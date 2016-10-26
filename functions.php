@@ -38,26 +38,29 @@ function hs_content_character_count( $valid, $value, $field, $input ){
 
 };
 
-/* Include Advanced Custom Fields */
-include_once("_includes/acf-pro/acf.php");
-
+// 1. customize ACF path
 add_filter('acf/settings/path', 'my_acf_settings_path');
 function my_acf_settings_path( $path ) {
     // update path
-    $path = get_stylesheet_directory() . "/_includes/acf-pro/";
+    $path = get_stylesheet_directory() . '/_includes/acf-pro/';
     // return
     return $path;
 }
 
-// Customize ACF dir
+
+// 2. customize ACF dir
 add_filter('acf/settings/dir', 'my_acf_settings_dir');
-
 function my_acf_settings_dir( $dir ) {
-
     // update path
     $dir = get_stylesheet_directory_uri() . '/_includes/acf-pro/';
-
     // return
     return $dir;
-
 }
+
+
+// 3. Hide ACF field group menu item
+//add_filter('acf/settings/show_admin', '__return_false');
+
+
+// 4. Include ACF
+include_once( get_stylesheet_directory() . '/_includes/acf-pro/acf.php' );
