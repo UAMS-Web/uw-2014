@@ -5,9 +5,7 @@
  */
 
 
-/* Home Slider */
-
-if( function_exists('acf_add_local_field_group') ):
+//if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
 	'key' => 'group_57fd5b6e0d942',
@@ -262,7 +260,7 @@ acf_add_local_field_group(array (
 	'active' => 1,
 	'description' => '',
 ));
-
+/* Home Slider */
 acf_add_local_field_group(array (
 	'key' => 'hs_options',
 	'title' => 'Slide Options',
@@ -419,4 +417,5 @@ acf_add_local_field_group(array (
 	'active' => 1,
 	'description' => '',
 ));
-endif;
+//endif;
+
