@@ -5956,6 +5956,7 @@ table th[class*="col-"] {
   background-color: #fff;
   -webkit-box-shadow: 0 0 4px rgba(164, 164, 164, 0.5);
   box-shadow: 0 0 4px rgba(164, 164, 164, 0.5);
+  z-index: 101;
 }
 .full-bar .action-bar ul {
   padding: 0;
