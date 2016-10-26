@@ -1,9 +1,9 @@
 
-# UW 2014 Theme
+# UAMS 2016 Theme - Back to the 5
 
-The UAMS 2014 Theme is available to anyone wishing to apply the Boundless UW brand to their website.  
+Back to the 5 is the default theme for UAMS.edu websites. The name "Back to the 5" is an homage to the University of Washington and the UW web team whose UW 2014 "Boundless" theme is this theme's base.
+
 This is an overview of the custom widgets, plugins and various features it includes.
-
 
 ## Table of contents
  - - -
@@ -42,12 +42,12 @@ This is an overview of the custom widgets, plugins and various features it inclu
 ## Quick Start ##
  - - -
 
-Download the [UW 2014 theme](https://github.com/uweb/uw-2014/archive/master.zip) into the wp-content/themes folder of your local WordPress install. Next, log into the WordPress dashboard and go the Appearance -> Themes page. From here you can activate the UW 2014 theme. 
+Download the [UAMS 2016 theme](https://github.com/UAMS-Web/uams-2016/archive/master.zip) into the wp-content/themes folder of your local WordPress install. Next, log into the WordPress dashboard and go the Appearance -> Themes page. From here you can activate the UAMS 2016 theme. 
 
 ## Bugs and feature requests ##
  - - -
 
-All bugs and feature requests can be issued at the [UW Web Team's GitHub account](https://github.com/uweb/uw-2014/issues) or emailed directly to the UW web team at [uweb@uw.edu](mailto:uweb@uw.edu).
+All bugs and feature requests can be issued at the [UAMS Web Team's GitHub account](https://github.com/UAMS-Web/uams-2016/issues) or emailed directly to the UAMS web team at [uamsonline@uams.edu](mailto:uamsonline@uams.edu).
 
 ## Widgets ##
  - - -
@@ -170,7 +170,7 @@ All bugs and feature requests can be issued at the [UW Web Team's GitHub account
 
 ### Button ###
 
->  Displays a branded call to action button. [See some examples](http://www.washington.edu/brand/html-web-components/#buttons). 
+>  Displays a branded call to action button. [See some examples](http://#.edu/brand/html-web-components/#buttons). 
 
 > Attributes:  
 
@@ -179,9 +179,11 @@ All bugs and feature requests can be issued at the [UW Web Team's GitHub account
 > - __small__: Adjusts the size of the button. Options: __small__, __large__ (_Default: large_)
 > - __url__: The URL where the button links to (_Default: None_)
 
-> Example:   
+> Examples:   
 ```
-  [button color=gold type=plus small=true url="http://uw.edu"]Button Text[/button]`
+  [button color=red url="http://uams.edu"]Button Text[/button]
+  
+  [button color=red type=plus small=true url="http://uams.edu"]Button Text[/button]
 ```
 
 ### Blogroll ###
@@ -220,13 +222,13 @@ All bugs and feature requests can be issued at the [UW Web Team's GitHub account
 
 > Example:   
 ```
-    [iframe src="https://www.youtube.com/embed/0h33Y9Zw8oQ" height="500" width="700"]
+    [iframe src="https://www.youtube.com/embed/Bmb270rrRqQ" height="500" width="700"]
 ```
 
 > Allowed domains:
 ```
-  uw.edu,
-    washington.edu,
+    uams.edu,
+    uamshealth.com,
     uwtv.org,
     tvw.org,
     google.com,
@@ -236,12 +238,6 @@ All bugs and feature requests can be issued at the [UW Web Team's GitHub account
     matchinggifts.com,
     docs.google.com,
     surveygizmo.com,
-    uwregents.wufoo.com,
-    depts.washington.edu,
-    online.gifts.washington.edu,
-    secure.gifts.washington.edu,
-    payroll.gifts.washington.edu,
-    helperapps.gifts.washington.edu,
 ```
 
 
@@ -277,7 +273,7 @@ All bugs and feature requests can be issued at the [UW Web Team's GitHub account
 
 ### Tile box ###
 
->  Display branded tiles to structure content in elegantly. [See an example of tiles here](http://www.washington.edu/newhuskies/).  
+>  Display branded tiles to structure content in elegantly. [See an example of tiles here](http://#/).  
 Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode. 
 
 > Attributes:  
@@ -375,7 +371,7 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
 
 
 ### Custom Menu ###
-> This shortcode pulls in a custom menu that can be created under _Dashboard > Appearance > Menus_. Icons can be added in the class field in the menu builder. View the [full set of icons](http://www.washington.edu/brand/web-2/html-web-components/web-icons/) for more information.
+> This shortcode pulls in a custom menu that can be created under _Dashboard > Appearance > Menus_. Icons can be added in the class field in the menu builder. View the [full set of icons](http://www.#.edu/brand/web-2/html-web-components/web-icons/) for more information.
 > 
 > Example:   
 ```
@@ -400,16 +396,19 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
 > This feature allows images to have author credits next to them. When an image is selected in the Media Library a field for Media Credit will appear next to its other attributes. This credit will always appear after the image caption. 
 
 
-## Creators 
+## UW 2014 Creators 
 - - - 
 [Dane Odekirk](https://github.com/daneodekirk)  
 [Jon Swanson](https://github.com/swansong)  
 [Kilian Frey](https://github.com/kilianf)  
 
-## Contributors
+## UW 2014 Contributors
 - - -
 [Ben Erickson](https://github.com/nambuben)
 
+## Contributors
+[Todd McKee](https://github.com/todd-uams) 
+[Brent Passmore](https://github.com/bpmore) 
 
 ## License
 - - - 
