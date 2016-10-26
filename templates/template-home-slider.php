@@ -53,9 +53,11 @@
 	endwhile; wp_reset_query();
 	?>
 	<div class="slideshow-controls <?php echo $slidecolor[0]; ?>">
-		<span class="uwn-slideshow-next-text">NEXT</span>
-		<span class="uwn-slideshow-next-title">NEXT TITLE HERE</span>
-		<span class="udub-slant" style="margin-top: 10px;"><span></span></span>
+		<button class="next-headline">
+			<span class="uwn-slideshow-next-text">NEXT</span>
+			<span class="uwn-slideshow-next-title">NEXT TITLE HERE</span>
+			<span class="udub-slant" style="margin-top: 10px;"><span></span></span>
+		</button>
 	</div>
 </div>
 	<?php

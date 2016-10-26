@@ -8,13 +8,14 @@ jQuery(document).ready(function(){
 	var totalslides = slides.length;
 
 	var next = jQuery('.slideshow-controls');
+	var nextbutton = jQuery('.next-headline');
 
 	var slidetitle = jQuery('.uams-homepage-slider-container .uams-homepage-slider .slide-title')
 	var thenextslide = 1;
 	var thenexttitle = slidetitle[1].innerText;
-	next[0].childNodes[3].innerText = thenexttitle;
+	nextbutton[0].childNodes[3].innerText = thenexttitle;
 
-	next.click(function(){
+	nextbutton.click(function(){
 	    slides.removeClass('activeslide');
 	    console.log(slides);
 	    slides[thenextslide].className = slides[thenextslide].className + ' activeslide';
@@ -30,7 +31,7 @@ jQuery(document).ready(function(){
 	    thenextslide = (thenextslide == totalslides - 1) ? 0 : thenextslide + 1;
 	    console.log(thenextslide);
 	    thenexttitle = slidetitle[thenextslide].innerText;
-	    next[0].childNodes[3].innerText = thenexttitle;
+	    nextbutton[0].childNodes[3].innerText = thenexttitle;
 	    console.log(thenexttitle);
 	});
 
