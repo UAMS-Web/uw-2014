@@ -37,3 +37,27 @@ function hs_content_character_count( $valid, $value, $field, $input ){
 
 
 };
+
+/* Include Advanced Custom Fields */
+include_once("_includes/acf-pro/acf.php");
+
+add_filter('acf/settings/path', 'my_acf_settings_path');
+function my_acf_settings_path( $path ) {
+    // update path
+    $path = get_stylesheet_directory() . "/_includes/acf-pro/";
+    // return
+    return $path;
+}
+
+// Customize ACF dir
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
+
+function my_acf_settings_dir( $dir ) {
+
+    // update path
+    $dir = get_stylesheet_directory_uri() . '/_includes/acf-pro/';
+
+    // return
+    return $dir;
+
+}

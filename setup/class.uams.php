@@ -46,8 +46,8 @@ class UAMS
         require_once($parent . 'class.uams-page-attributes-meta-box.php' );
         require_once($parent . 'custom-post-types.php' ); // Add our custom post types
 
-        require_once($parent . 'class-tgm-plugin-activation.php' ); //tgm activation
-        require_once($parent . 'class.uams-plugins.php' );
+        //require_once($parent . 'class-tgm-plugin-activation.php' ); //tgm activation
+        //require_once($parent . 'class.uams-plugins.php' );
 
         require_once($parent . 'class.uams-acf.php' );
 
