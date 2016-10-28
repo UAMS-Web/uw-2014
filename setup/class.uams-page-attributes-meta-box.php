@@ -129,8 +129,6 @@ class UAMS_Page_Attributes_Meta_Box
     echo "</div>";
     if ($default === "templates/template-big-hero.php" || $default === "templates/template-small-hero.php" || $default === "templates/template-home.php") {
       if (is_super_admin()) {
-        $banner = get_post_meta($post->ID, "banner", true);
-        wp_nonce_field( 'banner_nonce' , 'banner_name' );
 
         $buttontext = get_post_meta($post->ID, "buttontext", true);
         wp_nonce_field( 'buttontext_nonce' , 'buttontext_name' );
@@ -141,7 +139,6 @@ class UAMS_Page_Attributes_Meta_Box
         $mobileimage = get_post_meta($post->ID, "mobileimage", true);
         wp_nonce_field( 'mobileimage_nonce' , 'mobileimage_name' );
 
-        echo "<p><b>Banner</b></br><input type='text' name='bannertext' value='" . $banner . "'></p>";
         echo "<p><b>Button</b></br>Text</br><input type='text' name='buttontext' value='" . $buttontext . "'></br>Link</br><input type='text' name='buttonlink' value='" . $buttonlink . "'></p>";
         echo "<p><b>Mobile Header Image</b></br><input type='text' class='meta-image' name='mobileimagetext' value='" . $mobileimage . "'><input type='button' class='button image-upload' value='Browse'></p>";
         echo "<div class='image-preview'><img src='" . $mobileimage ."' style='max-width: 140px;'></div>";
@@ -195,18 +192,6 @@ class UAMS_Page_Attributes_Meta_Box
     $post_status = get_post_status( $post_ID );
     if (!isset($post_type) || 'page' != $post_type ) {
         return $post_ID;
-    }
-
-    if ( isset( $_POST['banner_name'] ) ) {
-      if ( ! empty( $_POST ) && check_admin_referer( 'banner_nonce', 'banner_name') ) { //limit to only pages
-        if ($post_type) {
-          if(isset($_POST["bannertext"])) {
-            update_post_meta($post_ID, "banner", $_POST["bannertext"]);
-          } else {
-            update_post_meta($post_ID, "banner", null);
-          }
-        }
-      }
     }
 
     if ( isset( $_POST['buttontext_name'] ) ) {

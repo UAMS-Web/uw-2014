@@ -16,7 +16,6 @@
         $hasmobileimage = 'hero-mobile-image';
       }
       $sidebar = get_post_meta($post->ID, "sidebar");
-      $banner = get_post_meta($post->ID, "banner");
       $buttontext = get_post_meta($post->ID, "buttontext");
       $buttonlink = get_post_meta($post->ID, "buttonlink");   ?>
 
@@ -27,9 +26,6 @@
     <?php } ?>
     <div id="hero-bg">
       <div id="hero-container" class="container">
-      <?php if(!empty($banner) && $banner[0]){ ?>
-<!--         <div id="hashtag"><span><span><?php echo $banner[0] ? $banner[0] : ''; ?></span></span></div> -->
-      <?php } ?>
         <h1 class="uams-site-title"><?php echo get_bloginfo( 'description' ); ?></h1>
         <span class="udub-slant"><span></span></span>
       <?php if(!empty($buttontext) && $buttontext[0]){ ?>
