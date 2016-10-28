@@ -5778,15 +5778,6 @@ table th[class*="col-"] {
     display: block;
     height: auto;
   }
-  .uams-hero-image.hero-height2 .container #hashtag {
-    font-size: 16px;
-  }
-  .uams-hero-image.hero-height2 .container #hashtag span {
-    padding: 2px 5px 3px 18px;
-  }
-  .uams-hero-image.hero-height2 .container #hashtag.mask {
-    min-height: auto;
-  }
   .uams-hero-image.hero-height2 h1 {
     font-size: 35px;
     padding: 0;
@@ -5876,7 +5867,7 @@ table th[class*="col-"] {
   text-align: left;
   cursor: pointer;
   padding: 14px 14px 20px 14px;
-  z-index: 11;
+  z-index: 1;
 }
 .uams-homepage-slider-container .slideshow-controls .next-headline .uwn-slideshow-next-text {
   font-weight: bold;
@@ -6014,7 +6005,7 @@ table th[class*="col-"] {
   background-color: #fff;
   -webkit-box-shadow: 0 0 4px rgba(164, 164, 164, 0.5);
   box-shadow: 0 0 4px rgba(164, 164, 164, 0.5);
-  z-index: 101;
+  z-index: 1;
 }
 .full-bar .action-bar ul {
   padding: 0;
