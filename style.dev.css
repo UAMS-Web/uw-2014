@@ -6009,6 +6009,9 @@ table th[class*="col-"] {
     margin: 25px auto 45px;
     width: 970px;
   }
+  .uams-homepage-slider-container .uams-homepage-slider div p {
+    width: 50%;
+  }
 }
 @media (min-width: 1200px) {
   .uams-homepage-slider-container .uams-homepage-slider div {
