@@ -2949,8 +2949,22 @@ td.visible-print {
 }
 @font-face {
   font-family: 'Fira Sans';
+  src: url('assets/fonts/firasans-extrabolditalic.eot');
+  src: url('assets/fonts/firasans-extrabolditalic.eot?#iefix') format('embedded-opentype'), url('assets/fonts/firasans-extrabolditalic.woff') format('woff'), url('assets/fonts/firasans-extrabolditalic.ttf') format('truetype'), url('assets/fonts/firasans-extrabolditalic.svg#firasans-extrabold') format('svg');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fira Sans';
   src: url('assets/fonts/firasans-heavy.eot');
   src: url('assets/fonts/firasans-heavy.eot?#iefix') format('embedded-opentype'), url('assets/fonts/firasans-heavy.woff') format('woff'), url('assets/fonts/firasans-heavy.ttf') format('truetype'), url('assets/fonts/firasans-heavy.svg#firasans-heavy') format('svg');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('assets/fonts/firasans-heavyitalic.eot');
+  src: url('assets/fonts/firasans-heavyitalic.eot?#iefix') format('embedded-opentype'), url('assets/fonts/firasans-heavyitalic.woff') format('woff'), url('assets/fonts/firasans-heavyitalic.ttf') format('truetype'), url('assets/fonts/firasans-heavyitalic.svg#firasans-heavy') format('svg');
   font-weight: 900;
   font-style: normal;
 }
@@ -5873,6 +5887,16 @@ table th[class*="col-"] {
   content: "\A";
   white-space: pre;
 }
+.uams-homepage-slider-container .slideshow-controls .next-headline:before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  margin-top: -14px;
+  width: 16px;
+  height: 28px;
+  background: url(../uams-2016/assets/svg/uams-sprite.svg) no-repeat -574px -55px;
+}
 .uams-homepage-slider-container .slideshow-controls .next-headline .uwn-slideshow-next-title {
   font-weight: bold;
   cursor: pointer;
@@ -5920,15 +5944,31 @@ table th[class*="col-"] {
   text-shadow: 1px 1px 1px rgba(225, 225, 225, 0.3);
 }
 @media only screen and (max-width: 767px) {
+  .uams-homepage-slider-container .uams-homepage-slider div h3.slide-title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .uams-homepage-slider-container .uams-homepage-slider div p {
+    font-size: 15px;
+    line-height: 18px;
+  }
   .uams-homepage-slider-container .slideshow-controls {
     position: absolute;
-    left: 30px;
-    bottom: 40px;
+    left: 35px;
+    bottom: 0;
   }
   .uams-homepage-slider-container .slideshow-controls .next-headline {
-    position: static;
+    position: relative;
     width: auto;
-    padding-right: 5px;
+    padding: 0 5px 10px 5px;
+  }
+  .uams-homepage-slider-container .slideshow-controls .next-headline:before {
+    right: -25px;
+    left: auto;
+    top: 20px;
+  }
+  .uams-homepage-slider-container .slideshow-controls .next-headline .udub-slant {
+    display: none;
   }
   .uams-hero-image {
     display: block !important;
@@ -6039,6 +6079,7 @@ table th[class*="col-"] {
   }
   .full-bar .action-bar {
     padding: 3% 0;
+    margin-top: 0;
   }
   .full-bar .action-bar ul li {
     padding: 0 5%;
@@ -7120,6 +7161,10 @@ ul.uams-mobile-menu ul.children {
 }
 body.home .uams-sidebar-menu {
   display: none;
+}
+body.action-bar ul.uams-sidebar-menu,
+body.action-barul.uams-mobile-menu {
+  margin-top: -42px;
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {

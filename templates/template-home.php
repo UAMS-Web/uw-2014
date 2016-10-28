@@ -28,7 +28,7 @@
     <div id="hero-bg">
       <div id="hero-container" class="container">
       <?php if(!empty($banner) && $banner[0]){ ?>
-        <div id="hashtag"><span><span><?php echo $banner[0] ? $banner[0] : ''; ?></span></span></div>
+<!--         <div id="hashtag"><span><span><?php echo $banner[0] ? $banner[0] : ''; ?></span></span></div> -->
       <?php } ?>
         <h1 class="uams-site-title"><?php echo get_bloginfo( 'description' ); ?></h1>
         <span class="udub-slant"><span></span></span>

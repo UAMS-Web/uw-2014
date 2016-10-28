@@ -60,3 +60,17 @@ function my_acf_settings_dir( $dir ) {
 
 /* Include Advanced Custom Fields */
 include_once("_includes/acf-pro/acf.php");
+
+// check for 'action_menu_active' meta key on pages and add a body class if meta value equals '1'
+add_filter('body_class','uams_custom_field_body_class');
+function uams_custom_field_body_class( $classes ) {
+	global $post;
+	if ( is_page() && ( '1' == get_post_meta( $post->ID, 'action_menu_active', true ) ) ) {
+
+		$classes[] = 'action-bar';
+
+	}
+
+	// return the $classes array
+	return $classes;
+}

@@ -88,11 +88,33 @@
 
   @font-face {
     font-family: 'Fira Sans';
+    src: ~"url('@{local-font-path}@{local-font-name-extrabold}italic.eot')";
+    src: ~"url('@{local-font-path}@{local-font-name-extrabold}italic.eot?#iefix') format('embedded-opentype')",
+         ~"url('@{local-font-path}@{local-font-name-extrabold}italic.woff') format('woff')",
+         ~"url('@{local-font-path}@{local-font-name-extrabold}italic.ttf') format('truetype')",
+         ~"url('@{local-font-path}@{local-font-name-extrabold}italic.svg#@{local-font-name-extrabold}') format('svg')";
+    font-weight: 800;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Fira Sans';
     src: ~"url('@{local-font-path}@{local-font-name-black}.eot')";
     src: ~"url('@{local-font-path}@{local-font-name-black}.eot?#iefix') format('embedded-opentype')",
          ~"url('@{local-font-path}@{local-font-name-black}.woff') format('woff')",
          ~"url('@{local-font-path}@{local-font-name-black}.ttf') format('truetype')",
          ~"url('@{local-font-path}@{local-font-name-black}.svg#@{local-font-name-black}') format('svg')";
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Fira Sans';
+    src: ~"url('@{local-font-path}@{local-font-name-black}italic.eot')";
+    src: ~"url('@{local-font-path}@{local-font-name-black}italic.eot?#iefix') format('embedded-opentype')",
+         ~"url('@{local-font-path}@{local-font-name-black}italic.woff') format('woff')",
+         ~"url('@{local-font-path}@{local-font-name-black}italic.ttf') format('truetype')",
+         ~"url('@{local-font-path}@{local-font-name-black}italic.svg#@{local-font-name-black}') format('svg')";
     font-weight: 900;
     font-style: normal;
   }
