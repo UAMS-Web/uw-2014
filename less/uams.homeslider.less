@@ -11,7 +11,7 @@
 				text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 				background-color: rgba(0, 0, 0, 0.25);
 				.uwn-slideshow-next-text {
-					color: white;
+					color: @gray;
 				}
 				.uwn-slideshow-next-title {
 					color: white;
@@ -19,18 +19,24 @@
 				.udub-slant span {
 					background-color: white;
 				}
+				&:before {
+					background: url(../uams-2016/assets/svg/uams-sprite.svg) no-repeat -574px -55px;
+				}
 			}
 			&.darktext .next-headline{
 				text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.5);
 				background-color: rgba(255, 255, 255, 0.25);
 				.uwn-slideshow-next-text {
-					color: @900grey;
+					color: @red;
 				}
 				.uwn-slideshow-next-title {
 					color: @900grey;
 				}
 				.udub-slant span {
 					background-color: @900grey;
+				}
+				&:before {
+					background: url(../uams-2016/assets/svg/uams-sprite-focus.svg) no-repeat -574px -55px;
 				}
 			}
 		.next-headline{
@@ -44,17 +50,18 @@
 			position: absolute;
 			bottom: 0;
 			//height: 112px;
-			width: 250px;
+			width: 280px;
 			line-height: 17px;
 
 			text-align: left;
 			cursor: pointer;
-			padding: 14px 14px 20px 14px;
+			padding: 14px 14px 20px 44px;
 			z-index: 1;
 			.uwn-slideshow-next-text {
 				font-weight: bold;
 				font-style: italic;
-				font-size: 13px;
+				font-size: 18px;
+				line-height: 24px;
 				&:after {
 					content: "\A";
 					white-space: pre;
@@ -63,16 +70,16 @@
 			&:before {
 				content: "";
 			    position: absolute;
-			    left: -30px;
+			    left: 15px;
 			    top: 50%;
-			    margin-top: -14px;
+			    margin-top: -26px;
 			    width: 16px;
 			    height: 28px;
-			    background: url(../uams-2016/assets/svg/uams-sprite.svg) no-repeat -574px -55px;
 			}
 			.uwn-slideshow-next-title {
 				font-weight: bold;
 				cursor: pointer;
+				font-size: 20px;
 			}
 			.udub-slant span {
 				height: 5px; width: 57px;
@@ -100,6 +107,10 @@
 				font-size: 48px;
 				line-height: 52px;
 				text-transform: uppercase;
+				margin: 0;
+				.udub-slant span {
+					background-color: @red;
+				}
 			}
 			p {
 				font-size: 18px;
@@ -146,11 +157,11 @@
 			.next-headline {
 			    position: relative;
 			    width: auto;
-			    padding: 0 5px 10px 5px;
+			    padding: 0 40px 10px 5px;
 			    &:before {
-				    right: -25px;
+				    right: 10px;
 				    left: auto;
-				    top: 20px;
+				    top: 36px;
 			    }
 			    .udub-slant {
 				    display: none;
@@ -163,7 +174,27 @@
 	}
 }
 @media only screen and (max-width: 991px) and (min-width: 768px) {
-	.uams-homepage-slider-container .slideshow-controls { right: auto; left: 50px; }
+	.uams-homepage-slider-container {
+		.slideshow-controls {
+			 right: auto; left: 50px;
+			 .next-headline { right:10%; }
+		}
+		.uams-homepage-slider {
+			 div {
+				 padding-left: 48px;
+				p {
+					padding-right: 45%;
+					font-size: 16px;
+					line-height: 24px;
+		    	}
+		    	h3.slide-title {
+			    	.udub-slant {
+				    	margin: 20px 0 10px 0;
+			    	}
+		    	}
+		    }
+	    }
+    }
 }
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
 	.uams-homepage-slider-container .slideshow-controls { right: 480px; }
@@ -172,14 +203,14 @@
 	.uams-homepage-slider-container {
 		height: 430px;
 		.uams-homepage-slider div {
-			margin: 45px auto;
+			margin: 25px auto 45px;
 			width: 970px;
 		}
 	}
 }
 @media (min-width: 1200px) {
 	.uams-homepage-slider-container .uams-homepage-slider div {
-		margin: 45px auto;
+		margin: 35px auto 45px;
 		width: 1170px;
 	}
 	.uams-homepage-slider-container .uams-homepage-slider div p {
