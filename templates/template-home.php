@@ -126,7 +126,11 @@ endif;
 
       <?php //uams_page_title(); ?>
       <?php //get_template_part( 'menu', 'mobile' ); ?>
-      <?php get_template_part( 'breadcrumbs' ); ?>
+      <?php
+	      if(get_field('home_remove_breadcrumbs') == '0') {
+	      	get_template_part( 'breadcrumbs' );
+	      }
+	  ?>
 
       <div id='main_content' class="uams-body-copy" tabindex="-1">
 
@@ -167,6 +171,9 @@ endif;
 </div>
 
 
-<?php wp_enqueue_script( 'script', get_template_directory_uri() . '/js/home-slider.js', array ( 'jquery' ), 1.1, true); ?>
+<?php
+	if ( ( get_field('home_page_slider') == 'slide' ) && have_rows('home_slides') ) {
+		wp_enqueue_script( 'script', get_template_directory_uri() . '/js/home-slider.js', array ( 'jquery' ), 1.1, true);
+	} ?>
 
 <?php get_footer(); ?>
