@@ -25,6 +25,7 @@ $homeSlider = new UAMS_Custom_Post(
 );
 */
 
+/*
 $homeSlider = new Cuztom_Post_Type(
     'home_slider',
 	array(
@@ -47,6 +48,7 @@ $homeSlider = new Cuztom_Post_Type(
     )
 
 );
+*/
 
 /*
 $box = new Cuztom_Meta_Box(

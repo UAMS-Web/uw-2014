@@ -4,38 +4,92 @@
   */
 ?>
 
-<?php get_header();
-      $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+<?php get_header(); ?>
+
+
+<?php
+	$first = true; // used to write class on first slide
+	$i = 0;
+	$slidecolor = array();
+    if ( ( get_field('home_page_slider') == 'slide' ) && have_rows('home_slides') ) : //$loop->have_posts() ) : ?>
+<div class="uams-homepage-slider-container" role="region">
+	<?php
+        while ( have_rows('home_slides') ): the_row();
+
+			$desktopimage = get_sub_field( "home_slide_desktop" );
+			$mobileimage = get_sub_field("home_slide_mobile");
+			$hasmobileimage = false;
+			if( !empty($mobileimage) && $mobileimage['url'] !== "") {
+	        	$mobileimage = $mobileimage['url'];
+				$hasmobileimage = true;
+	      	}
+	      	$buttonlink = get_sub_field( "home_slide_internal_link" ); //Default interal link
+	      	if ( get_sub_field( "home_slide_internal_link" ) ) { // Make it external
+		  		$buttonlink = get_sub_field( "home_slide_external_link" );
+		  	 }
+		  	$textcolor = get_sub_field( "home_slide_text_color" );
+
+      ?>
+
+    <div data-mobimg="<? echo ($hasmobileimage ? $mobileimage : $desktopimage['url']); ?>" data-dtimg="<? echo $desktopimage['url']; ?>" class="uams-hero-image uams-homepage-slider <?php echo ($textcolor ? $textcolor : 'lighttext' ); ?> <?php echo ($first ? 'activeslide' : '' ); ?>" style="background-position: center center; background-image:url('<? echo $desktopimage["url"]; ?>');">
+		<div>
+			<h3 class="slide-title"><?php the_sub_field( "home_slide_title" ); ?></a><span class="udub-slant"><span></span></span></h3>
+			<p><?php the_sub_field( 'home_slide_text' ); ?></p>
+			<p><a class="uams-btn btn-sm btn-none" href="<? echo $buttonlink ?>"><?php the_sub_field( 'home_slide_button_text' ); ?></a></p>
+		</div>
+	</div>
+
+<?php
+	$first = false;
+	$slidecolor[$i] = $textcolor;
+	$i++;
+	endwhile;
+	?>
+	<?php if ($i > 1) { ?>
+	<div class="slideshow-controls <?php echo $slidecolor[0]; ?>">
+		<button class="next-headline">
+			<span class="uwn-slideshow-next-text">NEXT</span>
+			<span class="uwn-slideshow-next-title">NEXT TITLE HERE</span>
+			<span class="udub-slant" style="margin-top: 10px;"><span></span></span>
+		</button>
+	</div>
+	<?php } ?>
+</div>
+	<?php
+	else :
+
+	$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
       if(!$url){
         $url = get_site_url() . "/wp-content/themes/uams-2016/assets/headers/uams-pattern-grey.png";
       }
-      $mobileimage = get_post_meta($post->ID, "mobileimage");
+      //$mobileimage = get_post_meta($post->ID, "home_image_mobile");
       $hasmobileimage = '';
-      if( !empty($mobileimage) && $mobileimage[0] !== "") {
-        $mobileimage = $mobileimage[0];
+      if( get_field('home_image_mobile')) {
         $hasmobileimage = 'hero-mobile-image';
       }
-      $sidebar = get_post_meta($post->ID, "sidebar");
-      $buttontext = get_post_meta($post->ID, "buttontext");
-      $buttonlink = get_post_meta($post->ID, "buttonlink");   ?>
+      $sidebar = get_post_meta($post->ID, "sidebar");   ?>
 
 
 <div class="uams-hero-image hero-height <?php echo $hasmobileimage ?>" style="background-image: url(<?php echo $url ?>);">
-    <?php if( !empty($mobileimage) ) { ?>
-    <div class="mobile-image" style="background-image: url(<?php echo $mobileimage ?>);"></div>
+    <?php if( get_field('home_image_mobile') ) { ?>
+    <div class="mobile-image" style="background-image: url(<?php echo get_field('home_image_mobile') ?>);"></div>
     <?php } ?>
     <div id="hero-bg">
       <div id="hero-container" class="container">
-        <h1 class="uams-site-title"><?php echo get_bloginfo( 'description' ); ?></h1>
+        <h1 class="uams-site-title"><?php echo get_field('home_image_title') ? get_field('home_image_title') : get_the_title(); ?></h1>
         <span class="udub-slant"><span></span></span>
-      <?php if(!empty($buttontext) && $buttontext[0]){ ?>
-        <a class="uams-btn btn-sm btn-none" href="<?php echo $buttonlink[0] ? $buttonlink[0] : ''; ?>"><?php echo $buttontext[0] ? $buttontext[0] : ''; ?></a>
+      <?php if( get_field( 'home_image_add_button' )){ ?>
+        <a class="uams-btn btn-sm btn-none" href="<?php echo get_field('home_image_external') ? get_field('home_image_internal_url') : get_field('home_image_external_url'); ?>"><?php echo get_field('home_image_button_text'); ?></a>
       <?php } ?>
       </div>
     </div>
 </div>
 
+<?php
+endif;
+?>
 <?php if( have_rows('action_menu') ):  ?>
+
 <div class="full-bar">
 	<nav aria-label="popular links" class="container action-bar">
 		<ul class="center-block">
@@ -111,5 +165,8 @@
   </div>
 
 </div>
+
+
+<?php wp_enqueue_script( 'script', get_template_directory_uri() . '/js/home-slider.js', array ( 'jquery' ), 1.1, true); ?>
 
 <?php get_footer(); ?>

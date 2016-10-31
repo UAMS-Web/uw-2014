@@ -105,7 +105,7 @@ class UAMS_Page_Attributes_Meta_Box
 
   function page_template_dropdown( $default = '' , $post) {
 
-    $previews = array('Big Hero' => '/assets/images/template-big-hero.jpg', 'Small Hero' => '/assets/images/template-small-hero.jpg', 'Home' => '/assets/images/template-home.jpg', 'Home with Slider' => '/assets/images/template-home.jpg', 'No image' => '/assets/images/template-no-image.jpg', 'No title/image' => '/assets/images/template-no-title.jpg', 'Default Template' => '/assets/images/template-default.jpg');
+    $previews = array('Big Hero' => '/assets/images/template-big-hero.jpg', 'Small Hero' => '/assets/images/template-small-hero.jpg', 'Home' => '/assets/images/template-home.jpg', 'No image' => '/assets/images/template-no-image.jpg', 'No title/image' => '/assets/images/template-no-title.jpg', 'Default Template' => '/assets/images/template-default.jpg');
 
     $templates = get_page_templates( get_post() );
 
@@ -127,7 +127,8 @@ class UAMS_Page_Attributes_Meta_Box
 </span></a>)" : "") . "</p>";
     }
     echo "</div>";
-    if ($default === "templates/template-big-hero.php" || $default === "templates/template-small-hero.php" || $default === "templates/template-home.php") {
+/*    if ($default === "templates/template-big-hero.php" || $default === "templates/template-small-hero.php" || $default === "templates/template-home.php") {
+
       if (is_super_admin()) {
 
         $buttontext = get_post_meta($post->ID, "buttontext", true);
@@ -179,7 +180,8 @@ class UAMS_Page_Attributes_Meta_Box
 		</script>
 <?php
       }
-    }
+
+    }*/
   }
 
   function custom_style() {
@@ -194,6 +196,7 @@ class UAMS_Page_Attributes_Meta_Box
         return $post_ID;
     }
 
+/*
     if ( isset( $_POST['buttontext_name'] ) ) {
       if ( ! empty( $_POST ) && check_admin_referer( 'buttontext_nonce', 'buttontext_name') ) { //limit to only pages
         if ($post_type) {
@@ -205,7 +208,9 @@ class UAMS_Page_Attributes_Meta_Box
         }
       }
     }
+*/
 
+/*
     if ( isset( $_POST['buttonlink_name'] ) ) {
       if ( ! empty( $_POST ) && check_admin_referer( 'buttonlink_nonce', 'buttonlink_name') ) { //limit to only pages
         if ($post_type) {
@@ -217,7 +222,9 @@ class UAMS_Page_Attributes_Meta_Box
         }
       }
     }
+*/
 
+/*
     if ( isset( $_POST['mobileimage_name'] ) ) {
       if ( ! empty( $_POST ) && check_admin_referer( 'mobileimage_nonce', 'mobileimage_name') ) { //limit to only pages
         if ($post_type) {
@@ -229,7 +236,9 @@ class UAMS_Page_Attributes_Meta_Box
         }
       }
     }
+*/
 
+/*
     if ( isset( $_POST['sidebar_name'] ) ) {
       if ( ! empty( $_POST ) && check_admin_referer( 'sidebar_nonce', 'sidebar_name') ) { //limit to only pages
         if ($post_type) {
@@ -241,6 +250,7 @@ class UAMS_Page_Attributes_Meta_Box
         }
       }
     }
+*/
 
     if ( isset( $_POST['parent_name'] ) ) {
       if ( ! empty( $_POST ) && check_admin_referer( 'parent_nonce', 'parent_name') ) { //limit to only pages
