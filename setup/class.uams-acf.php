@@ -1007,6 +1007,31 @@ function my_acf_add_local_field_groups() {
 				'esc_html' => 0,
 			),
 			array (
+				'key' => 'field_58174e04ca0e0',
+				'label' => 'Instructions / Help',
+				'name' => '',
+				'type' => 'message',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array (
+					array (
+						array (
+							'field' => 'field_57fd5dffccc90',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '<p>Additional information ...</p><p><a href="/wp-content/themes/uams-2016/assets/fonts/reddieicons.html?TB_iframe=true&width=640&height=550" class="thickbox"">Find your icon</a></p>',
+				'new_lines' => 'wpautop',
+				'esc_html' => 0,
+			),
+			array (
 				'key' => 'field_57fd5bb2de8d5',
 				'label' => 'Action Menu Items',
 				'name' => 'action_menu',
