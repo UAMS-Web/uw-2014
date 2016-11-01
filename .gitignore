@@ -3,3 +3,5 @@ node_modules
 *.swo
 *.DS_Store
 assets/fonts/heron.*
+
+config.codekit3
