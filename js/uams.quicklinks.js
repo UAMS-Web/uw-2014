@@ -12,9 +12,9 @@ UAMS.QuickLinks = Backbone.View.extend({
     template : '<nav id="quicklinks" role="navigation" aria-label="quick links" aria-hidden="true">' +
                         '<ul id="big-links">' +
                             '<% _.each( links, function( link ) { %> ' +
-                                '<% if (link.classes) { %>' +
+                                '<% if (link.classes.indexOf("big") !== -1 ) { %>' +
                                     '<li>' +
-                                        '<span class="<%= link.classes %>"></span>' +
+                                        '<span class="<%= link.classes.join(" ") %>"></span>' +
                                         '<a href="<%= link.url %>" tabindex="-1"><%= link.title %></a>' +
                                     '</li>' +
                                 '<% } %>' +
@@ -23,10 +23,20 @@ UAMS.QuickLinks = Backbone.View.extend({
                         '<h3>Helpful Links</h3>' +
                         '<ul id="little-links">' +
                             '<% _.each( links, function( link ) { %> '+
-                                '<% if ( ! link.classes) { %>' +
+                                '<% if (( link.classes.indexOf("big") == -1) && ( link.classes.indexOf("social") == -1)) { %>' +
                                     '<li>' +
-                                        '<span class="<%= link.classes %>"></span>' +
+                                        '<span class="<%= link.classes.join(" ") %>"></span>' +
                                         '<a href="<%= link.url %>" tabindex="-1"><%= link.title %></a>' +
+                                    '</li>' +
+                                '<% } %>' +
+                            '<% }) %>' +
+                        '</ul>' +
+                        '<h4>Social</h4>' +
+                        '<ul id="social">' +
+                            '<% _.each( links, function( link ) { %> '+
+                                '<% if ( link.classes.indexOf("social") !== -1) { %>' +
+                                    '<li>' +
+                                        '<a href="<%= link.url %>" tabindex="-1"><span class="<%= link.classes.join(" ") %>"></span> <%= link.title %></a>' +
                                     '</li>' +
                                 '<% } %>' +
                             '<% }) %>' +
@@ -144,61 +154,41 @@ UAMS.QuickLinks.Collection = Backbone.Collection.extend({
     },
 
     defaults : [{
-       "title": "MyUW",
-       "url": "http:\/\/myuw.washington.edu",
-       "classes": ["icon-myuw"]
+       "title": "GUS",
+       "url": "http:\/\/gus.uams.edu\/",
+       "classes": ["i-Student big"]
    }, {
-       "title": "Calendar",
-       "url": "http:\/\/uw.edu\/calendar",
-       "classes": ["icon-calendar"]
+       "title": "Library",
+       "url": "http:\/\/library.uams.edu\/",
+       "classes": ["ic-book big"]
    }, {
-       "title": "Directories",
-       "url": "http:\/\/uw.edu\/directory\/",
-       "classes": ["icon-directories"]
+       "title": "UAMS Bookstore",
+       "url": "http:\/\/library.uams.edu\/library-services\/bookstore\/",
+       "classes": ["i-Globe big"]
    }, {
-       "title": "Libraries",
-       "url": "http:\/\/www.lib.washington.edu\/",
-       "classes": ["icon-libraries"]
-   }, {
-       "title": "UW Medicine",
-       "url": "http:\/\/www.uwmedicine.org",
-       "classes": ['icon-medicine']
-   }, {
-       "title": "Maps",
-       "url": "http:\/\/uw.edu\/maps",
-       "classes": ["icon-maps"]
-   }, {
-       "title": "UW Today",
-       "url": "http:\/\/www.uw.edu\/news",
-       "classes": ["icon-uwtoday"]
-   }, {
-       "title": "Computing\/IT",
-       "url": "http:\/\/www.washington.edu\/itconnect\/forstudents.html",
-       "classes": false
+       "title": "Webmail",
+       "url": "http:\/\/webmail.uams.edu\/",
+       "classes": ["ic-mail"]
    }, {
        "title": "Employee Self Service",
-       "url": "http:\/\/f2.washington.edu\/fm\/payroll\/payroll\/ESS",
-       "classes": false
+       "url": "https:\/\/enterprise.uams.edu\/irj\/portal",
+       "classes": ['i-Name-Plate-Female-1']
    }, {
-       "title": "Husky Card",
-       "url": "http:\/\/www.hfs.washington.edu\/huskycard\/",
-       "classes": false
+       "title": "Computing \/ IT",
+       "url": "http:\/\/www.uams.edu\/IT",
+       "classes": ["ic-computer"]
    }, {
-       "title": "UW Bothell",
-       "url": "http:\/\/www.bothell.washington.edu\/",
-       "classes": false
+       "title": "Intranet",
+       "url": "http:\/\/inside.uams.edu\/",
+       "classes": ["i-Networking-2"]
    }, {
-       "title": "UW Tacoma",
-       "url": "http:\/\/www.tacoma.uw.edu\/",
-       "classes": false
+       "title": "UAMS Facebook",
+       "url": "https:\/\/www.facebook.com\/UAMSHealth",
+       "classes": ["facebook social"]
    }, {
-       "title": "UW Facebook",
-       "url": "https:\/\/www.facebook.com\/UofWA",
-       "classes": false
-   }, {
-       "title": "UW Twitter",
-       "url": "https:\/\/twitter.com\/UW",
-       "classes": false
+       "title": "UAMS Twitter",
+       "url": "https:\/\/twitter.com\/uamshealth",
+       "classes": ["twitter social"]
    }]
 
 });

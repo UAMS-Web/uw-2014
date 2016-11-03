@@ -1,6 +1,5 @@
 /* Styles necessary for quicklinks */
 
-
 #uams-container
 {
     position: relative;
@@ -10,15 +9,14 @@
     background-color: white;
     overflow-x: hidden;
 
-    #quicklinks
-    {
+    #quicklinks	{
         position: absolute;
         background-color: #4d4d4d;
         top: 0px;
         right: 0px;
         height: 100%;
         width: 300px;
-        padding: 10px 0 0 90px;
+        padding: 10px 0 0 80px;
         transition: transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
         background: #4d4d4d;
         background: rgba(46,46,46,1);
@@ -43,172 +41,150 @@
           list-style: none;
           margin-top: 10px;
 
-          li
-          {
-            display: block;
-            width: 100%;
-            padding: 14px 0 0 0;
+          	li {
+	            display: block;
+	            width: 100%;
+	            padding: 14px 0 0 0;
+	            a {
+		            font-family: @font-family-headline;
+		            font-size: @font-size-h6;
+		            margin-left: 15px;
+		            &:hover, &:focus {
+		                color: @50grey;
+		                text-decoration: underline;
+		        	}
+	        	}
+	            [class^="ic-"]:before, [class*=" ic-"]:before, [class^="i-"]:before, [class*=" i-"]:before {
+		            font-size: 30px;
+					color: #fff;
+	            }
 
+	            span {
+	              	display: block;
+				  	float: left;
+				  	width:30px;
+				  	height:30px;
+	            }
+
+	        }
+
+	    }
+
+		h3 {
+	        font-size: @font-size-h6;
+	        color: white;
+	        margin: 40px 0 30px 0;
+	        position: relative;
+	        &:after {
+	          	content: "";
+			  	display: block;
+			  	width: 30px;
+			  	height: 1px;
+			  	background-color: white;
+			  	position: absolute;
+			  	bottom: -19px;
+	        }
+      	}
+	  	h4 {
+	        font-size: @font-size-h6;
+	        color: white;
+	        margin: 20px 0 15px 0;
+	        position: relative;
+	        &:after {
+	          	content: "";
+			  	display: block;
+			  	width: 30px;
+			  	height: 1px;
+			  	background-color: white;
+			  	position: absolute;
+			  	bottom: -12px;
+	        }
+      	}
+	  	ul#little-links{
+        	margin-left: 5px;
+			li {
+				list-style: none;
+				position: relative;
+
+				span {
+	            	display: block;
+					float: left;
+					width:20px;
+					height:20px;
+	            }
+				[class^="ic-"]:before, [class*=" ic-"]:before, [class^="i-"]:before, [class*=" i-"]:before {
+		            font-size: 20px;
+					color: #fff;
+					line-height: 30px;
+	            }
+				a {
+					//font-family: @font-family-headline;
+					font-size: @font-size-base;
+					margin-left: 12px;
+					&:hover, &:focus {
+						color: @50grey;
+						text-decoration: underline;
+            		}
+        		}
+        	}
+    	}
+
+    	ul#social {
+	    	list-style: none;
+			margin-top: 24px;
+
+			[class^="ic-"]:before, [class*=" ic-"]:before, [class^="i-"]:before, [class*=" i-"]:before {
+	            font-size: 30px;
+				color: #fff;
+            }
             a {
-              font-family: @font-family-headline;
-              font-size: @font-size-h6;
-              margin-left: 15px;
-              &:hover, &:focus {
-                color: @50grey;
-                text-decoration: underline;
-              }
+            	font-size: @font-size-base;
+				margin-left: 12px;
+	            span {
+		            display: block;
+		            float: left;
+		            width:20px;
+		            height:20px;
+		            margin-top: 3px;
+		            background: url(assets/svg/uams-sprite.svg) no-repeat 0 0;
+		            background-size: 700px;
+		            transition: 0.25s;
+		            &.facebook		{ background-position: 0px -159px		}
+					&.twitter	 	{ background-position: -37px -159px		}
+					&.tumblr	 	{ background-position: -297px -159px	}
+					&.youtube	 	{ background-position: -112px -185px	}
+					&.linkedin		{ background-position: -149px -159px	}
+					&.pinterest		{ background-position: -75px -159px		}
+					&.google	 	{ background-position: -223px -159px	}
+					&.instagram		{ background-position: -261px -159px	}
+		        }
+				&:hover, &:focus {
+                	color: @50grey;
+					text-decoration: underline;
+					span {
+		                &.facebook	 { background-position: 0px -192px		}
+						&.twitter	 { background-position: -37px -192px	}
+						&.tumblr	 { background-position: -297px -192px	}
+						&.youtube	 { background-position: -112px -192px	}
+						&.linkedin	 { background-position: -149px -192px	}
+						&.pinterest	 { background-position: -75px -192px	}
+						&.google	 { background-position: -223px -192px	}
+						&.instagram	 { background-position: -261px -192px	}
+                	}
+            	}
             }
-
-            span {
-              display: block;
-              float: left;
-              width:30px;
-              height:30px;
-              background: url(assets/svg/uams-sprite.svg) no-repeat 0 0;
-              &.icon-maps
-              {
-                background-position: 6px -303px;
-              }
-
-              &.icon-directories
-              {
-                background-position: -84px -303px;
-              }
-
-              &.icon-calendar
-              {
-                background-position: -39px -303px;
-              }
-
-              &.icon-libraries
-              {
-                background-position: -129px -303px;
-              }
-              &.icon-medicine
-              {
-                background-position: -264px -303px;
-              }
-              &.icon-myuams
-              {
-                background-position: -174px -303px;
-              }
-
-              &.icon-uamstoday
-              {
-                background-position: -219px -303px;
-              }
-            }
-
-
-          }
-
         }
-
-      h3{
-        font-size: @font-size-h6;
-        color: white;
-        margin: 40px 0 30px 0;
-        position: relative;
-        &:after {
-          content: "";
-          display: block;
-          width: 30px;
-          height: 1px;
-          background-color: white;
-          position: absolute;
-          bottom: -19px;
-        }
-      }
-      ul#little-links{
-        margin-left: 10px;
-        li {
-          list-style: none;
-          position: relative;
-          &:before {
-            content: "";
-            width: 6px;
-            height: 6px;
-            display: block;
-            background-color: @50grey;
-            position: absolute;
-            left: -15px;
-            top: 13px;
-            .border-top-radius(100%);
-            .border-right-radius(100%);
-            .border-bottom-radius(100%);
-            .border-left-radius(100%);
-          }
-          &:nth-child(1):before { background-color: #8a00ff; }
-          &:nth-child(2):before { background-color: #8a00ff; }
-          &:nth-child(3):before { background-color: #e49243; }
-          &:nth-child(4):before { background-color: #9bc343; }
-          &:nth-child(5):before { background-color: #9bc343; }
-          &:nth-child(6):before {
-              background: url(assets/svg/uams-sprite.svg) no-repeat 0px -159px;
-              height: 20px;
-              width: 20px;
-              top: 5px;
-              left: -28px;
-              .border-radius(0);
-              background-size: 700px;
-          }
-          &:nth-child(7):before {
-              background: url(assets/svg/uams-sprite.svg) no-repeat -37px -157px;
-              height: 20px;
-              width: 20px;
-              top: 5px;
-              left: -28px;
-              .border-radius(0);
-              background-size: 690px;
-          }
-          &:nth-child(6) {
-            margin-top: 30px;
-            &:after {
-              content: "";
-              display: block;
-              width: 30px;
-              height: 1px;
-              background-color: white;
-              position: absolute;
-              top: -15px;
-              left: -26px;
-            }
-          }
-          &:nth-child(7),
-          &:nth-child(6) {
-            margin-left: 15px;
-            padding-left: 3px;
-          }
-
-
-
-
-
-          a{
-            font-family: @font-family-headline;
-            font-size: @font-size-h6;
-            &:hover, &:focus {
-              color: @50grey;
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-
-        a
-        {
+        a 	{
           color: white;
         }
 
-        &.open
-        {
+        &.open	{
           -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
              -moz-transform: matrix(1, 0, 0, 1, 0, 0);
               -ms-transform: matrix(1, 0, 0, 1, 0, 0);
                -o-transform: matrix(1, 0, 0, 1, 0, 0);
                   transform: matrix(1, 0, 0, 1, 0, 0);
         }
-
     }
 
     div#uams-container-inner {
@@ -216,12 +192,6 @@
         background-color: white;
         box-shadow: 10px 0px 11px -6px #1f1f1f;
         transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
-        //div.uams-body-wrap{
-        //    position:relative;
-        //    width: 100%;
-        //    height: 100%;
-        //    background-color:white;
-        //}
     }
     &.open
     {
@@ -240,9 +210,9 @@
 // Mobile
 
 @media only screen and (max-width : 767px) {
-  #uams-container {
-    #quicklinks  {
-      padding: 0 0 0 70px;
-    }
-}
+  	#uams-container	{
+  		#quicklinks {
+  			padding: 0 0 0 70px;
+    	}
+	}
 }

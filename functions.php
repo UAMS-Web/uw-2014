@@ -12,6 +12,14 @@ if (!function_exists('setup_uams_object')){
 
 $UAMS = setup_uams_object();
 
+add_action('admin_enqueue_scripts', 'webcenter_scripts');
+
+function webcenter_scripts() {
+	if(wp_script_is('wp-color-picker', 'enqueued')){
+		wp_enqueue_script( 'webcenter-scripts', get_stylesheet_directory_uri() . '/assets/admin/js/custom-color.js');
+	}
+}
+
 
 // Custom Validation rule for Home Slider Content
 add_filter('acf/validate_value/name=hs_content', 'hs_content_character_count', 10, 4);

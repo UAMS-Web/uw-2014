@@ -3308,7 +3308,7 @@ address {
   right: 0px;
   height: 100%;
   width: 300px;
-  padding: 10px 0 0 90px;
+  padding: 10px 0 0 80px;
   transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   background: #4d4d4d;
   background: #2e2e2e;
@@ -3348,33 +3348,18 @@ address {
   color: #fafafa;
   text-decoration: underline;
 }
+#uams-container #quicklinks ul#big-links li [class^="ic-"]:before,
+#uams-container #quicklinks ul#big-links li [class*=" ic-"]:before,
+#uams-container #quicklinks ul#big-links li [class^="i-"]:before,
+#uams-container #quicklinks ul#big-links li [class*=" i-"]:before {
+  font-size: 30px;
+  color: #fff;
+}
 #uams-container #quicklinks ul#big-links li span {
   display: block;
   float: left;
   width: 30px;
   height: 30px;
-  background: url(assets/svg/uams-sprite.svg) no-repeat 0 0;
-}
-#uams-container #quicklinks ul#big-links li span.icon-maps {
-  background-position: 6px -303px;
-}
-#uams-container #quicklinks ul#big-links li span.icon-directories {
-  background-position: -84px -303px;
-}
-#uams-container #quicklinks ul#big-links li span.icon-calendar {
-  background-position: -39px -303px;
-}
-#uams-container #quicklinks ul#big-links li span.icon-libraries {
-  background-position: -129px -303px;
-}
-#uams-container #quicklinks ul#big-links li span.icon-medicine {
-  background-position: -264px -303px;
-}
-#uams-container #quicklinks ul#big-links li span.icon-myuams {
-  background-position: -174px -303px;
-}
-#uams-container #quicklinks ul#big-links li span.icon-uamstoday {
-  background-position: -219px -303px;
 }
 #uams-container #quicklinks h3 {
   font-size: 19px;
@@ -3391,96 +3376,136 @@ address {
   position: absolute;
   bottom: -19px;
 }
-#uams-container #quicklinks ul#little-links {
-  margin-left: 10px;
-}
-#uams-container #quicklinks ul#little-links li {
-  list-style: none;
+#uams-container #quicklinks h4 {
+  font-size: 19px;
+  color: white;
+  margin: 20px 0 15px 0;
   position: relative;
 }
-#uams-container #quicklinks ul#little-links li:before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  display: block;
-  background-color: #fafafa;
-  position: absolute;
-  left: -15px;
-  top: 13px;
-  border-top-right-radius: 100%;
-  border-bottom-right-radius: 100%;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
-}
-#uams-container #quicklinks ul#little-links li:nth-child(1):before {
-  background-color: #8a00ff;
-}
-#uams-container #quicklinks ul#little-links li:nth-child(2):before {
-  background-color: #8a00ff;
-}
-#uams-container #quicklinks ul#little-links li:nth-child(3):before {
-  background-color: #e49243;
-}
-#uams-container #quicklinks ul#little-links li:nth-child(4):before {
-  background-color: #9bc343;
-}
-#uams-container #quicklinks ul#little-links li:nth-child(5):before {
-  background-color: #9bc343;
-}
-#uams-container #quicklinks ul#little-links li:nth-child(6):before {
-  background: url(assets/svg/uams-sprite.svg) no-repeat 0px -159px;
-  height: 20px;
-  width: 20px;
-  top: 5px;
-  left: -28px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  background-size: 700px;
-}
-#uams-container #quicklinks ul#little-links li:nth-child(7):before {
-  background: url(assets/svg/uams-sprite.svg) no-repeat -37px -157px;
-  height: 20px;
-  width: 20px;
-  top: 5px;
-  left: -28px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  background-size: 690px;
-}
-#uams-container #quicklinks ul#little-links li:nth-child(6) {
-  margin-top: 30px;
-}
-#uams-container #quicklinks ul#little-links li:nth-child(6):after {
+#uams-container #quicklinks h4:after {
   content: "";
   display: block;
   width: 30px;
   height: 1px;
   background-color: white;
   position: absolute;
-  top: -15px;
-  left: -26px;
+  bottom: -12px;
 }
-#uams-container #quicklinks ul#little-links li:nth-child(7),
-#uams-container #quicklinks ul#little-links li:nth-child(6) {
-  margin-left: 15px;
-  padding-left: 3px;
+#uams-container #quicklinks ul#little-links {
+  margin-left: 5px;
+}
+#uams-container #quicklinks ul#little-links li {
+  list-style: none;
+  position: relative;
+}
+#uams-container #quicklinks ul#little-links li span {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+#uams-container #quicklinks ul#little-links li [class^="ic-"]:before,
+#uams-container #quicklinks ul#little-links li [class*=" ic-"]:before,
+#uams-container #quicklinks ul#little-links li [class^="i-"]:before,
+#uams-container #quicklinks ul#little-links li [class*=" i-"]:before {
+  font-size: 20px;
+  color: #fff;
+  line-height: 30px;
 }
 #uams-container #quicklinks ul#little-links li a {
-  font-family: "Fira Sans", sans-serif;
-  font-size: 19px;
+  font-size: 17px;
+  margin-left: 12px;
 }
 #uams-container #quicklinks ul#little-links li a:hover,
 #uams-container #quicklinks ul#little-links li a:focus {
   color: #fafafa;
   text-decoration: underline;
+}
+#uams-container #quicklinks ul#social {
+  list-style: none;
+  margin-top: 24px;
+}
+#uams-container #quicklinks ul#social [class^="ic-"]:before,
+#uams-container #quicklinks ul#social [class*=" ic-"]:before,
+#uams-container #quicklinks ul#social [class^="i-"]:before,
+#uams-container #quicklinks ul#social [class*=" i-"]:before {
+  font-size: 30px;
+  color: #fff;
+}
+#uams-container #quicklinks ul#social a {
+  font-size: 17px;
+  margin-left: 12px;
+}
+#uams-container #quicklinks ul#social a span {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  background: url(assets/svg/uams-sprite.svg) no-repeat 0 0;
+  background-size: 700px;
+  transition: 0.25s;
+}
+#uams-container #quicklinks ul#social a span.facebook {
+  background-position: 0px -159px;
+}
+#uams-container #quicklinks ul#social a span.twitter {
+  background-position: -37px -159px;
+}
+#uams-container #quicklinks ul#social a span.tumblr {
+  background-position: -297px -159px;
+}
+#uams-container #quicklinks ul#social a span.youtube {
+  background-position: -112px -185px;
+}
+#uams-container #quicklinks ul#social a span.linkedin {
+  background-position: -149px -159px;
+}
+#uams-container #quicklinks ul#social a span.pinterest {
+  background-position: -75px -159px;
+}
+#uams-container #quicklinks ul#social a span.google {
+  background-position: -223px -159px;
+}
+#uams-container #quicklinks ul#social a span.instagram {
+  background-position: -261px -159px;
+}
+#uams-container #quicklinks ul#social a:hover,
+#uams-container #quicklinks ul#social a:focus {
+  color: #fafafa;
+  text-decoration: underline;
+}
+#uams-container #quicklinks ul#social a:hover span.facebook,
+#uams-container #quicklinks ul#social a:focus span.facebook {
+  background-position: 0px -192px;
+}
+#uams-container #quicklinks ul#social a:hover span.twitter,
+#uams-container #quicklinks ul#social a:focus span.twitter {
+  background-position: -37px -192px;
+}
+#uams-container #quicklinks ul#social a:hover span.tumblr,
+#uams-container #quicklinks ul#social a:focus span.tumblr {
+  background-position: -297px -192px;
+}
+#uams-container #quicklinks ul#social a:hover span.youtube,
+#uams-container #quicklinks ul#social a:focus span.youtube {
+  background-position: -112px -192px;
+}
+#uams-container #quicklinks ul#social a:hover span.linkedin,
+#uams-container #quicklinks ul#social a:focus span.linkedin {
+  background-position: -149px -192px;
+}
+#uams-container #quicklinks ul#social a:hover span.pinterest,
+#uams-container #quicklinks ul#social a:focus span.pinterest {
+  background-position: -75px -192px;
+}
+#uams-container #quicklinks ul#social a:hover span.google,
+#uams-container #quicklinks ul#social a:focus span.google {
+  background-position: -223px -192px;
+}
+#uams-container #quicklinks ul#social a:hover span.instagram,
+#uams-container #quicklinks ul#social a:focus span.instagram {
+  background-position: -261px -192px;
 }
 #uams-container #quicklinks a {
   color: white;
@@ -9470,12 +9495,12 @@ label.screen-reader {
   font-weight: normal;
   font-style: normal;
 }
-[class^="i-"],
-[class*=" i-"] {
-  font-family: "Reddie Icons";
+[class^="i-"]:before,
+[class*=" i-"]:before {
   font-size: 70px;
   color: #9d2235;
   display: block;
+  font-family: 'Reddie Icons';
   speak: none;
   font-style: normal;
   font-weight: normal;
