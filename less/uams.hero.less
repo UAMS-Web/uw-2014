@@ -151,12 +151,15 @@
 		      background-size: cover;
 		    }
 
-		    #hero-bg #hero-container h1.uams-site-title ,
-		    div.container h1.uams-site-title2 {
-				padding-top: 40px;
-			    &:after{
-			    	background: none;
-			    }
+		    #hero-bg {
+				top: 20px;
+			    #hero-container h1.uams-site-title ,
+			    div.container h1.uams-site-title2 {
+					padding-top: 40px;
+				    &:after{
+				    	background: none;
+				    }
+				}
 			}
 
 			.container {
@@ -171,6 +174,9 @@
 			padding: 50px 20px 20px;
 			display: block;
 		  	height: auto;
+		  	#hero-bg{
+			  	top: 20px;
+		  	}
 		  	#hero-container {
 		  		h1 {
 		  			font-size: 35px;
@@ -179,7 +185,7 @@
 		  				background-size: 80%;
 		  				-moz-background-size: 80%;
 		  				-webkit-background-size: 80%;
-						top: -60px;
+// 						top: -60px;
 						left: -270px;
 		  			}
 		  		}

@@ -5096,7 +5096,7 @@ table th[class*="col-"] {
 }
 .uams-thinstrip button.uams-quicklinks {
   height: 45px;
-  padding-left: 38px;
+  padding-left: 37px;
   margin-left: -15px;
   margin-right: 0;
   padding-right: 54px;
@@ -5773,16 +5773,20 @@ table th[class*="col-"] {
     -o-background-size: cover;
     background-size: cover;
   }
+  .uams-hero-image.hero-mobile-image.hero-height #hero-bg,
+  .uams-hero-image.hero-mobile-image.hero-height2 #hero-bg {
+    top: 20px;
+  }
   .uams-hero-image.hero-mobile-image.hero-height #hero-bg #hero-container h1.uams-site-title,
   .uams-hero-image.hero-mobile-image.hero-height2 #hero-bg #hero-container h1.uams-site-title,
-  .uams-hero-image.hero-mobile-image.hero-height div.container h1.uams-site-title2,
-  .uams-hero-image.hero-mobile-image.hero-height2 div.container h1.uams-site-title2 {
+  .uams-hero-image.hero-mobile-image.hero-height #hero-bg div.container h1.uams-site-title2,
+  .uams-hero-image.hero-mobile-image.hero-height2 #hero-bg div.container h1.uams-site-title2 {
     padding-top: 40px;
   }
   .uams-hero-image.hero-mobile-image.hero-height #hero-bg #hero-container h1.uams-site-title:after,
   .uams-hero-image.hero-mobile-image.hero-height2 #hero-bg #hero-container h1.uams-site-title:after,
-  .uams-hero-image.hero-mobile-image.hero-height div.container h1.uams-site-title2:after,
-  .uams-hero-image.hero-mobile-image.hero-height2 div.container h1.uams-site-title2:after {
+  .uams-hero-image.hero-mobile-image.hero-height #hero-bg div.container h1.uams-site-title2:after,
+  .uams-hero-image.hero-mobile-image.hero-height2 #hero-bg div.container h1.uams-site-title2:after {
     background: none;
   }
   .uams-hero-image.hero-mobile-image.hero-height .container,
@@ -5795,6 +5799,9 @@ table th[class*="col-"] {
     display: block;
     height: auto;
   }
+  .uams-hero-image.hero-height #hero-bg {
+    top: 20px;
+  }
   .uams-hero-image.hero-height #hero-container h1 {
     font-size: 35px;
     padding: 0;
@@ -5803,7 +5810,6 @@ table th[class*="col-"] {
     background-size: 80%;
     -moz-background-size: 80%;
     -webkit-background-size: 80%;
-    top: -60px;
     left: -270px;
   }
   .uams-hero-image.hero-height2 {
