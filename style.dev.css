@@ -5904,7 +5904,7 @@ table th[class*="col-"] {
   font-weight: bold;
   font-style: italic;
   font-size: 21px;
-  line-height: 24px;
+  line-height: 36px;
 }
 .uams-homepage-slider-container .slideshow-controls .next-headline .uwn-slideshow-next-text:after {
   content: "\A";
