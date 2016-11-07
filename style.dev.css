@@ -5821,10 +5821,11 @@ table th[class*="col-"] {
     padding: 0;
   }
   .uams-hero-image.hero-height2 h1:after {
-    background-size: 80%;
-    -moz-background-size: 80%;
-    -webkit-background-size: 80%;
+    background-size: 100%;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
     left: -270px;
+    height: 100vh;
   }
   .uams-hero-image.hero-blank {
     display: block;
