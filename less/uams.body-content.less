@@ -86,7 +86,7 @@ a.more {
 	blockquote {
 		p {
 			font-family: @font-family-headline;
-			font-size: 21px;
+			font-size: floor(@font-size-base * 1.111);
 		}
 	}
 	.uams-site-title {
@@ -213,7 +213,7 @@ span.next-page {
 		bottom: -40px;
 	}
 	p, li, a {
-		font-size: 16px;
+		font-size: floor(@font-size-base * 0.9);
 		line-height: 1.6;
 	}
 	h1, h2, h3, h4, h5 {

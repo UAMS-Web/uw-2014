@@ -9,6 +9,7 @@
   bottom: -80px;
   left: auto;
   margin-left: -325px;
+  z-index: 10000;
 }
 .uams-admin-template a:hover span {
   display: block;

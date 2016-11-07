@@ -3113,7 +3113,6 @@ p {
   line-height: 1.72222;
   margin: 0 0 16px;
   font-weight: 300;
-  color: #212121;
   -webkit-font-smoothing: antialiased;
 }
 .lead {
@@ -6449,7 +6448,7 @@ span.next-page a:hover {
 .info-box p,
 .info-box li,
 .info-box a {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
 }
 .info-box h1,
@@ -7219,6 +7218,9 @@ ul.uams-mobile-menu ul.children {
   background-color: white;
   bottom: 3px;
   height: 8px;
+}
+.uams-sidebar p {
+  color: #212121;
 }
 body.home .uams-sidebar-menu {
   display: none;
@@ -9181,6 +9183,7 @@ label.screen-reader {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  padding-bottom: 10px;
 }
 .hero-height2 .container a.uams-btn {
   background-color: #fff;

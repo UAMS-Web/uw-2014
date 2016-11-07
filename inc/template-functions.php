@@ -206,7 +206,7 @@ if ( ! function_exists('get_uams_breadcrumbs') ) :
 
     if ( is_404() )
     {
-        $html .=  '<li class="current"><span>Woof!</span>';
+        $html .=  '<li class="current"><span>Ooops!</span>';
     } else
 
     if ( is_search() )
