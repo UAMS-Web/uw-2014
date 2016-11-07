@@ -60,7 +60,7 @@
 			.uwn-slideshow-next-text {
 				font-weight: bold;
 				font-style: italic;
-				font-size: 18px;
+				font-size: floor(@font-size-base * 1.111);
 				line-height: 24px;
 				&:after {
 					content: "\A";
@@ -79,7 +79,7 @@
 			.uwn-slideshow-next-title {
 				font-weight: bold;
 				cursor: pointer;
-				font-size: 20px;
+				font-size: floor(@font-size-base * 1.111);
 			}
 			.udub-slant span {
 				height: 5px; width: 57px;
@@ -104,8 +104,8 @@
 		div {
 			padding: 24px;
 			h3.slide-title {
-				font-size: 48px;
-				line-height: 52px;
+				font-size: ceil(@font-size-base * 2.5);
+				line-height: ceil(@font-size-base * 2.66);
 				text-transform: uppercase;
 				margin: 0;
 				.udub-slant span {
@@ -113,7 +113,7 @@
 				}
 			}
 			p {
-				font-size: 18px;
+				font-size: floor(@font-size-base * 1.111);;
 				line-height: 28px;
 				font-weight: 400;
 			}
@@ -141,12 +141,12 @@
 		.uams-homepage-slider {
 			div {
 				h3.slide-title {
-					font-size: 28px;
-					line-height: 32px;
+					font-size: floor(@font-size-base * 1.2);
+					line-height: ceil(@font-size-base * 1.2);
 				}
 				p {
-					font-size: 15px;
-					line-height: 18px;
+					font-size: floor(@font-size-base * 0.9);
+					line-height: floor(@font-size-base * 1.111);
 				}
 			}
 		}
@@ -184,8 +184,8 @@
 				 padding-left: 48px;
 				p {
 					padding-right: 45%;
-					font-size: 16px;
-					line-height: 24px;
+					font-size: floor(@font-size-base * 0.95);
+					line-height: floor(@font-size-base * 1.2);
 		    	}
 		    	h3.slide-title {
 			    	.udub-slant {

@@ -13,10 +13,10 @@ a.uams-btn {
   margin-right: 50px;
   z-index: 1;
   line-height: 24px;
-  font-size: 16px;
+  font-size: floor(@font-size-base * 0.9);
   &.btn-sm {
     padding: 8px 14px;
-    font-size: 14px;
+    font-size: floor(@font-size-base * 0.8);
     font-weight: @bold;
     border-radius:0;
     -webkit-border-radius:0;
@@ -71,7 +71,7 @@ a.uams-btn {
       background-color: lighten(@900grey, 10%);
     }
   }
-  &.btn-purple {
+  &.btn-red {
     background-color: @red;
     color: white;
     &:hover, &:focus {

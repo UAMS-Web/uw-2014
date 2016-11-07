@@ -127,7 +127,7 @@ class UAMS_Widget_Cards extends WP_Widget
         $the_image = $image_attributes = wp_get_attachment_image_src( $image, 'large' );
         echo  $the_image[0]; ?>
       )'></div>
-
+	  <div class="card-body">
       <span>
       <h3>
         <?php if ( ! empty( $link) ) : ?>
@@ -140,13 +140,13 @@ class UAMS_Widget_Cards extends WP_Widget
       <?php echo wpautop($text); ?>
 
       <?php if ( ! empty( $link) ) : ?>
-        <a href="<?php echo $link; ?>" class="pic-text-more uams-btn btn-sm btn-gold"><?php echo $linktext; ?></a>
+        <a href="<?php echo $link; ?>" class="pic-text-more uams-btn btn-sm btn-red"><?php echo $linktext; ?></a>
       <?php else: ?>
         <br/>
       <?php endif; ?>
       </span>
 
-
+	  </div>
 
       </div>
 
