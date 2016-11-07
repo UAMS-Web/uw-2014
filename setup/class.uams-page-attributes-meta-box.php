@@ -238,7 +238,6 @@ class UAMS_Page_Attributes_Meta_Box
     }
 */
 
-/*
     if ( isset( $_POST['sidebar_name'] ) ) {
       if ( ! empty( $_POST ) && check_admin_referer( 'sidebar_nonce', 'sidebar_name') ) { //limit to only pages
         if ($post_type) {
@@ -250,7 +249,6 @@ class UAMS_Page_Attributes_Meta_Box
         }
       }
     }
-*/
 
     if ( isset( $_POST['parent_name'] ) ) {
       if ( ! empty( $_POST ) && check_admin_referer( 'parent_nonce', 'parent_name') ) { //limit to only pages
