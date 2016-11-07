@@ -51,7 +51,7 @@
 		a {
 		font-family: @font-family-headline;
 		font-weight: @bold;
-		font-size: 19px;
+		font-size: floor(@font-size-base * 1.111);
 		padding: 5px 10px 21px 15px;
 			&:focus,
 			&:hover {
@@ -69,7 +69,7 @@
 			margin-right: 0;
 			margin-top: 6px;
 			margin-bottom: 6px;
-			font-size: 17px;
+			font-size: @font-size-base;
 			line-height: 28px;
 			&:hover,
 			&:focus {
@@ -89,7 +89,7 @@
 			margin-right: 0;
 			margin-top: 6px;
 			margin-bottom: 6px;
-			font-size: 17px;
+			font-size: @font-size-base;
 			line-height: 28px;
 			&:hover,
 			&:focus {
@@ -102,7 +102,7 @@
 
 		color: @red;
 		-webkit-font-smoothing: antialiased;
-		font-size: 22px;
+		font-size: ceil(@font-size-base * 1.2);
 		text-transform: uppercase;
 		padding: 24px 10px 19px 15px;
 		display: block;
@@ -172,7 +172,7 @@
 		border-bottom: thin solid #eee;
 		a {
 			color: #707070;
-			font-size: 17px;
+			font-size: @font-size-base;
 			margin: 10px 30px 0px 20px;
 			text-align: left;
 			padding: 0 10px;
@@ -226,7 +226,7 @@
 }
 @media only screen and (min-width : 993px) and (max-width : 1200px) {
 	.reddiedrops-item.reddiedrops-item a {
-		font-size: 18px;
+		font-size: floor(@font-size-base * 1.111);
 		padding-bottom: 23px;
 	}
 }
@@ -235,7 +235,7 @@
 
 @media only screen and (min-width : 768px) {
 	nav#reddiedrops .btn-myuams a {
-  		font-size: 18px;
+  		font-size: floor(@font-size-base * 1.111);
   		text-transform: none;
   		color: #FFF;
   		font-weight: @bold;

@@ -132,7 +132,7 @@ UAMS.Search = Backbone.View.extend({
     {
       case this.searchFeatures.uams :
         this.$el.find( 'input' ).attr( 'name', 'q' )
-        this.$el.find( 'form' ).attr( 'action', Backbone.history.location.protocol + '//uams.edu/search/' )
+        this.$el.find( 'form' ).attr( 'action', Backbone.history.location.protocol + '//www.uams.edu/google-search/' )
         return true;
 
       case this.searchFeatures.site :

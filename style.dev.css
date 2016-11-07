@@ -203,7 +203,7 @@ html {
 }
 body {
   font-family: "Fira Sans", sans-serif;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.72222;
   color: #212121;
   background-color: #ffffff;
@@ -263,8 +263,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 29px;
-  margin-bottom: 29px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   border: 0;
   border-top: 1px solid #c17480;
 }
@@ -338,8 +338,8 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 29px;
-  margin-bottom: 14.5px;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 h1 small,
 .h1 small,
@@ -361,8 +361,8 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 14.5px;
-  margin-bottom: 14.5px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 h4 small,
 .h4 small,
@@ -380,45 +380,45 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 37px;
+  font-size: 42px;
 }
 h2,
 .h2 {
-  font-size: 28px;
+  font-size: 31px;
 }
 h3,
 .h3 {
-  font-size: 23px;
+  font-size: 26px;
 }
 h4,
 .h4 {
-  font-size: 21px;
+  font-size: 23px;
 }
 h5,
 .h5 {
-  font-size: 18px;
+  font-size: 21px;
 }
 h6,
 .h6 {
-  font-size: 19px;
+  font-size: 22px;
 }
 p {
-  margin: 0 0 14.5px;
+  margin: 0 0 16px;
 }
 .lead {
-  margin-bottom: 29px;
-  font-size: 19px;
+  margin-bottom: 32px;
+  font-size: 21px;
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 25.5px;
+    font-size: 28.5px;
   }
 }
 small,
 .small {
-  font-size: 88%;
+  font-size: 89%;
 }
 cite {
   font-style: normal;
@@ -547,14 +547,14 @@ a.bg-danger:hover {
   background-color: #e4b9b9;
 }
 .page-header {
-  padding-bottom: 13.5px;
-  margin: 58px 0 29px;
+  padding-bottom: 15px;
+  margin: 64px 0 32px;
   border-bottom: 1px solid #f3e4e7;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 14.5px;
+  margin-bottom: 16px;
 }
 ul ul,
 ol ul,
@@ -578,7 +578,7 @@ ol ol {
 }
 dl {
   margin-top: 0;
-  margin-bottom: 29px;
+  margin-bottom: 32px;
 }
 dt,
 dd {
@@ -614,9 +614,9 @@ abbr[data-original-title] {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 14.5px 29px;
-  margin: 0 0 29px;
-  font-size: 21.25px;
+  padding: 16px 32px;
+  margin: 0 0 32px;
+  font-size: 23.75px;
   border-left: 5px solid #f3e4e7;
 }
 blockquote p:last-child,
@@ -666,7 +666,7 @@ blockquote:after {
   content: "";
 }
 address {
-  margin-bottom: 29px;
+  margin-bottom: 32px;
   font-style: normal;
   line-height: 1.72222;
 }
@@ -698,9 +698,9 @@ kbd kbd {
 }
 pre {
   display: block;
-  padding: 14px;
-  margin: 0 0 14.5px;
-  font-size: 16px;
+  padding: 15.5px;
+  margin: 0 0 16px;
+  font-size: 18px;
   line-height: 1.72222;
   word-break: break-all;
   word-wrap: break-word;
@@ -1506,8 +1506,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 29px;
-  font-size: 25.5px;
+  margin-bottom: 32px;
+  font-size: 28.5px;
   line-height: inherit;
   color: inherit;
   border: 0;
@@ -1551,7 +1551,7 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.72222;
   color: #c9c9c9;
 }
@@ -1560,7 +1560,7 @@ output {
   width: 100%;
   height: 41px;
   padding: 6px 12px;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.72222;
   color: #c9c9c9;
   background-color: #ffffff;
@@ -1651,7 +1651,7 @@ input[type="month"].input-lg {
 .checkbox {
   position: relative;
   display: block;
-  min-height: 29px;
+  min-height: 32px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -1722,7 +1722,7 @@ fieldset[disabled] .checkbox label {
 .form-horizontal .form-group-sm .form-control {
   height: 35px;
   padding: 5px 10px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -1746,7 +1746,7 @@ select[multiple].input-sm {
 .form-horizontal .form-group-lg .form-control {
   height: 45px;
   padding: 10px 16px;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.33;
   border-radius: 6px;
 }
@@ -1774,7 +1774,7 @@ select[multiple].input-lg {
 }
 .form-control-feedback {
   position: absolute;
-  top: 34px;
+  top: 37px;
   right: 0;
   z-index: 2;
   display: block;
@@ -2087,7 +2087,7 @@ select[multiple].input-lg {
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 36px;
+  min-height: 39px;
 }
 .form-horizontal .form-group {
   margin-left: -15px;
@@ -2161,7 +2161,7 @@ select[multiple].input-lg {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.72222;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -2480,19 +2480,19 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg {
   padding: 10px 16px;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.33;
   border-radius: 6px;
 }
 .btn-sm {
   padding: 5px 10px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.5;
   border-radius: 3px;
 }
 .btn-xs {
   padding: 1px 5px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -2995,7 +2995,7 @@ td.visible-print {
 }
 body {
   font-family: "Fira Sans", sans-serif;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.72222;
   color: #212121;
   background-color: #ffffff;
@@ -3033,7 +3033,7 @@ a:focus {
   height: auto;
 }
 .img-comment {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.2;
   font-style: italic;
   margin: 24px 0;
@@ -3072,59 +3072,59 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 29px;
-  margin-bottom: 14.5px;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 h4,
 h5,
 h6 {
-  margin-top: 14.5px;
-  margin-bottom: 14.5px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 h6 {
   font-weight: normal;
 }
 h1,
 .h1 {
-  font-size: 37px;
+  font-size: 42px;
 }
 h2,
 .h2 {
-  font-size: 28px;
+  font-size: 31px;
 }
 h3,
 .h3 {
-  font-size: 23px;
+  font-size: 26px;
 }
 h4,
 .h4 {
-  font-size: 21px;
+  font-size: 23px;
 }
 h5,
 .h5 {
-  font-size: 18px;
+  font-size: 21px;
 }
 h6,
 .h6 {
-  font-size: 19px;
+  font-size: 22px;
 }
 p {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.72222;
-  margin: 0 0 14.5px;
+  margin: 0 0 16px;
   font-weight: 300;
   color: #212121;
   -webkit-font-smoothing: antialiased;
 }
 .lead {
-  margin-bottom: 29px;
-  font-size: 26px;
+  margin-bottom: 32px;
+  font-size: 29px;
   line-height: 1.46428571;
   font-weight: 300;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 28.339px;
+    font-size: 31.673px;
   }
 }
 small,
@@ -3230,16 +3230,16 @@ a.bg-danger:hover {
   background-color: #e4b9b9;
 }
 .page-header {
-  padding-bottom: 13.5px;
-  margin: 58px 0 29px;
+  padding-bottom: 15px;
+  margin: 64px 0 32px;
   border-bottom: 1px solid #f3e4e7;
 }
 ul,
 ol {
-  margin-bottom: 14.5px;
+  margin-bottom: 16px;
 }
 dl {
-  margin-bottom: 29px;
+  margin-bottom: 32px;
 }
 dt,
 dd {
@@ -3260,17 +3260,17 @@ abbr[data-original-title] {
 blockquote {
   border-left: 3px solid #f3e4e7;
   padding: 0 0 0 16px;
-  margin: 0 0 29px;
+  margin: 0 0 32px;
 }
 blockquote p {
-  font-size: 19px;
+  font-size: 22px;
   line-height: 1.55;
   font-weight: normal;
   margin-bottom: .4em;
 }
 blockquote small,
 blockquote .small {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.72222;
   font-style: italic;
   color: inherit;
@@ -3289,7 +3289,7 @@ blockquote.pull-right small:after {
   content: "";
 }
 address {
-  margin-bottom: 29px;
+  margin-bottom: 32px;
   line-height: 1.72222;
 }
 /* Styles necessary for quicklinks */
@@ -3340,7 +3340,7 @@ address {
 }
 #uams-container #quicklinks ul#big-links li a {
   font-family: "Fira Sans", sans-serif;
-  font-size: 19px;
+  font-size: 22px;
   margin-left: 15px;
 }
 #uams-container #quicklinks ul#big-links li a:hover,
@@ -3362,7 +3362,7 @@ address {
   height: 30px;
 }
 #uams-container #quicklinks h3 {
-  font-size: 19px;
+  font-size: 22px;
   color: white;
   margin: 40px 0 30px 0;
   position: relative;
@@ -3377,7 +3377,7 @@ address {
   bottom: -19px;
 }
 #uams-container #quicklinks h4 {
-  font-size: 19px;
+  font-size: 22px;
   color: white;
   margin: 20px 0 15px 0;
   position: relative;
@@ -3413,7 +3413,7 @@ address {
   line-height: 30px;
 }
 #uams-container #quicklinks ul#little-links li a {
-  font-size: 17px;
+  font-size: 19px;
   margin-left: 12px;
 }
 #uams-container #quicklinks ul#little-links li a:hover,
@@ -3433,7 +3433,7 @@ address {
   color: #fff;
 }
 #uams-container #quicklinks ul#social a {
-  font-size: 17px;
+  font-size: 19px;
   margin-left: 12px;
 }
 #uams-container #quicklinks ul#social a span {
@@ -4286,7 +4286,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 29px;
+  margin-bottom: 32px;
   border: 1px solid #E7E7E7;
 }
 .table > thead > tr > th,
@@ -4467,7 +4467,7 @@ table th[class*="col-"] {
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
-    margin-bottom: 21.75px;
+    margin-bottom: 24px;
     overflow-y: hidden;
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -4642,7 +4642,7 @@ table th[class*="col-"] {
   color: white;
   text-indent: 0px;
   text-align: center;
-  font-size: 17px;
+  font-size: 19px;
   left: 70%;
 }
 .uams-player .video-js .vjs-control-bar .vjs-current-time span {
@@ -4651,7 +4651,7 @@ table th[class*="col-"] {
 .uams-player .video-js .vjs-control-bar .vjs-duration {
   text-indent: 0px;
   text-align: center;
-  font-size: 17px;
+  font-size: 19px;
   left: 78%;
 }
 .uams-player .video-js .vjs-control-bar .vjs-duration span {
@@ -4662,7 +4662,7 @@ table th[class*="col-"] {
 }
 .uams-player .video-js .vjs-control-bar .vjs-time-divider {
   color: gray;
-  font-size: 17px;
+  font-size: 19px;
   position: absolute;
   top: 11px;
   left: 77%;
@@ -5418,7 +5418,7 @@ table th[class*="col-"] {
 .reddiedrops-item.reddiedrops-item a {
   font-family: "Fira Sans", sans-serif;
   font-weight: 800;
-  font-size: 19px;
+  font-size: 21px;
   padding: 5px 10px 21px 15px;
 }
 .reddiedrops-item.reddiedrops-item a:focus,
@@ -5436,7 +5436,7 @@ table th[class*="col-"] {
   margin-right: 0;
   margin-top: 6px;
   margin-bottom: 6px;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 28px;
 }
 .reddiedrops-item.reddiedrops-item li a:hover,
@@ -5456,7 +5456,7 @@ table th[class*="col-"] {
   margin-right: 0;
   margin-top: 6px;
   margin-bottom: 6px;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 28px;
 }
 .reddiedrops-item.reddiedrops-item li li a:hover,
@@ -5467,7 +5467,7 @@ table th[class*="col-"] {
 .reddiedrops-item a {
   color: #9d2235;
   -webkit-font-smoothing: antialiased;
-  font-size: 22px;
+  font-size: 23px;
   text-transform: uppercase;
   padding: 24px 10px 19px 15px;
   display: block;
@@ -5535,7 +5535,7 @@ table th[class*="col-"] {
 }
 .reddiedrops-menu li a {
   color: #707070;
-  font-size: 17px;
+  font-size: 19px;
   margin: 10px 30px 0px 20px;
   text-align: left;
   padding: 0 10px;
@@ -5579,13 +5579,13 @@ table th[class*="col-"] {
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
   .reddiedrops-item.reddiedrops-item a {
-    font-size: 18px;
+    font-size: 21px;
     padding-bottom: 23px;
   }
 }
 @media only screen and (min-width: 768px) {
   nav#reddiedrops .btn-myuams a {
-    font-size: 18px;
+    font-size: 21px;
     text-transform: none;
     color: #FFF;
     font-weight: 800;
@@ -6222,7 +6222,7 @@ table th[class*="col-"] {
   font-family: "Fira Sans", sans-serif;
   color: #535353;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 17px;
   padding: 0 25px 0 0;
   display: block;
   white-space: nowrap;
@@ -6342,6 +6342,15 @@ a.more:after {
 .uams-body .uams-site-title span {
   font-weight: 800;
 }
+.uams-body a.uams-site-title {
+  color: #fff;
+}
+.uams-body a.uams-site-title:focus,
+.uams-body a.uams-site-title:hover {
+  color: #fff;
+  border-bottom: none;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
 .uams-body div.uams-site-title {
   margin-top: 29px;
   margin-bottom: 14.5px;
@@ -6405,7 +6414,6 @@ span.next-page a:hover {
 }
 .uams-body-copy a {
   text-decoration: none;
-  font-weight: 400;
 }
 .info-box {
   width: 310px;
@@ -6852,14 +6860,14 @@ ul.uams-sidebar-menu > div span.homelink,
 ul.uams-mobile-menu > div span.homelink {
   display: none;
   color: #9d2235;
-  font-size: 25px;
+  font-size: 21px;
 }
 ul.uams-sidebar-menu li.pagenav ul,
 ul.uams-mobile-menu li.pagenav ul,
 ul.uams-sidebar-menu > div ul,
 ul.uams-mobile-menu > div ul {
   line-height: 1.3;
-  font-size: 19px;
+  font-size: 22px;
 }
 ul.uams-sidebar-menu li.pagenav ul li.current_page_item,
 ul.uams-mobile-menu li.pagenav ul li.current_page_item,
@@ -7025,7 +7033,7 @@ ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children,
 ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children,
 ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children {
   display: block;
-  font-size: 17px;
+  font-size: 19px;
   background-color: white;
 }
 ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li,
@@ -7263,7 +7271,7 @@ body.action-barul.uams-mobile-menu {
     float: right;
     margin-top: -55px;
     margin-right: -10px;
-    font-size: 14.16666667px;
+    font-size: 15.83333333px;
     line-height: 1.43518333;
     font-family: "Fira Sans", sans-serif;
     font-weight: 800;
@@ -7424,7 +7432,7 @@ img {
 }
 .wp-caption-text {
   font-size: 15px;
-  line-height: 22.30769231px;
+  line-height: 24.61538462px;
   margin-top: 15px;
 }
 .wp-media-credit {
@@ -8495,7 +8503,7 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
   -o-transition: color 0.25s linear;
   -webkit-transition: color 0.25s linear;
   transition: color 0.25s linear;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
 }
 .checkbox input,
@@ -10586,24 +10594,24 @@ ul.shortcode-blogroll-mini {
   margin: -13.5% -20% 0 -19.5%;
   height: 200px;
 }
-.cards-widget .boundless-card h3 {
+.cards-widget .styled-card h3 {
   font-size: 30px;
 }
-.cards-widget .boundless-card h3 a {
+.cards-widget .styled-card h3 a {
   color: white;
 }
-.cards-widget .boundless-card .udub-slant {
+.cards-widget .styled-card .udub-slant {
   margin: 20px 0 25px 0;
 }
-.cards-widget .boundless-card .udub-slant span {
+.cards-widget .styled-card .udub-slant span {
   height: 8px;
   width: 100px;
   background-color: #616161;
 }
-.cards-widget .boundless-card p {
+.cards-widget .styled-card p {
   padding-bottom: 20px;
 }
-.cards-widget .boundless-card .card-image {
+.cards-widget .styled-card .card-image {
   position: absolute;
   z-index: 0;
   top: 0;
@@ -10643,17 +10651,17 @@ ul.shortcode-blogroll-mini {
   color: white;
 }
 .cards-widget .enhanced-card,
-.cards-widget .boundless-card {
+.cards-widget .styled-card {
   position: relative;
   padding: 15px 35px 30px 35px;
 }
 .cards-widget .enhanced-card > span,
-.cards-widget .boundless-card > span {
+.cards-widget .styled-card > span {
   position: relative;
   z-index: 0;
 }
 .cards-widget .enhanced-card .card-image,
-.cards-widget .boundless-card .card-image {
+.cards-widget .styled-card .card-image {
   position: absolute;
   z-index: 0;
   top: 0;
@@ -10662,7 +10670,7 @@ ul.shortcode-blogroll-mini {
   bottom: 0;
 }
 .cards-widget .enhanced-card p,
-.cards-widget .boundless-card p {
+.cards-widget .styled-card p {
   color: white;
   font-size: 16px;
   line-height: 1.35;
