@@ -32,6 +32,7 @@
   		#hero-container {
   			padding-left: 0;
 			position: static;
+			padding-bottom: 20px;
   			h1 {
 			  line-height: 1;
 			  padding: 40px 20% 0 0;
@@ -41,13 +42,16 @@
 			    content: "";
 			    display: block;
 			    position: absolute;
-			    top: 0;
 			    height: 360px;
 			    left: -140px;
   				opacity: .3;
   				width: 600px;
 			    background: url(assets/svg/triangle-light.svg) no-repeat 0 0;
 			    z-index: 0;
+			    top: 50%;
+			    -webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
 			  }
 			}
   		}
@@ -56,6 +60,11 @@
   		}
   		#hero-bg {
   			padding: 0;
+  			position: relative;
+  			top: 50%;
+  			-webkit-transform: translateY(-50%);
+  			-ms-transform: translateY(-50%);
+  			transform: translateY(-50%);
 		}
 		.udub-slant span {
 		  background-color: @700grey;

@@ -2959,14 +2959,14 @@ td.visible-print {
   src: url('assets/fonts/firasans-heavy.eot');
   src: url('assets/fonts/firasans-heavy.eot?#iefix') format('embedded-opentype'), url('assets/fonts/firasans-heavy.woff') format('woff'), url('assets/fonts/firasans-heavy.ttf') format('truetype'), url('assets/fonts/firasans-heavy.svg#firasans-heavy') format('svg');
   font-weight: 900;
-  font-style: italic;
+  font-style: normal;
 }
 @font-face {
   font-family: 'Fira Sans';
   src: url('assets/fonts/firasans-heavyitalic.eot');
   src: url('assets/fonts/firasans-heavyitalic.eot?#iefix') format('embedded-opentype'), url('assets/fonts/firasans-heavyitalic.woff') format('woff'), url('assets/fonts/firasans-heavyitalic.ttf') format('truetype'), url('assets/fonts/firasans-heavyitalic.svg#firasans-heavy') format('svg');
   font-weight: 900;
-  font-style: normal;
+  font-style: italic;
 }
 @font-face {
   font-family: 'Fira Sans';
@@ -3708,7 +3708,7 @@ div.uams-slideshow.photo-slider > div.slide div p {
 }
 div.uams-slideshow.photo-slider .has-text:after {
   font-family: "Fira Sans", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
   content: "i";
   font-size: 13px;
   text-align: center;
@@ -5668,6 +5668,7 @@ table th[class*="col-"] {
 .no-uams-hero-image.hero-height #hero-container {
   padding-left: 0;
   position: static;
+  padding-bottom: 20px;
 }
 .uams-hero-image.hero-height #hero-container h1,
 .no-uams-hero-image.hero-height #hero-container h1 {
@@ -5681,13 +5682,16 @@ table th[class*="col-"] {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
   height: 360px;
   left: -140px;
   opacity: .3;
   width: 600px;
   background: url(assets/svg/triangle-light.svg) no-repeat 0 0;
   z-index: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .uams-hero-image.hero-height:after,
 .no-uams-hero-image.hero-height:after {
@@ -5696,6 +5700,11 @@ table th[class*="col-"] {
 .uams-hero-image.hero-height #hero-bg,
 .no-uams-hero-image.hero-height #hero-bg {
   padding: 0;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .uams-hero-image.hero-height .udub-slant span,
 .no-uams-hero-image.hero-height .udub-slant span {
@@ -9101,6 +9110,10 @@ label.screen-reader {
 #hero-bg {
   position: relative;
   padding: 90px 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 #hero-bg div.orig,
 #hero-bg div.blrd {
@@ -9121,11 +9134,12 @@ label.screen-reader {
   text-align: left;
   position: relative;
   z-index: 1;
+  padding-bottom: 20px;
 }
 #hero-container h1 {
   font-family: "Fira Sans", sans-serif;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 75px;
   color: #fff;
 }
@@ -9136,36 +9150,6 @@ label.screen-reader {
   line-height: 23px;
   margin: 0 0 30px;
   width: 70%;
-}
-#hero-container #hashtag {
-  position: absolute;
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 800;
-  color: #9d2235;
-  font-size: 21px;
-  overflow: hidden;
-  z-index: 1;
-}
-#hero-container #hashtag span {
-  background-color: rgba(255, 255, 255, 0.9);
-  -webkit-transform: skew(-22deg, 0);
-  -ms-transform: skewX(-22deg) skewY(0);
-  transform: skew(-22deg, 0);
-  padding: 2px 25px 3px 28px;
-  display: block;
-  margin: 0 10px 0 -10px;
-}
-#hero-container #hashtag span span {
-  transform: skew(22deg, 0);
-  display: block;
-  background-color: transparent;
-}
-#hero-container #hashtag span span big {
-  font-size: xx-large;
-}
-#hero-container #hashtag span span small {
-  font-family: 'Uni Sans', sans-serif;
-  font-weight: 300;
 }
 #hero-container a.uams-btn {
   background-color: #fff;
@@ -9191,40 +9175,12 @@ label.screen-reader {
 .hero-height2 {
   height: 245px;
 }
-.hero-height2 .container #hashtag.mask {
-  position: inherit;
-  visibility: hidden;
-  min-height: 70px;
-}
-.hero-height2 .container #hashtag {
-  position: absolute;
-  top: 0px;
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 800;
-  color: #9d2235;
-  font-size: 21px;
-  overflow: hidden;
-}
-.hero-height2 .container #hashtag span {
-  background-color: rgba(255, 255, 255, 0.9);
-  -webkit-transform: skew(-22deg, 0);
-  -ms-transform: skewX(-22deg) skewY(0);
-  transform: skew(-22deg, 0);
-  padding: 2px 25px 3px 28px;
-  display: block;
-  margin: 0 10px 0 -10px;
-}
-.hero-height2 .container #hashtag span span {
-  transform: skew(22deg, 0);
-  display: block;
-  background-color: transparent;
-}
-.hero-height2 .container #hashtag span span big {
-  font-size: xx-large;
-}
-.hero-height2 .container #hashtag span span small {
-  font-family: 'Uni Sans', sans-serif;
-  font-weight: 300;
+.hero-height2 .container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .hero-height2 .container a.uams-btn {
   background-color: #fff;
@@ -9234,10 +9190,9 @@ label.screen-reader {
   background-color: #616161;
 }
 .hero-height2 h1 {
-  font-family: "Fira Sans", sans-serif;
   text-transform: uppercase;
   color: #FFF !important;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 60px;
   margin: 0;
   line-height: 1;
@@ -9249,13 +9204,16 @@ label.screen-reader {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
   height: 360px;
   left: -140px;
   opacity: .3;
   width: 600px;
   background: url(assets/svg/triangle-light.svg) no-repeat 0 0;
   z-index: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .hero-height2:before {
   display: none;
@@ -9277,25 +9235,6 @@ label.screen-reader {
 @media only screen and (max-width: 767px) {
   .hero-content .uams-site-title {
     display: block;
-  }
-  #hero-container #hashtag {
-    margin-top: -50px;
-    font-size: 18px;
-  }
-  #hero-container #hashtag span {
-    padding: 2px 5px 3px 18px;
-  }
-  #hero-container #hashtag span span big {
-    font-size: 18px;
-  }
-  div.uams-hero-image.hero-height2 div.container #hashtag {
-    font-size: 18px;
-  }
-  div.uams-hero-image.hero-height2 div.container #hashtag span span big {
-    font-size: 18px;
-  }
-  div.uams-hero-image.hero-height2 div.container #hashtag.mask {
-    position: relative;
   }
 }
 [class^="ic-"]:before,
