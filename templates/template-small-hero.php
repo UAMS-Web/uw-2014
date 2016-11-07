@@ -9,29 +9,29 @@
       if(!$url){
         $url = get_site_url() . "/wp-content/themes/uams-2016/assets/headers/uams-pattern-grey.png";
       }
-      $mobileimage = get_post_meta($post->ID, "mobileimage");
+      $mobileimage = get_field('home_image_mobile');
       $hasmobileimage = '';
       if( !empty($mobileimage) && $mobileimage[0] !== "") {
-        $mobileimage = $mobileimage[0];
+        //$mobileimage = $mobileimage[0];
         $hasmobileimage = 'hero-mobile-image';
       }
       $sidebar = get_post_meta($post->ID, "sidebar");
-      $banner = get_post_meta($post->ID, "banner");
-      $buttontext = get_post_meta($post->ID, "buttontext");
-      $buttonlink = get_post_meta($post->ID, "buttonlink");   ?>
+
+      $buttontext = get_field('home_image_button_text');
+      $external = get_field( 'home_image_external' );
+      $externalurl = get_field( 'home_image_external_url' );
+      $internalurl = get_field( 'home_image_internal_url' );
+	  ?>
 
 <div class="uams-hero-image hero-height2 <?php echo $hasmobileimage ?>" style="background-image: url(<?php echo $url ?>);">
      <?php if( !empty($mobileimage) ) { ?>
-    <div class="mobile-image" style="background-image: url(<?php echo $mobileimage ?>);"></div>
+    <div class="mobile-image" style="background-image: url(<?php echo $mobileimage['url'] ?>);"></div>
     <?php } ?>
       <div class="container">
-        <?php if(!empty($banner) && $banner[0]){ ?>
-        <div id="hashtag"><span><span><?php echo $banner[0] ? $banner[0] : ''; ?></span></span></div>
-        <?php } ?>
         <h1 class="uams-site-title2"><?php the_title(); ?></h1>
         <span class="udub-slant"><span></span></span>
-        <?php if(!empty($buttontext) && $buttontext[0]){ ?>
-        <a class="uams-btn btn-sm btn-none" href="<?php echo $buttonlink[0] ? $buttonlink[0] : ''; ?>"><?php echo $buttontext[0] ? $buttontext[0] : ''; ?></a>
+        <?php if(!empty($buttontext)){ ?>
+        <a class="uams-btn btn-sm btn-none" href="<?php echo $external ? $externalurl : $internalurl; ?>"><?php echo $buttontext ? $buttontext : ''; ?></a>
         <?php } ?>
       </div>
 </div>

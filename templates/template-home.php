@@ -64,7 +64,8 @@
       }
       //$mobileimage = get_post_meta($post->ID, "home_image_mobile");
       $hasmobileimage = '';
-      if( get_field('home_image_mobile')) {
+      $mobileimage = get_field('home_image_mobile');
+      if( !empty($mobileimage)) {
         $hasmobileimage = 'hero-mobile-image';
       }
       $sidebar = get_post_meta($post->ID, "sidebar");   ?>
@@ -72,7 +73,7 @@
 
 <div class="uams-hero-image hero-height <?php echo $hasmobileimage ?>" style="background-image: url(<?php echo $url ?>);">
     <?php if( get_field('home_image_mobile') ) { ?>
-    <div class="mobile-image" style="background-image: url(<?php echo get_field('home_image_mobile') ?>);"></div>
+    <div class="mobile-image" style="background-image: url(<?php echo $mobileimage['url'] ?>);"></div>
     <?php } ?>
     <div id="hero-bg">
       <div id="hero-container" class="container">
