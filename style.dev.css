@@ -6847,7 +6847,7 @@ ul.uams-mobile-menu li.pagenav span,
 ul.uams-sidebar-menu > div span,
 ul.uams-mobile-menu > div span {
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   padding: 10px 10px 10px 20px;
 }
 ul.uams-sidebar-menu li.pagenav a.homelink,
@@ -8871,7 +8871,7 @@ body.error404 .woof {
   font-family: "Fira Sans", sans-serif;
   color: #fff;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 22px;
   position: relative;
   margin: 41px 0 11px 0;
 }
@@ -10213,7 +10213,7 @@ label.screen-reader {
 .icon-menu a {
   line-height: 1.3;
   font-family: "Fira Sans", sans-serif;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 800;
   color: #9d2235;
   display: inline-block;
