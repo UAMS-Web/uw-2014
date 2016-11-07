@@ -5767,7 +5767,7 @@ table th[class*="col-"] {
     height: 480px;
     position: absolute;
     right: 0;
-    background-position: center bottom;
+    background-position: center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -5792,7 +5792,6 @@ table th[class*="col-"] {
   .uams-hero-image.hero-mobile-image.hero-height .container,
   .uams-hero-image.hero-mobile-image.hero-height2 .container {
     position: absolute;
-    top: 0;
   }
   .uams-hero-image.hero-height {
     padding: 50px 20px 20px;
@@ -5825,7 +5824,6 @@ table th[class*="col-"] {
     background-size: 80%;
     -moz-background-size: 80%;
     -webkit-background-size: 80%;
-    top: -60px;
     left: -270px;
   }
   .uams-hero-image.hero-blank {
