@@ -8801,8 +8801,15 @@ a.uams-btn:hover:before,
 a.uams-btn:focus:before {
   background-color: #c72b43;
 }
-a.uams-btn.btn-gold:hover:before {
-  background-color: #3b3b3b;
+a.uams-btn.btn-grey {
+  background-color: #fff;
+}
+a.uams-btn.btn-grey:before {
+  background-color: #616161;
+  border-left: 5px solid rgba(0, 0, 0, 0.3);
+}
+a.uams-btn.btn-grey:hover:before {
+  background-color: #545454;
 }
 a.uams-btn.btn-red {
   background-color: #9d2235;
@@ -8818,6 +8825,36 @@ a.uams-btn.btn-red:before {
 }
 a.uams-btn.btn-red:hover:before {
   background-color: #491019;
+}
+a.uams-btn.btn-blue {
+  background-color: #e0e0e0;
+  color: #616161;
+}
+a.uams-btn.btn-blue:hover,
+a.uams-btn.btn-blue:focus {
+  background-color: #2d4e68;
+  color: #eeeeee;
+}
+a.uams-btn.btn-blue:before {
+  background-color: #2d4e68;
+}
+a.uams-btn.btn-blue:hover:before {
+  background-color: #162633;
+}
+a.uams-btn.btn-green {
+  background-color: #e0e0e0;
+  color: #616161;
+}
+a.uams-btn.btn-green:hover,
+a.uams-btn.btn-green:focus {
+  background-color: #277237;
+  color: #eeeeee;
+}
+a.uams-btn.btn-green:before {
+  background-color: #277237;
+}
+a.uams-btn.btn-green:hover:before {
+  background-color: #14391c;
 }
 a.uams-btn:after {
   content: "";
@@ -8849,12 +8886,6 @@ a.uams-btn.btn-external:after {
 }
 a.uams-btn.btn-plus:after {
   background-position: -95px -539px;
-}
-a.uams-btn.btn-gold:before {
-  background-color: #212121;
-}
-a.uams-btn.btn-gold:before {
-  border-left: 5px solid rgba(0, 0, 0, 0.1);
 }
 body.error404 .woof {
   height: 400px;
@@ -10509,7 +10540,7 @@ ul.shortcode-blogroll-mini {
   text-transform: uppercase;
 }
 .cards-widget .default-card {
-  background-color: #EEEADF;
+  background-color: #eeeeee;
   padding: 10% 14% 5% 14%;
   text-align: left;
   background-image: url('assets/images/stripes-dark-tile.svg');

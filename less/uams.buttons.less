@@ -66,9 +66,14 @@ a.uams-btn {
       background-color: lighten(@red, 10%);
     }
   }
-  &.btn-gold {
+  &.btn-grey {
+	background-color: #fff;
+	&:before {
+		background-color: @700grey;
+		border-left: 5px solid rgba(0,0,0,.3);
+	}
     &:hover:before {
-      background-color: lighten(@900grey, 10%);
+      background-color: darken(@700grey, 5%);
     }
   }
   &.btn-red {
@@ -83,6 +88,34 @@ a.uams-btn {
     }
     &:hover:before {
       background-color: darken(@red, 20%);
+    }
+  }
+  &.btn-blue {
+    background-color: @300grey;
+    color: @700grey;
+    &:hover, &:focus {
+      background-color: darken(@blue, 5%);
+      color: @200grey;
+    }
+    &:before {
+      background-color: darken(@blue, 5%);
+    }
+    &:hover:before {
+      background-color: darken(@blue, 20%);
+    }
+  }
+  &.btn-green {
+    background-color: @300grey;
+    color: @700grey;
+    &:hover, &:focus {
+      background-color: darken(@green, 5%);
+      color: @200grey;
+    }
+    &:before {
+      background-color: darken(@green, 5%);
+    }
+    &:hover:before {
+      background-color: darken(@green, 20%);
     }
   }
   &:after {
@@ -115,12 +148,6 @@ a.uams-btn {
   }
   &.btn-plus:after {
       background-position: -95px -539px;
-  }
-  &.btn-gold:before {
-    background-color: @900grey;
-  }
-  &.btn-gold:before {
-    border-left: 5px solid rgba(0,0,0,.1);
   }
 
 }
