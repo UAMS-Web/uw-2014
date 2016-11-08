@@ -8811,6 +8811,7 @@ a.uams-btn.btn-red {
 a.uams-btn.btn-red:hover,
 a.uams-btn.btn-red:focus {
   background-color: #881d2e;
+  color: #eeeeee;
 }
 a.uams-btn.btn-red:before {
   background-color: #881d2e;

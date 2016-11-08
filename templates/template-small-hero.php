@@ -16,7 +16,7 @@
         $hasmobileimage = 'hero-mobile-image';
       }
       $sidebar = get_post_meta($post->ID, "sidebar");
-
+	  $button = get_field( 'home_image_add_button' );
       $buttontext = get_field('home_image_button_text');
       $external = get_field( 'home_image_external' );
       $externalurl = get_field( 'home_image_external_url' );
@@ -30,7 +30,7 @@
       <div class="container">
         <h1 class="uams-site-title2"><?php the_title(); ?></h1>
         <span class="udub-slant"><span></span></span>
-        <?php if(!empty($buttontext)){ ?>
+        <?php if(!empty($buttontext) && $button ){ ?>
         <a class="uams-btn btn-sm btn-none" href="<?php echo $external ? $externalurl : $internalurl; ?>"><?php echo $buttontext ? $buttontext : ''; ?></a>
         <?php } ?>
       </div>
