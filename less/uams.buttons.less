@@ -59,6 +59,27 @@ a.uams-btn {
       background-position: -83px -465px;
     }
   }
+  &.btn-lg {
+    padding: 16px 30px;
+    font-size: floor(@font-size-base * 1.3);
+    font-weight: @bold;
+    border-radius:0;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+	    &:before {
+	      width: 60px;
+	      right: -60px;
+	    }
+	    &:after {
+	      width: 64px;
+	      height: 45px;
+	      top: 50%;
+	      margin-top: -30px;
+	      right: -60px;
+	      background-size: 1000px;
+	      background-position: -38px -550px;
+	    }
+   }
   &:hover, &:focus {
     color: @900grey;
     background-color: #f5f5f5;
@@ -67,7 +88,7 @@ a.uams-btn {
     }
   }
   &.btn-grey {
-	background-color: #fff;
+	background-color: #f5f5f5;
 	&:before {
 		background-color: @700grey;
 		border-left: 5px solid rgba(0,0,0,.3);

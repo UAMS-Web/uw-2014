@@ -8792,6 +8792,27 @@ a.uams-btn.btn-sm.btn-external:after {
 a.uams-btn.btn-sm.btn-plus:after {
   background-position: -83px -465px;
 }
+a.uams-btn.btn-lg {
+  padding: 16px 30px;
+  font-size: 24px;
+  font-weight: 800;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+a.uams-btn.btn-lg:before {
+  width: 60px;
+  right: -60px;
+}
+a.uams-btn.btn-lg:after {
+  width: 64px;
+  height: 45px;
+  top: 50%;
+  margin-top: -30px;
+  right: -60px;
+  background-size: 1000px;
+  background-position: -38px -550px;
+}
 a.uams-btn:hover,
 a.uams-btn:focus {
   color: #212121;
@@ -8802,7 +8823,7 @@ a.uams-btn:focus:before {
   background-color: #c72b43;
 }
 a.uams-btn.btn-grey {
-  background-color: #fff;
+  background-color: #f5f5f5;
 }
 a.uams-btn.btn-grey:before {
   background-color: #616161;
