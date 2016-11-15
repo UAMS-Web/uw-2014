@@ -85,7 +85,7 @@ class UAMS_Widget_Cards extends WP_Widget
     </p>
 -->
     <p>
-    <label for="<?php echo $this->get_field_id('styled'); ?>">Styled card (<a id="styled-preview" href="#">preview<span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/widget-card-boundless.jpg" alt="" width="" height="" />
+    <label for="<?php echo $this->get_field_id('styled'); ?>">Styled card (<a id="styled-preview" href="#">preview<span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/widget-card-styled.jpg" alt="" width="" height="" />
 </span></a>)
      <input id="kjhsdf" type="radio" name="<?php echo $this->get_field_name('radio_card'); ?>" value="styled-card"  <?php checked( $radio , "styled-card" ); ?>/></label>
     </p>

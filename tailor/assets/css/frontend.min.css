@@ -6,3 +6,7 @@
 .tailor-ui .tailor-custom-wrapper h2 {
   font-style: italic;
 }
+
+.tailor-ui .tailor-section__content {
+	max-width: inherit;
+}

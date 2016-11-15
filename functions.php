@@ -286,3 +286,25 @@ function tailor_remove_default_elements( $element_manager ) {
 
 }
 add_action( 'tailor_register_elements', 'tailor_remove_default_elements' );
+
+/**
+ * Modifies the default colorpicker palettes.
+ *
+ * @param array $control_args
+ *
+ * @return array $control_args
+ */
+/*
+function tailor_modify_colorpicker( $control_args ) {
+	$control_args['palettes'] = array(
+		'#9d2235',
+		'#212121',
+		'#bdbdbd',
+		'#2e8540',
+		'#355b7a',
+		'#fdb81e',
+	);
+	return $control_args;
+}
+add_action( 'tailor_control_args_colorpicker', 'tailor_modify_colorpicker' );
+*/
