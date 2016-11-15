@@ -294,17 +294,18 @@ add_action( 'tailor_register_elements', 'tailor_remove_default_elements' );
  *
  * @return array $control_args
  */
-/*
-function tailor_modify_colorpicker( $control_args ) {
-	$control_args['palettes'] = array(
-		'#9d2235',
-		'#212121',
-		'#bdbdbd',
-		'#2e8540',
-		'#355b7a',
-		'#fdb81e',
-	);
-	return $control_args;
+if (!function_exists('uams_tailor_modify_colorpicker')){
+	function uams_tailor_modify_colorpicker( $control_args ) {
+		$control_args['palettes'] = array(
+			'#9d2235',
+			'#212121',
+			'#bdbdbd',
+			'#ffffff',
+			'#2e8540',
+			'#355b7a',
+			'#fdb81e',
+		);
+		return $control_args;
+	}
+	add_action( 'tailor_control_args_colorpicker', 'uams_tailor_modify_colorpicker' );
 }
-add_action( 'tailor_control_args_colorpicker', 'tailor_modify_colorpicker' );
-*/
