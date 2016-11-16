@@ -5799,7 +5799,7 @@ table th[class*="col-"] {
     height: auto;
   }
   .uams-hero-image.hero-height #hero-bg {
-    top: 20px;
+    top: 50%;
   }
   .uams-hero-image.hero-height #hero-container h1 {
     font-size: 35px;
