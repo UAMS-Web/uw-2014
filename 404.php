@@ -13,7 +13,7 @@
         <div class="row show-grid">
           <div class="col-md-12">
 
-            <div class="woof" style="background: url( <?php echo get_template_directory_uri() . '/assets/images/reddie-404.png' ?>) center center no-repeat"></div>
+            <div class="reddie" style="background: url( <?php echo get_template_directory_uri() . '/assets/images/reddie-404.png' ?>) center center no-repeat"></div>
 
             <div class="row show-grid">
 

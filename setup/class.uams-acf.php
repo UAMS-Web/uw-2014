@@ -31,7 +31,7 @@ function my_acf_add_local_field_groups() {
 			),
 			array (
 				'key' => 'field_581753bd46f91',
-				'label' => 'Desktop Image',
+				'label' => 'Desktop Header Image',
 				'name' => '_thumbnail_id',
 				'type' => 'image',
 				'instructions' => '',
@@ -55,7 +55,7 @@ function my_acf_add_local_field_groups() {
 			),
 			array (
 				'key' => 'field_581753c246f92',
-				'label' => 'Mobile Image',
+				'label' => 'Mobile Header Image',
 				'name' => 'home_image_mobile',
 				'type' => 'image',
 				'instructions' => '',
@@ -269,7 +269,7 @@ function my_acf_add_local_field_groups() {
 			),
 			array (
 				'key' => 'field_58175656b9d52',
-				'label' => 'Desktop Image',
+				'label' => 'Header Image',
 				'name' => '_thumbnail_id',
 				'type' => 'image',
 				'instructions' => '',
@@ -447,7 +447,7 @@ function my_acf_add_local_field_groups() {
 			),
 			array (
 				'key' => 'field_5813a0328220b',
-				'label' => 'Desktop Image',
+				'label' => 'Desktop Header Image',
 				'name' => '_thumbnail_id',
 				'type' => 'image',
 				'instructions' => '',
@@ -479,7 +479,7 @@ function my_acf_add_local_field_groups() {
 			),
 			array (
 				'key' => 'field_5813a0658220c',
-				'label' => 'Mobile Image',
+				'label' => 'Mobile Header Image',
 				'name' => 'home_image_mobile',
 				'type' => 'image',
 				'instructions' => '',
@@ -917,7 +917,7 @@ function my_acf_add_local_field_groups() {
 					),
 					array (
 						'key' => 'field_58139535b49fd',
-						'label' => 'Desktop Image',
+						'label' => 'Desktop Slide Image',
 						'name' => 'home_slide_desktop',
 						'type' => 'image',
 						'instructions' => '',
@@ -941,7 +941,7 @@ function my_acf_add_local_field_groups() {
 					),
 					array (
 						'key' => 'field_581395acb49fe',
-						'label' => 'Mobile Image',
+						'label' => 'Mobile Slide Image',
 						'name' => 'home_slide_mobile',
 						'type' => 'image',
 						'instructions' => '',
