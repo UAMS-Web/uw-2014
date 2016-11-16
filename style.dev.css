@@ -3110,10 +3110,6 @@ h6,
   font-size: 22px;
 }
 p {
-  font-size: 19px;
-  line-height: 1.72222;
-  margin: 0 0 16px;
-  font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
 .lead {
@@ -10454,7 +10450,7 @@ label.screen-reader {
 .uams-widget-related-posts small,
 .uams-widget-rss small {
   font-family: "Fira Sans", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
 }
 .shortcode-blogroll-mini span,
