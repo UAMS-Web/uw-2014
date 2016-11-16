@@ -71,7 +71,7 @@ class UAMS_Dropdowns
 
         // The default About dropdown.
         $this->add_menu_item( 'About', 'http://web.uams.edu/about/' );
-        $this->add_menu_item( 'About the UW', 'http://web.uams.edu/about/', $parent = 'About' );
+        $this->add_menu_item( 'About UAMS', 'http://web.uams.edu/about/', $parent = 'About' );
         $this->add_menu_item( 'Vision, Mission & Core Values', 'http://web.uams.edu/about/vision-mission-core-values/', $parent = 'About' );
         $this->add_menu_item( 'Leadership', 'http://web.uams.edu/about/leadership/', $parent = 'About' );
         $this->add_menu_item( 'Fast Facts', 'http://web.uams.edu/about/fast-facts/', $parent = 'About' );
