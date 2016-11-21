@@ -89,7 +89,7 @@
 <?php
 endif;
 ?>
-<?php if( have_rows('action_menu') ):  ?>
+<?php if( get_field( 'action_menu_active' ) && have_rows('action_menu') ):  ?>
 
 <div class="full-bar">
 	<nav aria-label="popular links" class="container action-bar">
