@@ -8,6 +8,7 @@
 
 
 <?php
+	$sidebar = get_post_meta($post->ID, "sidebar");
 	$first = true; // used to write class on first slide
 	$i = 0;
 	$slidecolor = array();
@@ -68,7 +69,7 @@
       if( !empty($mobileimage)) {
         $hasmobileimage = 'hero-mobile-image';
       }
-      $sidebar = get_post_meta($post->ID, "sidebar");   ?>
+      ?>
 
 
 <div class="uams-hero-image hero-height <?php echo $hasmobileimage ?>" style="background-image: url(<?php echo $url ?>);">
