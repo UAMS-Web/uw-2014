@@ -81,7 +81,7 @@
         <h1 class="uams-site-title"><?php echo get_field('home_image_title') ? get_field('home_image_title') : get_the_title(); ?></h1>
         <span class="udub-slant"><span></span></span>
       <?php if( get_field( 'home_image_add_button' )){ ?>
-        <a class="uams-btn btn-sm btn-none" href="<?php echo get_field('home_image_external') ? get_field('home_image_internal_url') : get_field('home_image_external_url'); ?>"><?php echo get_field('home_image_button_text'); ?></a>
+        <a class="uams-btn btn-sm btn-none" href="<?php echo get_field('home_image_external') ? get_field('home_image_external_url') : get_field('home_image_internal_url'); ?>"><?php echo get_field('home_image_button_text'); ?></a>
       <?php } ?>
       </div>
     </div>
