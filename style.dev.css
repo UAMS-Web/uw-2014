@@ -5793,7 +5793,7 @@ table th[class*="col-"] {
   .uams-hero-image.hero-height {
     padding: 50px 20px 20px;
     display: block;
-    height: auto;
+    height: 240px;
   }
   .uams-hero-image.hero-height #hero-bg {
     top: 50%;
