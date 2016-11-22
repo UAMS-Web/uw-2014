@@ -10,3 +10,6 @@
 .tailor-ui .tailor-section__content {
 	max-width: inherit;
 }
+.u-full-width .tailor-section__content {
+	max-width: 1130px;
+}
