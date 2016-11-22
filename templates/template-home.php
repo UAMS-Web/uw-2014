@@ -25,7 +25,7 @@
 				$hasmobileimage = true;
 	      	}
 	      	$buttonlink = get_sub_field( "home_slide_internal_link" ); //Default interal link
-	      	if ( get_sub_field( "home_slide_internal_link" ) ) { // Make it external
+	      	if ( get_sub_field( "home_slide_external" ) && get_sub_field( "home_slide_external_link" ) ) { // Make it external
 		  		$buttonlink = get_sub_field( "home_slide_external_link" );
 		  	 }
 		  	$textcolor = get_sub_field( "home_slide_text_color" );
