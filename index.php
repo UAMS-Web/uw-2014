@@ -8,7 +8,7 @@
 
     <div <?php if(function_exists('uams_content_class')){uams_content_class();} ?> role='main'>
 
-      <?php uams_page_title(); ?>
+      <?php //uams_page_title(); ?>
 
       <?php get_template_part('menu', 'mobile'); ?>
 
