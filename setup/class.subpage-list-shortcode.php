@@ -36,7 +36,7 @@ class UAMS_SubpageList
           $tiles = 0;
           foreach ($subpages as $page){
 
-            $permalink = get_post_permalink($page->ID);
+            $permalink = get_permalink($page->ID);
 
             if (!$attributes->tilebox){
               $output = $output . sprintf("<h2><a href='%s'>%s</a></h2>", $permalink, $page->post_title);
