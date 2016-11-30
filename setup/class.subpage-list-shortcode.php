@@ -29,7 +29,7 @@ class UAMS_SubpageList
 
         global $post;
 
-        $subpages = get_pages(array('parent' => get_the_ID(), 'sort_column'=>'menu_order'));
+        $subpages = get_pages(array('parent' => get_the_ID(), 'sort_column'=>'post_title'));
 
         if (!empty($subpages)){
           $output = '';
