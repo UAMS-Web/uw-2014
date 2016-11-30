@@ -7271,6 +7271,9 @@ body.action-barul.uams-mobile-menu {
   #desktop-relative {
     display: none;
   }
+  .mobile-menu {
+    z-index: 10;
+  }
   .uams-mobile-menu li {
     background-color: #eee;
     border-bottom: 1px solid #fff;
@@ -9302,6 +9305,12 @@ label.screen-reader {
   .hero-content .uams-site-title {
     display: block;
   }
+  .hero-height2 .container {
+    top: inherit%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
 }
 [class^="ic-"]:before,
 [class*=" ic-"]:before {
@@ -10185,10 +10194,10 @@ label.screen-reader {
   content: '\e0de';
 }
 .i-reddie:before {
-  content: '\e0e0';
+  content: '\e0df';
 }
 .i-reddie-alt:before {
-  content: '\e0e1';
+  content: '\e0e0';
 }
 .icon-menu {
   text-align: center;
