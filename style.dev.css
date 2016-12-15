@@ -7243,6 +7243,9 @@ body.action-barul.uams-mobile-menu {
   .uams-sidebar {
     padding-top: 40px;
   }
+  .blank .uams-sidebar {
+    padding-top: 0;
+  }
 }
 #mobile-relative {
   display: none;
