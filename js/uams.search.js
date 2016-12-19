@@ -21,7 +21,7 @@ UAMS.Search = Backbone.View.extend({
                     '</form>'+
 
                     '<select id="mobile-search-select" class="visible-xs">' +
-                      '<option value="uams" selected>All the UAMS</option>' +
+                      '<option value="uams" selected>All of UAMS</option>' +
                       '<option value="site">Current site</option>' +
                     '</select>' +
 

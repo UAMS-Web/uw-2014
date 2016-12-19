@@ -10823,15 +10823,15 @@ ul.shortcode-blogroll-mini {
   bottom: 3px;
 }
 #uamsalert-alert-message.uamsalert-red,
-#uamsalert-alert-message.red-alert-urgent {
+#uamsalert-alert-message.urgent-uams {
   background-color: #C61029;
 }
 #uamsalert-alert-message.uamsalert-orange,
-#uamsalert-alert-message.orange-alert {
+#uamsalert-alert-message.alert-uams {
   background-color: #ec7330;
 }
 #uamsalert-alert-message.uamsalert-steel,
-#uamsalert-alert-message.steel-alert-fyis {
+#uamsalert-alert-message.fyi-uams {
   background-color: #597286;
 }
 #uamsalert-alert-message .close {

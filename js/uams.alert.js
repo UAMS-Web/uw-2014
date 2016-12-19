@@ -6,7 +6,7 @@ UAMS.Alert = Backbone.View.extend({
     'click .close' : 'hide'
   },
 
-  template : '<div id="uamsalert-alert-message" class="<% _.each( categories, function( category ) { %> <%= category.slug %> <% }) %>"><div class="container"><span class="close">Close</span><h1><%= title %></h1><p><%= excerpt %><a class="more" href="http://emergency.uw.edu" title="<%= title %>">More info</a></p></div></div>',
+  template : '<div id="uamsalert-alert-message" class="<% _.each( categories, function( category ) { %> <%= category.slug %> <% }) %>"><div class="container"><span class="close">Close</span><h1><%= title %></h1><p><%= excerpt %><a class="more" href="http://uamsalert.wordpress.com" title="<%= title %>">More info</a></p></div></div>',
 
   initialize  : function( options )
   {
@@ -34,9 +34,9 @@ UAMS.Alert = Backbone.View.extend({
 UAMS.Alert.Model = Backbone.Model.extend({
 
   alerts :  [
-    'red-alert-urgent',
-    'orange-alert',
-    'steel-alert-fyis',
+    'urgent-uams',
+    'alert-uams',
+    'fyi-uams',
   ],
 
   data  : {
@@ -48,7 +48,7 @@ UAMS.Alert.Model = Backbone.Model.extend({
     dataType: 'json'
   },
 
-  url :  'https://public-api.wordpress.com/rest/v1/sites/uwemergency.wordpress.com/posts/',
+  url :  'https://public-api.wordpress.com/rest/v1/sites/uamsalert.wordpress.com/posts/',
 
   initialize : function()
   {
