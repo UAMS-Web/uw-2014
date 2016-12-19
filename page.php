@@ -3,7 +3,7 @@
 
 <?php get_template_part( 'header', 'image' ); ?>
 
-<div class="col-md-12 mobile-menu"> <?php get_template_part( 'menu', 'mobile' ); ?> </div>
+<!--<div class="col-md-12 mobile-menu"> <?php get_template_part( 'menu', 'mobile' ); ?> </div>-->
 <div class="container uams-body">
 
   <div class="row">
