@@ -192,22 +192,20 @@ add_action( 'wp_enqueue_scripts', 'tailor_add_custom_styles' );
 
 
 /**
- * Modifies default section elements.
+ * Modifies default row elements.
  *
- * @param Tailor_Section_Element $section_element
+ * @param Tailor_Row_Element $row_element
  */
-/*
-function tailor_modify_section( $section_element ) {
+function tailor_modify_row( $row_element ) {
 
-	// Get the section class name setting
-	$style_setting = $section_element->get_setting( 'class' );
+	// Get the row collapse setting
+	$style_setting = $row_element->get_setting( 'collapse' );
 
-	// Set the default value to 'u-full-width' to have sections display full width
-	//$style_setting->default = 'u-full-width';
+	// Set the default value to 'desktop' to have columns display on desktop only
+	$style_setting->default = 'desktop';
 }
 
-add_action( 'tailor_element_register_controls_tailor_section', 'tailor_modify_section' );
-*/
+add_action( 'tailor_element_register_controls_tailor_row', 'tailor_modify_row' );
 
 
 

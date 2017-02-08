@@ -156,31 +156,35 @@ UAMS.QuickLinks.Collection = Backbone.Collection.extend({
     defaults : [{
        "title": "GUS",
        "url": "http:\/\/gus.uams.edu\/",
-       "classes": ["i-Student big"]
+       "classes": ["big i-gus"]
    }, {
        "title": "Library",
        "url": "http:\/\/library.uams.edu\/",
-       "classes": ["ic-book big"]
+       "classes": ["i-books-1 big"]
+    }, {
+       "title": "Profiles",
+       "url": "https:\/\/uams-triprofiles.uams.edu\/profiles\/search\/",
+       "classes": ["i-intranet big"]
    }, {
        "title": "UAMS Bookstore",
        "url": "http:\/\/library.uams.edu\/library-services\/bookstore\/",
-       "classes": ["i-Globe big"]
+       "classes": ["i-cart big"]
    }, {
        "title": "Webmail",
        "url": "http:\/\/webmail.uams.edu\/",
-       "classes": ["ic-mail"]
+       "classes": ["i-mail"]
    }, {
        "title": "Employee Self Service",
        "url": "https:\/\/enterprise.uams.edu\/irj\/portal",
-       "classes": ['i-Name-Plate-Female-1']
+       "classes": ['i-id-employee-female']
    }, {
        "title": "Computing \/ IT",
        "url": "http:\/\/www.uams.edu\/IT",
-       "classes": ["ic-computer"]
+       "classes": ["i-screen-1"]
    }, {
        "title": "Intranet",
        "url": "http:\/\/inside.uams.edu\/",
-       "classes": ["i-Networking-2"]
+       "classes": ["i-information"]
    }, {
        "title": "UAMS Facebook",
        "url": "https:\/\/www.facebook.com\/UAMSHealth",
