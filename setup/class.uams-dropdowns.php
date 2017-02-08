@@ -89,7 +89,7 @@ class UAMS_Dropdowns
         //$this->add_menu_item( 'Time Schedule', 'http://uw.edu/students/timeschd/', $parent = 'Academics');
 
         // the default Admissions dropdown.
-        $this->add_menu_item( 'Apply', 'http://uw.edu/admissions/' );
+        $this->add_menu_item( 'Apply', 'http://students.uams.edu/apply/' );
         //$this->add_menu_item( 'Admissions', 'http://uw.edu/admissions/', $parent = 'Apply' );
         //$this->add_menu_item( 'Continuing Education', 'http://www.pce.uw.edu/', $parent = 'Apply' );
         //$this->add_menu_item( 'Financial Aid', 'http://www.washington.edu/students/osfa/', $parent = 'Apply' );
