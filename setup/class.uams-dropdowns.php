@@ -79,7 +79,7 @@ class UAMS_Dropdowns
         $this->add_menu_item( 'Contact Us', 'http://web.uams.edu/about/contact-information/', $parent = 'About' );
 
         // The default Academics dropdown.
-        $this->add_menu_item( 'Academics', 'http://uw.edu/about/academics/' );
+        $this->add_menu_item( 'Academics', 'http://web.uams.edu/for-faculty-staff-and-students/' );
         //$this->add_menu_item( 'Academic Calendar', 'http://www.washington.edu/students/reg/calendar.html', $parent = 'Academics' );
         $this->add_menu_item( 'Departments & Divisions', 'http://web.uams.edu/departments-and-divisions/', $parent = 'Academics' );
         $this->add_menu_item( 'Colleges', 'http://web.uams.edu/educational-programs-at-uams/', $parent = 'Academics' );
