@@ -10,7 +10,7 @@
 
       <?php //uams_page_title(); ?>
 
-      <?php get_template_part('menu', 'mobile'); ?>
+      <?php //get_template_part('menu', 'mobile'); ?>
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 
