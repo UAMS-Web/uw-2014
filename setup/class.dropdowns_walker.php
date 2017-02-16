@@ -80,6 +80,7 @@ class UAMS_Dropdowns_Walker_Menu extends Walker_Nav_Menu
 		$output .= $indent . '<li ' . $li_attributes . $li_classnames .'>';
 
 		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+		$attributes .= ! empty( $item->description ) ? ' title="'  . esc_attr( $title . ' - ' . $item->description ) .'"' : '';
 		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
