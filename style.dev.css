@@ -5998,6 +5998,7 @@ table th[class*="col-"] {
     position: relative;
     width: auto;
     padding: 0 40px 10px 5px;
+    right: auto;
   }
   .uams-homepage-slider-container .slideshow-controls .next-headline:before {
     right: 10px;
