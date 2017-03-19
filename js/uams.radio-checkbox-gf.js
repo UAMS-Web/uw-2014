@@ -28,11 +28,7 @@ UAMS.Radio = Backbone.View.extend({
 
     this.name   = this.$el.attr( 'name' )
 
-    if ( this.$el.closest('.gform_wrapper').length > 0 ) {
-    	this.setElement( this.$el.parent() )
-    } else {
-    	this.setElement( this.$el.closest('label') )
-    }
+    this.setElement( this.$el.parent() )
 
     this.setState()
   },

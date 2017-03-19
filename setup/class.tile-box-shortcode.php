@@ -3,7 +3,7 @@
 /* box shortcode:
  * meant for front page (maybe disable on not front page?)
  * boxes contain tiles.  Boxes support only tiles inside and only between 1 and 4 tiles.
- * 
+ *
  * structure: [box alignment="centered" shadow="none" padding="none"][tile][/tile][tile][/tile][/box]
  */
 
@@ -17,11 +17,11 @@ Class TileBox
 
     function __construct()
     {
-        remove_filter( 'the_content', 'wpautop' );
-        add_filter( 'the_content', 'wpautop' , self::PRIORITY );
+      //  remove_filter( 'the_content', 'wpautop' );
+      //  add_filter( 'the_content', 'wpautop' , self::PRIORITY );
 
-        remove_filter( 'the_excerpt', 'wpautop' );
-        add_filter( 'the_excerpt', 'wpautop' , self::PRIORITY );
+      //  remove_filter( 'the_excerpt', 'wpautop' );
+      //  add_filter( 'the_excerpt', 'wpautop' , self::PRIORITY );
 
         add_shortcode( 'box', array( $this, 'box_handler' ) );
         add_shortcode( 'tile', array( $this, 'tile_handler' ) );
@@ -35,23 +35,23 @@ Class TileBox
             'padding' => '',
             'shadow' => ''
         ), $atts );
- 
+
         $color = '';
         if (!empty($boxCenter['color'])){
           $color = ' box-' . $boxCenter['color'];
-        }; 
+        };
 
         $padding = '';
         if (!empty($boxCenter['padding'])){
           $padding = ' nopad';
-        }; 
+        };
 
         $shadow = '';
         if (!empty($boxCenter['shadow'])){
           $shadow = ' noshadow';
-        }; 
+        };
 
-        $center = 'box-' . $boxCenter['alignment'];        
+        $center = 'box-' . $boxCenter['alignment'];
 
         $this->count = 0;
 

@@ -15,11 +15,11 @@ class UAMS_AccordionShortcode
 
     function __construct()
     {
-        remove_filter( 'the_content', 'wpautop' );
-        add_filter( 'the_content', 'wpautop' , self::PRIORITY );
+      //  remove_filter( 'the_content', 'wpautop' );
+      //  add_filter( 'the_content', 'wpautop' , self::PRIORITY );
 
-        remove_filter( 'the_excerpt', 'wpautop' );
-        add_filter( 'the_excerpt', 'wpautop' , self::PRIORITY );
+      //  remove_filter( 'the_excerpt', 'wpautop' );
+      //  add_filter( 'the_excerpt', 'wpautop' , self::PRIORITY );
 
         add_shortcode('accordion', array($this, 'accordion_handler'));
         add_shortcode('section', array($this, 'section_handler'));

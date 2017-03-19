@@ -34,7 +34,7 @@ function my_acf_add_local_field_groups() {
 				'label' => 'Desktop Header Image',
 				'name' => '_thumbnail_id',
 				'type' => 'image',
-				'instructions' => '',
+				'instructions' => 'Recommended size 1600px x 450px',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array (
@@ -58,7 +58,7 @@ function my_acf_add_local_field_groups() {
 				'label' => 'Mobile Header Image',
 				'name' => 'home_image_mobile',
 				'type' => 'image',
-				'instructions' => '',
+				'instructions' => 'Recommended size 750px x 450px',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array (
@@ -450,7 +450,7 @@ function my_acf_add_local_field_groups() {
 				'label' => 'Desktop Header Image',
 				'name' => '_thumbnail_id',
 				'type' => 'image',
-				'instructions' => '',
+				'instructions' => 'Recommended size 1600 x 450 px',
 				'required' => 0,
 				'conditional_logic' => array (
 					array (
@@ -482,7 +482,7 @@ function my_acf_add_local_field_groups() {
 				'label' => 'Mobile Header Image',
 				'name' => 'home_image_mobile',
 				'type' => 'image',
-				'instructions' => '',
+				'instructions' => 'Recommended size 750 x 450 px',
 				'required' => 0,
 				'conditional_logic' => array (
 					array (
@@ -920,7 +920,7 @@ function my_acf_add_local_field_groups() {
 						'label' => 'Desktop Slide Image',
 						'name' => 'home_slide_desktop',
 						'type' => 'image',
-						'instructions' => '',
+						'instructions' => 'Recommended size 1600 x 450 px',
 						'required' => 1,
 						'conditional_logic' => 0,
 						'wrapper' => array (
@@ -944,7 +944,7 @@ function my_acf_add_local_field_groups() {
 						'label' => 'Mobile Slide Image',
 						'name' => 'home_slide_mobile',
 						'type' => 'image',
-						'instructions' => '',
+						'instructions' => 'Recommended size 750 x 450 px',
 						'required' => 0,
 						'conditional_logic' => 0,
 						'wrapper' => array (

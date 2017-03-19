@@ -8742,6 +8742,24 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 .wpcf7 .fui-radio-checked:before {
   display: none;
 }
+.gform_wrapper .gfield_radio label,
+.gform_wrapper .gfield_checkbox label {
+  padding-left: 30px !important;
+}
+.gform_wrapper input[type="checkbox"],
+.gform_wrapper input[type="radio"] {
+  margin-top: 0 !important;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  outline: 0!important;
+  opacity: 0;
+}
 a.uams-btn {
   padding: 11px 20px;
   text-transform: uppercase;
