@@ -4,7 +4,7 @@ Theme URI: www.uams.edu
 Description: The 2016 theme
 Author: UAMS Web Team
 Author URI: http://www.uams.edu/
-Version: 0.3
+Version: 0.4
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -5002,6 +5002,9 @@ table th[class*="col-"] {
 .uams-thinstrip div.align-right {
   float: right;
 }
+.uams-thinstrip .thin-nav {
+  margin-top: 45px;
+}
 .uams-thinstrip nav {
   display: inline-block;
   vertical-align: top;
@@ -5182,6 +5185,30 @@ table th[class*="col-"] {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+.uams-primary .uams-thinstrip {
+  height: 95px;
+}
+.uams-primary .uams-thinstrip #top-header {
+  background-color: transparent;
+}
+.uams-primary .uams-thinstrip .uams-patch {
+  right: auto;
+  left: 5%;
+  background-size: 1080px;
+  width: 400px;
+  height: 60px;
+}
+.uams-primary .uams-thinstrip .uams-patch:focus,
+.uams-primary .uams-thinstrip .uams-patch:hover {
+  background-size: 1080px;
+}
+.uams-primary .uams-thinstrip .thin-nav {
+  margin-top: 0;
+}
+.uams-primary #site-title {
+  display: none;
+  opacity: 0;
+}
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   #uams-container.open .uams-quicklinks button {
@@ -5264,8 +5291,8 @@ table th[class*="col-"] {
     left: 12px;
   }
   .search-open .uams-thinstrip button.uams-search svg {
-    top: -17px;
-    left: 14px;
+    top: -19px;
+    left: 11px;
   }
   #site-title {
     max-width: 90%;
@@ -5276,6 +5303,30 @@ table th[class*="col-"] {
   }
   #site-title h1 a.long-title {
     font-size: 26px;
+  }
+  .uams-primary .uams-thinstrip {
+    padding: 0;
+    height: 115px;
+  }
+  .uams-primary .uams-thinstrip .container {
+    position: static;
+  }
+  .uams-primary .uams-thinstrip #top-header {
+    height: 54px;
+  }
+  .uams-primary .uams-thinstrip .uams-patch {
+    width: 240px;
+    height: 38px;
+    top: 0;
+    left: 10px;
+    background-size: 640px;
+    -o-transition: all 0s;
+    -webkit-transition: all 0s;
+    transition: all 0s;
+  }
+  .uams-primary .uams-thinstrip .uams-patch:hover,
+  .uams-primary .uams-thinstrip .uams-patch:focus {
+    background-size: 640px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -5295,17 +5346,31 @@ table th[class*="col-"] {
 }
 /* Tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 768px) {
+  .uams-primary .uams-thinstrip .uams-patch,
   .uams-thinstrip .uams-patch {
     width: 320px;
     height: 48px;
     background-size: auto;
   }
+  .uams-primary .uams-thinstrip .uams-patch:hover,
+  .uams-thinstrip .uams-patch:hover,
+  .uams-primary .uams-thinstrip .uams-patch:focus,
+  .uams-thinstrip .uams-patch:focus {
+    background-size: auto;
+  }
 }
 /* Extra Small devices */
 @media only screen and (max-width: 360px) {
+  .uams-primary .uams-thinstrip .uams-patch,
   .uams-thinstrip .uams-patch {
     width: 142px;
     height: 45px;
+    background-size: 780px;
+  }
+  .uams-primary .uams-thinstrip .uams-patch:hover,
+  .uams-thinstrip .uams-patch:hover,
+  .uams-primary .uams-thinstrip .uams-patch:focus,
+  .uams-thinstrip .uams-patch:focus {
     background-size: 780px;
   }
 }
@@ -5357,6 +5422,9 @@ table th[class*="col-"] {
   #site-title {
     height: 134px;
     max-width: 55%;
+  }
+  .uams-primary .uams-thinstrip {
+    height: 145px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {

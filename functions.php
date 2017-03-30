@@ -80,10 +80,18 @@ function uams_custom_field_body_class( $classes ) {
 		$classes[] = 'action-bar';
 
 	}
+	/* Add custom class of uams-primary if the item is checked in the backend */
+	if ( get_option('primary_uams_site') ) {
+
+		$classes[] = 'uams-primary';
+
+	}
 
 	// return the $classes array
 	return $classes;
 }
+
+/* Add custom class of uams-primary if the item is checked in the backend */
 
 /**
  * Loads the custom Tailor elements.

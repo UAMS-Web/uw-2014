@@ -1,4 +1,4 @@
-// UW Thinstrip
+// UAMS Thinstrip
 
 .uams-thinstrip {
 	height: 140px;
@@ -65,6 +65,9 @@
 
   div.align-right {
     float: right;
+  }
+  .thin-nav {
+	  margin-top: 45px;
   }
 
   nav {
@@ -207,6 +210,7 @@
 		left: 10px;
 	}
 }
+
 .open .uams-thinstrip ul.uams-thin-links li.uams-quicklinks button {
 	&:hover svg,
 	&:focus svg {
@@ -259,6 +263,33 @@
               transform:rotate(180deg);
 		}
 	}
+}
+
+.uams-primary {
+	.uams-thinstrip {
+		height: 95px;
+		#top-header {
+			background-color: transparent;
+		}
+		.uams-patch {
+			right: auto;
+			left: 5%;
+			background-size: 1080px;
+			width: 400px;
+			height: 60px;
+			&:focus,
+			&:hover{
+				background-size: 1080px;
+			}
+		}
+		.thin-nav {
+			margin-top: 0;
+  		}
+  	}
+  	#site-title {
+	  	display: none;
+	  	opacity: 0;
+  	}
 }
 
 /* Small Devices, Tablets */
@@ -353,8 +384,8 @@
         .uams-thinstrip {
             button.uams-search {
                 svg {
-                    top: -17px;
-                    left: 14px;
+                    top: -19px;
+                    left: 11px;
                 }
             }
         }
@@ -372,6 +403,32 @@
 			}
 	    }
     }
+    .uams-primary {
+		.uams-thinstrip {
+			padding: 0;
+			height: 115px;
+			.container {
+				position: static;
+			}
+
+			#top-header {
+				height: 54px;
+			}
+			.uams-patch {
+				width: 240px;
+				height: 38px;
+				top: 0;
+				left: 10px;
+				background-size: 640px;
+				.transition(all 0s);
+				&:hover,
+				&:focus,
+				{
+		        	background-size: 640px;
+		      	}
+		    }
+		}
+	}
 }
 
 @media only screen and (max-width : 768px) {
@@ -393,16 +450,21 @@
 			}
 		}
 	}
-
 }
 
 /* Tablet devices */
 @media only screen and (min-width : 600px) and (max-width : 768px) {
+	.uams-primary .uams-thinstrip,
 	.uams-thinstrip {
 		.uams-patch {
 			width: 320px;
 			height: 48px;
 			background-size: auto;
+			&:hover,
+		    &:focus,
+		    {
+		        background-size: auto;
+		    }
 		}
 	}
 
@@ -410,11 +472,17 @@
 
 /* Extra Small devices */
 @media only screen and (max-width : 360px) {
+	.uams-primary .uams-thinstrip,
 	.uams-thinstrip {
 		.uams-patch {
 			width: 142px;
 			height: 45px;
 			background-size: 780px;
+			&:hover,
+		    &:focus,
+		    {
+		        background-size: 780px;
+		    }
 		}
 	}
 
@@ -475,6 +543,11 @@
 	#site-title {
 		height: 134px;
 		max-width: 55%;
+	}
+	.uams-primary {
+		.uams-thinstrip {
+			height: 145px;
+		}
 	}
 }
 @media only screen and (min-width : 992px) and (max-width : 1200px) {

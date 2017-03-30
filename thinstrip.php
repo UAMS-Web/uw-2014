@@ -7,7 +7,7 @@
     	<h1 class="vertical-align"><?php uams_site_title(); ?></h1>
     </div>
   </div>
-  <div class='align-right' style="margin-top: 45px; ">
+  <div class='align-right thin-nav'>
       <nav class="uams-thin-strip-nav" role='navigation' aria-label='audience based'>
           <ul class="uams-thin-links">
             <li><a href="http://uamshealth.com" title="UAMSHealth" class="">UAMSHealth</a></li>
