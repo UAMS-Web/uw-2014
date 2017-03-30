@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> <?php wp_title(' | ',TRUE,'right'); bloginfo('name'); ?> </title>
+        <title> <?php wp_title(' | ',TRUE,'right'); echo str_replace('\n', '', get_bloginfo('name')); ?> </title>
         <meta charset="utf-8">
         <meta name="description" content="<?php bloginfo('description', 'display'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
