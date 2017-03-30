@@ -5,7 +5,9 @@
 ?>
 
 <?php get_header();
-    $sidebar = get_post_meta($post->ID, "sidebar");  ?>
+    $sidebar = get_post_meta($post->ID, "sidebar");
+    $breadcrumbs = get_post_meta($post->ID, "breadcrumb");
+?>
 
 <div class="uams-hero-image hero-blank no-title">
   <h1 class="container uams-site-title-blank"><?php the_title(); ?></h1>

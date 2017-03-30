@@ -364,22 +364,6 @@ function my_acf_add_local_field_groups() {
 				'default_value' => 0,
 			),
 			array (
-				'key' => 'field_5817b82d8a083',
-				'label' => 'Breadcrumbs',
-				'name' => 'home_remove_breadcrumbs',
-				'type' => 'true_false',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '25',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => 'Remove Breadcrumbs',
-				'default_value' => 1,
-			),
-			array (
 				'key' => 'field_58138fd3b49f7',
 				'label' => 'Slide Instructions',
 				'name' => '',

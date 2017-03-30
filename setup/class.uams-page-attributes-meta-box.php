@@ -86,6 +86,8 @@ class UAMS_Page_Attributes_Meta_Box
     <?php }
     $sidebar = get_post_meta($post->ID, "sidebar", true);
     wp_nonce_field( 'sidebar_nonce' , 'sidebar_name' );
+    $breadcrumb = get_post_meta($post->ID, "breadcrumb", true);
+    wp_nonce_field( 'breadcrumb_nonce' , 'breadcrumb_name' );
     ?>
 
     <p><strong><?php _e('Sidebar') ?></strong></p>
@@ -93,6 +95,12 @@ class UAMS_Page_Attributes_Meta_Box
     <label class="screen-reader-text" for="sidebar"><?php _e('Sidebar') ?></label>
 
     <p><input type="checkbox" id="sidebar_id" name="sidebarcheck" value="on" <?php if( !empty($sidebar) ) { ?>checked="checked"<?php } ?> /><?php _e('No Sidebar') ?></p>
+
+    <p><strong><?php _e('Breadcrumbs') ?></strong></p>
+
+    <label class="screen-reader-text" for="breadcrumbs"><?php _e('Breadcrumbs') ?></label>
+
+    <p><input type="checkbox" id="breadcrumb_id" name="breadcrumbcheck" value="on" <?php if( !empty($breadcrumb) ) { ?>checked="checked"<?php } ?> /><?php _e('Hide Breadcrumbs') ?></p>
 
     <p><strong><?php _e('Order') ?></strong></p>
 
@@ -245,6 +253,18 @@ class UAMS_Page_Attributes_Meta_Box
             update_post_meta($post_ID, "sidebar", $_POST["sidebarcheck"]);
           } else {
             update_post_meta($post_ID, "sidebar", null);
+          }
+        }
+      }
+    }
+
+    if ( isset( $_POST['breadcrumb_name'] ) ) {
+      if ( ! empty( $_POST ) && check_admin_referer( 'breadcrumb_nonce', 'breadcrumb_name') ) { //limit to only pages
+        if ($post_type) {
+          if(isset($_POST["breadcrumbcheck"])) {
+            update_post_meta($post_ID, "breadcrumb", $_POST["breadcrumbcheck"]);
+          } else {
+            update_post_meta($post_ID, "breadcrumb", null);
           }
         }
       }

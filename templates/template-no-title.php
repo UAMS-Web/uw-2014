@@ -5,7 +5,9 @@
 ?>
 
 <?php get_header();
-    $sidebar = get_post_meta($post->ID, "sidebar");  ?>
+    $sidebar = get_post_meta($post->ID, "sidebar");
+    $breadcrumbs = get_post_meta($post->ID, "breadcrumb");
+?>
 
 <div class="uams-hero-image hero-blank no-title">
   <h1 class="container uams-site-title-blank"><?php the_title(); ?></h1>
@@ -19,7 +21,11 @@
 
       <?php //uams_page_title(); ?>
       <?php //get_template_part( 'menu', 'mobile' ); ?>
-      <?php get_template_part( 'breadcrumbs' ); ?>
+      <?php
+	      if((!isset($breadcrumbs[0]) || $breadcrumbs[0]!="on")) {
+	      	get_template_part( 'breadcrumbs' );
+	      }
+	  ?>
 
       <div id='main_content' class="uams-body-copy" tabindex="-1">
 

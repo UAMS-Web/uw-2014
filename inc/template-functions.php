@@ -360,7 +360,7 @@ if ( !function_exists('uams_site_title')):
         if (get_option('overly_long_title')){
             $classes .= ' long-title';
         }
-        echo '<a href="' . home_url('/') . '" title="' . esc_attr( get_bloginfo() ) . '" tabindex="-1" aria-hidden="true" class="uams-site-title' . $classes . '">' . get_bloginfo() . '</a>';
+        echo '<a href="' . home_url('/') . '" title="' . esc_attr( str_replace('\n', '', get_bloginfo()) ) . '" tabindex="-1" aria-hidden="true" class="uams-site-title' . $classes . '">' . str_replace('\n', '<br/>', get_bloginfo()) . '</a>';
     }
 
 endif;

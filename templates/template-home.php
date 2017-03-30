@@ -9,6 +9,7 @@
 
 <?php
 	$sidebar = get_post_meta($post->ID, "sidebar");
+	$breadcrumbs = get_post_meta($post->ID, "breadcrumb");
 	$first = true; // used to write class on first slide
 	$i = 0;
 	$slidecolor = array();
@@ -129,7 +130,7 @@ endif;
       <?php //uams_page_title(); ?>
       <?php //get_template_part( 'menu', 'mobile' ); ?>
       <?php
-	      if(get_field('home_remove_breadcrumbs') == '0') {
+	      if((!isset($breadcrumbs[0]) || $breadcrumbs[0]!="on")) {
 	      	get_template_part( 'breadcrumbs' );
 	      }
 	  ?>

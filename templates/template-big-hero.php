@@ -15,6 +15,7 @@
         $hasmobileimage = 'hero-mobile-image';
       }
       $sidebar = get_post_meta($post->ID, "sidebar");
+      $breadcrumbs = get_post_meta($post->ID, "breadcrumb");
 	  $button = get_field( 'home_image_add_button' );
       $buttontext = get_field('home_image_button_text');
       $external = get_field( 'home_image_external' );
@@ -44,7 +45,11 @@
 
       <?php //uams_page_title(); ?>
       <?php //get_template_part( 'menu', 'mobile' ); ?>
-      <?php get_template_part( 'breadcrumbs' ); ?>
+      <?php
+	      if((!isset($breadcrumbs[0]) || $breadcrumbs[0]!="on")) {
+	      	get_template_part( 'breadcrumbs' );
+	      }
+	  ?>
 
       <div id='main_content' class="uams-body-copy" tabindex="-1">
 

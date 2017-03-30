@@ -1,5 +1,7 @@
 <?php get_header();
-   $sidebar = get_post_meta($post->ID, "sidebar"); ?>
+   $sidebar = get_post_meta($post->ID, "sidebar");
+   $breadcrumbs = get_post_meta($post->ID, "breadcrumb");
+ ?>
 
 <?php get_template_part( 'header', 'image' ); ?>
 
@@ -14,7 +16,11 @@
 
       <?php //get_template_part( 'menu', 'mobile' ); ?>
 
-      <?php get_template_part( 'breadcrumbs' ); ?>
+      <?php
+	      if((!isset($breadcrumbs[0]) || $breadcrumbs[0]!="on")) {
+	      	get_template_part( 'breadcrumbs' );
+	      }
+	  ?>
 
       <div id='main_content' class="uams-body-copy" tabindex="-1">
 
