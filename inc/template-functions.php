@@ -202,7 +202,7 @@ if ( ! function_exists('get_uams_breadcrumbs') ) :
     global $post;
     $ancestors = array_reverse( get_post_ancestors( $post->ID ) );
     $html = '<li><a href="http://www.uams.edu" title="University of Arkansas for Medical Scineces">Home</a></li>';
-    $html .= '<li' . (is_front_page() ? ' class="current"' : '') . '><a href="' . home_url('/') . '" title="' . get_bloginfo('title') . '">' . get_bloginfo('title') . '</a><li>';
+    $html .= '<li' . (is_front_page() ? ' class="current"' : '') . '><a href="' . home_url('/') . '" title="' . str_replace('\n', '', get_bloginfo('title')) . '">' . str_replace('\n', '', get_bloginfo('title')) . '</a><li>';
 
     if ( is_404() )
     {
