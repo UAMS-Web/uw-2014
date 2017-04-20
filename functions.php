@@ -315,3 +315,9 @@ if (!function_exists('uams_tailor_modify_colorpicker')){
 	}
 	add_action( 'tailor_control_args_colorpicker', 'uams_tailor_modify_colorpicker' );
 }
+
+/* Add Woocommerce Supprt */
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
