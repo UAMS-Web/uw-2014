@@ -64,7 +64,7 @@ class UAMS_Iframes
       'docs.google.com',
       'youtube.com',
 //      'excition.com',
-//       'uwregents.wufoo.com',
+      'www.googletagmanager.com',
       'www.uams.edu',
 //      'catalyst.uw.edu',
 //      'www.washington.edu',
