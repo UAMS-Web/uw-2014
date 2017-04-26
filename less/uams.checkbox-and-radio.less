@@ -117,13 +117,19 @@
 	    position: absolute;
 	    top: 0;
 	    left: 0;
-	    width: 20px;
-	    height: 20px;
+	    width: 22px;
+	    height: 22px;
 	    padding: 0;
 	    margin: 0;
 	    outline: 0!important;
 	    opacity: 0;
+	    z-index: 1000; // Float above Icons
+	    cursor: pointer; // Add pointer cursor
 	}
+}
+.uams-body .gform_wrapper ul.gfield_checkbox li input[type=checkbox],
+.uams-body .gform_wrapper ul.gfield_radio li input[type=radio] {
+	width: 22px !important; // Over-ride width settings
 }
 
 // Woo WooCommerce Extra Product Options

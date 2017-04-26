@@ -8821,12 +8821,18 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   padding: 0;
   margin: 0;
   outline: 0!important;
   opacity: 0;
+  z-index: 1000;
+  cursor: pointer;
+}
+.uams-body .gform_wrapper ul.gfield_checkbox li input[type=checkbox],
+.uams-body .gform_wrapper ul.gfield_radio li input[type=radio] {
+  width: 22px !important;
 }
 .tm-extra-product-options .tm-epo-field.tmcp-checkbox,
 .tm-extra-product-options .tm-epo-field.tmcp-radio {
