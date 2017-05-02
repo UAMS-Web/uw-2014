@@ -38,7 +38,7 @@ class UAMS_Widget_Twitter extends WP_Widget
 
   function UAMS_Widget_Twitter()
   {
-    parent::WP_Widget(
+    parent::__construct(
       $id = self::ID,
       $name = self::NAME,
       $options = array(

@@ -14,7 +14,7 @@ class UAMS_Widget_Cards extends WP_Widget
 
   function __construct()
   {
-		parent::WP_Widget( $id = 'uams-widget-cards', $name = 'Image Cards', $options = array( 'description' => 'Choose from several styles of cards', 'classname' => 'cards-widget' ) );
+		parent::__construct( $id = 'uams-widget-cards', $name = 'Image Cards', $options = array( 'description' => 'Choose from several styles of cards', 'classname' => 'cards-widget' ) );
 
     if ( is_admin() )
       add_action('admin_enqueue_scripts', array( __CLASS__, 'scripts') );

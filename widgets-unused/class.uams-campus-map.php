@@ -11,7 +11,7 @@ class UAMS_Campus_Map extends WP_Widget
 
   function __construct()
   {
-		parent::WP_Widget( 'uams-campus-map', __('UAMS Campus Map'), array(
+		parent::__construct( 'uams-campus-map', __('UAMS Campus Map'), array(
       'description' => __('Show your building on the UAMS campus map.'),
       'classname'   => 'uams-widget-campus-map'
     ) );

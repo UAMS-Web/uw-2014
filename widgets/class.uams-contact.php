@@ -14,7 +14,7 @@ class UAMS_Widget_Contact extends WP_Widget
 
   function UAMS_Widget_Contact()
   {
-		parent::WP_Widget( $id = 'uams-contact-list', $name = 'Contact list', $options = array( 'description' => 'Display important contact information', 'classname' => 'contact-widget' ) );
+		parent::__construct( $id = 'uams-contact-list', $name = 'Contact list', $options = array( 'description' => 'Display important contact information', 'classname' => 'contact-widget' ) );
 
     if ( is_admin() )
       add_action('admin_enqueue_scripts', array( __CLASS__, 'scripts') );
