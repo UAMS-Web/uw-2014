@@ -38,7 +38,7 @@ class UAMS_Users
 
     if(isset($role) && $role == "editor") {
        remove_submenu_page( 'themes.php', 'themes.php' );
-       remove_submenu_page( 'themes.php', 'nav-menus.php' );
+       //remove_submenu_page( 'themes.php', 'nav-menus.php' );
        global $submenu;
         unset($submenu['themes.php'][6]);
         unset($submenu['themes.php'][15]);
