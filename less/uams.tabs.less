@@ -1,0 +1,187 @@
+/*
+ *  All styles for UAMS accordion
+ */
+
+
+
+
+.uams-tabs {
+    h3 {
+        background-color: @300grey;
+        color: #565656;
+        padding: 15px 15px 15px 15px;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 19px;
+        cursor: pointer;
+        &.active:after {
+            background-position: -383px -23px;
+        }
+    }
+    h3:after {
+        content: " ";
+        float: right;
+        display: block;
+        width: 30px;
+        height: 25px;
+        background: url(assets/svg/uams-sprite.svg) no-repeat -383px 2px rgba(255, 255, 255, 0);
+    }
+    div {
+        height: 0px;
+        overflow: hidden;
+    }
+    div.active {
+        height: auto;
+    }
+}
+
+.js-tabcontent[aria-hidden=true] { display: none; }
+
+.uams-tab-content {
+  	padding-top: 1px;
+  	border: 1px dotted @400grey;
+  	padding: 1em 1.5em;
+  	margin-top: -2px; //Fix for active tab
+  	.tabs__uams__tabcontent {
+    	border-bottom: 1px solid @400grey;
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+}
+
+.tabs__tabcontent:focus {
+  outline: 1px dotted; /* chrome */
+}
+[aria-disabled="true"], [aria-disabled="true"]:hover{
+  background-color: #ddd;
+  color: @700grey;
+  pointer-events: none;
+  /* for old IEs */
+  cursor: not-allowed;
+}
+
+/*
+ * Styles tabs top
+ */
+
+/* styles without JS */
+
+.tabs__uams_ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.tabs__uams__li {
+    border: 1px solid @400grey;
+    padding: 0.5em 1em;
+    /* display: block; */
+}
+
+.tabs__uams__a {
+    font-size: 1.125em;
+    display: block;
+    font-weight: bold;
+    color: @red;
+}
+
+/* styles with JS */
+[role="tablist"].tabs__uams_ul {
+  	padding-left: 0;
+  	margin-bottom: 0;
+  	margin-top: 0;
+  	display: table;
+}
+
+[role="tablist"] .tabs__uams__li {
+  	position: relative;
+  	display: table-cell;
+  	vertical-align: middle;
+  	text-align: center;
+  	padding:0;
+  	border: none;
+}
+[role="tablist"] .tabs__uams__a {
+  	line-height: 1.1;
+  	display: block;
+  	min-height: 3em;
+  	padding: .5em 1.2em;
+  	border-bottom: 0;
+  	background: @200grey;
+  	border-top: 4px solid @300grey;
+  	border-right: 1px dotted @400grey;
+  	border-left: 1px dotted @400grey;
+}
+[role="tablist"] .tabs__uams__a:hover {
+  	border-top: 4px solid @300grey;
+  	background: #fff;
+}
+[role="tablist"] .tabs__uams__a:focus,
+[role="tablist"] .tabs__uams__a:active,
+[role="tablist"] .tabs__uams__a[aria-selected="true"] {
+  	border-bottom:  2px solid #fff;
+  	border-top: 4px solid @red;
+  	background: #fff;
+}
+[role="tablist"] .tabs__uams__a:focus {
+  	outline: 1px dotted;
+}
+[role="tabpanel"].tabs__uams__tabcontent {
+		border-bottom: none;
+}
+.invisible {
+  	border: 0;
+  	clip: rect(0 0 0 0);
+  	height: 1px;
+  	margin: -1px;
+  	overflow: hidden;
+  	padding: 0;
+  	position: absolute;
+  	width: 1px;
+}
+
+@media only screen and (max-width: 767px) {
+  	/* styles without JS */
+  	.tab-style {
+  	  	margin: 0;
+  	}
+
+
+
+  	/*
+  	 * Styles tabs top
+  	 */
+
+  	/* styles without JS */
+
+
+
+  	/* styles with JS */
+  	[role="tablist"].tabs__uams_ul {
+  	  	display: block;
+  	  	border-bottom: 2px solid @red;
+  	}
+  	[role="tablist"] .tabs__uams__li {
+  	  	display: block;
+  	  	width: auto;
+  	}
+  	[role="tablist"] .tabs__uams__a {
+  	  	border-radius: 0;
+  	  	border-bottom: 0;
+  	  	min-height: 0;
+  	}
+  	[role="tablist"] .tabs__uams__a:focus,
+  	[role="tablist"] .tabs__uams__a:hover,
+  	[role="tablist"] .tabs__uams__a:active,
+  	[role="tablist"] .tabs__uams__a[aria-selected="true"] {
+  	  	background: @red;
+  	  	color: #fff;
+  	  	border-bottom: 0;
+  	}
+  	[role="tabpanel"].tabs__uams__tabcontent {
+  	  	border-bottom-left-radius: 0;
+  	  	border-bottom-right-radius: 0;
+  	}
+}

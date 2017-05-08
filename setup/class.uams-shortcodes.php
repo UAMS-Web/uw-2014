@@ -23,6 +23,7 @@ class UAMS_Shortcodes
         require_once('class.subpage-list-shortcode.php');
         require_once('class.accordion-shortcode.php');
       //  require_once('class.tiny-shortcode.php');
+        require_once('class.tabs-shortcode.php');
         require_once('class.grid-shortcode.php');
         require_once('class.menu-shortcode.php');
     }
@@ -37,6 +38,7 @@ class UAMS_Shortcodes
         $this->subpage_list   = new UAMS_SubpageList();
         $this->accordion      = new UAMS_AccordionShortcode();
       //  $this->tiny           = new UAMS_TinyShortcode();
+        $this->tabs           = new UAMS_TabsShortcode();
         $this->bootstrap      = new UAMS_GridShortcode();
         $this->custommenu     = new UAMS_MenuShortcode();
     }

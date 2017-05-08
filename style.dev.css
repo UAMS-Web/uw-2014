@@ -4166,6 +4166,173 @@ ul.uams-select li.inactive a {
   overflow: hidden;
 }
 /*
+ *  All styles for UAMS accordion
+ */
+.uams-tabs h3 {
+  background-color: #e0e0e0;
+  color: #565656;
+  padding: 15px 15px 15px 15px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 19px;
+  cursor: pointer;
+}
+.uams-tabs h3.active:after {
+  background-position: -383px -23px;
+}
+.uams-tabs h3:after {
+  content: " ";
+  float: right;
+  display: block;
+  width: 30px;
+  height: 25px;
+  background: url(assets/svg/uams-sprite.svg) no-repeat -383px 2px rgba(255, 255, 255, 0);
+}
+.uams-tabs div {
+  height: 0px;
+  overflow: hidden;
+}
+.uams-tabs div.active {
+  height: auto;
+}
+.js-tabcontent[aria-hidden=true] {
+  display: none;
+}
+.uams-tab-content {
+  padding-top: 1px;
+  border: 1px dotted #bdbdbd;
+  padding: 1em 1.5em;
+  margin-top: -2px;
+}
+.uams-tab-content .tabs__uams__tabcontent {
+  border-bottom: 1px solid #bdbdbd;
+}
+.uams-tab-content .tabs__uams__tabcontent:last-of-type {
+  border-bottom: none;
+}
+.tabs__tabcontent:focus {
+  outline: 1px dotted;
+  /* chrome */
+}
+[aria-disabled="true"],
+[aria-disabled="true"]:hover {
+  background-color: #ddd;
+  color: #616161;
+  pointer-events: none;
+  /* for old IEs */
+  cursor: not-allowed;
+}
+/*
+ * Styles tabs top
+ */
+/* styles without JS */
+.tabs__uams_ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+.tabs__uams__li {
+  border: 1px solid #bdbdbd;
+  padding: 0.5em 1em;
+  /* display: block; */
+}
+.tabs__uams__a {
+  font-size: 1.125em;
+  display: block;
+  font-weight: bold;
+  color: #9d2235;
+}
+/* styles with JS */
+[role="tablist"].tabs__uams_ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: table;
+}
+[role="tablist"] .tabs__uams__li {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0;
+  border: none;
+}
+[role="tablist"] .tabs__uams__a {
+  line-height: 1.1;
+  display: block;
+  min-height: 3em;
+  padding: .5em 1.2em;
+  border-bottom: 0;
+  background: #eeeeee;
+  border-top: 4px solid #e0e0e0;
+  border-right: 1px dotted #bdbdbd;
+  border-left: 1px dotted #bdbdbd;
+}
+[role="tablist"] .tabs__uams__a:hover {
+  border-top: 4px solid #e0e0e0;
+  background: #fff;
+}
+[role="tablist"] .tabs__uams__a:focus,
+[role="tablist"] .tabs__uams__a:active,
+[role="tablist"] .tabs__uams__a[aria-selected="true"] {
+  border-bottom: 2px solid #fff;
+  border-top: 4px solid #9d2235;
+  background: #fff;
+}
+[role="tablist"] .tabs__uams__a:focus {
+  outline: 1px dotted;
+}
+[role="tabpanel"].tabs__uams__tabcontent {
+  border-bottom: none;
+}
+.invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+@media only screen and (max-width: 767px) {
+  /* styles without JS */
+  .tab-style {
+    margin: 0;
+  }
+  /*
+  	 * Styles tabs top
+  	 */
+  /* styles without JS */
+  /* styles with JS */
+  [role="tablist"].tabs__uams_ul {
+    display: block;
+    border-bottom: 2px solid #9d2235;
+  }
+  [role="tablist"] .tabs__uams__li {
+    display: block;
+    width: auto;
+  }
+  [role="tablist"] .tabs__uams__a {
+    border-radius: 0;
+    border-bottom: 0;
+    min-height: 0;
+  }
+  [role="tablist"] .tabs__uams__a:focus,
+  [role="tablist"] .tabs__uams__a:hover,
+  [role="tablist"] .tabs__uams__a:active,
+  [role="tablist"] .tabs__uams__a[aria-selected="true"] {
+    background: #9d2235;
+    color: #fff;
+    border-bottom: 0;
+  }
+  [role="tabpanel"].tabs__uams__tabcontent {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+/*
  *  All styles for Boxes shortcode
  */
 .box-outer {
@@ -10364,30 +10531,6 @@ label.screen-reader {
 /* Small Devices, Tablets */
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */
-.uw-widget-campus-map .uw-campus-map-widget {
-  position: relative;
-}
-.uw-widget-campus-map .uw-campus-map-widget iframe {
-  margin: 0;
-}
-.uw-widget-campus-map .uw-campus-map-widget a {
-  position: absolute;
-  top: 10px;
-  width: 30px;
-  height: 30px;
-  right: 14px;
-  background: url('assets/svg/uw-sprite.svg') -109px -489px no-repeat #ffffff;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  display: block;
-  overflow: hidden;
-  text-indent: -999px;
-  opacity: .95;
-}
 #searchform {
   position: relative;
   clear: both;
