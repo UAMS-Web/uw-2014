@@ -1405,6 +1405,126 @@ function my_acf_add_local_field_groups() {
 		'description' => '',
 	));
 
+	acf_add_local_field_group(array (
+		'key' => 'group_5910d0d27a592',
+		'title' => 'SEO',
+		'fields' => array (
+			array (
+				'key' => 'field_5910d103abf65',
+				'label' => 'Document Title',
+				'name' => 'seo_document_title',
+				'type' => 'text',
+				'instructions' => 'Optimal title length. Google typically displays the first 50-60 characters of a title tag. If you keep your titles under 60 characters, research suggests that you can expect about 90% of your titles to display properly.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => 100,
+			),
+			array (
+				'key' => 'field_5910da3fabf66',
+				'label' => 'Meta Description',
+				'name' => 'seo_meta_description',
+				'type' => 'textarea',
+				'instructions' => 'Meta descriptions can be any length, but search engines generally truncate snippets longer than 160 characters. It is best to keep meta descriptions long enough that they\'re sufficiently descriptive, but shorter than that 160-character limit.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => 200,
+				'rows' => 4,
+				'new_lines' => '',
+			),
+			array (
+				'key' => 'field_5910dafcabf67',
+				'label' => 'Meta Keywords',
+				'name' => 'seo_meta_keywords',
+				'type' => 'text',
+				'instructions' => 'Comma separated list (UAMS, Medicine, College...)',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5910dbf1abf68',
+				'label' => 'Canonical URL',
+				'name' => 'seo_canonical_url',
+				'type' => 'url',
+				'instructions' => 'The canonical URL that this page should point to, leave empty to default to permalink.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+			),
+			array (
+				'key' => 'field_5910dc4cabf69',
+				'label' => 'Custom Redirect URL',
+				'name' => 'seo_custom_redirect_url',
+				'type' => 'url',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+				),
+			),
+		),
+		'menu_order' => 100,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'field',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+
 }
 
 add_action('acf/init', 'my_acf_add_local_field_groups');

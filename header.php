@@ -1,11 +1,61 @@
+<?php
+    /**
+	 * Redirect singular page to an alternate URL.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return null Return early if not a singular entry.
+	 */
+	if ( ! is_singular() )
+		return;
+
+	if ( $url = get_field('seo_custom_redirect_url') ) {
+
+		wp_redirect( esc_url_raw( $url ), 301 );
+		exit;
+
+	}
+	if ( is_singular() || null !== $post_id ) {
+		if ( get_field('seo_document_title') ) {
+			// Title is set via custom field.
+			$title = get_field('seo_document_title');
+		} else {
+			// Use default WP title.
+
+		}
+		if ( get_field('seo_meta_description') ) {
+			// Description is set via custom field.
+			$description = get_field('seo_meta_description');
+		} else {
+			// Use default WP description
+			$description = get_bloginfo('description', 'display');
+		}
+		if ( get_field('seo_custom_redirect_url') ) {
+			//Keywords are set via custom field.
+			$keywords = get_field('seo_meta_keywords');
+		}
+		if ( get_field('seo_canonical_url') ) {
+			//Canonical URL are set via custom field.
+			$canonical = get_field('seo_canonical_url');
+		}
+	}
+?>
 <!DOCTYPE html>
 <html class="no-js">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> <?php wp_title(' | ',TRUE,'right'); echo str_replace('\n', '', get_bloginfo('name')); ?> </title>
+        <title> <?php echo ($title ? $title . ' | ' : wp_title(' | ',TRUE,'right')); echo str_replace('\n', '', get_bloginfo('name')); ?> </title>
         <meta charset="utf-8">
-        <meta name="description" content="<?php bloginfo('description', 'display'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="<?php echo $description; ?>">
+        <?php // SEO
+	   	if ($keywords) {
+        	echo ('<meta name="keywords" content="' . $keywords . '" />');
+        }
+        if ($canonical) {
+        	echo ('<link rel="canonical" href="' . $canonical . '" />');
+        }
+        ?>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- Google Tag Manager -->
