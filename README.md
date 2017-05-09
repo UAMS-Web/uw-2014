@@ -376,7 +376,7 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
 > 
 > Example:   
 ```
-  [tabs name='Accessible Accordion']
+  [tabs name='Accessible Tabs']
     [tab title='Example' link='linkname1'] Tab Text [/tab]
     [tab title='Example' link='linkname2'] Tab Text [/tab]
     [tab title='Example' link='linkname3'] Tab Text [/tab]
