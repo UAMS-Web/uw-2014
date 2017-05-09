@@ -12,24 +12,30 @@
 
 class UAMS_TabsShortcode
 {
-    const PRIORITY = 12;
 
     function __construct()
     {
-        remove_filter( 'the_content', 'wpautop' );
-        add_filter( 'the_content', 'wpautop' , self::PRIORITY );
 
-      //  remove_filter( 'the_excerpt', 'wpautop' );
-      //  add_filter( 'the_excerpt', 'wpautop' , self::PRIORITY );
+      add_filter('the_content', array( $this, 'wpex_fix_shortcodes' ) );
 
         add_shortcode('tabs', array($this, 'tabs_handler'));
         add_shortcode('tab', array($this, 'tab_handler'));
-        //add_shortcode('tabpanel', array($this, 'tabpanel_handler'));
+
     }
+
+    function wpex_fix_shortcodes($content){
+	    $array = array (
+	        '<p>[' => '[',
+	        ']</p>' => ']',
+	        ']<br />' => ']'
+	    );
+
+	    $content = strtr($content, $array);
+	    return $content;
+	}
 
     function tabs_handler( $atts, $content )
     {
-        $content = wpautop(trim($content));
 
         # Create empty titles & links array
 		$this->tab_titles = array();
@@ -73,7 +79,6 @@ class UAMS_TabsShortcode
 
     function tab_handler( $atts, $content )
     {
-        $content = wpautop(trim($content));
 
         $tab_atts = shortcode_atts( array(
           'title' => '',

@@ -29,10 +29,7 @@ class UAMS_Filters
     add_filter('excerpt_more', '__return_false' );
     add_filter('the_excerpt', array($this, 'excerpt_more_override'));
 
-    //remove auto-paragraphs from shortcodes and keep it for content
-    //remove_filter( 'the_content', 'wpautop' );
-    //add_filter( 'the_content', 'wpautop' , 99);
-    //add_filter( 'the_content', 'shortcode_unautop',100 );
+	//add_filter('the_content', array( $this, 'wpex_fix_shortcodes' ) );
 
     // Add PDF filter to media library
     add_filter( 'post_mime_types', array( $this, 'modify_post_mime_types' ) );
@@ -66,6 +63,19 @@ class UAMS_Filters
   function custom_excerpt_more( $more ) {
     return '...';
   }
+
+/*
+  function wpex_fix_shortcodes($content){
+	    $array = array (
+	        '<p>[' => '[',
+	        ']</p>' => ']',
+	        ']<br />' => ']'
+	    );
+
+	    $content = strtr($content, $array);
+	    return $content;
+	}
+*/
 
   function modify_post_mime_types( $post_mime_types ) {
 

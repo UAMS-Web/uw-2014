@@ -11,21 +11,28 @@
 Class TileBox
 {
     const MAXTILES = 12;
-    const PRIORITY = 11;
     private $count = 0;
     private $NumbersArray = array('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'); //arrays can't be constants in PHP.  Privates at least can't be changed
 
     function __construct()
     {
-      //  remove_filter( 'the_content', 'wpautop' );
-      //  add_filter( 'the_content', 'wpautop' , self::PRIORITY );
 
-      //  remove_filter( 'the_excerpt', 'wpautop' );
-      //  add_filter( 'the_excerpt', 'wpautop' , self::PRIORITY );
+      add_filter('the_content', array( $this, 'wpex_fix_shortcodes' ) );
 
         add_shortcode( 'box', array( $this, 'box_handler' ) );
         add_shortcode( 'tile', array( $this, 'tile_handler' ) );
     }
+
+    function wpex_fix_shortcodes($content){
+	    $array = array (
+	        '<p>[' => '[',
+	        ']</p>' => ']',
+	        ']<br />' => ']'
+	    );
+
+	    $content = strtr($content, $array);
+	    return $content;
+	}
 
     function box_handler( $atts, $content ){
 

@@ -11,20 +11,27 @@
 
 class UAMS_AccordionShortcode
 {
-    const PRIORITY = 12;
 
     function __construct()
     {
-      //  remove_filter( 'the_content', 'wpautop' );
-      //  add_filter( 'the_content', 'wpautop' , self::PRIORITY );
 
-      //  remove_filter( 'the_excerpt', 'wpautop' );
-      //  add_filter( 'the_excerpt', 'wpautop' , self::PRIORITY );
+      add_filter('the_content', array( $this, 'wpex_fix_shortcodes' ) );
 
         add_shortcode('accordion', array($this, 'accordion_handler'));
         add_shortcode('section', array($this, 'section_handler'));
         add_shortcode('subsection', array($this, 'subsection_handler'));
     }
+
+    function wpex_fix_shortcodes($content){
+	    $array = array (
+	        '<p>[' => '[',
+	        ']</p>' => ']',
+	        ']<br />' => ']'
+	    );
+
+	    $content = strtr($content, $array);
+	    return $content;
+	}
 
     function accordion_handler( $atts, $content )
     {
