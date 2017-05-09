@@ -31,6 +31,7 @@ This is an overview of the custom widgets, plugins and various features it inclu
   - [Slideshow](#slideshow)
   - [Subpage List](#subpagelist)
   - [Accordion](#accordion)
+  - [Tabs](#tabs)
   - [Custom Menu](#custommenu)
 - [Features](#features)
   - [UAMS Widget Visibility](#uamswidgetvisiblity)
@@ -369,6 +370,18 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
    [/accordion]
 ```
 
+### Tabs ###
+> This is an accessible version of the accordion menu based off of Nicolas Hoffmann's [Accessible tab panel using ARIA](https://van11y.net/accessible-tab-panel/)
+>The title is what appears in each tab across the top. The link is optional.  The link is the text that is used in the hashtag (Ex. #linkname1). The Tab Text is the content for each tab.
+> 
+> Example:   
+```
+  [tabs name='Accessible Accordion']
+    [tab title='Example' link='linkname1'] Tab Text [/tab]
+    [tab title='Example' link='linkname2'] Tab Text [/tab]
+    [tab title='Example' link='linkname3'] Tab Text [/tab]
+   [/tabs]
+```
 
 ### Custom Menu ###
 > This shortcode pulls in a custom menu that can be created under _Dashboard > Appearance > Menus_. Icons can be added in the class field in the menu builder. View the [full set of icons](http://www.#.edu/brand/web-2/html-web-components/web-icons/) for more information.
