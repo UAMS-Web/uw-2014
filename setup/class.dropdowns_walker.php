@@ -65,6 +65,8 @@ class UAMS_Dropdowns_Walker_Menu extends Walker_Nav_Menu
     $this->CURRENT = $item->post_name;
     $title = ! empty( $item->title ) ? $item->title : $item->post_title;
 
+    $title = strip_tags($title); //PBSandwich fix - remove tags
+
     $controls = $depth == 0 && $item->has_children ? 'aria-controls="menu-'.$item->post_name.'" aria-expanded="false" aria-haspopup="true"' : '';
 
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
@@ -80,7 +82,7 @@ class UAMS_Dropdowns_Walker_Menu extends Walker_Nav_Menu
 		$output .= $indent . '<li ' . $li_attributes . $li_classnames .'>';
 
 		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-		$attributes .= ! empty( $item->description ) ? ' title="'  . esc_attr( $title . ' - ' . $item->description ) .'"' : '';
+		$attributes .= ! empty( $item->description ) ? ' title="'  . esc_attr( $title . ' - ' . strip_tags($item->description) ) .'"' : '';
 		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';

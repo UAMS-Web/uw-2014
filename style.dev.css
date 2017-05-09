@@ -7464,7 +7464,7 @@ body.home .uams-sidebar-menu {
   display: none;
 }
 body.action-bar ul.uams-sidebar-menu,
-body.action-barul.uams-mobile-menu {
+body.action-bar ul.uams-mobile-menu {
   margin-top: -42px;
 }
 /* Medium Devices, Desktops */
@@ -7508,7 +7508,7 @@ body.action-barul.uams-mobile-menu {
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 768px) {
   #desktop-relative {
-    display: none;
+    /* display: none; */
   }
   .mobile-menu {
     z-index: 10;
