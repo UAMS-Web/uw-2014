@@ -16,7 +16,6 @@ This is an overview of the custom widgets, plugins and various features it inclu
   - [UAMS RSS](#uamsrss)
   - [UAMS Single Image ](#uamssingleimage)
   - [UAMS Top Posts](#uamstopposts)
-  - [UAMS Twitter](#uamstwitter)
   - [UAMS Contact Card](#uamscontactcard)
   - [UAMS Image Card](#uamsimagecard)
 - [Shortcodes](#shortcodes)
@@ -26,9 +25,7 @@ This is an overview of the custom widgets, plugins and various features it inclu
   - [Intro](#intro)
   - [RSS](#rss)
   - [Tile box](#tilebox)
-  - [Twitter](#twitter)
   - [YouTube](#youtube)
-  - [Slideshow](#slideshow)
   - [Subpage List](#subpagelist)
   - [Accordion](#accordion)
   - [Tabs](#tabs)
@@ -126,19 +123,6 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 
 > _Requires JetPack to be installed_.
 
-### UAMS Twitter ###
-
-> Shows the latest tweets from a specific Twitter account. 
-
-> Options:  
-
-> - __Title__ : The title of the widget (_Default: UW Twitter Feed_)   
-> - __Screen name__ : The title of the widget (_Default: twitter__)   
-> - __Number of tweets to show__: The number of items in the RSS feed to display (_Default: 5_)    
-
-> In order to have the widget display in the widgets a `TWITTER_OAUTH_TOKEN` constant must be defined in your wp-config.php file.  
-> _Requires a Twitter API key_.  
-
 ### UAMS Contact Card ###
 
 > Displays a multiple list of contacts for the group/department.
@@ -228,17 +212,14 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 
 > Allowed domains:
 ```
-    uams.edu,
+	uams.edu,
     uamshealth.com,
-    uwtv.org,
-    tvw.org,
     google.com,
     youtube.com,
-    excition.com,
     pgcalc.com,
-    matchinggifts.com,
     docs.google.com,
-    surveygizmo.com,
+    vimeo.com,
+    facebook.com,
 ```
 
 
@@ -292,24 +273,6 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
   [/box]
 ```
 
-### Twitter ###
-
->  This is a shortcode embeds a Twitter feed for a desired username. It behaves similarly to the UW Twitter Widget. 
-
-> Attributes:  
-
-> - __Title__ : The title of the widget (_Default: UW Twitter Feed_)   
-> - __Screen name__ : The title of the widget (_Default: twitter__)   
-> - __Number of tweets to show__: The number of items in the RSS feed to display (_Default: 5_)    
-
-> Example:
-```
-  [twitter title="Twitter feed" count=10 name=uw]
-```
-
-> In order to have the shortcode display a `TWITTER_OAUTH_TOKEN` constant must be defined in your wp-config.php file.  
-> _Requires a Twitter API key_.  
-
 ### YouTube ###
 
 >  Embed a YouTube video or playlist into your post content.
@@ -320,24 +283,16 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
 > - __id__ : The youtube video or playlist id  (_Default: None_)  
 > - __max-results__ (__OPTIONAL__):  The maximum number of results to return for a playlist (_Default: None_)
 
-> Example:   
+> Examples: 
+
+> __Single:__
+```
+  [youtube type='single' id='6sjcltWIlkQ']
+``` 
+
+> __Playlist:__
 ```
   [youtube type='playlist' id='PLgNkGpnjFWo9CN_HeVtujhMnUXK05iwgZ' max-results='10']
-```
-
-### Slideshow ###
-
->  Embed a slideshow into your post content.
-> _Requires the UW Slideshow Plugin (https://github.com/uweb/uw-slideshow)_.  
-
-> Attributes:  
-
-> -  __id__ : Enter the ID of the slideshow you have created via the _Dashboard > Slideshows_. (_Default: None_)   
-> - __simple__ : The youtube video or playlist id  (_Default: None_)  
-
-> Example:   
-```
-  [slideshow simple='true' id='1234']
 ```
 
 ### Subpage List ###
@@ -375,6 +330,15 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
 >The title is what appears in each tab across the top. The link is optional.  The link is the text that is used in the hashtag (Ex. #linkname1). The Tab Text is the content for each tab.
 > 
 > Example:   
+```
+  [tabs name='Accessible Tabs']
+    [tab title='Example'] Tab Text [/tab]
+    [tab title='Example'] Tab Text [/tab]
+    [tab title='Example'] Tab Text [/tab]
+   [/tabs]
+```
+
+> Example with custom link names:   
 ```
   [tabs name='Accessible Tabs']
     [tab title='Example' link='linkname1'] Tab Text [/tab]
@@ -419,7 +383,7 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
 - - -
 [Ben Erickson](https://github.com/nambuben)
 
-## Contributors
+## UAMS 2016 Contributors
 [Todd McKee](https://github.com/todd-uams) 
 [Brent Passmore](https://github.com/bpmore) 
 
