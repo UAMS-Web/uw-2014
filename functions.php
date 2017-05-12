@@ -48,28 +48,28 @@ function hs_content_character_count( $valid, $value, $field, $input ){
 };
 */
 
-
-
+/*ACF*/
+// 1. customize ACF path
 add_filter('acf/settings/path', 'my_acf_settings_path');
 function my_acf_settings_path( $path ) {
-    // update path
-    $path = get_stylesheet_directory() . "/_includes/acf-pro/";
-    // return
+    $path = get_template_directory() . '/_includes/acf-pro/';
     return $path;
 }
 
-// Customize ACF dir
+// 2. customize ACF dir
 add_filter('acf/settings/dir', 'my_acf_settings_dir');
 
 function my_acf_settings_dir( $dir ) {
-    // update path
-    $dir = get_stylesheet_directory_uri() . '/_includes/acf-pro/';
-    // return
+    $dir = get_template_directory_uri() . '/_includes/acf-pro/';
     return $dir;
 }
 
-/* Include Advanced Custom Fields */
-include_once("_includes/acf-pro/acf.php");
+// 3. Hide ACF field group menu item
+//if ( ! has_filter( 'acf/settings/show_admin' ) ) {
+//	add_filter('acf/settings/show_admin', '__return_false');
+//}
+// 4. Include ACF
+include_once( get_template_directory() . '/_includes/acf-pro/acf.php' );
 
 // check for 'action_menu_active' meta key on pages and add a body class if meta value equals '1'
 add_filter('body_class','uams_custom_field_body_class');
