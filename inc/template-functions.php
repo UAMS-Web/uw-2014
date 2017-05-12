@@ -202,7 +202,7 @@ if ( ! function_exists('get_uams_breadcrumbs') ) :
     global $post;
     $ancestors = array_reverse( get_post_ancestors( $post->ID ) );
     $html = '<li><a href="http://www.uams.edu" title="University of Arkansas for Medical Scineces">Home</a></li>';
-    $html .= '<li' . (is_front_page() ? ' class="current"' : '') . '><a href="' . home_url('/') . '" title="' . str_replace('\n', '', get_bloginfo('title')) . '">' . str_replace('\n', '', get_bloginfo('title')) . '</a><li>';
+    $html .= '<li' . (is_front_page() ? ' class="current"' : '') . '><a href="' . home_url('/') . '" title="' . str_replace('   ', ' ', get_bloginfo('title')) . '">' . str_replace('   ', ' ', get_bloginfo('title')) . '</a><li>';
 
     if ( is_404() )
     {
@@ -360,7 +360,7 @@ if ( !function_exists('uams_site_title')):
         if (get_option('overly_long_title')){
             $classes .= ' long-title';
         }
-        echo '<a href="' . home_url('/') . '" title="' . esc_attr( str_replace('\n', '', get_bloginfo()) ) . '" tabindex="-1" aria-hidden="true" class="uams-site-title' . $classes . '">' . str_replace('\n', '<br/>', get_bloginfo()) . '</a>';
+        echo '<a href="' . home_url('/') . '" title="' . esc_attr( str_replace('   ', ' ', get_bloginfo()) ) . '" tabindex="-1" aria-hidden="true" class="uams-site-title' . $classes . '">' . str_replace('   ', ' <br/>', get_bloginfo()) . '</a>';
     }
 
 endif;

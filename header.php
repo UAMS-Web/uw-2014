@@ -44,7 +44,7 @@
 <html class="no-js">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> <?php echo ($title ? $title . ' | ' : wp_title(' | ',TRUE,'right')); echo str_replace('\n', '', get_bloginfo('name')); ?> </title>
+        <title> <?php echo ($title ? $title . ' | ' : wp_title(' | ',TRUE,'right')); echo str_replace('   ', ' ', get_bloginfo('name')); ?> </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="<?php echo $description; ?>">
