@@ -6194,7 +6194,7 @@ table th[class*="col-"] {
 .uams-homepage-slider-container .uams-homepage-slider div h3.slide-title {
   font-size: 48px;
   line-height: 51px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin: 0;
 }
 .uams-homepage-slider-container .uams-homepage-slider div h3.slide-title .udub-slant span {
