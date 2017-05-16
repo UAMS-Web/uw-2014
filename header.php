@@ -6,8 +6,6 @@
 	 *
 	 * @return null Return early if not a singular entry.
 	 */
-	if ( ! is_singular() )
-		return;
 
 	if ( $url = get_field('seo_custom_redirect_url') ) {
 
