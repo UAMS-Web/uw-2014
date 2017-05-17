@@ -6531,6 +6531,7 @@ small,
 }
 a.more {
   position: relative;
+  border-bottom: 1px dotted #0088dd;
 }
 a.more:after {
   background: url(/wp-content/themes/uams-2016/assets/svg/uams-sprite.svg) no-repeat -206px -492px;
@@ -6660,6 +6661,7 @@ span.next-page a:hover {
 }
 .uams-body-copy a {
   text-decoration: none;
+  border-bottom: 1px dotted #0088dd;
 }
 .info-box {
   width: 310px;
