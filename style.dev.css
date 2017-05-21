@@ -9204,7 +9204,7 @@ a.uams-btn.btn-plus:after {
   background-position: -95px -539px;
 }
 body.error404 .reddie {
-  height: 400px;
+  text-align: center;
 }
 .uams-footer {
   background: url('assets/images/footer.jpg') center bottom;
