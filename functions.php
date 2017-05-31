@@ -15,7 +15,7 @@ $UAMS = setup_uams_object();
 // Custom colors
 function webcenter_scripts() {
 	if(wp_script_is('wp-color-picker', 'enqueued')){
-		wp_enqueue_script( 'webcenter-scripts', get_stylesheet_directory_uri() . '/assets/admin/js/custom-color.js');
+		wp_enqueue_script( 'webcenter-scripts', get_template_directory() . '/assets/admin/js/custom-color.js');
 	}
 }
 
