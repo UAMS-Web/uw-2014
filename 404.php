@@ -29,7 +29,6 @@
                   <li><a href="//www.uamshealth.com/">UAMSHealth home page</a></li>
                   <li><a href="//www.uamshealth.com/maps/">Maps</a></li>
                   <li><a href="//www.uamshealth.com/news/">UAMS Today</a></li>
-<!--                   <li><a href="//www.washington.edu/discover/visit/">Visitor and Information Center</a></li> -->
                 </ul>
               </div>
             </div>
