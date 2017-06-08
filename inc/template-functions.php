@@ -225,10 +225,10 @@ if ( ! function_exists('get_uams_breadcrumbs') ) :
     }
 
     // If the current view is a post type other than page or attachment then the breadcrumbs will be taxonomies.
-    if( is_category() || is_single() || is_post_type_archive() )
+    if( is_category() || is_tax() || is_single() || is_post_type_archive() )
     {
 
-      if ( is_post_type_archive() )
+      if ( is_post_type_archive() && !is_tax() )
       {
         $posttype = get_post_type_object( get_post_type() );
         //$html .=  '<li class="current"><a href="'  . get_post_type_archive_link( $posttype->query_var ) .'" title="'. $posttype->labels->menu_name .'">'. $posttype->labels->menu_name  . '</a>';
@@ -240,6 +240,22 @@ if ( ! function_exists('get_uams_breadcrumbs') ) :
         $category = get_category( get_query_var( 'cat' ) );
         //$html .=  '<li class="current"><a href="'  . get_category_link( $category->term_id ) .'" title="'. get_cat_name( $category->term_id ).'">'. get_cat_name($category->term_id ) . '</a>';
         $html .=  '<li class="current"><span>'. get_cat_name($category->term_id ) . '</span>';
+      }
+
+      if ( is_tax() && !is_post_type_archive() )
+      {
+        $term = get_term_by("slug", get_query_var("term"), get_query_var("taxonomy") );
+        $tax = get_taxonomy( get_query_var("taxonomy") );
+        //$html .=  '<li class="current"><a href="'  . get_category_link( $category->term_id ) .'" title="'. get_cat_name( $category->term_id ).'">'. get_cat_name($category->term_id ) . '</a>';
+        $html .=  '<li class="current"><span>'. $tax->labels->name .': '. $term->name .'</span>';
+      }
+
+      if ( is_tax() && is_post_type_archive() )
+      {
+        $tax = get_term_by("slug", get_query_var("term"), get_query_var("taxonomy") );
+        $posttype = get_post_type_object( get_post_type() );
+        //$html .=  '<li class="current"><a href="'  . get_category_link( $category->term_id ) .'" title="'. get_cat_name( $category->term_id ).'">'. get_cat_name($category->term_id ) . '</a>';
+        $html .=  '<li class="current"><span>'. $tax->name . '</span>';
       }
 
       if ( is_single() )
