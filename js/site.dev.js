@@ -11372,8 +11372,8 @@ UAMS.QuickLinks = Backbone.View.extend({
 
     render : function(  )
     {
-        this.quicklinks = $( _.template( this.template )({ links : this.defaultLinks ? this.defaultLinks : this.links.toJSON() }) );
-        this.$container = $(this.container);
+        this.quicklinks = jQuery( _.template( this.template )({ links : this.defaultLinks ? this.defaultLinks : this.links.toJSON() }) );
+        this.$container = jQuery(this.container);
         this.$container.prepend( this.quicklinks )
         this.$el.attr( 'aria-controls', 'quicklinks' ).attr( 'aria-owns', 'quicklinks' )
         UAMS.$body.on( 'keydown', '#quicklinks a:first', this.inner_keydown )
@@ -11423,14 +11423,14 @@ UAMS.QuickLinks = Backbone.View.extend({
         if ( this.open ) {
             this.$el.attr('aria-label', 'Close quick links');
             this.quicklinks.find('a').attr( 'tabindex', 0 ).first().focus()
-           $('#uams-container-inner').attr('aria-hidden', true);
-           $('.screen-reader-shortcut').attr('aria-hidden', true)
+           jQuery('#uams-container-inner').attr('aria-hidden', true);
+           jQuery('.screen-reader-shortcut').attr('aria-hidden', true)
         } else {
             this.$el.attr('aria-label', 'Open quick links');
             this.quicklinks.find('a').attr( 'tabindex', -1 )
             this.$el.focus()
-           $('#uams-container-inner').attr('aria-hidden', false);
-           $('.screen-reader-shortcut').attr('aria-hidden', false);
+           jQuery('#uams-container-inner').attr('aria-hidden', false);
+           jQuery('.screen-reader-shortcut').attr('aria-hidden', false);
         }
     },
 
@@ -12470,25 +12470,25 @@ UAMS.Dropdowns = Backbone.View.extend({
 
   wrapChildren : function( element )
   {
-    if ( $(element).find('li').length > this.chunkSize )
-        _.each( _.groupBy( $( element ).find('li'), this.chunk ), this.wrap )
+    if ( jQuery(element).find('li').length > this.chunkSize )
+        _.each( _.groupBy( jQuery( element ).find('li'), this.chunk ), this.wrap )
   },
 
   wrapMega : function( element )
   {
  	//if ( $(element).find('li').not('.sub-menu li') )
-    	_.each( $( element ).find('li').not('.sub-menu li'), this.wrap )
+    	_.each( jQuery( element ).find('li').not('.sub-menu li'), this.wrap )
   },
 
   wrap : function( elements )
   {
-      $( elements ).wrapAll( this.menuBlock )
+      jQuery( elements ).wrapAll( this.menuBlock )
   },
 
   // todo: tidy up the math / variables
   positionSubmenu : function( event )
   {
-    var $el = $( event.currentTarget )
+    var $el = jQuery( event.currentTarget )
       , position = $el.position()
       , menublock = $el.find('.menu-block')
       , shift = ( this.menuBlockWidth * ( menublock.length ) ) + position.left
@@ -12508,8 +12508,8 @@ UAMS.Dropdowns = Backbone.View.extend({
       case this.keys.enter :
       case this.keys.down  :
 
-        $(e.currentTarget).attr('aria-expanded', 'true');
-        this.currentSubMenu = $(e.currentTarget).siblings('ul')
+        jQuery(e.currentTarget).attr('aria-expanded', 'true');
+        this.currentSubMenu = jQuery(e.currentTarget).siblings('ul')
         this.currentSubMenuAnchors = this.currentSubMenu.find('a')
 
         this.currentSubMenu
@@ -12522,16 +12522,16 @@ UAMS.Dropdowns = Backbone.View.extend({
         return false
 
       case this.keys.left :
-        $(e.currentTarget).parent().prev().children('a').first().focus()
+        jQuery(e.currentTarget).parent().prev().children('a').first().focus()
         return false
 
 
       case this.keys.right :
-        $(e.currentTarget).parent().next().children('a').first().focus()
+        jQuery(e.currentTarget).parent().next().children('a').first().focus()
         return false
 
       case this.keys.spacebar:
-        window.location.href = $(e.currentTarget).attr('href')
+        window.location.href = jQuery(e.currentTarget).attr('href')
         return false;
 
     }
@@ -12577,7 +12577,7 @@ UAMS.Dropdowns = Backbone.View.extend({
 
       case this.keys.spacebar:
       case this.keys.enter:
-        window.location.href = $(e.currentTarget).attr('href')
+        window.location.href = jQuery(e.currentTarget).attr('href')
         return false;
 
       case this.keys.esc:

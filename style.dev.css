@@ -6644,10 +6644,6 @@ span.next-page a:after {
   bottom: 3px;
   width: 14px;
   height: 21px;
-  -o-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
 span.next-page a:hover {
   background-color: #e1e1e1;

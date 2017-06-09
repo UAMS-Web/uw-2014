@@ -72,8 +72,8 @@ UAMS.QuickLinks = Backbone.View.extend({
 
     render : function(  )
     {
-        this.quicklinks = $( _.template( this.template )({ links : this.defaultLinks ? this.defaultLinks : this.links.toJSON() }) );
-        this.$container = $(this.container);
+        this.quicklinks = jQuery( _.template( this.template )({ links : this.defaultLinks ? this.defaultLinks : this.links.toJSON() }) );
+        this.$container = jQuery(this.container);
         this.$container.prepend( this.quicklinks )
         this.$el.attr( 'aria-controls', 'quicklinks' ).attr( 'aria-owns', 'quicklinks' )
         UAMS.$body.on( 'keydown', '#quicklinks a:first', this.inner_keydown )
@@ -123,14 +123,14 @@ UAMS.QuickLinks = Backbone.View.extend({
         if ( this.open ) {
             this.$el.attr('aria-label', 'Close quick links');
             this.quicklinks.find('a').attr( 'tabindex', 0 ).first().focus()
-           $('#uams-container-inner').attr('aria-hidden', true);
-           $('.screen-reader-shortcut').attr('aria-hidden', true)
+           jQuery('#uams-container-inner').attr('aria-hidden', true);
+           jQuery('.screen-reader-shortcut').attr('aria-hidden', true)
         } else {
             this.$el.attr('aria-label', 'Open quick links');
             this.quicklinks.find('a').attr( 'tabindex', -1 )
             this.$el.focus()
-           $('#uams-container-inner').attr('aria-hidden', false);
-           $('.screen-reader-shortcut').attr('aria-hidden', false);
+           jQuery('#uams-container-inner').attr('aria-hidden', false);
+           jQuery('.screen-reader-shortcut').attr('aria-hidden', false);
         }
     },
 
