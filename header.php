@@ -102,5 +102,7 @@
     <?php get_template_part('thinstrip'); ?>
 
     <?php require( get_template_directory() . '/inc/template-functions.php' );
+	    if (has_nav_menu( 'white-bar' )) {
           uams_dropdowns(); ?>
     <div class="col-md-12 mobile-menu"> <?php get_template_part( 'menu', 'mobile' ); ?> </div>
+	<?php } //end if nav
