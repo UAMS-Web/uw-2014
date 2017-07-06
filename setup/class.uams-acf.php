@@ -1581,6 +1581,18 @@ function my_acf_add_local_field_groups() {
 					'value' => 'administrator',
 				),
 			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+				),
+				array (
+					'param' => 'current_user_role',
+					'operator' => '==',
+					'value' => 'super_admin',
+				),
+			),
 		),
 		'menu_order' => 2,
 		'position' => 'normal',
