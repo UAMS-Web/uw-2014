@@ -42,5 +42,10 @@
 
 <?php wp_footer(); ?>
 
+<?php
+    if ( get_post_meta( get_the_ID() , 'custom_footer_script' , 'true' ) )
+		echo get_post_meta( get_the_ID() , 'custom_footer_script' , 'true' );
+    ?>
+
 </body>
 </html>

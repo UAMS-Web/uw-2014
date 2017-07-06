@@ -1525,6 +1525,73 @@ function my_acf_add_local_field_groups() {
 		'description' => '',
 	));
 
+	acf_add_local_field_group(array (
+		'key' => 'group_595e512b6e9bb',
+		'title' => 'Custom CSS/JS',
+		'fields' => array (
+			array (
+				'key' => 'field_595e518756ad4',
+				'label' => 'Header Script',
+				'name' => 'custom_header_script',
+				'type' => 'textarea',
+				'instructions' => 'If you require JavaScript or CSS in the header of your page, place the code (including style or script tags) here',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'new_lines' => '',
+			),
+			array (
+				'key' => 'field_595e51f056ad5',
+				'label' => 'Footer Script',
+				'name' => 'custom_footer_script',
+				'type' => 'textarea',
+				'instructions' => 'If you require JavaScript or CSS in the footer of your page, place the code (including style or script tags) here',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'new_lines' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+				),
+				array (
+					'param' => 'current_user_role',
+					'operator' => '==',
+					'value' => 'administrator',
+				),
+			),
+		),
+		'menu_order' => 2,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => 'Custom JS & CSS',
+	));
+
 }
 
 add_action('acf/init', 'my_acf_add_local_field_groups');

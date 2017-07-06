@@ -80,6 +80,10 @@
         echo get_post_meta( get_the_ID() , 'javascript' , 'true' );
         echo get_post_meta( get_the_ID() , 'css' , 'true' );
         ?>
+        <?php
+	    if ( get_post_meta( get_the_ID() , 'custom_header_script' , 'true' ) )
+			echo get_post_meta( get_the_ID() , 'custom_header_script' , 'true' );
+        ?>
     </head>
     <!--[if lt IE 9]> <body <?php body_class('lt-ie9'); ?>> <![endif]-->
     <!--[if gt IE 8]><!-->
