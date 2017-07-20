@@ -321,3 +321,30 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
+
+
+/* Update sitemap on publish post & page */
+add_action( 'publish_post', 'sitemap' );
+add_action( 'publish_page', 'sitemap' );
+/* Function to create sitemap.xml */
+function sitemap() {
+  $posts = get_posts( array(
+    'numberposts' => -1,
+    'orderby' => 'modified',
+    'post_type' => array( 'post', 'page' ),
+    'order' => 'DESC'
+  ));
+
+  header('Content-Type: text/xml; charset=' . get_bloginfo('charset'), true);
+  header('X-Robots-Tag: noindex, follow', true);
+  $sitemap .= '<?xml version="1.0" encoding="' . get_bloginfo('charset') . '"?> <?xml-stylesheet type="text/xsl" href="' . get_stylesheet_directory_uri() . '/sitemap.xsl' . '"?> <!-- generated-on="' . date('Y-m-d\TH:i:s+00:00') . '" --> <!-- generator="University of Arkansas for Medical Sciences (UAMS)" --> <!-- generator-url="http://www.uams.edu/" --> <!-- generator-version="1.0" --> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"> ';
+  $sitemap .= '<url> <loc>' . esc_url( home_url( "/" ) ) . '</loc> <changefreq>Daily</changefreq> <priority>1.0</priority> </url>';
+  foreach( $posts as $post ) {
+	  setup_postdata( $post);
+	  $postdate = explode( " ", $post->post_modified ); $sitemap .= '<url> <loc>' . get_permalink( $post->ID ) . '</loc> <lastmod>' . $postdate[0] . 'T' . $postdate[1] . '+00:00' . '</lastmod> <changefreq>Weekly</changefreq> <priority>0.5</priority> </url>';
+  }
+  $sitemap .= '</urlset>';
+  $fop = fopen( ABSPATH . "sitemap.xml", 'w' );
+  fwrite( $fop, $sitemap );
+  fclose( $fop );
+}
