@@ -11027,7 +11027,7 @@ UAMS.initialize = function( $ )
   UAMS.alert = new UAMS.Alert({ after: UAMS.elements.alert, model: new UAMS.Alert.Model() });
 
   // todo: add to separate file
-  $('table').addClass('table table-striped')
+  $('table').addClass('table table-striped').attr( "border", 1 )
 
   $('pre').addClass('prettyprint')
 
@@ -11167,7 +11167,7 @@ UAMS.Search = Backbone.View.extend({
                       '<input id="uams-search-bar" type="search" name="s" value="" autocomplete="off" />'+
                     '</form>'+
 
-                    '<select id="mobile-search-select" class="visible-xs">' +
+                    '<select id="mobile-search-select" class="visible-xs" aria-label="Search Scope">' +
                       '<option value="uams" selected>All of UAMS</option>' +
                       '<option value="site">Current site</option>' +
                     '</select>' +
@@ -13001,7 +13001,7 @@ UAMS.Select = Backbone.View.extend({
                     '<div></div>' +
                     '<div class="wrapper" style="width:<%= width %>px; margin-top:-<%= height/2 %>px; margin-left:-<%= width/2 %>px;">' +
                      '<span class="close"> Close</span>' +
-                     '<iframe width="<%= width %>" height="<%= height %>" src="<%= src %>" frameborder="0" allowfullscreen></iframe>' +
+                     '<iframe width="<%= width %>" height="<%= height %>" src="<%= src %>" style="border:0;" allowfullscreen="" title="<%= caption %>"></iframe>' +
                      '<p><%= caption %></p>' +
                      '<p><%= credit %></p>' +
                    '</div>' +
