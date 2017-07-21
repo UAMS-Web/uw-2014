@@ -77,7 +77,7 @@ UAMS.initialize = function( $ )
   UAMS.alert = new UAMS.Alert({ after: UAMS.elements.alert, model: new UAMS.Alert.Model() });
 
   // todo: add to separate file
-  $('table').addClass('table table-striped')
+  $('table').addClass('table table-striped').attr( "border", 1 )
 
   $('pre').addClass('prettyprint')
 
