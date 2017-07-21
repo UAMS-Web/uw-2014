@@ -5,3 +5,7 @@ node_modules
 assets/fonts/heron.*
 
 config.codekit3
+
+assets/images/.DS_Store
+
+assets/images/.DS_Store
