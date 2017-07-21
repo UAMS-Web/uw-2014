@@ -20,7 +20,7 @@ UAMS.Search = Backbone.View.extend({
                       '<input id="uams-search-bar" type="search" name="s" value="" autocomplete="off" />'+
                     '</form>'+
 
-                    '<select id="mobile-search-select" class="visible-xs">' +
+                    '<select id="mobile-search-select" class="visible-xs" aria-label="Search Scope">' +
                       '<option value="uams" selected>All of UAMS</option>' +
                       '<option value="site">Current site</option>' +
                     '</select>' +
