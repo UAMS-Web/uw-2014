@@ -35,9 +35,9 @@
 
     <div data-mobimg="<? echo ($hasmobileimage ? $mobileimage : $desktopimage['url']); ?>" data-dtimg="<? echo $desktopimage['url']; ?>" class="uams-hero-image uams-homepage-slider <?php echo ($textcolor ? $textcolor : 'lighttext' ); ?> <?php echo ($first ? 'activeslide' : '' ); ?>" style="background-position: center center; background-image:url('<? echo $desktopimage["url"]; ?>');">
 		<div>
-			<h3 class="slide-title"><?php the_sub_field( "home_slide_title" ); ?></a><span class="udub-slant"><span></span></span></h3>
+			<h3 class="slide-title" id="slide-title-<?php echo $i; ?>"><?php the_sub_field( "home_slide_title" ); ?></a><span class="udub-slant"><span></span></span></h3>
 			<p class="slide-content"><?php the_sub_field( 'home_slide_text' ); ?></p>
-			<p><a class="uams-btn btn-sm btn-none" href="<? echo $buttonlink ?>"><?php the_sub_field( 'home_slide_button_text' ); ?></a></p>
+			<p><a class="uams-btn btn-sm btn-none" href="<? echo $buttonlink ?>" aria-describedby="slide-title-<?php echo $i; ?>"><?php the_sub_field( 'home_slide_button_text' ); ?></a></p>
 		</div>
 	</div>
 
@@ -127,8 +127,6 @@ endif;
 
     <div class="hero-content col-md-<?php echo (($sidebar[0]!="on") ? "8" : "12" ) ?> uams-content" role='main'>
 
-      <?php //uams_page_title(); ?>
-      <?php //get_template_part( 'menu', 'mobile' ); ?>
       <?php
 	      if((!isset($breadcrumbs[0]) || $breadcrumbs[0]!="on")) {
 	      	get_template_part( 'breadcrumbs' );
