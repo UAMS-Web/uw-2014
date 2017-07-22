@@ -128,6 +128,7 @@ UAMS.Search = Backbone.View.extend({
   // Determine if the client wants to search current site or the entire UAMS
   submitSearch : function( e )
   {
+    this.$el.find( 'input.radiobtn' ).attr('disabled', 'disabled')
     switch ( this.searchFeature )
     {
       case this.searchFeatures.uams :

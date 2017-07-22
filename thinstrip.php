@@ -8,14 +8,14 @@
     </div>
   </div>
   <div class='align-right thin-nav'>
-      <nav class="uams-thin-strip-nav" role='navigation' aria-label='audience based'>
+      <nav class="uams-thin-strip-nav" aria-label='audience based'>
           <ul class="uams-thin-links">
             <li><a href="http://uamshealth.com" title="UAMSHealth" class="">UAMSHealth</a></li>
             <li><a href="http://jobs.uams.edu" title="Jobs @ UAMS">Jobs</a></li>
             <li><a href="http://giving.uams.edu" title="Giving">Giving</a></li>
           </ul>
       </nav>
-      <nav id='search-quicklinks' role='navigation' aria-label='search and quick links'>
+      <nav id='search-quicklinks' aria-label='search and quick links'>
       <button class='uams-search' aria-owns='uamssearcharea' aria-controls='uamssearcharea' aria-expanded='false' aria-label='open search area' aria-haspopup='true'>
 <!--[if gt IE 8]><!-->
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

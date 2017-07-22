@@ -4,7 +4,7 @@
 
         <h4>Connect with us:</h4>
 
-        <nav role="navigation" aria-label="social networking">
+        <nav aria-label="social networking">
             <ul class="footer-social">
                 <li><a class="facebook" href="http://facebook.com/uamshealth">Facebook</a></li>
                 <li><a class="twitter" href="http://twitter.com/uamshealth">Twitter</a></li>
@@ -18,7 +18,7 @@
             </ul>
         </nav>
 
-        <nav role="navigation" aria-label="footer links">
+        <nav aria-label="footer links">
             <ul class="footer-links">
 <!--                 <li><a href="http://www.uw.edu/accessibility">Accessibility</a></li> -->
                 <li><a href="http://uamshealth.com/disclaimer/">Disclaimer</a></li>
