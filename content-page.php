@@ -4,12 +4,7 @@
 
 	<button id="mobile-sidebar-menu" class="visible-xs" aria-hidden="true" tabindex="1">
 
-	    <div aria-hidden="true" id="ham" class="i-org-tree">
-		    <span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
+	    <div aria-hidden="true" id="ham" class="i-org-tree"></div>
 	   <div id="mobile-sidebar-title" class="page_item">
 
 <?php
