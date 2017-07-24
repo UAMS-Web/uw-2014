@@ -1,5 +1,6 @@
 <h1><?php the_title() ?></h1>
 
+<<<<<<< HEAD
 <div id="mobile-sidebar">
 
 	<button id="mobile-sidebar-menu" class="visible-xs" aria-hidden="true" tabindex="1">
@@ -27,4 +28,6 @@
 	<div id="mobile-sidebar-links" aria-hidden="true">  <?php uams_sidebar_menu(); ?></div>
 </div>
 
+=======
+>>>>>>> parent of da883e0... Mobile Sidebar Menu for Hierarchy
 <?php the_content(); ?>
