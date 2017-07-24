@@ -20,6 +20,12 @@ class UAMS_AccordionShortcode
         add_shortcode('accordion', array($this, 'accordion_handler'));
         add_shortcode('section', array($this, 'section_handler'));
         add_shortcode('subsection', array($this, 'subsection_handler'));
+
+        // register accordion script, if needed
+        function register_uams_accordion() {
+			wp_register_script('uams-accordion', get_template_directory_uri() . '/js/uams.accordionmodule.js', array(), '1.0', true);
+		}
+		add_action( 'init', 'register_uams_accordion' );
     }
 
     function wpex_fix_shortcodes($content){
@@ -42,8 +48,11 @@ class UAMS_AccordionShortcode
         if ( empty( $content ) )
             return 'No content inside the accordion element. Make sure your close your accordion element. Required stucture: [accordion][section]content[/section][/accordion]';
 
+        // Enqueue accordion script
+        wp_enqueue_script('uams-accordion');
+
         $output = do_shortcode( $content );
-        return sprintf( '<script src="' . get_template_directory_uri() . '/js/uams.accordionmodule.js" type="text/javascript"></script><div id="accordion uams-accordion-shortcode"><h3>%s</h3><div class="js-accordion" data-accordion-prefix-classes="uams-accordion-shortcode">%s</div></div>', $accordion_atts['name'], $output );
+        return sprintf( '<div id="accordion uams-accordion-shortcode"><h3>%s</h3><div class="js-accordion" data-accordion-prefix-classes="uams-accordion-shortcode">%s</div></div>', $accordion_atts['name'], $output );
     }
 
     function section_handler( $atts, $content )

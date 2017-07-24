@@ -21,6 +21,12 @@ class UAMS_TabsShortcode
         add_shortcode('tabs', array($this, 'tabs_handler'));
         add_shortcode('tab', array($this, 'tab_handler'));
 
+        // register accordion script, if needed
+        function register_uams_tabs() {
+			wp_register_script('uams-tabs', get_template_directory_uri() . '/js/uams.tabs.min.js', array(), '1.0', true);
+		}
+		add_action( 'init', 'register_uams_tabs' );
+
     }
 
     function wpex_fix_shortcodes($content){
@@ -48,6 +54,9 @@ class UAMS_TabsShortcode
         if ( empty( $content ) )
             return 'No content inside the tabs element. Make sure your close your tabs element. Required stucture: [tabs][tab title=""]content[/tab][/tabs]';
 
+		// Enqueue accordion script
+        wp_enqueue_script('uams-tabs');
+
         # Get all individual tabs content
 		$tab_content = do_shortcode($content);
 
@@ -71,7 +80,7 @@ class UAMS_TabsShortcode
 		$output .= '</ul><div class="uams-tab-content">';
 		$output .= $tab_content;
 		$output .= '</div></div>'; //Close js-tabs
-		$output .= '</div><script src="' . get_template_directory_uri() . '/js/uams.tabs.min.js" type="text/javascript"></script>'; //Close uams-tabs-shortcode
+		$output .= '</div>'; //Close uams-tabs-shortcode
 
 		return $output;
 
