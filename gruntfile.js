@@ -28,6 +28,7 @@ module.exports = function(grunt) {
           "js/uams.radio-checkbox.js",
           "js/uams.dropdowns.js",
           "js/uams.mobile-menu.js",
+          "js/uams.mobile-sidebar-menu.js",
           "js/uams.accordion.js",
           "js/uams.select.js",
           "js/uams.images.js",

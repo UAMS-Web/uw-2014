@@ -10951,20 +10951,21 @@ UAMS.KEYCODES = {
 ;// List out the classes that each component searches for
 UAMS.elements = {
 
-  alert      : '.mobile-menu',
-  accordion  : '.uams-accordion',
-  dropdowns  : '#reddiedrops',
-  images     : 'a > img',
-  mobilemenu : '#mobile-relative',
-  radio      : ':radio',
-  checkbox   : ':checkbox',
-  search     : '#uamssearcharea',
-  select     : '.uams-select',
-  quicklinks : '.uams-quicklinks',
-  slideshow  : '.uams-slideshow',
-  social     : '.uams-social',
-  vimeo      : '.uams-vimeo',
-  youtube    : '.uams-youtube'
+  alert      	: '.mobile-menu',
+  accordion  	: '.uams-accordion',
+  dropdowns  	: '#reddiedrops',
+  images     	: 'a > img',
+  mobilemenu 	: '#mobile-relative',
+  togglemobile  : '#mobile-sidebar',
+  radio      	: ':radio',
+  checkbox   	: ':checkbox',
+  search     	: '#uamssearcharea',
+  select     	: '.uams-select',
+  quicklinks 	: '.uams-quicklinks',
+  slideshow  	: '.uams-slideshow',
+  social     	: '.uams-social',
+  vimeo      	: '.uams-vimeo',
+  youtube    	: '.uams-youtube'
 
 }
 
@@ -11010,6 +11011,9 @@ UAMS.initialize = function( $ )
   UAMS.quicklinks = _.map( $( UAMS.elements.quicklinks ),    function( element ) { return new UAMS.QuickLinks( { el : element, url : UAMS.sources.quicklinks }) } )
   UAMS.search     = _.map( $( UAMS.elements.search ),    function( element ) { return new UAMS.Search( { el : element } ) } )
   UAMS.images     = _.map( $( UAMS.elements.images ),    function( element ) { return new UAMS.Image({ el : element }) } )
+
+  // New togglemenu
+  UAMS.togglemobile = _.map( $( UAMS.elements.togglemobile ),     function( element ) { return new UAMS.ToggleSidebarMenu({ el : element }) } )
 
   // UAMS Modules
   UAMS.slideshows = _.map( $( UAMS.elements.slideshow ), function( element ) { return new UAMS.Slideshow( { el : element }) } )
@@ -12663,7 +12667,48 @@ UAMS.MobileMenu = Backbone.View.extend({
     this.$mobilemenu.find('li').removeAttr('style');
   }
 
-});// ### UAMS Accordion
+});/* Sidebar Navigation Toggle Button for Mobile Devices - Hide and Show The Sidebar Content    */
+
+
+UAMS.ToggleSidebarMenu = Backbone.View.extend({
+
+  events: {
+    'click button': 'toggleContent'
+  },
+
+  initialize : function() {
+    console.log(this.el);
+    this.toggleContent();
+  },
+
+  toggleContent: function(e){
+
+    if (this.showmeState === false) {
+      this.showLinks();
+    } else {
+      this.hideLinks();
+    }
+
+  },
+
+
+  showLinks: function() {
+    this.$el.find('#mobile-sidebar-links').show();
+    this.$el.find('#mobile-sidebar-menu').addClass('open');
+    this.showmeState = true;
+
+  },
+
+  hideLinks: function() {
+    this.$el.find('#mobile-sidebar-links').hide();
+    this.$el.find('#mobile-sidebar-menu').removeClass('open');
+    this.showmeState = false;
+
+  }
+
+})
+
+/* Sidebar Navigation Hamburger Button for Mobile Devices */;// ### UAMS Accordion
 
 // This creates a UAMS Accordion
 // For usage, refer to the [UAMS Web Components webpage](http://uw.edu/brand/web#accordion)

@@ -27,9 +27,9 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 768px) {
 
-  //Hides desktop version
-  #desktop-relative {
-    /* display: none; */
+  //Hides sidebar down in the page for mobile vesion
+  #sidebar #desktop-relative {
+	  display:none;
   }
 
   //Moves mobile menu above the hero.
@@ -80,7 +80,7 @@
       //}
     }
     ul.uams-mobile-menu li.pagenav ul li.current_page_parent.current_page_ancestor > a:after {
-      display: none;
+      display: inline;
     }
     &.frontpage {
         //margin-top: -10px;
