@@ -1,10 +1,10 @@
 a.uams-btn {
   padding: 11px 20px;
   text-transform: uppercase;
-  background-color: @200grey;
+  background-color: @300grey;
   font-family: @font-family-headline;
   font-weight: @bold;
-  color: @darkgray;
+  color: @700grey;
   display: inline-block;
   position: relative;
   background-image: none !important;
@@ -82,19 +82,23 @@ a.uams-btn {
    }
   &:hover, &:focus {
     color: @900grey;
-    background-color: #f5f5f5;
+    background-color: @200grey;
     &:before {
       background-color: lighten(@red, 10%);
     }
   }
   &.btn-grey {
-	background-color: #f5f5f5;
-	&:before {
-		background-color: @700grey;
-		border-left: 5px solid rgba(0,0,0,.3);
-	}
-    &:hover:before {
+	background-color: @300grey;
+	color: @700grey;
+    &:hover, &:focus {
+      background-color: darken(@600grey, 5%);
+      color: @100grey;
+    }
+    &:before {
       background-color: darken(@700grey, 5%);
+    }
+    &:hover:before {
+      background-color: darken(@700grey, 20%);
     }
   }
   &.btn-red {
@@ -137,6 +141,20 @@ a.uams-btn {
     }
     &:hover:before {
       background-color: darken(@green, 20%);
+    }
+  }
+  &.btn-yellow {
+    background-color: @300grey;
+    color: @700grey;
+    &:hover, &:focus {
+      background-color: darken(@yellow, 5%);
+      color: @900grey;
+    }
+    &:before {
+      background-color: darken(@yellow, 5%);
+    }
+    &:hover:before {
+      background-color: darken(@yellow, 20%);
     }
   }
   &:after {
