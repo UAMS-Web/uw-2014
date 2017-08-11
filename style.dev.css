@@ -7667,7 +7667,7 @@ body.action-bar ul.uams-mobile-menu {
 }
 /*==========  Hidden for all devices ==========*/
 #mobile-sidebar-links {
-  display: none !important;
+  display: none;
 }
 /*==========  Mobile Devices  ==========*/
 @media only screen and (max-width: 768px) {
