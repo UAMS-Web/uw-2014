@@ -6572,6 +6572,9 @@ a.more:after {
   font-weight: 800;
   letter-spacing: normal;
 }
+.uams-body blockquote {
+  border-left: 3px solid #e0e0e0;
+}
 .uams-body blockquote p {
   font-family: "Fira Sans", sans-serif;
   font-size: 21px;
@@ -9285,6 +9288,26 @@ a.uams-btn.btn-external:after {
 }
 a.uams-btn.btn-plus:after {
   background-position: -95px -539px;
+}
+#sidebar a.uams-btn {
+  width: calc(100% - 48px);
+}
+#sidebar.btn-lg {
+  width: calc(100% - 60px);
+}
+#sidebar.btn-sm {
+  width: calc(100% - 43px);
+}
+@media only screen and (max-width: 768px) {
+  #sidebar a.uams-btn {
+    width: auto;
+  }
+  #sidebar.btn-lg {
+    width: auto;
+  }
+  #sidebar.btn-sm {
+    width: auto;
+  }
 }
 body.error404 .reddie {
   text-align: center;

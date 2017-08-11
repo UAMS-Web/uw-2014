@@ -190,3 +190,30 @@ a.uams-btn {
   }
 
 }
+
+// Sidebar buttons
+#sidebar {
+	a.uams-btn {
+	width: ~"calc(100% - 48px)"; // Less hack
+	}
+	&.btn-lg {
+		width: ~"calc(100% - 60px)"; // Less hack
+	}
+	&.btn-sm {
+		width: ~"calc(100% - 43px)"; // Less hack
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	#sidebar {
+		a.uams-btn {
+			width: auto;
+		}
+		&.btn-lg {
+			width: auto;
+		}
+		&.btn-sm {
+			width: auto;
+		}
+	}
+}
