@@ -1,12 +1,17 @@
 /*==========  Hidden for all devices ==========*/
 
-#mobile-sidebar-links{ display:none; }
+#mobile-sidebar { display: none; }
 
-
+#mobile-sidebar-links{ display: none; }
 
 
 /*==========  Mobile Devices  ==========*/
 @media only screen and (max-width : 768px) {
+
+	.page-parent #mobile-sidebar,
+	.page-child #mobile-sidebar {
+		display: block;
+	}
 
 	#mobile-sidebar-links {
 		margin: -20px 0 20px 0;
