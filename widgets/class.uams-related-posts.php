@@ -3,6 +3,7 @@
 //       Name: UAMS Related Posts
 //       Description: A widget that shows related posts
 
+/*
 if ( ! class_exists( 'UAMS_Widget_Related_Posts') ) :
 
 class UAMS_Widget_Related_Posts extends WP_Widget
@@ -19,7 +20,7 @@ class UAMS_Widget_Related_Posts extends WP_Widget
   {
       // Possible paramters to pass to the the `get_for_post_id` function: `size`, `post_type`, `has_terms`, `date_range` and `exclude_post_ids`.
       // - By default related posts go back one year
-      /* [todo] make these widget options */
+      // [todo] make these widget options
       $this->RelatedPostsOptions = array(
         'date_range' => array( 'from' => strtotime('last year') , 'to' => time() )
       );
@@ -174,3 +175,4 @@ class UAMS_Related_Posts
 new UAMS_Related_Posts;
 
 endif;
+*/

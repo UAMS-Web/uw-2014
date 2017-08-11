@@ -78,17 +78,6 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 > - **Number of posts to display** : The number of posts to show (*Default: 1*)
 > - **Display more link** : Display an anchor tag that links to the blogroll page (*Default: false*)
 
-### UAMS Related Posts ###
-
->  Uses the WordPress JetPack API to show a list of posts related to the one currently being views.  
- _Requires the JetPack Plugin to be installed_ otherwise it will not appear in the Widgets admin area.  
-
-> Options:  
-
-> - **Title** : The title of the widget (*Default: None*)   
-
-> _Requires the JetPack Plugin to be installed_.
-
 ### UAMS RSS ###
 
 > Similar to the WordPress RSS widget except with a branded layout that displays RSS images.
@@ -111,17 +100,6 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 > - __Featured text__ : A small blurb that is shown below the image (_Default: None_)    
 > - __Link__ : A URL for the More link text (_Default: None_)    
 > - __More link__ : The text to display in the more link (_Default: Read more_)    
-
-### UAMS Top Posts ###
-
-> Shows the most popular posts on your blog.  
-
-> Options:  
-
-> - __Title__ : The title of the widget (_Default: Image Widget_)   
-> - __Number of items to display__ : The number of items in the RSS feed to display (_Default: 1_)    
-
-> _Requires JetPack to be installed_.
 
 ### UAMS Contact Card ###
 

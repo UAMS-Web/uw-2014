@@ -3,6 +3,7 @@
 //       Name: UAMS Top Posts
 //       Description: A widget that shows top posts and most recent posts on your blog
 
+/*
 if ( ! class_exists( 'UAMS_Top_Posts' ) ) :
 
 class UAMS_Top_Posts extends WP_Widget
@@ -210,3 +211,4 @@ class UAMS_Top_Posts extends WP_Widget
 register_widget( 'UAMS_Top_Posts' );
 
 endif;
+*/
