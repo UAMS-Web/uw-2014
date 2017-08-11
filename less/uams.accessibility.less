@@ -53,7 +53,7 @@ label.screen-reader {
             border-bottom: none;
         }
     }
-    a:visited {
+    a:visited:not(.uams-btn) {
 	    color: @visited;
 	    border-bottom: 1px solid @visited;
 	    &.uams-btn {
@@ -64,9 +64,14 @@ label.screen-reader {
         text-decoration: underline;
     }
     .uams-breadcrumbs {
-        a:focus {
+        a:focus,
+        a:hover {
+	        color: @hover;
             border-bottom: none;
             text-decoration: underline;
+        }
+        a:visited {
+	        color: @700grey;
         }
     }
     #main_content:focus {

@@ -6467,7 +6467,7 @@ table th[class*="col-"] {
 .uams-breadcrumbs a,
 .uams-breadcrumbs span {
   font-family: "Fira Sans", sans-serif;
-  color: #535353;
+  color: #616161;
   font-weight: 400;
   font-size: 17px;
   padding: 0 25px 0 0;
@@ -9530,19 +9530,24 @@ label.screen-reader {
 .uams-body a:hover.uams-btn {
   border-bottom: none;
 }
-.uams-body a:visited {
+.uams-body a:visited:not(.uams-btn) {
   color: #4527a0;
   border-bottom: 1px solid #4527a0;
 }
-.uams-body a:visited.uams-btn {
+.uams-body a:visited:not(.uams-btn).uams-btn {
   border-bottom: none;
 }
 .uams-body a.uams-btn:focus {
   text-decoration: underline;
 }
-.uams-body .uams-breadcrumbs a:focus {
+.uams-body .uams-breadcrumbs a:focus,
+.uams-body .uams-breadcrumbs a:hover {
+  color: #9d2235;
   border-bottom: none;
   text-decoration: underline;
+}
+.uams-body .uams-breadcrumbs a:visited {
+  color: #616161;
 }
 .uams-body #main_content:focus {
   outline: none;
