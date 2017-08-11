@@ -46,10 +46,17 @@ label.screen-reader {
 .uams-body {
     a:focus,
     a:hover {
-        color: @900grey;
-        border-bottom: 1px solid #BDBDBD;
+        color: @hover;
+        border-bottom: 1px solid @hover;
         // We don't want buttons underlined on hover
         &.uams-btn {
+            border-bottom: none;
+        }
+    }
+    a:visited {
+	    color: @visited;
+	    border-bottom: 1px solid @visited;
+	    &.uams-btn {
             border-bottom: none;
         }
     }
