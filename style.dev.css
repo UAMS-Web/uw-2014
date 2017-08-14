@@ -5065,40 +5065,40 @@ table th[class*="col-"] {
 .uams-body-copy ul.shortcode-blogroll {
   overflow: visible;
 }
-.widget .shortcode-blogroll {
+.shortcode-blogroll {
   margin-top: 40px;
   padding: 0;
   list-style: none;
 }
-.widget .shortcode-blogroll > li {
+.shortcode-blogroll > li {
   margin: 20px 0 0;
   position: relative;
   overflow: hidden;
   padding-bottom: 20px;
 }
-.widget .shortcode-blogroll > li:first-child {
+.shortcode-blogroll > li:first-child {
   margin-top: 0px;
 }
-.widget .shortcode-blogroll > li .wp-post-image {
+.shortcode-blogroll > li .wp-post-image {
   margin: 10px 30px 0 0;
   height: auto;
   width: 90px;
 }
-.widget .shortcode-blogroll > li span {
+.shortcode-blogroll > li span {
   display: block;
   overflow: hidden;
 }
-.widget .shortcode-blogroll > li p.date {
+.shortcode-blogroll > li p.date {
   font-weight: 800;
-  font-size: 22px;
   margin: 10px 0 0;
+  font-size: 22px;
   font-family: "Fira Sans", sans-serif;
 }
-.widget .shortcode-blogroll > li .author-info {
+.shortcode-blogroll > li .author-info {
   margin: 0px 0 20px 0;
   font-size: 22px;
 }
-.widget .shortcode-blogroll > li:after {
+.shortcode-blogroll > li:after {
   display: block;
   content: "";
   width: 80px;
@@ -5107,7 +5107,27 @@ table th[class*="col-"] {
   bottom: 0;
   position: absolute;
 }
-.widget .shortcode-blogroll > li:last-child:after {
+.shortcode-blogroll > li:last-child:after {
+  display: none;
+}
+.shortcode-blogroll > li a {
+  color: #212121;
+  border-bottom: 1px dotted #212121;
+}
+.shortcode-blogroll > li a:visited:not(.uams-btn) {
+  color: #9d2235;
+  border-bottom-color: #9d2235;
+}
+.shortcode-blogroll > li a:focus,
+.shortcode-blogroll > li a:hover {
+  border-bottom: none;
+  color: #9d2235;
+  text-decoration: underline;
+}
+.shortcode-blogroll h2 {
+  margin: 20px 0 0px;
+}
+.shortcode-blogroll br {
   display: none;
 }
 .widget .shortcode-blogroll > li a {
@@ -5123,12 +5143,6 @@ table th[class*="col-"] {
   border-bottom: none;
   color: #9d2235;
   text-decoration: underline;
-}
-.widget .shortcode-blogroll h2 {
-  margin: 20px 0 0px;
-}
-.widget .shortcode-blogroll br {
-  display: none;
 }
 .uams-thinstrip {
   height: 140px;
@@ -7353,8 +7367,8 @@ ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li span,
 ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li span,
 ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li span {
   color: #5a5a5a;
-  padding: 10px 30px 10px 30px;
-  border-left: none;
+  padding: 10px 30px 10px 20px;
+  border-left: 10px solid #eeeeee;
 }
 ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li a:hover,
 ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children li a:hover,
@@ -7389,6 +7403,7 @@ ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li span:f
 ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li span:focus,
 ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li span:focus {
   background-color: #eeeeee;
+  border-color: #9e9e9e;
 }
 ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children li,
 ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children li,
@@ -7420,7 +7435,7 @@ ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li.current_pa
 ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a {
   background-color: white;
   color: #5a5a5a;
-  border-left: none;
+  border-left: 10px solid white;
   padding-left: 25px;
 }
 ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:before,
@@ -7432,6 +7447,24 @@ ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li.curren
 ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:before,
 ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:before {
   content: "- ";
+}
+ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:hover,
+ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:hover,
+ul.uams-sidebar-menu > div ul li.current_page_item ul.children li.current_page_item ul.children a:hover,
+ul.uams-mobile-menu > div ul li.current_page_item ul.children li.current_page_item ul.children a:hover,
+ul.uams-sidebar-menu li.pagenav ul li.current_page_ancestor ul.children li.current_page_item ul.children a:hover,
+ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li.current_page_item ul.children a:hover,
+ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:hover,
+ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:hover,
+ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:focus,
+ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:focus,
+ul.uams-sidebar-menu > div ul li.current_page_item ul.children li.current_page_item ul.children a:focus,
+ul.uams-mobile-menu > div ul li.current_page_item ul.children li.current_page_item ul.children a:focus,
+ul.uams-sidebar-menu li.pagenav ul li.current_page_ancestor ul.children li.current_page_item ul.children a:focus,
+ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li.current_page_item ul.children a:focus,
+ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:focus,
+ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:focus {
+  border-color: #9e9e9e;
 }
 ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li.current_page_item span,
 ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children li.current_page_item span,
