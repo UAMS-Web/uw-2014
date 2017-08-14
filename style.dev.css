@@ -11155,49 +11155,70 @@ ul.shortcode-blogroll-mini {
 .uams-sidebar .contact-widget-inner .widgettitle:after {
   background-color: #eeeeee;
 }
+.widget_nav_menu ul.menu {
+  -webkit-font-smoothing: auto;
+}
 .widget_nav_menu ul.menu > li {
-  background-color: #DDD;
+  background-color: #eeeeee;
+  font-size: 18px;
+  border-bottom: 1px solid white;
 }
 .widget_nav_menu ul.menu > li > a {
-  font-weight: bold;
-  border-bottom: 1px solid #FFF;
+  border-bottom: none;
+  border-left: 10px solid #eeeeee;
 }
 .widget_nav_menu ul.menu > li > a:hover,
 .widget_nav_menu ul.menu > li > a:focus,
 .widget_nav_menu ul.menu > li > a:active {
-  background-color: #949494;
-  color: white;
+  border-color: #9e9e9e;
+}
+.widget_nav_menu ul.menu > li > a:visited:not(.uams-btn) {
+  color: #9d2235;
 }
 .widget_nav_menu ul.menu li a,
 .widget_nav_menu ul.menu li span {
   color: #5a5a5a;
   padding: 6px 25px 6px 20px;
-  border-bottom: 1px solid #FFF;
   display: block;
 }
+.widget_nav_menu ul.menu li.current_page_item {
+  font-weight: bold;
+}
+.widget_nav_menu ul.menu li.current_page_item a {
+  border-color: #616161;
+  color: #616161;
+}
+.widget_nav_menu ul.menu li.current_page_item a:hover {
+  border-color: #757575;
+  color: #9d2235;
+}
 .widget_nav_menu ul.menu ul.sub-menu li {
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid #e0e0e0;
 }
 .widget_nav_menu ul.menu ul.sub-menu li:last-child {
   border-bottom: none;
 }
 .widget_nav_menu ul.menu ul.sub-menu a {
   background-color: white;
-  border-left: none;
+  border-left: 10px solid white;
   padding-left: 20px;
 }
 .widget_nav_menu ul.menu ul.sub-menu a:hover,
 .widget_nav_menu ul.menu ul.sub-menu a:focus,
 .widget_nav_menu ul.menu ul.sub-menu a:active {
-  background-color: #D2D2D2;
+  border-color: #9e9e9e;
+  border-bottom: none;
 }
 .widget_nav_menu ul.menu ul.sub-menu a:before {
   content: "- ";
 }
+.widget_nav_menu ul.menu ul.sub-menu a:visited:not(.uams-btn) {
+  color: #9d2235;
+}
 .widget_nav_menu ul.menu span {
   border-left: 10px solid #616161;
   padding-left: 20px;
-  background-color: #ddd;
+  background-color: #eeeeee;
   border-bottom: none;
 }
 .widget_nav_menu ul.menu span a {

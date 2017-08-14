@@ -1,52 +1,78 @@
 .widget_nav_menu {
   ul.menu
     {
+	    -webkit-font-smoothing: auto;
       & > li {
-          background-color: #DDD;
+          background-color: @200grey;
+          font-size: 18px;
+          border-bottom: 1px solid white;
           & > a {
-            font-weight: bold;
-            border-bottom: 1px solid #FFF;
+            //font-weight: bold;
+            border-bottom: none;
+            border-left: 10px solid @200grey;
             &:hover,
             &:focus,
             &:active {
-              background-color: #949494;
-              color: white;
+              border-color: @500grey;
+              //color: white;
+            }
+            &:visited:not(.uams-btn) {
+	            color: @red;
+	            &:hover {
+		            //color: white;
+	            }
             }
           }
       }
 
       li
       {
-        a,
-        span
-        {
-          color:@darkgray;
-          padding: 6px 25px 6px 20px;
-          border-bottom: 1px solid #FFF;
-          display: block;
-        }
-
+	      a,
+	      span {
+		      //border-left: 10px solid @200grey;
+	          color:@darkgray;
+	          padding: 6px 25px 6px 20px;
+	          display: block;
+	      }
+		  &.current_page_item {
+		  	  font-weight: bold;
+		  	  a {
+			  	  border-color: @700grey;
+			  	  color: @700grey;
+			  	  &:hover {
+				  	 border-color: @600grey;
+				  	 color: @red;
+			  	  }
+		  	  }
+		  }
       }
       // background-color:white;
       ul.sub-menu {
         li {
-          border-bottom: 1px solid #E0E0E0;
+          border-bottom: 1px solid @300grey;
         }
         li:last-child {
           border-bottom: none;
         }
         a {
           background-color: white;
-          border-left: none;
+          border-left: 10px solid white;
           padding-left: 20px;
           &:hover,
           &:focus,
           &:active {
-            background-color: #D2D2D2;
+            border-color: @500grey;
+            border-bottom: none;
           }
           &:before {
             content: "- ";
           }
+          &:visited:not(.uams-btn) {
+	            color: @red;
+	            &:hover {
+		            //color: white;
+	            }
+            }
         }
       }
       span
@@ -54,7 +80,7 @@
         // background-color:#757575;
         border-left: 10px solid @700grey;
         padding-left: 20px;
-        background-color: #ddd;
+        background-color: @200grey;
         a
         {
           color:white;
