@@ -7405,6 +7405,24 @@ ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li span:focus 
   background-color: #eeeeee;
   border-color: #9e9e9e;
 }
+ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li a:visited,
+ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children li a:visited,
+ul.uams-sidebar-menu > div ul li.current_page_item ul.children li a:visited,
+ul.uams-mobile-menu > div ul li.current_page_item ul.children li a:visited,
+ul.uams-sidebar-menu li.pagenav ul li.current_page_ancestor ul.children li a:visited,
+ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li a:visited,
+ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li a:visited,
+ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li a:visited,
+ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li span:visited,
+ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children li span:visited,
+ul.uams-sidebar-menu > div ul li.current_page_item ul.children li span:visited,
+ul.uams-mobile-menu > div ul li.current_page_item ul.children li span:visited,
+ul.uams-sidebar-menu li.pagenav ul li.current_page_ancestor ul.children li span:visited,
+ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li span:visited,
+ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li span:visited,
+ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li span:visited {
+  color: #9d2235;
+}
 ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children li,
 ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children li,
 ul.uams-sidebar-menu > div ul li.current_page_item ul.children li.current_page_item ul.children li,
@@ -7465,6 +7483,16 @@ ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li.curren
 ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:focus,
 ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:focus {
   border-color: #9e9e9e;
+}
+ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:visited,
+ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:visited,
+ul.uams-sidebar-menu > div ul li.current_page_item ul.children li.current_page_item ul.children a:visited,
+ul.uams-mobile-menu > div ul li.current_page_item ul.children li.current_page_item ul.children a:visited,
+ul.uams-sidebar-menu li.pagenav ul li.current_page_ancestor ul.children li.current_page_item ul.children a:visited,
+ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li.current_page_item ul.children a:visited,
+ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:visited,
+ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:visited {
+  color: #9d2235;
 }
 ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li.current_page_item span,
 ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children li.current_page_item span,

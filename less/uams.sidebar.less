@@ -117,11 +117,15 @@ ul.uams-mobile-menu
                             span
 							{
 								color:@darkgray;
-								padding: 10px 30px 10px 30px;
-								border-left: none;
+								padding: 10px 30px 10px 20px;
+								border-left: 10px solid @200grey;
 								&:hover,
                                 &:focus {
 									background-color: @200grey;
+									border-color: @500grey;
+								}
+								&:visited {
+									color: @red;
 								}
 							}
 
@@ -140,10 +144,17 @@ ul.uams-mobile-menu
 								a {
 									background-color: white;
 									color: @darkgray;
-									border-left: none;
+									border-left: 10px solid white;
 									padding-left: 25px;
 									&:before {
 										content: "- ";
+									}
+									&:hover,
+	                                &:focus {
+										border-color: @500grey;
+									}
+									&:visited {
+										color: @red;
 									}
 								}
 							}
