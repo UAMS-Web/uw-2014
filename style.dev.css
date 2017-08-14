@@ -381,27 +381,27 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 42px;
+  font-size: 48px;
 }
 h2,
 .h2 {
-  font-size: 31px;
+  font-size: 40px;
 }
 h3,
 .h3 {
-  font-size: 26px;
+  font-size: 33px;
 }
 h4,
 .h4 {
-  font-size: 23px;
+  font-size: 26px;
 }
 h5,
 .h5 {
-  font-size: 21px;
+  font-size: 22px;
 }
 h6,
 .h6 {
-  font-size: 22px;
+  font-size: 19px;
 }
 p {
   margin: 0 0 16px;
@@ -3087,27 +3087,27 @@ h6 {
 }
 h1,
 .h1 {
-  font-size: 42px;
+  font-size: 48px;
 }
 h2,
 .h2 {
-  font-size: 31px;
+  font-size: 40px;
 }
 h3,
 .h3 {
-  font-size: 26px;
+  font-size: 33px;
 }
 h4,
 .h4 {
-  font-size: 23px;
+  font-size: 26px;
 }
 h5,
 .h5 {
-  font-size: 21px;
+  font-size: 22px;
 }
 h6,
 .h6 {
-  font-size: 22px;
+  font-size: 19px;
 }
 p {
   -webkit-font-smoothing: antialiased;
@@ -3336,7 +3336,7 @@ address {
 }
 #uams-container #quicklinks ul#big-links li a {
   font-family: "Fira Sans", sans-serif;
-  font-size: 22px;
+  font-size: 19px;
   margin-left: 15px;
 }
 #uams-container #quicklinks ul#big-links li a:hover,
@@ -3358,7 +3358,7 @@ address {
   height: 30px;
 }
 #uams-container #quicklinks h3 {
-  font-size: 22px;
+  font-size: 19px;
   color: white;
   margin: 40px 0 30px 0;
   position: relative;
@@ -3373,7 +3373,7 @@ address {
   bottom: -19px;
 }
 #uams-container #quicklinks h4 {
-  font-size: 22px;
+  font-size: 19px;
   color: white;
   margin: 20px 0 15px 0;
   position: relative;
@@ -5065,38 +5065,40 @@ table th[class*="col-"] {
 .uams-body-copy ul.shortcode-blogroll {
   overflow: visible;
 }
-.shortcode-blogroll {
+.widget .shortcode-blogroll {
   margin-top: 40px;
   padding: 0;
   list-style: none;
 }
-.shortcode-blogroll > li {
+.widget .shortcode-blogroll > li {
   margin: 20px 0 0;
   position: relative;
   overflow: hidden;
   padding-bottom: 20px;
 }
-.shortcode-blogroll > li:first-child {
+.widget .shortcode-blogroll > li:first-child {
   margin-top: 0px;
 }
-.shortcode-blogroll > li .wp-post-image {
+.widget .shortcode-blogroll > li .wp-post-image {
   margin: 10px 30px 0 0;
   height: auto;
   width: 90px;
 }
-.shortcode-blogroll > li span {
+.widget .shortcode-blogroll > li span {
   display: block;
   overflow: hidden;
 }
-.shortcode-blogroll > li p.date {
+.widget .shortcode-blogroll > li p.date {
   font-weight: 800;
+  font-size: 22px;
   margin: 10px 0 0;
   font-family: "Fira Sans", sans-serif;
 }
-.shortcode-blogroll > li .author-info {
+.widget .shortcode-blogroll > li .author-info {
   margin: 0px 0 20px 0;
+  font-size: 22px;
 }
-.shortcode-blogroll > li:after {
+.widget .shortcode-blogroll > li:after {
   display: block;
   content: "";
   width: 80px;
@@ -5105,13 +5107,27 @@ table th[class*="col-"] {
   bottom: 0;
   position: absolute;
 }
-.shortcode-blogroll > li:last-child:after {
+.widget .shortcode-blogroll > li:last-child:after {
   display: none;
 }
-.shortcode-blogroll h2 {
+.widget .shortcode-blogroll > li a {
+  color: #212121;
+  border-bottom: 1px dotted #212121;
+}
+.widget .shortcode-blogroll > li a:visited:not(.uams-btn) {
+  color: #9d2235;
+  border-bottom-color: #9d2235;
+}
+.widget .shortcode-blogroll > li a:focus,
+.widget .shortcode-blogroll > li a:hover {
+  border-bottom: none;
+  color: #9d2235;
+  text-decoration: underline;
+}
+.widget .shortcode-blogroll h2 {
   margin: 20px 0 0px;
 }
-.shortcode-blogroll br {
+.widget .shortcode-blogroll br {
   display: none;
 }
 .uams-thinstrip {
@@ -6666,12 +6682,27 @@ span.next-page a:hover {
 .uams-body-copy h3 a,
 .uams-body-copy h4 a,
 .uams-body-copy h5 a {
-  border-bottom: none;
-  color: inherit;
+  color: #212121;
+  border-bottom: 1px dotted #212121;
+}
+.uams-body-copy h1 a:visited,
+.uams-body-copy h2 a:visited,
+.uams-body-copy h3 a:visited,
+.uams-body-copy h4 a:visited,
+.uams-body-copy h5 a:visited {
+  color: #9d2235;
+  border-bottom-color: #9d2235;
 }
 .uams-body-copy a {
   text-decoration: none;
   border-bottom: 1px dotted #1565c0;
+}
+.uams-body-copy p a:visited:not(.uams-btn) {
+  color: #4527a0;
+  border-bottom: 1px solid #4527a0;
+}
+.uams-body-copy p a:visited:not(.uams-btn).uams-btn {
+  border-bottom: none;
 }
 .info-box {
   width: 310px;
@@ -9540,13 +9571,6 @@ label.screen-reader {
 .uams-body a:hover.uams-btn {
   border-bottom: none;
 }
-.uams-body a:visited:not(.uams-btn) {
-  color: #4527a0;
-  border-bottom: 1px solid #4527a0;
-}
-.uams-body a:visited:not(.uams-btn).uams-btn {
-  border-bottom: none;
-}
 .uams-body a.uams-btn:focus {
   text-decoration: underline;
 }
@@ -9562,24 +9586,23 @@ label.screen-reader {
 .uams-body #main_content:focus {
   outline: none;
 }
+.uams-body .widget a:visited:not(.uams-btn) {
+  color: #4527a0;
+}
+.uams-body .widget a.widget-link {
+  color: #212121;
+}
 .uams-body .widget a.widget-link:focus,
 .uams-body .widget a.widget-link:hover {
   border-bottom: none;
-  color: #212121;
+  color: #9d2235;
+  text-decoration: underline;
 }
 .uams-body .widget a.widget-link:focus {
   text-decoration: underline;
 }
-.uams-body .widget .recent-posts a:visited {
+.uams-body .widget a.widget-link:visited {
   color: #9d2235;
-}
-.uams-body .widget .recent-posts a:focus,
-.uams-body .widget .recent-posts a:hover {
-  border-bottom: none;
-  color: #212121;
-}
-.uams-body .widget .recent-posts a:focus {
-  text-decoration: underline;
 }
 .uams-body input::-webkit-input-placeholder {
   color: #757575;

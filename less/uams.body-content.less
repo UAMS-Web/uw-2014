@@ -182,8 +182,13 @@ span.next-page {
 	h3 a,
 	h4 a,
 	h5 a {
-		border-bottom: none;
-		color: inherit;
+		//border-bottom: none;
+		color: @900grey;
+		border-bottom: 1px dotted @900grey;
+		&:visited {
+			color: @red;
+			border-bottom-color: @red;
+		}
 	}
 	a {
 		text-decoration: none;
@@ -191,6 +196,13 @@ span.next-page {
 		//font-weight: 400;
 
 	}
+	p a:visited:not(.uams-btn) {
+	    color: @visited;
+	    border-bottom: 1px solid @visited;
+	    &.uams-btn {
+            border-bottom: none;
+        }
+    }
 }
 
 

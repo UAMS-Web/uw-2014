@@ -53,13 +53,6 @@ label.screen-reader {
             border-bottom: none;
         }
     }
-    a:visited:not(.uams-btn) {
-	    color: @visited;
-	    border-bottom: 1px solid @visited;
-	    &.uams-btn {
-            border-bottom: none;
-        }
-    }
     a.uams-btn:focus {
         text-decoration: underline;
     }
@@ -78,27 +71,17 @@ label.screen-reader {
       outline:none;
     }
     .widget {
-        a.widget-link{
-            &:focus,
-            &:hover{
-                border-bottom: none;
-                color: @900grey;
-            }
-            &:focus {
-                text-decoration: underline;
-                // can't override according to spec. We'll have to redo the structure to get this done
-                //p {
-                //    text-decoration: none;
-                //}
-            }
-        }
-        .recent-posts {
-			a {
-				&:visited { color: @red; }
-				&:focus,
+        a {
+	        &:visited:not(.uams-btn) {
+		        color: @visited;
+	        }
+	        &.widget-link{
+		        color: @900grey;
+	            &:focus,
 	            &:hover{
 	                border-bottom: none;
-	                color: @900grey;
+	                color: @red;
+	                text-decoration: underline;
 	            }
 	            &:focus {
 	                text-decoration: underline;
@@ -107,8 +90,11 @@ label.screen-reader {
 	                //    text-decoration: none;
 	                //}
 	            }
+	            &:visited {
+		            color: @red;
+	            }
 	        }
-		}
+	    }
     }
     // Darken form default color
     input::-webkit-input-placeholder{
