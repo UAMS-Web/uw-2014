@@ -72,7 +72,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .jp-carousel-info h2 {
 	background: none !important;
 	border: none !important;
-	color: #999;
+	color: @700grey;
 	display: block !important;
 	font: normal 13px/1.25em "Helvetica Neue", sans-serif !important;
 	letter-spacing: 0 !important;
@@ -136,7 +136,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 div.jp-carousel-buttons a {
 	border: none !important;
-	color: #999;
+	color: @700grey;
 	font: normal 11px/1.2em "Helvetica Neue", sans-serif !important;
 	letter-spacing: 0 !important;
 	padding: 5px 2px 5px 0;
@@ -170,7 +170,7 @@ div.jp-carousel-buttons a:hover {
 	position:fixed;
 	width:0;
 	bottom:0;
-	background-color:#000;
+	background-color:black;
 	border-radius:2px;
 	-webkit-border-radius:2px;
 	-moz-border-radius:2px;
@@ -219,7 +219,7 @@ div.jp-carousel-buttons a:hover {
 }
 
 .jp-carousel-close-hint {
-	color: #999;
+	color: @700grey;
 	cursor: default;
 	letter-spacing: 0 !important;
 	padding:0.35em 0 0;
@@ -283,7 +283,7 @@ div.jp-carousel-buttons a.jp-carousel-commentlink {
 
 div.jp-carousel-buttons a.jp-carousel-reblog.reblogged,
 div.jp-carousel-buttons a.jp-carousel-like.liked {
-	background-color: #303030;
+	background-color: @900grey;
 	padding-right: 8px !important;
 	border-radius: 2px;
 	border-radius:2px;
@@ -302,7 +302,7 @@ div.jp-carousel-buttons a.jp-carousel-reblog,
 div.jp-carousel-buttons a.jp-carousel-reblog.reblogged:hover {
 	background-position: 6px -36px;
 	padding-left: 26px !important;
-	color: #999;
+	color: @700grey;
 }
 
 div.jp-carousel-buttons a.jp-carousel-commentlink {
@@ -360,15 +360,15 @@ div#carousel-reblog-box {
 }
 
 #carousel-reblog-box textarea {
-	background: #999;
+	background: @500grey;
 	font: 13px/1.4 "Helvetica Neue", sans-serif !important;
-	color: #444;
+	color: @800grey;
 	padding: 3px 6px;
 	width: 370px;
 	height: 48px;
 	float: left;
 	margin: 6px 9px 0 9px;
-	border: 1px solid #666;
+	border: 1px solid @700grey;
 	-webkit-box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
 	box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
 	-moz-border-radius: 2px;
@@ -378,11 +378,11 @@ div#carousel-reblog-box {
 
 #carousel-reblog-box textarea:focus {
 	background: #ccc;
-	color: #222;
+	color: @900grey;
 }
 
 #carousel-reblog-box label {
-	color: #aaa;
+	color: @midgrey;
 	font-size: 11px;
 	padding-right: 2px;
 	padding-left: 2px;
@@ -396,7 +396,7 @@ div#carousel-reblog-box {
 	font-size: 12px;
 	font-family: "Helvetica Neue", sans-serif !important;
 	background: #333;
-	color: #eee;
+	color: @200grey;
 	border: 1px solid #444;
 	margin-top:5px;
 }
@@ -417,7 +417,7 @@ div#carousel-reblog-box {
 	clear: none;
 	padding-left: 2px;
 	height: 34px;
-	color: #aaa;
+	color: @midgrey;
 }
 
 #carousel-reblog-box input#carousel-reblog-submit, #jp-carousel-comment-form-button-submit {
@@ -426,7 +426,7 @@ div#carousel-reblog-box {
 	padding: 0 10px !important;
 	border-radius: 1em;
 	height: 24px;
-	color: #333;
+	color: @900grey;
 	cursor:pointer;
 	font-weight: normal;
 	background: #aaa;
@@ -442,7 +442,7 @@ div#carousel-reblog-box {
 }
 
 #carousel-reblog-box .canceltext {
-	color: #aaa;
+	color: @midgrey;
 	font-size: 11px;
 	line-height: 24px;
 }
@@ -456,7 +456,7 @@ div#carousel-reblog-box {
 /** Title and Desc Start **/
 .jp-carousel-titleanddesc {
 	border-top: 1px solid #222;
-	color: #999;
+	color: @500grey;
 	font-size: 15px;
 	padding-top: 24px;
 	margin-bottom: 20px;
@@ -471,7 +471,7 @@ div#carousel-reblog-box {
 }
 
 .jp-carousel-titleanddesc-desc p {
-	color: #999;
+	color: @500grey;
 	line-height:1.4;
 	margin-bottom: 0.75em;
 }
@@ -489,13 +489,13 @@ div#carousel-reblog-box {
 .jp-carousel-titleanddesc p strong,
 .jp-carousel-titleanddesc p b {
 	font-weight: bold;
-	color: #999;
+	color: @500grey;
 }
 
 .jp-carousel-titleanddesc p em,
 .jp-carousel-titleanddesc p i {
 	font-style: italic;
-	color: #999;
+	color: @500grey;
 }
 
 
@@ -558,7 +558,7 @@ div#carousel-reblog-box {
 }
 
 .jp-carousel-image-meta h5 {
-	color: #999 !important;
+	color: @500grey !important;
 	text-transform: uppercase !important;
 	font-size:10px !important;
 	margin:0 0 2px !important;
@@ -569,7 +569,7 @@ a.jp-carousel-image-download {
 	padding-left: 23px;
 	display: inline-block;
 	clear: both;
-	color: #999;
+	color: @500grey;
 	line-height: 1;
 	font-weight: 400;
 	font-size: 13px;
@@ -643,7 +643,7 @@ a.jp-carousel-image-download:hover {
 
 .jp-carousel-comment {
 	background:none transparent;
-	color: #999;
+	color: @500grey;
 	margin-bottom: 20px;
 	clear:left;
 	overflow: auto;
@@ -651,7 +651,7 @@ a.jp-carousel-image-download:hover {
 }
 
 .jp-carousel-comment p {
-	color: #999 !important;
+	color: @500grey !important;
 }
 
 .jp-carousel-comment .comment-author {
@@ -690,7 +690,7 @@ a.jp-carousel-image-download:hover {
 }
 
 .jp-carousel-comment .comment-date {
-	color:#999;
+	color:@500grey;
 	margin-top: 4px;
 	font-size:11px;
 	display: inline;
@@ -707,7 +707,7 @@ a.jp-carousel-image-download:hover {
 textarea#jp-carousel-comment-form-comment-field {
 	background: rgba(34,34,34,0.9);
 	border: 1px solid #3a3a3a;
-	color: #aaa;
+	color: @400grey;
 	font: 15px/1.4 "Helvetica Neue", sans-serif !important;
 	width: 100%;
 	padding: 10px 10px 5px;
@@ -726,16 +726,16 @@ textarea#jp-carousel-comment-form-comment-field {
 }
 
 textarea#jp-carousel-comment-form-comment-field::-webkit-input-placeholder {
-	color: #555;
+	color: @700grey;
 }
 
 textarea#jp-carousel-comment-form-comment-field:focus {
-	background: #ccc;
-	color: #222;
+	background: @400grey;
+	color: @900grey;
 }
 
 textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder {
-	color: #aaa;
+	color: @400grey;
 }
 
 #jp-carousel-comment-form-spinner {
@@ -759,8 +759,8 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 
 #jp-carousel-comment-form-commenting-as input {
 	background: rgba(34,34,34,0.9);
-	border: 1px solid #3a3a3a;
-	color: #aaa;
+	border: 1px solid @800grey;
+	color: @400grey;
 	font: 13px/1.4 "Helvetica Neue", sans-serif !important;
 	padding: 3px 6px;
 	float: left;
@@ -773,8 +773,8 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 }
 
 #jp-carousel-comment-form-commenting-as input:focus {
-	background: #ccc;
-	color: #222;
+	background: @300grey;
+	color: @900grey;
 }
 
 #jp-carousel-comment-form-commenting-as p {
@@ -850,13 +850,13 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 
 #jp-carousel-comments-closed {
 	display: none;
-	color: #999;
+	color: @500grey;
 }
 
 #jp-carousel-comments-loading {
 	font: 444 15px/1.7 "Helvetica Neue", sans-serif !important;
 	display: none;
-	color: #999;
+	color: @500grey;
 	text-align: left;
 	margin-bottom: 20px;
 }
@@ -884,7 +884,7 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 .jp-carousel-light .jp-carousel-titleanddesc p a,
 .jp-carousel-light .jp-carousel-comments p a,
 .jp-carousel-light .jp-carousel-info h2 a {
-	color: #1e8cbe !important;
+	color: @steel !important;
 }
 
 .jp-carousel-light .jp-carousel-comments p a:hover,
@@ -893,7 +893,7 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 .jp-carousel-light .jp-carousel-titleanddesc p a:hover,
 .jp-carousel-light .jp-carousel-comments p a:hover,
 .jp-carousel-light .jp-carousel-info h2 a:hover {
-	color: #f1831e !important;
+	color: @alert !important;
 }
 
 .jp-carousel-light .jp-carousel-info h2,
@@ -906,17 +906,17 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 .jp-carousel-light .jp-carousel-titleanddesc p b,
 .jp-carousel-light .jp-carousel-titleanddesc p em,
 .jp-carousel-light .jp-carousel-titleanddesc p i {
-	color: #666;
+	color: @700grey;
 }
 
 .jp-carousel-light .jp-carousel-buttons {
-	border-bottom-color: #f0f0f0;
-	background: #f5f5f5;
+	border-bottom-color: @200grey;
+	background: @100grey;
 }
 
 .jp-carousel-light div.jp-carousel-buttons a:hover {
 	text-decoration: none;
-	color: #f1831e;
+	color: @alert;
 }
 
 .jp-carousel-light div.jp-carousel-buttons a.jp-carousel-reblog,
@@ -927,7 +927,7 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 
 .jp-carousel-light div.jp-carousel-buttons a.jp-carousel-reblog.reblogged,
 .jp-carousel-light div.jp-carousel-buttons a.jp-carousel-like.liked {
-	background-color: #2ea2cc;
+	background-color: @steel;
 	color: #fff;
 }
 
@@ -961,7 +961,7 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 
 .jp-carousel-light #carousel-reblog-box textarea {
 	border: 1px inset #ccc;
-	color: #666;
+	color: @700grey;
 	border: 1px solid #cfcfcf;
 	background: #fff;
 }
@@ -971,7 +971,7 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 }
 
 .jp-carousel-light #carousel-reblog-box .canceltext a {
-	color: #666;
+	color: @700grey;
 }
 
 .jp-carousel-light #carousel-reblog-box select {

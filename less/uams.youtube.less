@@ -112,8 +112,8 @@
             color: #FFF;
             padding: 5px 10px 5px 10px;
             overflow: hidden;
-            background-color: #39275B;
-            background-color: rgba(57,39,91, .9);
+            background-color: @red;
+            background-color: rgba(157, 34, 53, .9);
             opacity: 0;
             transition: opacity .25s ease-in-out;
             -moz-transition: opacity .25s ease-in-out;
@@ -138,9 +138,9 @@
         cursor: pointer;
     }
     .duration {
-    	color: #B6B6B6 ;
+    	color: @400grey ;
     	background: url('assets/images/youtube-player/play-sm.png') right 2px no-repeat transparent;
-    	color: #B6B6B6;
+    	color: @400grey;
     	padding-right: 16px;
     	float: left;
     	margin-top: 3px;
@@ -160,7 +160,7 @@
     }
     .thumb .end,
     .thumb {
-    	background-color: #888888
+    	background-color: @600grey;
     }
     .scrollbar {
    		display: none;
@@ -172,7 +172,7 @@
    		height: 7px;
     }
     .track {
-        background-color: #f4f4f4;
+        background-color: @100grey;
         height: 100%;
         width: 8px;
         position: relative;
