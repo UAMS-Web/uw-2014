@@ -33,7 +33,10 @@
 		text-transform: uppercase;
 		font-weight: @bold;
 		font-size: 75px;
-		color: #fff;
+		color: white;
+		&.hero-text-dark {
+			color: @900grey;
+		}
 	}
 
 	p {
@@ -95,7 +98,7 @@
 	}
 	h1 {
 		text-transform: uppercase;
-    	color: #FFF !important;
+    	color: white;
     	font-weight: @bold;
     	font-size: 60px;
     	margin: 0;
@@ -112,12 +115,16 @@
   			opacity: .3;
   			width: 600px;
 		  	background: url(assets/svg/triangle-light.svg) no-repeat 0 0;
-		  	z-index: 0;
+		  	z-index: -1;
 		  	top: 50%;
 		  	-webkit-transform: translateY(-50%);
 		  	-ms-transform: translateY(-50%);
 		  	transform: translateY(-50%);
 		}
+		&.hero-text-dark {
+			color: @900grey;
+		}
+
 	}
 	&:before {
 		display: none;

@@ -64,22 +64,22 @@
       if(!$url){
         $url = get_site_url() . "/wp-content/themes/uams-2016/assets/headers/uams-pattern-grey.png";
       }
+      $darktext = get_post_meta($post->ID, "home_image_dark_text");
+      $hasdarktext =( in_array('1',$darktext) ? ' hero-text-dark' : '');
       //$mobileimage = get_post_meta($post->ID, "home_image_mobile");
       $hasmobileimage = '';
       $mobileimage = get_field('home_image_mobile');
-      if( !empty($mobileimage)) {
-        $hasmobileimage = 'hero-mobile-image';
-      }
+      $hasmobileimage = ( !empty($mobileimage) ? ' hero-mobile-image' : '' );
       ?>
 
 
-<div class="uams-hero-image hero-height <?php echo $hasmobileimage ?>" style="background-image: url(<?php echo $url ?>);">
+<div class="uams-hero-image hero-height<?php echo $hasmobileimage; ?>" style="background-image: url(<?php echo $url; ?>);">
     <?php if( get_field('home_image_mobile') ) { ?>
-    <div class="mobile-image" style="background-image: url(<?php echo $mobileimage['url'] ?>);"></div>
+    <div class="mobile-image" style="background-image: url(<?php echo $mobileimage['url']; ?>);"></div>
     <?php } ?>
     <div id="hero-bg">
       <div id="hero-container" class="container">
-        <h1 class="uams-site-title"><?php echo get_field('home_image_title') ? get_field('home_image_title') : get_the_title(); ?></h1>
+        <h1 class="uams-site-title<?php echo $hasdarktext; ?>"><?php echo get_field('home_image_title') ? get_field('home_image_title') : get_the_title(); ?></h1>
         <span class="udub-slant"><span></span></span>
       <?php if( get_field( 'home_image_add_button' )){ ?>
         <a class="uams-btn btn-sm btn-none" href="<?php echo get_field('home_image_external') ? get_field('home_image_external_url') : get_field('home_image_internal_url'); ?>"><?php echo get_field('home_image_button_text'); ?></a>

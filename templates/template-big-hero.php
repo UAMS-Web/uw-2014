@@ -21,6 +21,8 @@
       $external = get_field( 'home_image_external' );
       $externalurl = get_field( 'home_image_external_url' );
       $internalurl = get_field( 'home_image_internal_url' );
+      $darktext = get_post_meta($post->ID, "home_image_dark_text");
+      $hasdarktext =( in_array('1',$darktext) ? ' hero-text-dark' : '');
       //$buttonlink = $external ? $externalurl : $internalurl; ?>
 
 <div class="uams-hero-image hero-height <?php echo $hasmobileimage ?>" style="background-image: url(<?php echo $url ?>);">
@@ -29,7 +31,7 @@
     <?php } ?>
     <div id="hero-bg">
       <div id="hero-container" class="container">
-        <h1 class="uams-site-title"><?php the_title(); ?></h1>
+        <h1 class="uams-site-title<?php echo $hasdarktext; ?>"><?php the_title(); ?></h1>
         <span class="udub-slant"><span></span></span>
       <?php if(!empty($buttontext) && $button){ ?>
         <a class="uams-btn btn-sm btn-none" href="<?php echo $external ? $externalurl : $internalurl; ?>"><?php echo $buttontext ? $buttontext : ''; ?></a>
