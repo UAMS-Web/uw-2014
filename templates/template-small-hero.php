@@ -32,7 +32,7 @@
     <?php } ?>
       <div class="container">
         <h1 class="uams-site-title2<?php echo $hasdarktext; ?>"><?php the_title(); ?></h1>
-        <span class="udub-slant"><span></span></span>
+        <span class="udub-slant<?php echo $hasdarktext; ?>"><span></span></span>
         <?php if(!empty($buttontext) && $button ){ ?>
         <a class="uams-btn btn-sm btn-none" href="<?php echo $external ? $externalurl : $internalurl; ?>"><?php echo $buttontext ? $buttontext : ''; ?></a>
         <?php } ?>
