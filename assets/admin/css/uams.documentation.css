@@ -1,5 +1,4 @@
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Open Sans',sans-serif;
   color: rgb(89, 89, 89);
  }
 
@@ -9,7 +8,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
  }
 
 #uams-documentation, #uams-documentation p, #uams-documentation  {
-  font-family: 'Open Sans',sans-serif;
   font-size: 17px;
   line-height:  29px;
   color: #3d3d3d;
