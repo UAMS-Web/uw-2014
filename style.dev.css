@@ -7708,10 +7708,12 @@ body.action-bar ul.uams-mobile-menu {
     color: #424242;
   }
   #mobile-relative.frontpage ul.uams-mobile-menu > div > ul ul.sub-menu .menu-item-has-children a {
-    background-color: #424242;
+    background-color: #fafafa;
+    color: #9d2235;
   }
   #mobile-relative.frontpage ul.uams-mobile-menu > div > ul ul.sub-menu ul.sub-menu a {
     background-color: white;
+    color: #424242;
   }
   #mobile-relative.frontpage ul.uams-mobile-menu > div > ul .menu-item-has-children > a {
     position: relative;
