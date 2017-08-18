@@ -13,6 +13,13 @@
 		display: block;
 	}
 
+	// Hide mobile subnav on the home page
+	.home .page-parent #mobile-sidebar,
+	.home .page-child #mobile-sidebar {
+		display: none;
+	}
+
+
 	#mobile-sidebar-links {
 		margin: -20px 0 20px 0;
 	}
@@ -37,12 +44,12 @@
 	}
 
 	#ham {
-	  	width: 30px;
-	  	height: 30px;
+	  	width: 25px;
+	  	height: 25px;
 	  	position: relative;
 	  	float:left;
 	  	display: inline-block;
-	  	margin:0 4px 0 0;
+	  	margin: 7px 4px -2px 0;
 	  	-webkit-transform: rotate(0deg);
 	  	-moz-transform: rotate(0deg);
 	  	-o-transform: rotate(0deg);
@@ -54,6 +61,64 @@
 	  	cursor: pointer;
 	}
 
+	#ham span {
+	  display: inline;
+	  position: absolute;
+	  height: 2px;
+	  width: 100%;
+	  background: @red;
+	  border-radius: 1px;
+	  opacity: 1;
+	  left:0;
+	  -webkit-transform: rotate(0deg);
+	  -moz-transform: rotate(0deg);
+	  -o-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	  -webkit-transition: .25s ease-in-out;
+	  -moz-transition: .25s ease-in-out;
+	  -o-transition: .25s ease-in-out;
+	  transition: .25s ease-in-out;
+	}
+
+	#ham span:nth-child(1) {
+	  top: 0px;
+	}
+
+	#ham span:nth-child(2),#ham span:nth-child(3) {
+	  top: 7px;
+	}
+
+	#ham span:nth-child(4) {
+	  top: 14px;
+	}
+
+	#mobile-sidebar-menu.open span:nth-child(1) {
+	  top: 7px;
+	  width: 0%;
+	  left: 50%;
+	}
+
+	#mobile-sidebar-menu.open span:nth-child(2) {
+	  -webkit-transform: rotate(45deg);
+	  -moz-transform: rotate(45deg);
+	  -o-transform: rotate(45deg);
+	  transform: rotate(45deg);
+	}
+
+	#mobile-sidebar-menu.open span:nth-child(3) {
+	  -webkit-transform: rotate(-45deg);
+	  -moz-transform: rotate(-45deg);
+	  -o-transform: rotate(-45deg);
+	  transform: rotate(-45deg);
+	}
+
+	#mobile-sidebar-menu.open span:nth-child(4) {
+	  top: 7px;
+	  width: 0%;
+	  left: 50%;
+	}
+
+/*
 	#ham:before {
 		font-size: 28px;
 	    -webkit-transition: 0.25s ease-in-out;
@@ -68,5 +133,6 @@
 		-o-transform: rotate(-90deg);
 		transform: rotate(-90deg);
 	}
+*/
 
 }
