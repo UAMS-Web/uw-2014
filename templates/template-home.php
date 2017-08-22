@@ -141,18 +141,22 @@ endif;
 				<div id="mobile-sidebar-title" class="page_item">
 
 			<?php
-			        //limitation of the characters
-			        echo text_cut();
-					function text_cut($text, $length = 27, $dots = true) {
-					$text =get_the_title();
-					$text = trim(preg_replace('#[\s\n\r\t]{2,}#', ' ', $text));
-					$text_temp = $text;
-					   while (substr($text, $length, 1) != " ")
-					    { $length--;
-					  	if ($length > strlen($text)) { break; } }
-					    $text = substr($text, 0, $length);
-					    return $text . ( ( $dots == true && $text != '' && strlen($text_temp) > $length ) ? '...' : '');
-					   }
+		        //limitation of the characters
+		        $text = get_the_title();
+		        echo text_cut($text, 27, true);
+				function text_cut($text, $length, $dots) {
+				//$text =get_the_title();
+				$text = trim(preg_replace('#[\s\n\r\t]{2,}#', ' ', $text));
+				$text_temp = $text;
+				   while (substr($text, $length, 1) != " ") {
+						$length--;
+					  	if ($length > strlen($text)) {
+						  	break;
+						}
+					}
+				    $text = substr($text, 0, $length);
+				    return $text . ( ( $dots == true && $text != '' && strlen($text_temp) > $length ) ? '...' : '');
+				}
 			?>
 
 				</div>

@@ -69,9 +69,10 @@
 
 						<?php
 					        //limitation of the characters
-					        echo text_cut();
-							function text_cut($text, $length = 27, $dots = true) {
-							$text =get_the_title();
+					        $text = get_the_title();
+					        echo text_cut($text, 27, true);
+							function text_cut($text, $length, $dots) {
+							//$text =get_the_title();
 							$text = trim(preg_replace('#[\s\n\r\t]{2,}#', ' ', $text));
 							$text_temp = $text;
 							   while (substr($text, $length, 1) != " ") {
