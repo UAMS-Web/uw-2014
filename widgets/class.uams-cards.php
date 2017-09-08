@@ -139,7 +139,7 @@ class UAMS_Widget_Cards extends WP_Widget
 
       <?php echo wpautop($text); ?>
 
-      <?php if ( ! empty( $link) ) : ?>
+      <?php if ( ! empty( $link) && !empty( $linktext ) ) : ?>
         <a href="<?php echo $link; ?>" class="pic-text-more uams-btn btn-sm btn-red"><?php echo $linktext; ?></a>
       <?php else: ?>
         <br/>
