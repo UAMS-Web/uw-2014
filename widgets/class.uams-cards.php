@@ -130,12 +130,14 @@ class UAMS_Widget_Cards extends WP_Widget
 	  <div class="card-body">
       <span>
       <h3>
-        <?php if ( ! empty( $link) ) : ?>
+        <?php if ( ! empty( $link) && ! empty( $title ) ) : ?>
         <a href="<?php echo $link; ?>" class="pic-title"><?php endif; ?><?php echo $title; ?><?php if ( ! empty( $link) ) : ?></a>
         <?php endif; ?>
       </h3>
 
+	  <?php if ( ! empty( $title ) ) : ?>
       <span class="udub-slant"><span></span></span>
+      <?php endif; ?>
 
       <?php echo wpautop($text); ?>
 
