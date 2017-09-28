@@ -4,6 +4,16 @@
 	ul {
 		padding: 0;
 		list-style: none;
+		li {
+			&[class^="i-"]:before,
+			&[class*=" i-"]:before {
+				font-size: 24px;
+			    float: left;
+			    margin-left: 15px;
+			    width: 30px;
+			    margin-top: 8px;
+			}
+		}
 	}
 }
 
