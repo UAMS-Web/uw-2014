@@ -50,7 +50,7 @@ a.uams-btn {
       }
     }
     &.btn-play:after {
-      background-position: -31px -466px;
+      background-position: -31px -464px;
     }
     &.btn-external:after {
       background-position: -126px -410px;
@@ -72,17 +72,26 @@ a.uams-btn {
 	    }
 	    &:after {
 	      width: 64px;
-	      height: 45px;
+	      height: 56px;
 	      top: 50%;
 	      margin-top: -30px;
 	      right: -60px;
 	      background-size: 1000px;
 	      background-position: -38px -550px;
 	    }
+      &.btn-play:after {
+        background-position: -40px -625px;
+      }
+      &.btn-external:after {
+          background-position: -166px -550px;
+      }
+      &.btn-plus:after {
+          background-position: -108px -624px;;
+      }
    }
   &:hover, &:focus {
     color: @900grey;
-    background-color: @200grey;
+    background-color: @red;
     &:before {
       background-color: lighten(@red, 10%);
     }

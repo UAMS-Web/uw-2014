@@ -5311,7 +5311,7 @@ table th[class*="col-"] {
 .uams-thinstrip button.uams-quicklinks:hover,
 .uams-thinstrip button.uams-quicklinks:focus {
   color: #616161;
-  text-shadow: 0px 0px 4px rgba(240, 240, 240, 0.54);
+  text-shadow: 0px 4px rgba(240, 240, 240, 0.54);
   text-decoration: underline;
   outline: none;
   -o-transition: all 0.2s ease;
@@ -5936,7 +5936,7 @@ table th[class*="col-"] {
   line-height: 1;
   padding: 40px 20% 0 0;
   margin: 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 3px rgba(0, 0, 0, 0.5);
 }
 .uams-hero-image.hero-height #hero-container h1:after,
 .no-uams-hero-image.hero-height #hero-container h1:after {
@@ -6129,10 +6129,10 @@ table th[class*="col-"] {
   height: 450px;
 }
 .uams-homepage-slider-container .slideshow-controls:hover {
-  text-shadow: 0px 3px 4px black;
+  text-shadow: 3px 4px black;
 }
 .uams-homepage-slider-container .slideshow-controls.lighttext .next-headline {
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.25);
 }
 .uams-homepage-slider-container .slideshow-controls.lighttext .next-headline .uwn-slideshow-next-text {
@@ -6148,7 +6148,7 @@ table th[class*="col-"] {
   background: url(../uams-2016/assets/svg/uams-sprite.svg) no-repeat -574px -55px;
 }
 .uams-homepage-slider-container .slideshow-controls.darktext .next-headline {
-  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0.25);
 }
 .uams-homepage-slider-container .slideshow-controls.darktext .next-headline .uwn-slideshow-next-text {
@@ -6242,12 +6242,12 @@ table th[class*="col-"] {
 .uams-homepage-slider-container .uams-homepage-slider.lighttext div h3,
 .uams-homepage-slider-container .uams-homepage-slider.lighttext div p {
   color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
 .uams-homepage-slider-container .uams-homepage-slider.darktext div h3,
 .uams-homepage-slider-container .uams-homepage-slider.darktext div p {
   color: #212121;
-  text-shadow: 1px 1px 1px rgba(225, 225, 225, 0.3);
+  text-shadow: 1px 1px rgba(225, 225, 225, 0.3);
 }
 @media only screen and (max-width: 767px) {
   .uams-homepage-slider-container .uams-homepage-slider div h3.slide-title {
@@ -9310,7 +9310,7 @@ a.uams-btn.btn-sm.btn-left:after {
   -webkit-transform: rotate(180deg);
 }
 a.uams-btn.btn-sm.btn-play:after {
-  background-position: -31px -466px;
+  background-position: -31px -464px;
 }
 a.uams-btn.btn-sm.btn-external:after {
   background-position: -126px -410px;
@@ -9332,17 +9332,26 @@ a.uams-btn.btn-lg:before {
 }
 a.uams-btn.btn-lg:after {
   width: 64px;
-  height: 45px;
+  height: 56px;
   top: 50%;
   margin-top: -30px;
   right: -60px;
   background-size: 1000px;
   background-position: -38px -550px;
 }
+a.uams-btn.btn-lg.btn-play:after {
+  background-position: -40px -625px;
+}
+a.uams-btn.btn-lg.btn-external:after {
+  background-position: -166px -550px;
+}
+a.uams-btn.btn-lg.btn-plus:after {
+  background-position: -108px -624px;
+}
 a.uams-btn:hover,
 a.uams-btn:focus {
   color: #212121;
-  background-color: #eeeeee;
+  background-color: #9d2235;
 }
 a.uams-btn:hover:before,
 a.uams-btn:focus:before {
@@ -9804,13 +9813,6 @@ label.screen-reader {
   margin: 0 0 30px;
   width: 70%;
 }
-#hero-container a.uams-btn {
-  background-color: #fff;
-  color: #9d2235;
-}
-#hero-container a.uams-btn:before {
-  background-color: #616161;
-}
 .uams-site-title-blank {
   font-size: 50px;
   padding-top: 20px;
@@ -9850,7 +9852,7 @@ label.screen-reader {
   font-size: 60px;
   margin: 0;
   line-height: 1;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.5);
   display: inline-block;
   vertical-align: bottom;
 }
@@ -11069,6 +11071,14 @@ ul.shortcode-blogroll-mini {
   padding: 0;
   list-style: none;
 }
+.widget_nav_menu ul li[class^="i-"]:before,
+.widget_nav_menu ul li[class*=" i-"]:before {
+  font-size: 24px;
+  float: left;
+  margin-left: 15px;
+  width: 30px;
+  margin-top: 8px;
+}
 .pic-text-widget img {
   width: 100%;
   height: auto;
@@ -11227,7 +11237,7 @@ ul.shortcode-blogroll-mini {
   font-size: 17px;
   line-height: 1.35;
   padding-right: 30px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 3px rgba(0, 0, 0, 0.2);
 }
 .cards-widget .enhanced-card .udub-slant,
 .cards-widget .default-card .udub-slant {

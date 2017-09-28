@@ -29,7 +29,7 @@ class UAMS_Button
 
         $color = 'btn-' . $btnColors['color'];
 
-        if(empty($content)){
+        if(empty($content) && empty($attributes->text)){
             echo 'No text in this button';
             return;
         }
@@ -48,6 +48,14 @@ class UAMS_Button
 
         if (property_exists($attributes, 'small')){
             array_push($classes, 'btn-sm');
+        }
+
+        if (isset($attributes->size)){
+            array_push($classes, 'btn-' . $attributes->size);
+        }
+
+        if (isset($attributes->text)){
+            $content = $attributes->text;
         }
 
         $class_string = implode($classes, ' ');
