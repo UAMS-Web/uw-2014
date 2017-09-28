@@ -2,7 +2,7 @@
 
 /*
  *  Button shortcode allows for styled buttons to be added to content
- *  [button color='gold' type='type' url='link url' small='true']Button Text[/button]
+ *  [button color='gray' type='type' url='link url' size='small']Button Text[/button]
  *  optional small attribute makes the button small.  Assume large if not present
  */
 
