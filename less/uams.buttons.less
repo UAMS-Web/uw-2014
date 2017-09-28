@@ -50,7 +50,7 @@ a.uams-btn {
       }
     }
     &.btn-play:after {
-      background-position: -31px -464px;
+      background-position: -30px -464px;
     }
     &.btn-external:after {
       background-position: -126px -410px;
@@ -80,7 +80,7 @@ a.uams-btn {
 	      background-position: -38px -550px;
 	    }
       &.btn-play:after {
-        background-position: -40px -625px;
+        background-position: -39px -625px;
       }
       &.btn-external:after {
           background-position: -166px -550px;
@@ -99,6 +99,20 @@ a.uams-btn {
   &.btn-grey {
 	background-color: @300grey;
 	color: @700grey;
+    &:hover, &:focus {
+      background-color: darken(@600grey, 5%);
+      color: @100grey;
+    }
+    &:before {
+      background-color: darken(@700grey, 5%);
+    }
+    &:hover:before {
+      background-color: darken(@700grey, 20%);
+    }
+  }
+  &.btn-gray { //both spellings, just in case
+  background-color: @300grey;
+  color: @700grey;
     &:hover, &:focus {
       background-color: darken(@600grey, 5%);
       color: @100grey;
@@ -189,7 +203,7 @@ a.uams-btn {
     border-left: 5px solid rgba(0,0,0,.3);
   }
   &.btn-play:after {
-    background-position: -36px -539px;
+    background-position: -34px -539px;
   }
   &.btn-external:after {
       background-position: -146px -475px;

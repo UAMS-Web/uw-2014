@@ -9310,7 +9310,7 @@ a.uams-btn.btn-sm.btn-left:after {
   -webkit-transform: rotate(180deg);
 }
 a.uams-btn.btn-sm.btn-play:after {
-  background-position: -31px -464px;
+  background-position: -30px -464px;
 }
 a.uams-btn.btn-sm.btn-external:after {
   background-position: -126px -410px;
@@ -9340,7 +9340,7 @@ a.uams-btn.btn-lg:after {
   background-position: -38px -550px;
 }
 a.uams-btn.btn-lg.btn-play:after {
-  background-position: -40px -625px;
+  background-position: -39px -625px;
 }
 a.uams-btn.btn-lg.btn-external:after {
   background-position: -166px -550px;
@@ -9370,6 +9370,21 @@ a.uams-btn.btn-grey:before {
   background-color: #545454;
 }
 a.uams-btn.btn-grey:hover:before {
+  background-color: #2e2e2e;
+}
+a.uams-btn.btn-gray {
+  background-color: #e0e0e0;
+  color: #616161;
+}
+a.uams-btn.btn-gray:hover,
+a.uams-btn.btn-gray:focus {
+  background-color: #686868;
+  color: #f5f5f5;
+}
+a.uams-btn.btn-gray:before {
+  background-color: #545454;
+}
+a.uams-btn.btn-gray:hover:before {
   background-color: #2e2e2e;
 }
 a.uams-btn.btn-red {
@@ -9455,7 +9470,7 @@ a.uams-btn:before {
   border-left: 5px solid rgba(0, 0, 0, 0.3);
 }
 a.uams-btn.btn-play:after {
-  background-position: -36px -539px;
+  background-position: -34px -539px;
 }
 a.uams-btn.btn-external:after {
   background-position: -146px -475px;

@@ -51,7 +51,11 @@ class UAMS_Button
         }
 
         if (isset($attributes->size)){
-            array_push($classes, 'btn-' . $attributes->size);
+            if (in_array($attributes->size, array('small', 'sm'))){
+                array_push($classes, 'btn-sm');
+            } elseif (in_array($attributes->size, array('large', 'lg'))) {
+                array_push($classes, 'btn-lg');
+            }
         }
 
         if (isset($attributes->text)){
