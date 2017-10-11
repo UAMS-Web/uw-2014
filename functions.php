@@ -348,3 +348,11 @@ function sitemap() {
   fwrite( $fop, $sitemap );
   fclose( $fop );
 }
+
+add_filter('allowed_http_origins', 'add_allowed_origins');
+
+function add_allowed_origins($origins) {
+    $origins[] = 'http://www.uams.edu';
+    $origins[] = 'http://www.uams.dev'; //Dev URL
+    return $origins;
+}

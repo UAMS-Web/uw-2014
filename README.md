@@ -29,7 +29,7 @@ This is an overview of the custom widgets, plugins and various features it inclu
   - [Subpage List](#subpagelist)
   - [Accordion](#accordion)
   - [Tabs](#tabs)
-  - [Custom Menu](#custommenu)
+<!--   - [Custom Menu](#custommenu) -->
 - [Features](#features)
   - [UAMS Widget Visibility](#uamswidgetvisiblity)
   - [UAMS Media Credit](#uamsmediacredit)
@@ -325,7 +325,7 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
    [/tabs]
 ```
 
-### Custom Menu ###
+<!-- ### Custom Menu ###
 > This shortcode pulls in a custom menu that can be created under _Dashboard > Appearance > Menus_. Icons can be added in the class field in the menu builder. View the [full set of icons](http://www.#.edu/brand/web-2/html-web-components/web-icons/) for more information.
 > 
 > Example:   
@@ -334,7 +334,7 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
 ```
 > Attributes:  
 
-> -  __menu__ : Enter the name of the menu found in _Dashboard > Appearance > Menus_. (_Default: Main menu_)   
+> -  __menu__ : Enter the name of the menu found in _Dashboard > Appearance > Menus_. (_Default: Main menu_)   --> 
 
 
 

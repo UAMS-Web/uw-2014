@@ -7575,6 +7575,8 @@ ul.uams-mobile-menu ul.children {
 body.home .uams-sidebar-menu {
   display: none;
 }
+body.page-template-home ul.uams-sidebar-menu,
+body.page-template-home ul.uams-mobile-menu,
 body.action-bar ul.uams-sidebar-menu,
 body.action-bar ul.uams-mobile-menu {
   margin-top: -42px;
@@ -9350,7 +9352,7 @@ a.uams-btn.btn-lg.btn-plus:after {
 }
 a.uams-btn:hover,
 a.uams-btn:focus {
-  color: #212121;
+  color: #ffffff;
   background-color: #9d2235;
 }
 a.uams-btn:hover:before,
@@ -9710,13 +9712,13 @@ label.screen-reader {
 #reddiedrops li.reddiedrops-item ul.reddiedrops-menu a:focus {
   text-decoration: none;
 }
-.uams-body a:focus,
-.uams-body a:hover {
+.uams-body a:focus:not(.uams-btn),
+.uams-body a:hover:not(.uams-btn) {
   color: #9d2235;
   border-bottom: 1px solid #9d2235;
 }
-.uams-body a:focus.uams-btn,
-.uams-body a:hover.uams-btn {
+.uams-body a:focus:not(.uams-btn).uams-btn,
+.uams-body a:hover:not(.uams-btn).uams-btn {
   border-bottom: none;
 }
 .uams-body a.uams-btn:focus {
