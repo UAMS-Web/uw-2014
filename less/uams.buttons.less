@@ -213,6 +213,18 @@ a.uams-btn {
   }
 
 }
+// Override btn border radius
+.btn {
+	border-radius: 0;
+}
+// Change default button color for a11y
+button {
+	background-color: @400grey;
+	&:hover,
+	&:focus {
+		background-color: darken(@400grey, 5%)
+  }
+}
 
 // Sidebar buttons
 #sidebar {
