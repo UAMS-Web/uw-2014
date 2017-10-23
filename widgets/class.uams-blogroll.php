@@ -106,7 +106,7 @@ class UAMS_Blogroll extends WP_Widget
 
       if ( $this->is_true( $params->image ) )
       {
-          $image = get_the_post_thumbnail( $post->ID , 'thumbnail' );
+          $image = get_the_post_thumbnail( $post->ID , 'thumbnail', array( 'alt' => get_post_meta( get_post_thumbnail_id($post->ID), '_wp_attachment_image_alt', true) ) );
           $class = ' class="pull-left"';
       }
 
