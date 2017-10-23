@@ -33,7 +33,7 @@
 
 	  	</div>
 	</button>
-	<div id="mobile-sidebar-links" aria-hidden="true">  <?php uams_sidebar_menu(); ?></div>
+	<div id="mobile-sidebar-links" aria-hidden="true">  <?php uams_sidebar_menu_mobile(); ?></div>
 </div>
 
 <?php the_content(); ?>

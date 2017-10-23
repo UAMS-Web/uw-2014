@@ -5,7 +5,7 @@ UAMS.elements = {
   accordion  	: '.uams-accordion',
   dropdowns  	: '#reddiedrops',
   images     	: 'a > img',
-  mobilemenu 	: '#mobile-relative',
+  mobilemenu 	: '#mobile-reddiedrops',
   togglemobile  : '#mobile-sidebar',
   radio      	: ':radio',
   checkbox   	: ':checkbox',

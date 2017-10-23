@@ -1,4 +1,5 @@
-#mobile-relative {
+#mobile-relative,
+#mobile-reddiedrops {
     display: none;
     ul.uams-mobile-menu {
       display: none;
@@ -41,6 +42,7 @@
     background-color: @200grey;
     border-bottom: 1px solid #fff;
   }
+  #mobile-reddiedrops,
   #mobile-relative {
     display: block;
     button.uams-mobile-menu-toggle
@@ -157,7 +159,7 @@
                       position: relative;
                       padding: 10px 10px 10px 20px;
                       &:focus {
-                        color: black;
+                        color: @300grey;
                       }
                       &:after {
                         content: "";
@@ -226,6 +228,7 @@
 
   // Next few lines for the homepage only
  .home
+   #mobile-reddiedrops,
    #mobile-relative {
     li{
       a:hover,

@@ -65,11 +65,20 @@ if ( ! function_exists('uams_sidebar_menu') ) :
 
 endif;
 
+if ( ! function_exists('uams_sidebar_menu_mobile') ) :
+
+  function uams_sidebar_menu_mobile()
+  {
+    echo sprintf( '<nav id="mobile-relative" aria-label="relative">%s</nav>', uams_list_pages() ) ;
+  }
+
+endif;
+
 if ( ! function_exists( 'uams_mobile_menu' ) ) :
 
   function uams_mobile_menu()
   {
-    echo sprintf( '<nav id="mobile-relative" aria-label="relative">%s</nav>', uams_list_mobile_pages() ) ;
+    echo sprintf( '<nav id="mobile-reddiedrops" aria-label="relative">%s</nav>', uams_list_mobile_pages() ) ;
   }
 
 endif;
@@ -84,7 +93,7 @@ if ( ! function_exists( 'uams_mobile_front_page_menu' ) ) :
         $spacer = '<div id="spacer"></div>';
 
     }
-    echo sprintf( '<nav id="mobile-relative" class="frontpage%s" aria-label="relative">%s%s</nav>', $class, $spacer, uams_list_front_page_menu_items() ) ;
+    echo sprintf( '<nav id="mobile-reddiedrops" class="frontpage%s" aria-label="relative">%s%s</nav>', $class, $spacer, uams_list_front_page_menu_items() ) ;
   }
 
 endif;
