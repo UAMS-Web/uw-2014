@@ -134,7 +134,7 @@ class UAMS_Blogroll extends WP_Widget
         $html .= sprintf("<li><a class='widget-thumbnail' href='%s'>%s</a><a class='widget-link' href='%s'>%s<span>%s</span></a></li>", $link, $image, $link, $post->post_title, $byline);
       }
       else {
-        $html  .= "<li><span><{$params->titletag}><a href=\"$link\">{$post->post_title}</a><p class=\"date\">{$date}</p></{$params->titletag}>{$author}<span$class>{$image}</span>{$excerpt}</span></li>";
+        $html  .= "<li><span><{$params->titletag}><a href=\"$link\">{$post->post_title}</a><span class=\"date\">{$date}</p></{$params->titletag}>{$author}<span$class>{$image}</span>{$excerpt}</span></li>";
       }
 
     }

@@ -14,7 +14,7 @@
 	$i = 0;
 	$slidecolor = array();
     if ( ( get_field('home_page_slider') == 'slide' ) && have_rows('home_slides') ) : //$loop->have_posts() ) : ?>
-<div class="uams-homepage-slider-container" role="region" aria-labelledby="homepage-slides">
+<div class="uams-homepage-slider-container" role="region" aria-label="homepage-slides">
 	<?php
         while ( have_rows('home_slides') ): the_row();
 
