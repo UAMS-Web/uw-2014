@@ -14,7 +14,7 @@
 	$i = 0;
 	$slidecolor = array();
     if ( ( get_field('home_page_slider') == 'slide' ) && have_rows('home_slides') ) : //$loop->have_posts() ) : ?>
-<div class="uams-homepage-slider-container" role="region">
+<div class="uams-homepage-slider-container" role="region" aria-labelledby="homepage-slides">
 	<?php
         while ( have_rows('home_slides') ): the_row();
 
@@ -161,7 +161,7 @@ endif;
 
 				</div>
 			</button>
-			<div id="mobile-sidebar-links" aria-hidden="true">  <?php uams_sidebar_menu(); ?></div>
+			<div id="mobile-sidebar-links" aria-hidden="true">  <?php uams_mobile_menu(); ?></div>
 		</div>
 
       <div id='main_content' class="uams-body-copy" tabindex="-1">

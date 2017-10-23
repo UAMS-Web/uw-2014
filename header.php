@@ -91,12 +91,12 @@
     <!--<![endif]-->
     <!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $gtmvalue; ?>"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-    <div id="uamssearcharea" aria-hidden="true" class="uams-search-bar-container"></div>
-
     <a id="main-content" href="#main_content" class='screen-reader-shortcut'>Skip to main content</a>
+
+    <div id="uamssearcharea" aria-hidden="true" class="uams-search-bar-container"></div>
 
     <div id="uams-container">
 

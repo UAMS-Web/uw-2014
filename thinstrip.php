@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class='align-right thin-nav'>
-      <nav class="uams-thin-strip-nav" aria-label='audience based'>
+      <nav class="uams-thin-strip-nav" aria-label='UAMS Landing Pages'>
           <ul class="uams-thin-links">
             <li><a href="http://uamshealth.com" title="UAMSHealth" class="">UAMSHealth</a></li>
             <li><a href="http://jobs.uams.edu" title="Jobs @ UAMS">Jobs</a></li>
