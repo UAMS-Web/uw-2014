@@ -11499,6 +11499,66 @@ ul.shortcode-blogroll-mini {
 .social-widget ul.widget-social li a:focus.instagram {
   background-position: -322px -185px;
 }
+.uams-footer .social-widget .udub-slant span {
+  height: 4px;
+  max-width: 75%;
+}
+.uams-footer .social-widget ul.widget-social li a {
+  color: #fff;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: inline-block;
+  background: url(assets/svg/uams-sprite.svg) no-repeat 0 -185px transparent;
+}
+.uams-footer .social-widget ul.widget-social li a.facebook {
+  background-position: 0px -145px;
+}
+.uams-footer .social-widget ul.widget-social li a.twitter {
+  background-position: -46px -145px;
+}
+.uams-footer .social-widget ul.widget-social li a.tumblr {
+  background-position: -366px -145px;
+}
+.uams-footer .social-widget ul.widget-social li a.youtube {
+  background-position: -138px -145px;
+}
+.uams-footer .social-widget ul.widget-social li a.linkedin {
+  background-position: -184px -145px;
+}
+.uams-footer .social-widget ul.widget-social li a.pinterest {
+  background-position: -92px -145px;
+}
+.uams-footer .social-widget ul.widget-social li a.instagram {
+  background-position: -322px -145px;
+}
+.uams-footer .social-widget ul.widget-social li a:hover.facebook,
+.uams-footer .social-widget ul.widget-social li a:focus.facebook {
+  background-position: 0px -185px;
+}
+.uams-footer .social-widget ul.widget-social li a:hover.twitter,
+.uams-footer .social-widget ul.widget-social li a:focus.twitter {
+  background-position: -46px -185px;
+}
+.uams-footer .social-widget ul.widget-social li a:hover.tumblr,
+.uams-footer .social-widget ul.widget-social li a:focus.tumblr {
+  background-position: -366px -185px;
+}
+.uams-footer .social-widget ul.widget-social li a:hover.youtube,
+.uams-footer .social-widget ul.widget-social li a:focus.youtube {
+  background-position: -138px -185px;
+}
+.uams-footer .social-widget ul.widget-social li a:hover.linkedin,
+.uams-footer .social-widget ul.widget-social li a:focus.linkedin {
+  background-position: -184px -185px;
+}
+.uams-footer .social-widget ul.widget-social li a:hover.pinterest,
+.uams-footer .social-widget ul.widget-social li a:focus.pinterest {
+  background-position: -92px -185px;
+}
+.uams-footer .social-widget ul.widget-social li a:hover.instagram,
+.uams-footer .social-widget ul.widget-social li a:focus.instagram {
+  background-position: -322px -185px;
+}
 #uamsalert-alert-message {
   padding: 0 20px 40px;
   position: relative;
