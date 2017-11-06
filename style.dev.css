@@ -9624,67 +9624,60 @@ body.error404 .reddie {
   padding: 8px 21px;
 }
 .uams-footer ul.footer-social li a.facebook {
-  background-position: 0px -185px;
+  background-position: 0px -145px;
 }
 .uams-footer ul.footer-social li a.twitter {
-  background-position: -46px -185px;
+  background-position: -46px -145px;
 }
 .uams-footer ul.footer-social li a.tumblr {
-  background-position: -366px -185px;
+  background-position: -366px -145px;
 }
 .uams-footer ul.footer-social li a.youtube {
-  background-position: -138px -185px;
+  background-position: -138px -145px;
 }
 .uams-footer ul.footer-social li a.linkedin {
-  background-position: -184px -185px;
+  background-position: -184px -145px;
 }
 .uams-footer ul.footer-social li a.pinterest {
-  background-position: -92px -185px;
-}
-.uams-footer ul.footer-social li a.vine {
-  background-position: -230px -185px;
+  background-position: -92px -145px;
 }
 .uams-footer ul.footer-social li a.google {
-  background-position: -275px -185px;
+  background-position: -275px -145px;
 }
 .uams-footer ul.footer-social li a.instagram {
-  background-position: -322px -185px;
+  background-position: -322px -145px;
 }
 .uams-footer ul.footer-social li a:hover.facebook,
 .uams-footer ul.footer-social li a:focus.facebook {
-  background-position: 0px -225px;
+  background-position: 0px -185px;
 }
 .uams-footer ul.footer-social li a:hover.twitter,
 .uams-footer ul.footer-social li a:focus.twitter {
-  background-position: -46px -225px;
+  background-position: -46px -185px;
 }
 .uams-footer ul.footer-social li a:hover.tumblr,
 .uams-footer ul.footer-social li a:focus.tumblr {
-  background-position: -366px -225px;
+  background-position: -366px -185px;
 }
 .uams-footer ul.footer-social li a:hover.youtube,
 .uams-footer ul.footer-social li a:focus.youtube {
-  background-position: -138px -225px;
+  background-position: -138px -185px;
 }
 .uams-footer ul.footer-social li a:hover.linkedin,
 .uams-footer ul.footer-social li a:focus.linkedin {
-  background-position: -184px -225px;
+  background-position: -184px -185px;
 }
 .uams-footer ul.footer-social li a:hover.pinterest,
 .uams-footer ul.footer-social li a:focus.pinterest {
-  background-position: -92px -225px;
-}
-.uams-footer ul.footer-social li a:hover.vine,
-.uams-footer ul.footer-social li a:focus.vine {
-  background-position: -230px -225px;
+  background-position: -92px -185px;
 }
 .uams-footer ul.footer-social li a:hover.google,
 .uams-footer ul.footer-social li a:focus.google {
-  background-position: -275px -225px;
+  background-position: -275px -185px;
 }
 .uams-footer ul.footer-social li a:hover.instagram,
 .uams-footer ul.footer-social li a:focus.instagram {
-  background-position: -322px -225px;
+  background-position: -322px -185px;
 }
 .uams-footer ul.footer-links {
   margin: 45px 0 0 0;
@@ -11434,6 +11427,77 @@ ul.shortcode-blogroll-mini {
 .widget_nav_menu ul.menu span a {
   color: white;
   border-bottom: none;
+}
+.social-widget .udub-slant {
+  margin: 0;
+}
+.social-widget ul.widget-social {
+  padding-left: 0;
+}
+.social-widget ul.widget-social li {
+  list-style: none;
+  display: inline-block;
+}
+.social-widget ul.widget-social li a {
+  color: #fff;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: inline-block;
+  background: url(assets/svg/uams-sprite.svg) no-repeat 0 -185px transparent;
+  padding: 8px 21px;
+}
+.social-widget ul.widget-social li a.facebook {
+  background-position: 0px -225px;
+}
+.social-widget ul.widget-social li a.twitter {
+  background-position: -46px -225px;
+}
+.social-widget ul.widget-social li a.tumblr {
+  background-position: -366px -225px;
+}
+.social-widget ul.widget-social li a.youtube {
+  background-position: -138px -225px;
+}
+.social-widget ul.widget-social li a.linkedin {
+  background-position: -184px -225px;
+}
+.social-widget ul.widget-social li a.pinterest {
+  background-position: -92px -225px;
+}
+.social-widget ul.widget-social li a.instagram {
+  background-position: -322px -225px;
+}
+.social-widget ul.widget-social li a:hover,
+.social-widget ul.widget-social li a:focus {
+  border-bottom: none;
+}
+.social-widget ul.widget-social li a:hover.facebook,
+.social-widget ul.widget-social li a:focus.facebook {
+  background-position: 0px -185px;
+}
+.social-widget ul.widget-social li a:hover.twitter,
+.social-widget ul.widget-social li a:focus.twitter {
+  background-position: -46px -185px;
+}
+.social-widget ul.widget-social li a:hover.tumblr,
+.social-widget ul.widget-social li a:focus.tumblr {
+  background-position: -366px -185px;
+}
+.social-widget ul.widget-social li a:hover.youtube,
+.social-widget ul.widget-social li a:focus.youtube {
+  background-position: -138px -185px;
+}
+.social-widget ul.widget-social li a:hover.linkedin,
+.social-widget ul.widget-social li a:focus.linkedin {
+  background-position: -184px -185px;
+}
+.social-widget ul.widget-social li a:hover.pinterest,
+.social-widget ul.widget-social li a:focus.pinterest {
+  background-position: -92px -185px;
+}
+.social-widget ul.widget-social li a:hover.instagram,
+.social-widget ul.widget-social li a:focus.instagram {
+  background-position: -322px -185px;
 }
 #uamsalert-alert-message {
   padding: 0 20px 40px;

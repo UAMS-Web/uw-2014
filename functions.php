@@ -1,6 +1,6 @@
 <?php
 
-// allows child them overwriting of either whole UAMS object or just parts
+// allows child theme overwriting of either whole UAMS object or just parts
 if (!function_exists('setup_uams_object')){
     function setup_uams_object() {
         require( get_template_directory() . '/setup/class.uams.php' );
