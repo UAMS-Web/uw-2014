@@ -6544,6 +6544,9 @@ table th[class*="col-"] {
   .uams-breadcrumbs li:first-child:after {
     top: 8px;
   }
+  .action-bar .uams-breadcrumbs {
+    margin-top: 1em;
+  }
 }
 ul {
   padding-left: 25px;
@@ -7828,8 +7831,8 @@ body.action-bar ul.uams-mobile-menu {
   .page-child #mobile-sidebar {
     display: block;
   }
-  .home .page-parent #mobile-sidebar,
-  .home .page-child #mobile-sidebar {
+  .home.page-parent #mobile-sidebar,
+  .home.page-child #mobile-sidebar {
     display: none;
   }
   #mobile-sidebar-links {
