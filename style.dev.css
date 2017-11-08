@@ -11189,11 +11189,11 @@ ul.shortcode-blogroll-mini {
   background-repeat: repeat-x;
   background-size: 35px;
 }
-.cards-widget .default-card a.uw-btn {
+.cards-widget .default-card a.uams-btn {
   background-color: #9d2235;
   color: #FFF;
 }
-.cards-widget .default-card a.uw-btn:before {
+.cards-widget .default-card a.uams-btn:before {
   background-color: #eeeeee;
 }
 .cards-widget .default-card h3 {
@@ -11313,18 +11313,25 @@ ul.shortcode-blogroll-mini {
   background-size: cover;
   background-position: center center;
 }
-.cards-widget a.uw-btn.btn-sm {
+.cards-widget a.uams-btn.btn-sm {
   padding: 5px 11px;
   font-size: 13px;
 }
-.cards-widget a.uw-btn.btn-sm:after {
+.cards-widget a.uams-btn.btn-sm:after {
   right: -40px;
   background-size: 580px;
   background-position: -21px -317px;
 }
-.cards-widget a.uw-btn.btn-sm:before {
+.cards-widget a.uams-btn.btn-sm:before {
   width: 35px;
   right: -35px;
+}
+.uams-body .widget.cards-widget a:visited {
+  color: #eeeeee;
+}
+.uams-body .widget.cards-widget a:focus,
+.uams-body .widget.cards-widget a:hover {
+  color: #9d2235;
 }
 .contact-widget-inner {
   padding: 40px;

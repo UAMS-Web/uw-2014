@@ -16,7 +16,7 @@
   		background-position: 0 140px;
   		background-repeat: repeat-x;
   		background-size: 35px;
-		a.uw-btn {
+		a.uams-btn {
   			background-color: @red;
   			color: #FFF;
   			&:before {
@@ -138,7 +138,7 @@
 
 	// Adjust buttons to be smaller
 
-	a.uw-btn.btn-sm {
+	a.uams-btn.btn-sm {
   		padding: 5px 11px;
   		font-size: 13px;
   		&:after {
@@ -153,4 +153,17 @@
 	}
 
 
+}
+.uams-body {
+ 	.widget.cards-widget {
+ 		a {
+	 		&:visited {
+				color: @200grey;
+			}
+			&:focus,
+			&:hover {
+				color: @red;
+			}
+		}
+	}
 }
