@@ -11,6 +11,20 @@ class UAMS_Users
     add_filter( 'user_contactmethods', array( $this, 'additional_contact_fields'), 10, 1 );
     $role = get_role('editor');
     $role->add_cap('edit_theme_options');
+    //------------------------------------------------------//
+	//-----------------Give Editors Gravity Forms Access - TM
+	//------------------------------------------------------//
+    $role->add_cap( 'gravityforms_edit_forms' );
+	$role->add_cap( 'gravityforms_delete_forms' );
+	$role->add_cap( 'gravityforms_create_form' );
+	$role->add_cap( 'gravityforms_view_entries' );
+	$role->add_cap( 'gravityforms_edit_entries' );
+	$role->add_cap( 'gravityforms_delete_entries' );
+	$role->add_cap( 'gravityforms_view_settings' );
+	$role->add_cap( 'gravityforms_edit_settings' );
+	$role->add_cap( 'gravityforms_export_entries' );
+	$role->add_cap( 'gravityforms_view_entry_notes' );
+	$role->add_cap( 'gravityforms_edit_entry_notes' );
     add_action('admin_menu', array( $this,'custom_admin_menu'));
 
   }
