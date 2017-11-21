@@ -23,6 +23,7 @@ This is an overview of the custom widgets, plugins and various features it inclu
   - [Blogroll](#blogroll)
   - [iFrame](#iframe)
   - [Intro](#intro)
+  - [Map](#map)
   - [RSS](#rss)
   - [Tile box](#tilebox)
   - [YouTube](#youtube)
@@ -180,8 +181,8 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 > Attributes:  
 
 > - __src__ : The source URL of the embedded iframe (_Default: none_)
-> - __height__ : The width of the embedded iframe (_Default: WordPress's embed size width setting )
-> - __width__ :  The height of the embedded iframe (_Default: WordPress's embed size height setting )
+> - __height__ : The width of the embedded iframe (_Default: WordPress's embed size width setting_)
+> - __width__ :  The height of the embedded iframe (_Default: WordPress's embed size height setting_)
 
 > Example:   
 ```
@@ -190,7 +191,7 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 
 > Allowed domains:
 ```
-	uams.edu,
+    uams.edu,
     uamshealth.com,
     google.com,
     youtube.com,
@@ -210,6 +211,21 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 
 ```
   [intro] A block on introductory text for the content. [/intro]
+```
+
+### Map ###
+> This shortcode embeds a map into the body content.
+
+> Attributes: 
+
+> - __building__ : The building [id\_number](https://maps.uams.edu/map-ids/) (_Default: None_)
+> - __width__ : The width of the embedded iframe (_Default: 100%_)
+> - __height__ :  The height of the embedded iframe (_Default: 480px_) 
+
+> Example:
+
+```
+  [map building='135' width='100%' height='480'][/map]
 ```
 
 ### RSS ###
