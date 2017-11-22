@@ -174,7 +174,7 @@ class UAMS_Campus_Map extends WP_Widget
           <option value='154'<?php echo ($buildingCode=='154')?'selected':''; ?>>
             Winston K. Shorey Building (SHOR)
           </option>
-          <option value='115'<?php echo ($buildingCode=='115')?'selected':''; ?>>
+          <option value='115'<?php echo ($buildingCode=='155')?'selected':''; ?>>
             Winthrop P. Rockefeller Cancer Institute (WPRCI)
           </option>
           <option value='2'<?php echo ($buildingCode=='2')?'selected':''; ?>>
