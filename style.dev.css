@@ -5120,7 +5120,6 @@ table th[class*="col-"] {
 }
 .shortcode-blogroll > li a:focus,
 .shortcode-blogroll > li a:hover {
-  border-bottom: none;
   color: #9d2235;
 }
 .shortcode-blogroll h2 {
