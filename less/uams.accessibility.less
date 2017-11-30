@@ -44,13 +44,13 @@ label.screen-reader {
     }
 }
 .uams-body {
-    a:focus:not(.uams-btn),
-    a:hover:not(.uams-btn) {
+    a:focus,
+    a:hover {
         color: @hover;
         border-bottom: 1px solid @hover;
         // We don't want buttons underlined on hover
         &.uams-btn {
-            border-bottom: none;
+            border: none;
         }
     }
     a.uams-btn:focus {
@@ -72,7 +72,7 @@ label.screen-reader {
     }
     .widget {
         a {
-	        &:visited:not(.uams-btn) {
+	        &:visited {
 		        color: @visited;
 	        }
 	        &.widget-link{

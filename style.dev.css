@@ -5122,7 +5122,6 @@ table th[class*="col-"] {
 .shortcode-blogroll > li a:hover {
   border-bottom: none;
   color: #9d2235;
-  text-decoration: underline;
 }
 .shortcode-blogroll h2 {
   margin: 20px 0 0px;
@@ -6718,12 +6717,12 @@ span.next-page a:hover {
   text-decoration: none;
   border-bottom: 1px dotted #1565c0;
 }
-.uams-body-copy p a:visited:not(.uams-btn) {
+.uams-body-copy p a:visited {
   color: #4527a0;
   border-bottom: 1px solid #4527a0;
 }
-.uams-body-copy p a:visited:not(.uams-btn).uams-btn {
-  border-bottom: none;
+.uams-body-copy p a:visited.uams-btn {
+  border: none;
 }
 .info-box {
   width: 310px;
@@ -9412,6 +9411,9 @@ a.uams-btn.btn-grey:focus {
   background-color: #686868;
   color: #f5f5f5;
 }
+a.uams-btn.btn-grey:visited {
+  color: #616161;
+}
 a.uams-btn.btn-grey:before {
   background-color: #545454;
 }
@@ -9426,6 +9428,9 @@ a.uams-btn.btn-gray:hover,
 a.uams-btn.btn-gray:focus {
   background-color: #686868;
   color: #f5f5f5;
+}
+a.uams-btn.btn-gray:visited {
+  color: #616161;
 }
 a.uams-btn.btn-gray:before {
   background-color: #545454;
@@ -9442,6 +9447,9 @@ a.uams-btn.btn-red:focus {
   background-color: #881d2e;
   color: #eeeeee;
 }
+a.uams-btn.btn-red:visited {
+  color: white;
+}
 a.uams-btn.btn-red:before {
   background-color: #881d2e;
 }
@@ -9456,6 +9464,9 @@ a.uams-btn.btn-blue:hover,
 a.uams-btn.btn-blue:focus {
   background-color: #1d6488;
   color: #eeeeee;
+}
+a.uams-btn.btn-blue:visited {
+  color: #616161;
 }
 a.uams-btn.btn-blue:before {
   background-color: #1d6488;
@@ -9472,6 +9483,9 @@ a.uams-btn.btn-green:focus {
   background-color: #1d8843;
   color: #eeeeee;
 }
+a.uams-btn.btn-green:visited {
+  color: #616161;
+}
 a.uams-btn.btn-green:before {
   background-color: #1d8843;
 }
@@ -9486,6 +9500,9 @@ a.uams-btn.btn-yellow:hover,
 a.uams-btn.btn-yellow:focus {
   background-color: #ffb002;
   color: #212121;
+}
+a.uams-btn.btn-yellow:visited {
+  color: #616161;
 }
 a.uams-btn.btn-yellow:before {
   background-color: #ffb002;
@@ -9762,14 +9779,14 @@ label.screen-reader {
 #reddiedrops li.reddiedrops-item ul.reddiedrops-menu a:focus {
   text-decoration: none;
 }
-.uams-body a:focus:not(.uams-btn),
-.uams-body a:hover:not(.uams-btn) {
+.uams-body a:focus,
+.uams-body a:hover {
   color: #9d2235;
   border-bottom: 1px solid #9d2235;
 }
-.uams-body a:focus:not(.uams-btn).uams-btn,
-.uams-body a:hover:not(.uams-btn).uams-btn {
-  border-bottom: none;
+.uams-body a:focus.uams-btn,
+.uams-body a:hover.uams-btn {
+  border: none;
 }
 .uams-body a.uams-btn:focus {
   text-decoration: underline;
@@ -9786,7 +9803,7 @@ label.screen-reader {
 .uams-body #main_content:focus {
   outline: none;
 }
-.uams-body .widget a:visited:not(.uams-btn) {
+.uams-body .widget a:visited {
   color: #4527a0;
 }
 .uams-body .widget a.widget-link {
@@ -11198,7 +11215,15 @@ ul.shortcode-blogroll-mini {
   color: #FFF;
 }
 .cards-widget .default-card a.uams-btn:before {
-  background-color: #eeeeee;
+  background-color: #881d2e;
+}
+.cards-widget .default-card a.uams-btn:hover,
+.cards-widget .default-card a.uams-btn:focus {
+  text-decoration: underline;
+}
+.cards-widget .default-card a.uams-btn:hover:before,
+.cards-widget .default-card a.uams-btn:focus:before {
+  background-color: #491019;
 }
 .cards-widget .default-card h3 {
   font-size: 25px;
@@ -11329,13 +11354,6 @@ ul.shortcode-blogroll-mini {
 .cards-widget a.uams-btn.btn-sm:before {
   width: 35px;
   right: -35px;
-}
-.uams-body .widget.cards-widget a:visited {
-  color: #eeeeee;
-}
-.uams-body .widget.cards-widget a:focus,
-.uams-body .widget.cards-widget a:hover {
-  color: #9d2235;
 }
 .contact-widget-inner {
   padding: 40px;
