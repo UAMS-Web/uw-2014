@@ -11354,6 +11354,13 @@ ul.shortcode-blogroll-mini {
   width: 35px;
   right: -35px;
 }
+.uams-body .cards-widget .styled-card a:visited {
+  color: #eeeeee;
+}
+.uams-body .cards-widget .styled-card a:focus,
+.uams-body .cards-widget .styled-card a:hover {
+  color: #f5f5f5;
+}
 .contact-widget-inner {
   padding: 40px;
   margin-top: 20px;
