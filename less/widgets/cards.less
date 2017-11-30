@@ -19,9 +19,17 @@
 		a.uams-btn {
   			background-color: @red;
   			color: #FFF;
-  			&:before {
-  				background-color: @200grey;
+  			&:before
+  			{
+  			  background-color: darken(@red, 5%);
 			}
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+				&:before {
+		      		background-color: darken(@red, 20%);
+		      	}
+		    }
 		}
 		h3 {
   			font-size: 25px;
@@ -154,16 +162,16 @@
 
 
 }
-.uams-body {
- 	.widget.cards-widget {
- 		a {
-	 		&:visited {
-				color: @200grey;
-			}
-			&:focus,
-			&:hover {
-				color: @red;
-			}
-		}
-	}
-}
+// .uams-body {
+//  	.widget.cards-widget {
+//  		a {
+// 	 		&:visited {
+// 				color: @200grey;
+// 			}
+// 			&:focus,
+// 			&:hover {
+// 				color: @100grey;
+// 			}
+// 		}
+// 	}
+// }
