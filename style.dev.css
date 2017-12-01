@@ -11231,6 +11231,9 @@ ul.shortcode-blogroll-mini {
 .cards-widget .default-card h3 a {
   color: #9d2235;
 }
+.cards-widget .default-card h3 a:visited {
+  color: #7b1d2a;
+}
 .cards-widget .default-card p {
   font-size: 16px;
   line-height: 1.4;
