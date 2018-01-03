@@ -9599,7 +9599,7 @@ UAMS.initialize = function( $ )
   // UAMS Components - These need to render after all other javascript elements are rendered on page
   UAMS.accordion  = _.map( $( UAMS.elements.accordion ), function( element ) { return new UAMS.Accordion( { el : element }) } )
   UAMS.radio      = _.map( $( UAMS.elements.radio ),     function( element ) { return new UAMS.Radio({ el : element }) } )
-  UAMS.checkbox   = _.map( $( UAMS.elements.checkbox ),     function( element ) { return new UAMS.Radio({ el : element }) } )
+  UAMS.checkbox   = _.map( $( UAMS.elements.checkbox ),  function( element ) { return new UAMS.Checkbox({ el : element }) } )
   UAMS.select     = _.map( $( UAMS.elements.select ),    function( element ) { return new UAMS.Select({ el : element }) } )
 
   UAMS.alert = new UAMS.Alert({ after: UAMS.elements.alert, model: new UAMS.Alert.Model() });
@@ -10948,6 +10948,90 @@ UAMS.Radio = Backbone.View.extend({
     if ( this.$input.attr('type') === 'radio' ) {
       return _.where( UAMS.radio, { name : this.name })
     }
+    if ( this.$input.attr('type') === 'checkbox' ) {
+      return _.where( UAMS.checkbox, { name : this.name })
+    }
+  },
+
+  toggle : function(e )
+  {
+      _.each( this.getGroup() , this.toggleCheckBox )
+
+  },
+
+  toggleCheckBox : function( view )
+  {
+    var checked  = view.$input.prop( this.states.checked )
+      , disabled = view.$input.prop( this.states.disabled )
+    if ( ! disabled &&
+          view.$el.removeClass( this.states.checked ) )
+        view.$el.removeAttr( this.states.checked ).trigger( 'change' )
+
+
+    if ( ! disabled )
+    {
+
+      if ( checked && view.$el.addClass( this.states.checked ) )
+        view.$el.trigger( $.Event('toggle') )
+
+      if ( checked !== view.$el.prop( this.states.checked ) )
+        view.$el.trigger( 'change' )
+
+    }
+
+  }
+
+})
+;/* CHECKBOX PUBLIC CLASS DEFINITION
+ * ============================== */
+
+UAMS.Checkbox = Backbone.View.extend({
+
+  states :
+  {
+    checked  : 'checked',
+    disabled : 'disabled'
+  },
+
+  events :
+  {
+    'click input' : 'toggle'
+  },
+
+  template: '<span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span>',
+
+  initialize : function( options )
+  {
+    _.bindAll( this, 'toggle', 'getGroup', 'toggleCheckBox' )
+
+    this.settings = _.extend( {}, this.defaults , this.$el.data() , options )
+
+    this.$el.after( this.template )
+
+    this.$input = this.$el
+
+    this.name   = this.$el.attr( 'name' )
+
+    if ( this.$el.closest('.gform_wrapper').length > 0 ) {
+      this.setElement( this.$el.parent() )
+    } else {
+      this.setElement( this.$el.closest('label') )
+    }
+
+    this.setState()
+  },
+
+  setState: function()
+  {
+    if ( this.$input.prop( this.states.disabled ) ) this.$el.addClass( this.states.disabled )
+    if ( this.$input.prop( this.states.checked ) ) this.$el.addClass( this.states.checked )
+  },
+
+  getGroup : function()
+  {
+    // if ( this.$input.attr('type') === 'radio' ) {
+    //   return _.where( UAMS.radio, { name : this.name })
+    // }
     if ( this.$input.attr('type') === 'checkbox' ) {
       return _.where( UAMS.checkbox, { name : this.name })
     }

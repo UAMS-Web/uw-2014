@@ -27,6 +27,7 @@ module.exports = function(grunt) {
           "js/uams.youtube.js",
           "js/uams.vimeo.js",
           "js/uams.radio-checkbox.js",
+          "js/uams.checkbox.js",
           "js/uams.dropdowns.js",
           "js/uams.mobile-menu.js",
           "js/uams.mobile-sidebar-menu.js",

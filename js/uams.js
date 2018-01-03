@@ -33,6 +33,7 @@ UAMS.elements = {
   dropdowns  : '#reddiedrops',
   mobilemenu : '.uams-mobile-menu-toggle',
   radio      : ':radio',
+  checkbox   : ':checkbox',
   search     : '.uams-search',
   select     : '.uams-select',
   quicklinks : '.uams-quicklinks',
@@ -73,6 +74,7 @@ UAMS.initialize = function( $ )
   // UAMS Components - These need to render after all other javascript elements are rendered on page
   UAMS.accordion  = _.map( $( UAMS.elements.accordion ), function( element ) { return new UAMS.Accordion( { el : element }) } )
   UAMS.radio      = _.map( $( UAMS.elements.radio ),     function( element ) { return new UAMS.Radio({ el : element }) } )
+  UAMS.checkbox   = _.map( $( UAMS.elements.checkbox ),  function( element ) { return new UAMS.Checkbox({ el : element }) } )
   UAMS.select     = _.map( $( UAMS.elements.select ),    function( element ) { return new UAMS.Select({ el : element }) } )
 
   // todo: add to separate file

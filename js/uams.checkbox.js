@@ -1,7 +1,7 @@
-/* RADIO PUBLIC CLASS DEFINITION
+/* CHECKBOX PUBLIC CLASS DEFINITION
  * ============================== */
 
-UAMS.Radio = Backbone.View.extend({
+UAMS.Checkbox = Backbone.View.extend({
 
   states :
   {
@@ -14,7 +14,7 @@ UAMS.Radio = Backbone.View.extend({
     'click input' : 'toggle'
   },
 
-  template: '<span class="icons"><span class="first-icon fal fa-circle"></span><span class="second-icon fal fa-dot-circle"></span></span>',
+  template: '<span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span>',
 
   initialize : function( options )
   {
@@ -28,7 +28,11 @@ UAMS.Radio = Backbone.View.extend({
 
     this.name   = this.$el.attr( 'name' )
 
-    this.setElement( this.$el.parent() )
+    if ( this.$el.closest('.gform_wrapper').length > 0 ) {
+      this.setElement( this.$el.parent() )
+    } else {
+      this.setElement( this.$el.closest('label') )
+    }
 
     this.setState()
   },
@@ -41,9 +45,9 @@ UAMS.Radio = Backbone.View.extend({
 
   getGroup : function()
   {
-    if ( this.$input.attr('type') === 'radio' ) {
-      return _.where( UAMS.radio, { name : this.name })
-    }
+    // if ( this.$input.attr('type') === 'radio' ) {
+    //   return _.where( UAMS.radio, { name : this.name })
+    // }
     if ( this.$input.attr('type') === 'checkbox' ) {
       return _.where( UAMS.checkbox, { name : this.name })
     }

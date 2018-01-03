@@ -12,7 +12,7 @@
   background-position: -480px -25px;
 }
 .fui-radio-checked:before {
-  background-position: -504px -25px;
+  background-position: -480px -25px;
 }
 .checked {
   .fui-radio-unchecked:before {
@@ -20,6 +20,44 @@
   }
   .fui-radio-checked:before {
     background-position: -504px 0px;
+  }
+}
+
+.checkbox:focus .icons .first-icon,
+.radio:focus .icons .first-icon {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.checkbox:focus .icons .second-icon,
+.radio:focus .icons .second-icon {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+
+
+.fui-checkbox-unchecked:before,
+.fui-checkbox-checked:before {
+  background: url(assets/svg/uams-sprite.svg) no-repeat 0 0 rgba(0, 0, 0, 0);
+  content: "";
+  width: 22px;
+  height: 22px;
+  top: 2px;
+  left: 0;
+  position: absolute;
+}
+.fui-checkbox-unchecked:before {
+  background-position: -537px -25px;
+}
+.fui-checkbox-checked:before {
+  background-position: -537px -25px;
+}
+.checked {
+  .fui-checkbox-unchecked:before {
+    background-position: -537px -25px;
+  }
+  .fui-checkbox-checked:before {
+    background-position: -537px 0px;
   }
 }
 
@@ -66,6 +104,36 @@
 
 }
 
+.checkbox {
+
+  .fui-checkbox-unchecked:before,
+  .fui-checkbox-checked:before {
+    background: url(assets/svg/uams-sprite.svg) no-repeat 0 0 rgba(0, 0, 0, 0);
+    content: "";
+    width: 22px;
+    height: 22px;
+    top: 2px;
+    left: 0;
+    position: absolute;
+  }
+  .fui-checkbox-unchecked:before {
+    background-position: -537px -25px;
+  }
+  .fui-checkbox-checked:before {
+    background-position: -537px -25px;
+  }
+  &.checked {
+    .fui-checkbox-unchecked:before {
+      background-position: -537px 0px;
+    }
+    .fui-checkbox-checked:before {
+      background-position: -537px 0px;
+    }
+
+  }
+
+}
+
 .checkbox,
 .radio
 {
@@ -84,6 +152,21 @@
 
 }
 
+// Accessibility Fix for Focus  
+.gform_wrapper input[type=checkbox]:focus + .icons .fui-checkbox-unchecked,
+.gform_wrapper input[type=radio]:focus + .icons .fui-radio-unchecked {
+    border-color: @red;
+}
+
+.fui-checkbox-unchecked, .fui-radio-unchecked {
+    border: 1px solid #fff;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    margin-bottom: -6px;
+    display: inline-block;
+}
+
 // Contact Form 7 isn't able to show custom radios and checkboxes
 
 .wpcf7 .fui-radio-unchecked:before,
@@ -96,11 +179,12 @@
 	.gfield_radio,
 	.gfield_checkbox {
 		label {
-			padding-left: 30px !important;
-
+			//padding-left: 30px !important;
 		}
 		.icons {
-				//display: none;
+        width: 30px;
+				display: inline-block;
+        vertical-align: top;
 			}
 	}
 
@@ -130,6 +214,18 @@
 .uams-body .gform_wrapper ul.gfield_checkbox li input[type=checkbox],
 .uams-body .gform_wrapper ul.gfield_radio li input[type=radio] {
 	width: 22px !important; // Over-ride width settings
+}
+// GF CSS Override
+// Keep radio & checkboxes inline
+@media only screen and (max-width: 641px) {
+    .gform_wrapper .gfield_radio .icons,
+    .gform_wrapper .gfield_checkbox .icons,
+    .fui-checkbox-unchecked, .fui-radio-unchecked,
+    .fui-checkbox-checked, .fui-radio-checked
+     {
+        display: inline-block !important;
+        margin-bottom: 0 !important;
+    }
 }
 
 // Woo WooCommerce Extra Product Options
