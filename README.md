@@ -139,7 +139,7 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 > Attributes:  
 
 > - __color__ : The color of the button. Options: __red__, __gray__, __blue__, or __green__ (_Default: none_)
-> - __type__: Adjusts the image of the button. Options: __plus__, __go__, __external__, __play__ (_Default: go_)   
+> - __type__: Adjusts the image of the button. Options: __plus__, __go__, __external__, __play__, __pdf__ (_Default: go_)   
 > - __size__: Adjusts the size of the button. Options: __small__, __large__ (_Default: None_)
 > - __url__: The URL where the button links to (_Default: None_)
 
