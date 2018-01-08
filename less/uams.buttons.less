@@ -58,6 +58,9 @@ a.uams-btn {
     &.btn-plus:after {
       background-position: -83px -465px;
     }
+    &.btn-pdf:after {
+      background-position: -223px -410px;
+    }
   }
   &.btn-lg {
     padding: 16px 30px;
@@ -88,6 +91,9 @@ a.uams-btn {
       &.btn-plus:after {
           background-position: -108px -624px;;
       }
+      &.btn-pdf:after {
+          background-position: -300px -550px;;
+      }
    }
   &:hover, &:focus {
     color: @white;
@@ -98,13 +104,13 @@ a.uams-btn {
   }
   &.btn-grey {
 	background-color: @300grey;
-	color: @700grey;
+	color: @700grey !important;
     &:hover, &:focus {
       background-color: darken(@600grey, 5%);
-      color: @100grey;
+      color: @100grey !important;
     }
     &:visited {
-      color: @700grey;
+      color: @700grey !important;
     }
     &:before {
       background-color: darken(@700grey, 5%);
@@ -115,13 +121,13 @@ a.uams-btn {
   }
   &.btn-gray { //both spellings, just in case
   background-color: @300grey;
-  color: @700grey;
+  color: @700grey !important;
     &:hover, &:focus {
       background-color: darken(@600grey, 5%);
-      color: @100grey;
+      color: @100grey !important;
     }
     &:visited {
-      color: @700grey;
+      color: @700grey !important;
     }
     &:before {
       background-color: darken(@700grey, 5%);
@@ -132,13 +138,13 @@ a.uams-btn {
   }
   &.btn-red {
     background-color: @red;
-    color: white;
+    color: white !important;
     &:hover, &:focus {
       background-color: darken(@red, 5%);
-      color: @200grey;
+      color: @200grey !important;
     }
     &:visited {
-      color: white;
+      color: white !important;
     }
     &:before {
       background-color: darken(@red, 5%);
@@ -149,13 +155,13 @@ a.uams-btn {
   }
   &.btn-blue {
     background-color: @300grey;
-    color: @700grey;
+    color: @700grey !important;
     &:hover, &:focus {
       background-color: darken(@blue, 5%);
-      color: @200grey;
+      color: @200grey !important;
     }
     &:visited {
-      color: @700grey;
+      color: @700grey !important;
     }
     &:before {
       background-color: darken(@blue, 5%);
@@ -166,13 +172,13 @@ a.uams-btn {
   }
   &.btn-green {
     background-color: @300grey;
-    color: @700grey;
+    color: @700grey !important;
     &:hover, &:focus {
       background-color: darken(@green, 5%);
-      color: @200grey;
+      color: @200grey !important;
     }
     &:visited {
-      color: @700grey;
+      color: @700grey !important;
     }
     &:before {
       background-color: darken(@green, 5%);
@@ -183,13 +189,13 @@ a.uams-btn {
   }
   &.btn-yellow {
     background-color: @300grey;
-    color: @700grey;
+    color: @700grey !important;
     &:hover, &:focus {
       background-color: darken(@yellow, 5%);
-      color: @900grey;
+      color: @900grey !important;
     }
     &:visited {
-      color: @700grey;
+      color: @700grey !important;
     }
     &:before {
       background-color: darken(@yellow, 5%);
@@ -229,7 +235,9 @@ a.uams-btn {
   &.btn-plus:after {
       background-position: -95px -539px;
   }
-
+  &.btn-pdf:after {
+      background-position: -258px -475px;
+  }
 }
 // Override btn border radius
 .btn,

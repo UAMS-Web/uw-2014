@@ -9442,6 +9442,9 @@ a.uams-btn.btn-sm.btn-external:after {
 a.uams-btn.btn-sm.btn-plus:after {
   background-position: -83px -465px;
 }
+a.uams-btn.btn-sm.btn-pdf:after {
+  background-position: -223px -410px;
+}
 a.uams-btn.btn-lg {
   padding: 16px 30px;
   font-size: 24px;
@@ -9472,6 +9475,9 @@ a.uams-btn.btn-lg.btn-external:after {
 a.uams-btn.btn-lg.btn-plus:after {
   background-position: -108px -624px;
 }
+a.uams-btn.btn-lg.btn-pdf:after {
+  background-position: -300px -550px;
+}
 a.uams-btn:hover,
 a.uams-btn:focus {
   color: #ffffff;
@@ -9483,15 +9489,15 @@ a.uams-btn:focus:before {
 }
 a.uams-btn.btn-grey {
   background-color: #e0e0e0;
-  color: #616161;
+  color: #616161 !important;
 }
 a.uams-btn.btn-grey:hover,
 a.uams-btn.btn-grey:focus {
   background-color: #686868;
-  color: #f5f5f5;
+  color: #f5f5f5 !important;
 }
 a.uams-btn.btn-grey:visited {
-  color: #616161;
+  color: #616161 !important;
 }
 a.uams-btn.btn-grey:before {
   background-color: #545454;
@@ -9501,15 +9507,15 @@ a.uams-btn.btn-grey:hover:before {
 }
 a.uams-btn.btn-gray {
   background-color: #e0e0e0;
-  color: #616161;
+  color: #616161 !important;
 }
 a.uams-btn.btn-gray:hover,
 a.uams-btn.btn-gray:focus {
   background-color: #686868;
-  color: #f5f5f5;
+  color: #f5f5f5 !important;
 }
 a.uams-btn.btn-gray:visited {
-  color: #616161;
+  color: #616161 !important;
 }
 a.uams-btn.btn-gray:before {
   background-color: #545454;
@@ -9519,15 +9525,15 @@ a.uams-btn.btn-gray:hover:before {
 }
 a.uams-btn.btn-red {
   background-color: #9d2235;
-  color: white;
+  color: white !important;
 }
 a.uams-btn.btn-red:hover,
 a.uams-btn.btn-red:focus {
   background-color: #881d2e;
-  color: #eeeeee;
+  color: #eeeeee !important;
 }
 a.uams-btn.btn-red:visited {
-  color: white;
+  color: white !important;
 }
 a.uams-btn.btn-red:before {
   background-color: #881d2e;
@@ -9537,15 +9543,15 @@ a.uams-btn.btn-red:hover:before {
 }
 a.uams-btn.btn-blue {
   background-color: #e0e0e0;
-  color: #616161;
+  color: #616161 !important;
 }
 a.uams-btn.btn-blue:hover,
 a.uams-btn.btn-blue:focus {
   background-color: #1d6488;
-  color: #eeeeee;
+  color: #eeeeee !important;
 }
 a.uams-btn.btn-blue:visited {
-  color: #616161;
+  color: #616161 !important;
 }
 a.uams-btn.btn-blue:before {
   background-color: #1d6488;
@@ -9555,15 +9561,15 @@ a.uams-btn.btn-blue:hover:before {
 }
 a.uams-btn.btn-green {
   background-color: #e0e0e0;
-  color: #616161;
+  color: #616161 !important;
 }
 a.uams-btn.btn-green:hover,
 a.uams-btn.btn-green:focus {
   background-color: #1d8843;
-  color: #eeeeee;
+  color: #eeeeee !important;
 }
 a.uams-btn.btn-green:visited {
-  color: #616161;
+  color: #616161 !important;
 }
 a.uams-btn.btn-green:before {
   background-color: #1d8843;
@@ -9573,15 +9579,15 @@ a.uams-btn.btn-green:hover:before {
 }
 a.uams-btn.btn-yellow {
   background-color: #e0e0e0;
-  color: #616161;
+  color: #616161 !important;
 }
 a.uams-btn.btn-yellow:hover,
 a.uams-btn.btn-yellow:focus {
   background-color: #ffb002;
-  color: #212121;
+  color: #212121 !important;
 }
 a.uams-btn.btn-yellow:visited {
-  color: #616161;
+  color: #616161 !important;
 }
 a.uams-btn.btn-yellow:before {
   background-color: #ffb002;
@@ -9619,6 +9625,9 @@ a.uams-btn.btn-external:after {
 }
 a.uams-btn.btn-plus:after {
   background-position: -95px -539px;
+}
+a.uams-btn.btn-pdf:after {
+  background-position: -258px -475px;
 }
 .btn,
 .btn-sm,
