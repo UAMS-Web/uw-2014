@@ -138,7 +138,7 @@ function add_allowed_origins($origins) {
 add_action( 'wp_enqueue_scripts', 'custom_load_font_awesome' );
 function custom_load_font_awesome() {
     wp_enqueue_script( 'font-awesome-all', get_bloginfo('template_directory') . '/js/fontawesome-all.min.js', array(), null, false );
-    wp_enqueue_script( 'font-awesome-v4', get_bloginfo('template_directory') . '/js/fa-v4-shims.min.js', array(), null, false );
+    wp_enqueue_script( 'font-awesome-v4', get_bloginfo('template_directory') . '/js/fa-v4-shims.js', array(), null, false );
     //wp_enqueue_script( 'font-awesome-light', get_bloginfo('template_directory') . '/js/fa-light.min.js', array(), null );
     //wp_enqueue_script( 'font-awesome-brands', get_bloginfo('template_directory') . '/js/fa-brands.min.js', array(), null );
     wp_enqueue_script( 'font-awesome', get_bloginfo('template_directory') . '/js/fontawesome.min.js', array(), null );
