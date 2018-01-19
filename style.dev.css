@@ -3347,7 +3347,9 @@ address {
 #uams-container #quicklinks ul#big-links li [class^="ic-"]:before,
 #uams-container #quicklinks ul#big-links li [class*=" ic-"]:before,
 #uams-container #quicklinks ul#big-links li [class^="i-"]:before,
-#uams-container #quicklinks ul#big-links li [class*=" i-"]:before {
+#uams-container #quicklinks ul#big-links li [class*=" i-"]:before,
+#uams-container #quicklinks ul#big-links li [class^="fa-"],
+#uams-container #quicklinks ul#big-links li [class*=" fa-"] {
   font-size: 30px;
   color: #fff;
 }
@@ -3403,7 +3405,9 @@ address {
 #uams-container #quicklinks ul#little-links li [class^="ic-"]:before,
 #uams-container #quicklinks ul#little-links li [class*=" ic-"]:before,
 #uams-container #quicklinks ul#little-links li [class^="i-"]:before,
-#uams-container #quicklinks ul#little-links li [class*=" i-"]:before {
+#uams-container #quicklinks ul#little-links li [class*=" i-"]:before,
+#uams-container #quicklinks ul#little-links li [class^="fa-"],
+#uams-container #quicklinks ul#little-links li [class*=" fa-"] {
   font-size: 20px;
   color: #fff;
   line-height: 30px;
@@ -3424,7 +3428,9 @@ address {
 #uams-container #quicklinks ul#social [class^="ic-"]:before,
 #uams-container #quicklinks ul#social [class*=" ic-"]:before,
 #uams-container #quicklinks ul#social [class^="i-"]:before,
-#uams-container #quicklinks ul#social [class*=" i-"]:before {
+#uams-container #quicklinks ul#social [class*=" i-"]:before,
+#uams-container #quicklinks ul#social [class^="fa-"],
+#uams-container #quicklinks ul#social [class*=" fa-"] {
   font-size: 30px;
   color: #fff;
 }
