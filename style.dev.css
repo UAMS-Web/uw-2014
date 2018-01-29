@@ -9936,6 +9936,17 @@ label.screen-reader {
 .uams-body div.wp-caption > a:focus > img {
   outline: 7px solid #C3C3C3;
 }
+.screen-reader-text {
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal!important;
+  border: 0 none;
+}
 .site-accessibility .uams-body-copy a,
 .site-accessibility .uams-sidebar a {
   border-bottom: 1px solid #DFDFDF;
@@ -10081,6 +10092,22 @@ label.screen-reader {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+  }
+}
+h1.post-link-title {
+  margin-left: 1.2em;
+}
+p.post-link {
+  margin-left: 3em;
+}
+.post-link-icon {
+  color: #e0e0e0;
+  margin-left: -1.2em;
+  padding: 5px;
+}
+@media only screen and (max-width: 767px) {
+  p.post-link {
+    margin-left: 2em;
   }
 }
 [class^="ic-"]:before,
