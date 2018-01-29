@@ -127,6 +127,19 @@ label.screen-reader {
     }
 
 }
+// Hide text from visual presentation
+// Shows in Assistive Technology and search bots
+.screen-reader-text {
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal!important;
+    border: 0 none;
+}
 
 
 
