@@ -6834,6 +6834,16 @@ img.attachment-post-thumbnail.wp-post-image.blogroll-img,
   .uams-body p.date {
     margin-bottom: -15px;
   }
+  .uams-body .author-info {
+    display: block;
+  }
+  .uams-body .category-info {
+    display: block;
+  }
+  .uams-body .category-info .category-list {
+    padding-left: 0;
+    border-left: none;
+  }
   .home .uams-body .uams-page-title {
     padding-right: 65px;
   }
