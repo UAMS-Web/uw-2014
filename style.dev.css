@@ -6664,6 +6664,15 @@ a.more:after {
 .uams-body .author-info {
   margin: -4.5px 0 20px 0;
   font-weight: 900;
+  display: inline-block;
+}
+.uams-body .category-info {
+  display: inline-block;
+  margin-left: 3px;
+}
+.uams-body .category-info .category-list {
+  padding-left: 8px;
+  border-left: 1px dotted #616161;
 }
 span.next-page {
   display: block;

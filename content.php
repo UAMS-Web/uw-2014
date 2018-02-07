@@ -20,8 +20,15 @@ if (is_single() || is_home()){
 if ((is_single() || is_home()) && get_option('show_byline_on_posts')) :
 ?>
 <div class="author-info">
-    <?php if ( function_exists( 'coauthors' ) ) { coauthors(); } else { the_author(); } ?>
+    By <?php if ( function_exists( 'coauthors' ) ) { coauthors(); } else { the_author(); } ?>
     <p class="author-desc"> <small><?php the_author_meta(); ?></small></p>
+</div>
+<?php
+endif;
+if (is_single() && get_option('show_category_on_posts')) :
+?>
+<div class="category-info">
+    <p class="<?php echo ( get_option('show_byline_on_posts') ) ? 'category-list' : ''; ?>"> <?php the_category( ', ' ); ?></p>
 </div>
 <?php
 endif;
