@@ -1,3 +1,5 @@
+.uams-body a.uams-btn,
+.uams-body .widget a.uams-btn,
 a.uams-btn {
   padding: 11px 20px;
   text-transform: uppercase;
@@ -96,10 +98,16 @@ a.uams-btn {
       }
    }
   &:hover, &:focus {
-    color: @white;
+    color: @white !important;
     background-color: @red;
     &:before {
       background-color: lighten(@red, 10%);
+    }
+  }
+  &:visited {
+    color: @800grey;
+    &:hover, &:focus {
+      color: @white !important;
     }
   }
   &.btn-grey {
@@ -110,7 +118,10 @@ a.uams-btn {
       color: @100grey !important;
     }
     &:visited {
-      color: @700grey !important;
+      color: @700grey;
+      &:hover, &:focus {
+        color: @100grey;
+      }
     }
     &:before {
       background-color: darken(@700grey, 5%);
@@ -127,7 +138,10 @@ a.uams-btn {
       color: @100grey !important;
     }
     &:visited {
-      color: @700grey !important;
+      color: @700grey;
+      &:hover, &:focus {
+        color: @100grey;
+      }
     }
     &:before {
       background-color: darken(@700grey, 5%);
@@ -145,6 +159,9 @@ a.uams-btn {
     }
     &:visited {
       color: white !important;
+      &:hover, &:focus {
+        color: @200grey !important;
+      }
     }
     &:before {
       background-color: darken(@red, 5%);
@@ -162,6 +179,9 @@ a.uams-btn {
     }
     &:visited {
       color: @700grey !important;
+      &:hover, &:focus {
+        color: @200grey !important;
+      }
     }
     &:before {
       background-color: darken(@blue, 5%);
@@ -179,6 +199,9 @@ a.uams-btn {
     }
     &:visited {
       color: @700grey !important;
+      &:hover, &:focus {
+        color: @200grey !important;
+      }
     }
     &:before {
       background-color: darken(@green, 5%);
@@ -196,6 +219,9 @@ a.uams-btn {
     }
     &:visited {
       color: @700grey !important;
+      &:hover, &:focus {
+        color: @900grey;
+      }
     }
     &:before {
       background-color: darken(@yellow, 5%);
