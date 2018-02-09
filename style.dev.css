@@ -6043,10 +6043,6 @@ table th[class*="col-"] {
     -o-background-size: cover;
     background-size: cover;
   }
-  .uams-hero-image.hero-mobile-image.hero-height #hero-bg,
-  .uams-hero-image.hero-mobile-image.hero-height2 #hero-bg {
-    top: 20px;
-  }
   .uams-hero-image.hero-mobile-image.hero-height #hero-bg #hero-container h1.uams-site-title,
   .uams-hero-image.hero-mobile-image.hero-height2 #hero-bg #hero-container h1.uams-site-title,
   .uams-hero-image.hero-mobile-image.hero-height #hero-bg div.container h1.uams-site-title2,
