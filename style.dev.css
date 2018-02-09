@@ -11229,6 +11229,10 @@ h1.post-link-title {
   -ms-transform: translate(0, -10px);
   transform: translate(0, -10px);
 }
+.fa-ul {
+  margin-left: 0;
+  padding-left: 2.5em;
+}
 @media only screen and (max-width: 767px) {
   .icon-menu li {
     padding: 20px 0px;
