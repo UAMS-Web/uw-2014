@@ -5148,6 +5148,10 @@ table th[class*="col-"] {
   color: #9d2235;
   text-decoration: underline;
 }
+div[id*='tidio-chat'] iframe {
+  margin: 0;
+  box-sizing: border-box;
+}
 .uams-thinstrip {
   height: 140px;
   width: 100%;
