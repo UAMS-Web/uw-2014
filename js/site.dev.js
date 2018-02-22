@@ -10461,11 +10461,11 @@ UAMS.YouTube.Collection = Backbone.Collection.extend({
                 this.max_results = max_results_temp;
             }
             this.model = UAMS.YouTube.PlaylistItem;
-            this.url = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=' + this.youtube_id + '&key=AIzaSyApmhFr5oa8bmKPcpN7bm-h0mekjkUVypU&maxResults=' + this.max_results;
+            this.url = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=' + this.youtube_id + '&key=AIzaSyAKmV8t81T_-MkSazI03H3xTmY28tRzBF8&maxResults=' + this.max_results; //Old: AIzaSyApmhFr5oa8bmKPcpN7bm-h0mekjkUVypU
         }
         else if (this.type == 'single') {
             this.model = UAMS.YouTube.Video;
-            this.url = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&id=' + this.youtube_id + '&key=AIzaSyApmhFr5oa8bmKPcpN7bm-h0mekjkUVypU';
+            this.url = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&id=' + this.youtube_id + '&key=AIzaSyAKmV8t81T_-MkSazI03H3xTmY28tRzBF8'; //Old: AIzaSyApmhFr5oa8bmKPcpN7bm-h0mekjkUVypU
         }
     },
 
@@ -10549,7 +10549,7 @@ UAMS.YouTube.CollectionView = Backbone.View.extend({
     add_iFrame_function: function () {
         window.onYouTubeIframeAPIReady = function() {
             for (var i = 0, length = UAMS.youtube.length; i < length; i++){
-                var collection = UAMS.youtube[i], player_vars = {};
+                var collection = UAMS.youtube[i], player_vars = { 'rel' : 0 };
                 // if the collection desires no youtube branding, set these parameters
                 if (collection.modest) {
                     player_vars = {
