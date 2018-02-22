@@ -30,7 +30,7 @@ class UAMS_Campus_Map extends WP_Widget
 
     $content .= '<div class="uams-campus-map-widget">
                   <iframe width="100%" height="365" src="'.self::URL.$buildingCode.'" frameborder="0" allow="geolocation"></iframe>
-                  <a href="https://maps.uams.edu/map-mashup/?markerid='.$buildingCode.'" target="_blank">View larger</a>
+                  <a href="https://maps.uams.edu/uams-campus/?markerid='.$buildingCode.'" target="_blank">View larger</a>
                 </div>';
 
     echo $before_widget . $content . $after_widget;
