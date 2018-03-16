@@ -9355,7 +9355,8 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 }
 .gform_wrapper li.gfield fieldset legend.gfield_label {
   font-size: 19px;
-  font-weight: 800;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 .gform_wrapper input[type="checkbox"],
 .gform_wrapper input[type="radio"] {
