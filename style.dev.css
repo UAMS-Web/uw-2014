@@ -5094,7 +5094,7 @@ table th[class*="col-"] {
   display: block;
   overflow: hidden;
 }
-.shortcode-blogroll > li p.date {
+.shortcode-blogroll > li span.date {
   font-weight: 800;
   margin: 10px 0 0;
   font-size: 22px;
@@ -9352,6 +9352,10 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
   width: 30px;
   display: inline-block;
   vertical-align: top;
+}
+.gform_wrapper li.gfield fieldset legend.gfield_label {
+  font-size: 19px;
+  font-weight: 800;
 }
 .gform_wrapper input[type="checkbox"],
 .gform_wrapper input[type="radio"] {
