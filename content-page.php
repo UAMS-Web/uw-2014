@@ -2,7 +2,7 @@
 
 <div id="mobile-sidebar">
 
-	<button id="mobile-sidebar-menu" class="visible-xs" aria-hidden="true" tabindex="1">
+	<button id="mobile-sidebar-menu" aria-hidden="true" tabindex="1">
 
 	    <div aria-hidden="true" id="ham">
 		    <span></span>
