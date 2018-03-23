@@ -164,13 +164,14 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 > - __titletag__:  The html element for the post titles. (_Default: h2_)
 > - __post\_type__:  The post type to look for.(_Default: post_)
 > - __number__:  The maximum number of results to return (_Default: 5_)
-> - __mini__:  Use the miniture template instead of the default one. (_Default: false_)
+> - ~~__mini__:  Use the miniture template instead of the default one. (_Default: false_)~~ **_depreciated, use style_**
+> - __style__:  Use the template style. Options: __default__, __card__, __mini__ (_Default: default_)
 > - __category__:  The WordPress category ID to limit the results from. (_Default: None_)
 > - __category\_name__:  The WordPress category name to limit the results from. (_Default: None_)
 
 > Example:
 ```
-  [blogroll number=3 trim=true]
+  [blogroll number=3 trim=true style=card]
 ```
 
 ### iFrame ###
