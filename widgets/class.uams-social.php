@@ -12,7 +12,7 @@ class UAMS_Social_Icons extends WP_Widget
 
   function __construct()
   {
-		parent::__construct( $id = 'uams-widget-social', $name = 'Social Icons', $options = array( 'description' => 'Display social media icons with links to the appropriate account', 'classname' => 'social-widget' ) );
+		parent::__construct( $id = 'uams-widget-social', $name = 'UAMS Social Icons', $options = array( 'description' => 'Display social media icons with links to the appropriate account', 'classname' => 'social-widget' ) );
 
     if ( is_admin() )
       add_action('admin_enqueue_scripts', array( __CLASS__, 'scripts') );

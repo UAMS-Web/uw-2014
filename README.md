@@ -18,6 +18,8 @@ This is an overview of the custom widgets, plugins and various features it inclu
 >  - [UAMS Top Posts](#uamstopposts)
 >  - [UAMS Contact Card](#uamscontactcard)
 >  - [UAMS Image Card](#uamsimagecard)
+>  - [UAMS Campus Map](#uamscampusmap)
+>  - [UAMS Social Icons](#uamssocialicons)
 
 - [Shortcodes](#shortcodes)
 >  - [Button](#button)
@@ -62,7 +64,6 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 > - **Title** : The title of the widget (*Default: Blogroll*)   
 > - **Number of posts to display** : The number of post titles to show in the blogroll (*Default: 2*) 
 > - **Style** : Choose one of three styles (*Default: default*)    
-
 
 
 ### UAMS Recent Posts ###
@@ -123,6 +124,29 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 > - __Link__ : A URL for the More link text (_Default: None_)    
 > - __More link__ : The text to display in the more link (_Default: Read more_)  
 > - __Card style__ : Choose one of three styles (_Default: None_)  
+
+### UAMS Campus Map ###
+
+> Display a custom map with building selected.  
+
+> Options:  
+
+> - __Title__ : The title of the widget (_Default: Blogroll_)   
+> - __Building Code__ : Dropdown of the building names (_Default: none_) 
+
+### UAMS Social Icons ###
+
+> Display a list of social icons.  
+
+> Options:  
+
+> - __Title__ : The title of the widget (_Default: Connect with us:_)   
+> - __Facebook URI__ : URL of Facebook account (_Default: none_)
+> - __Twitter URI__ : URL of Twitter account (_Default: none_)
+> - __Instagram URI__ : URL of Instagram account (_Default: none_)
+> - __YouTube URI__ : URL of YouTube account (_Default: none_)
+> - __LinkedIn URI__ : URL of LinkedIn account (_Default: none_)
+> - __Pinterest URI__ : URL of Pinterest account (_Default: none_)
 
 
 ## Shortcodes
