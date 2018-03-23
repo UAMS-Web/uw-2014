@@ -3,7 +3,7 @@
 class UAMS_Blogroll extends WP_Widget
 {
 
-  const NAME        = 'Blogroll';
+  const NAME        = 'UAMS Blogroll';
   const ID          = 'blogroll';
   const CLASSNAME   = 'uams-blogroll';
   const DESCRIPTION = 'Pull and display your sites blog posts';
