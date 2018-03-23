@@ -157,8 +157,8 @@ All bugs and feature requests can be issued at the [UAMS Web Team's GitHub accou
 > Attributes:  
 
 > -  __excerpt__ : Choose whether to show the excerpt in the blogroll. Options: __show__, __hide__. (_Default: hide_)
-> - __trim__ : Whether or not to trim the words via WordPress [wp\_trim\_words](https://codex.wordpress.org/Function_Reference/wp_trim_words) function. Options: __true__, __false__. (_Default: _false)
-> - __image__:  Choose whether to show the featured image thumbnail. Options: __show__, __hide__. (_Default: hide_)
+> - __trim__ : Whether or not to trim the words via WordPress [wp\_trim\_words](https://codex.wordpress.org/Function_Reference/wp_trim_words) function. Options: __true__, __false__. (_Default: false_)
+> - __image__:  Choose whether to show the featured image thumbnail. Options: __show__, __hide__. (_Default: hide_) _\[Ignored by card style\]_
 > - __author__: Choose whether to show the author. Options: __show__, __hide__. (_Default: show_)
 > - __date__:  Choose whether to show the publish date. Options: __show__, __hide__. (_Default: show_)
 > - __titletag__:  The html element for the post titles. (_Default: h2_)
