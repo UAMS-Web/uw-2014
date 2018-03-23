@@ -12,6 +12,28 @@
     margin-top: 40px;
     padding: 0;
     list-style: none;
+    &.cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        & .cards-widget {
+            display: block;
+            flex: 1 0 245px;
+            min-width: 245px;
+            margin-right: 15px;
+            margin-top: 15px;
+            vertical-align: top;
+            & .card-body {
+                display: flex;
+                flex-direction: column;
+                & .read-more {
+                    width: fit-content;
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
     & > li {
         &:first-child {
             margin-top: 0px;

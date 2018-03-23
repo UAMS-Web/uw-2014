@@ -25,6 +25,7 @@ class UAMS_Blogroll extends WP_Widget
   {
     $title  = empty( $instance['title'] ) ? self::NAME : esc_attr( $instance['title'] );
     $number = empty( $instance['number'] ) ? 2 : absint( $instance['number'] );
+    $style = isset($instance['radio_style']) ? esc_attr($instance['radio_style']) : '';
     ?>
       <p>
         <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'twentyfourteen' ); ?></label>
@@ -36,6 +37,22 @@ class UAMS_Blogroll extends WP_Widget
         <input id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" size="3">
       </p>
 
+      <p>
+        <label for="<?php echo $this->get_field_id('radio_style'); ?>_default">Default style 
+          <input id="<?php echo $this->get_field_id('radio_style'); ?>_default" type="radio" name="<?php echo $this->get_field_name('radio_style'); ?>" value="default"  <?php checked( $style , "default" ); ?> />
+        </label>
+      </p>
+      <p>
+        <label for="<?php echo $this->get_field_id('radio_style'); ?>_card">Card style
+          <input id="<?php echo $this->get_field_id('radio_style'); ?>_card" type="radio" name="<?php echo $this->get_field_name('radio_style'); ?>" value="card"  <?php checked( $style , "card" ); ?>/>
+        </label>
+      </p>
+      <p>
+        <label for="<?php echo $this->get_field_id('radio_style'); ?>_mini">Mini style
+          <input id="<?php echo $this->get_field_id('radio_style'); ?>_mini" type="radio" name="<?php echo $this->get_field_name('radio_style'); ?>" value="mini"  <?php checked( $style , "mini" ); ?>/>
+        </label>
+      </p>
+
     <?php
   }
 
@@ -43,6 +60,7 @@ class UAMS_Blogroll extends WP_Widget
   {
 		$instance['title']  = strip_tags( $new_instance['title'] );
 		$instance['number'] = empty( $new_instance['number'] ) ? self::LIMIT : absint( $new_instance['number'] );
+    $instance['radio_style'] = empty( $new_instance['radio_style'] ) ? 'default' : strip_tags( $new_instance['radio_style'] );
 		return $instance;
   }
 
@@ -56,7 +74,7 @@ class UAMS_Blogroll extends WP_Widget
     echo $args['before_widget'];
     echo '<h2>' . $title .'</h2>';
 
-    echo do_shortcode( "[".self::ID." number={$number}/]");
+    echo do_shortcode( "[".self::ID." number={$number} style=". $radio_style ."/]");
 
     echo $args['after_widget'];
   }
@@ -75,8 +93,9 @@ class UAMS_Blogroll extends WP_Widget
           'number'    =>  5,
           'category'  =>  '',
           'category_name' =>  '',
-          'mini'     =>  false,
-          'date'     =>  'show'
+          'mini'      =>  false, //depreciated for style
+          'style'     =>  'default', // default, card, or mini 
+          'date'      =>  'show'
       ), $atts );
 
     if ( !array_key_exists('numberposts', $params ) )
@@ -86,6 +105,10 @@ class UAMS_Blogroll extends WP_Widget
 
     $params = (object) $params;
     $mini = $params->mini;
+    $style = $params->style;
+    if ('mini' == $style) {
+      $mini = true;
+    }
     $html = '';
 
     foreach ( $posts as $post ) {
@@ -123,15 +146,44 @@ class UAMS_Blogroll extends WP_Widget
 
       if ($mini){
         if (!empty($author_mini) && !empty($date)){
-          $byline = sprintf('<small>%s | %s</small>', $author_mini, $date);
+          $byline = sprintf('<small>%s | %s</small>', $date, $author_mini);
         }
         else if (empty($author_mini) && empty($date)){
           $byline = '';
         }
         else {
-          $byline = sprintf('<small>%s%s</small>', $author_mini, $date);
+          $byline = sprintf('<small>%s%s</small>', $date, $author_mini);
         }
         $html .= sprintf("<li><a class='widget-thumbnail' href='%s'>%s</a><a class='widget-link' href='%s'>%s<span>%s</span></a></li>", $link, $image, $link, $post->post_title, $byline);
+      } elseif ( 'card' == $style ) {
+        $html .= '<div class="cards-widget"><div class="default-card">';
+        if ( has_post_thumbnail($post->ID) ) { //shows image unless there is no featured image 
+            $html .= '<div class="card-image" style="background-image:url(' . wp_get_attachment_image_src( get_post_thumbnail_id($post->ID) , 'large' )[0] . ')"></div>';
+        }
+        $html .= '<div class="card-body"><h3>';
+        if ( ! empty( $link) && ! empty( $post->post_title ) ) :
+            $html .= '<a href="' . $link .'" class="pic-title">';
+        endif; 
+        $html .= $post->post_title;
+        $html .= ( !empty( $link) ) ? '</a>' : '';
+        $html .= '</h3>';
+        if (!empty($author_mini) && !empty($date)){
+          $byline = sprintf('<p><small>%s | %s</small></p>', $date, $author_mini);
+        }
+        else if (empty($author_mini) && empty($date)){
+          $byline = '';
+        }
+        else {
+          $byline = sprintf('<p><small>%s%s</small></p>', $date, $author_mini);
+        }
+        $html .= $byline;
+        $html .= '<div class="card-excerpt">' . $excerpt . '</div>';
+        if ( ! empty( $link) ) :
+            $html .= '<a href="'. $link .'" class="read-more uams-btn btn-sm btn-red">Read More</a>';
+        else:
+            $html .= '<br/>';
+        endif;
+        $html .= '</div></div></div>';
       }
       else {
         $html  .= "<li><span><{$params->titletag}><a href=\"$link\">{$post->post_title}</a><span class=\"date\">{$date}</p></{$params->titletag}>{$author}<span$class>{$image}</span>{$excerpt}</span></li>";
@@ -140,7 +192,8 @@ class UAMS_Blogroll extends WP_Widget
     }
 
     $miniclass = $mini ? '-mini' : '';
-    $html = "<ul class=\"shortcode-blogroll$miniclass\">$html</ul>";
+    $cardsclass = 'card' == $style ? 'cards' : '';
+    $html = "<ul class=\"shortcode-blogroll$miniclass $cardsclass\">$html</ul>";
     return $html;
 
   }

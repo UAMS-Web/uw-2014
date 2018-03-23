@@ -5076,6 +5076,28 @@ table th[class*="col-"] {
   padding: 0;
   list-style: none;
 }
+.shortcode-blogroll.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.shortcode-blogroll.cards .cards-widget {
+  display: block;
+  flex: 1 0 245px;
+  min-width: 245px;
+  margin-right: 15px;
+  margin-top: 15px;
+  vertical-align: top;
+}
+.shortcode-blogroll.cards .cards-widget .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.shortcode-blogroll.cards .cards-widget .card-body .read-more {
+  width: fit-content;
+  align-self: flex-end;
+}
 .shortcode-blogroll > li {
   margin: 20px 0 0;
   position: relative;
@@ -9869,6 +9891,7 @@ button:focus {
 }
 #sidebar a.uams-btn {
   width: calc(100% - 48px);
+  align-self: left;
 }
 #sidebar.btn-lg {
   width: calc(100% - 60px);
