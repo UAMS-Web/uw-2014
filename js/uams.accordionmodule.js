@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-       /*
+/*
         * jQuery Accessible Accordion system, using ARIA
         * Website: http://a11y.nicolas-hoffmann.net/accordion/
         * License MIT: https://github.com/nico3333fr/jquery-accessible-accordion-aria/blob/master/LICENSE
@@ -54,13 +54,13 @@ $(document).ready(function(){
                             "id": "accordion" + $index_accordion + "_panel" + $index_header,
                             "aria-hidden": "true"
                       }).addClass( $accordions_prefix_classes + "__panel" );
-                      
+                      //console.log($accordion_panel.attr("data-accordion-opened"));
                       // if opened by default
-                      if ( $that.attr( "data-accordion-opened" ) == "true" ) {
+                      if ( $accordion_panel.attr( "data-accordion-opened" ) == "true" ) {
                          $accordion_header.attr( "aria-expanded", "true" ).removeAttr( "data-accordion-opened" );
                          $accordion_panel.attr( "aria-hidden", "false" );
                          }
-          					  
+                      
                       // init first one focusable
                       if ( $index_header === 1 ) {
                          $accordion_header.removeAttr( "tabindex" );
