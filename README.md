@@ -329,13 +329,17 @@ Each tile is setup as a series of shortcodes wrapped in `[box]` shortcode.
 ```
 
 ### Accordion ###
-> This is an accessible version of the accordion menu based off of Nicolas Hoffmann's [accessible jQuery accordion](http://a11y.nicolas-hoffmann.net/accordion/)
+> This is an accessible version of the accordion menu based off of Nicolas Hoffmann's [accessible jQuery accordion](http://a11y.nicolas-hoffmann.net/accordion/).
+
+> Attributes: 
+
+> - __active__ : Open the accordion section by default (_Default: none_)
 > 
 > Example:   
 ```
   [accordion name='Accessible Accordion']
     [section title='Example'] Section[/section]
-    [section title='Example'] Section[/section]
+    [section title='Example' active='true'] Section[/section]
     [section title='Example'] Section[/section]
    [/accordion]
 ```
