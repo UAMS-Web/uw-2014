@@ -24,7 +24,7 @@ UAMS.Vimeo = Backbone.View.extend({
   // The second one is the playlist and only shows if a playlist is being called.
   templates : {
     video    : '<iframe id="test" src="https://player.vimeo.com/video/<%= video %>/?<%= $.param( defaults ) %>"' +
-               ' width=<%= width %> height=<%= height %>'+
+               ' width=<%= width %> height=<%= height %> title="<%= video.title %>"'+
                ' frameborder=0 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
 
     playlist : '' +

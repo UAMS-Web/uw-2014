@@ -94,7 +94,8 @@
 	height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-    <a id="main-content" href="#main_content" class='screen-reader-shortcut'>Skip to main content</a>
+    <!-- <a id="main-content" href="#main_content" class='screen-reader-shortcut'>Skip to main content</a> -->
+    <a role="banner" aria-label="main_content" id="main-content" href="#main_content" class='screen-reader-shortcut'>Skip to main content</a>
 
     <div id="uamssearcharea" aria-hidden="true" class="uams-search-bar-container"></div>
 

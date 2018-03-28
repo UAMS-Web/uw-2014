@@ -17,7 +17,7 @@ UAMS.Search = Backbone.View.extend({
                   '<div class="center-block uams-search-wrapper">'+
                     '<form class="uams-search" action="<%= UAMS.baseUrl %>">'+
                       '<label class="screen-reader" for="uams-search-bar">Enter search text</label>' +
-                      '<input id="uams-search-bar" type="search" name="s" value="" autocomplete="off" />'+
+                      '<input id="uams-search-bar" type="search" name="s" value="" autocomplete="off" placeholder="Search" />'+
                     '</form>'+
 
                     '<select id="mobile-search-select" class="visible-xs" aria-label="Search Scope">' +

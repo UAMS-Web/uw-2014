@@ -119,7 +119,7 @@ UAMS.YouTube.CollectionView = Backbone.View.extend({
     // if we don't have a copy of the youtube iframe api yet. add it
     add_iFrame_api: function () {
         if (UAMS.$body.find('script#iFrame').length === 0){
-            UAMS.$body.append('<script id="iFrame" src="//www.youtube.com/player_api" type="text/javascript"></script>');
+            UAMS.$body.append('<script id="iFrame" title="YouTube video player" src="//www.youtube.com/player_api" type="text/javascript"></script>');
             this.add_iFrame_function();
         }
     },

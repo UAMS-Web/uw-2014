@@ -60,7 +60,7 @@ if ( ! function_exists('uams_sidebar_menu') ) :
 
   function uams_sidebar_menu()
   {
-    echo sprintf( '<nav id="desktop-relative" aria-label="relative">%s</nav>', uams_list_pages() ) ;
+    echo sprintf( '<nav id="desktop-relative" aria-label="mobile menu that is not visible in the desktop version">%s</nav>', uams_list_pages() ) ;
   }
 
 endif;
@@ -69,7 +69,7 @@ if ( ! function_exists('uams_sidebar_menu_mobile') ) :
 
   function uams_sidebar_menu_mobile()
   {
-    echo sprintf( '<nav id="mobile-relative" aria-label="relative">%s</nav>', uams_list_pages() ) ;
+    echo sprintf( '<nav id="mobile-relative" aria-label="mobile menu">%s</nav>', uams_list_pages() ) ;
   }
 
 endif;
@@ -78,7 +78,7 @@ if ( ! function_exists( 'uams_mobile_menu' ) ) :
 
   function uams_mobile_menu()
   {
-    echo sprintf( '<nav id="mobile-reddiedrops" aria-label="relative">%s</nav>', uams_list_mobile_pages() ) ;
+    echo sprintf( '<nav id="mobile-reddiedrops" aria-label="mobile menu">%s</nav>', uams_list_mobile_pages() ) ;
   }
 
 endif;

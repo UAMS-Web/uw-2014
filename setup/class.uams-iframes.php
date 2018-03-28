@@ -48,7 +48,7 @@ class UAMS_Iframes
 
       $iframeSrc = esc_url($iframeSrc, array('http', 'https'));
 
-      return "<iframe src=\"$iframeSrc\" width=\"{$params['width']}\" height=\"{$params['height']}\" frameborder=\"0\"></iframe>";
+      return "<iframe src=\"$iframeSrc\" width=\"{$params['width']}\" height=\"{$params['height']}\" style=\"border:0\"></iframe>";
 
   }
 
@@ -56,37 +56,18 @@ class UAMS_Iframes
   {
     return array(
       'uams.edu',
-//      'washington.edu',
-//      'uwtv.org',
-//      'tvw.org',
-//      'www.uwtv.org',
+      'uamshealth.com',
       'google.com',
       'docs.google.com',
       'youtube.com',
-//      'excition.com',
       'www.googletagmanager.com',
       'www.uams.edu',
-//      'catalyst.uw.edu',
-//      'www.washington.edu',
-//      'depts.washington.edu',
-//      'online.gifts.washington.edu',
-//      'secure.gifts.washington.edu',
-//      'payroll.gifts.washington.edu',
-//      'helperapps.gifts.washington.edu',
-//      'uwfoundation.org',
-//      'support.gifts.washington.edu',
-//      'www.uwfoundation.org',
       'www.surveygizmo.com',
       'www.google.com',
-//      'www.excition.com',
       'www.youtube.com',
       'pgcalc.com',
       'www.pgcalc.com',
-//      'matchinggifts.com',
-//      'www.matchinggifts.com',
-//      'embed.pac-12.com',
       'storify.com',
-//       'w.soundcloud.com',
       'api.soundcloud.com',
       'flickr.com',
       'vimeo.com',
