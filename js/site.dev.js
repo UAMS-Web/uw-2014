@@ -6847,7 +6847,8 @@ vjs.Flash = vjs.MediaTechController.extend({
         'scrolling': 'no',
         'marginWidth': 0,
         'marginHeight': 0,
-        'frameBorder': 0
+        //'frameBorder': 0
+        'style':'border: 0'
       });
 
       // Update ready function names in flash vars for iframe window
@@ -9742,7 +9743,7 @@ UAMS.Search = Backbone.View.extend({
                   '<div class="center-block uams-search-wrapper">'+
                     '<form class="uams-search" action="<%= UAMS.baseUrl %>">'+
                       '<label class="screen-reader" for="uams-search-bar">Enter search text</label>' +
-                      '<input id="uams-search-bar" type="search" name="s" value="" autocomplete="off" />'+
+                      '<input id="uams-search-bar" type="search" name="s" value="" autocomplete="off" placeholder="Search" />'+
                     '</form>'+
 
                     '<select id="mobile-search-select" class="visible-xs" aria-label="Search Scope">' +
@@ -10539,7 +10540,7 @@ UAMS.YouTube.CollectionView = Backbone.View.extend({
     // if we don't have a copy of the youtube iframe api yet. add it
     add_iFrame_api: function () {
         if (UAMS.$body.find('script#iFrame').length === 0){
-            UAMS.$body.append('<script id="iFrame" src="//www.youtube.com/player_api" type="text/javascript"></script>');
+            UAMS.$body.append('<script id="iFrame" title="YouTube video player" src="//www.youtube.com/player_api" type="text/javascript"></script>');
             this.add_iFrame_function();
         }
     },
@@ -10764,7 +10765,7 @@ UAMS.Vimeo = Backbone.View.extend({
   // The second one is the playlist and only shows if a playlist is being called.
   templates : {
     video    : '<iframe id="test" src="https://player.vimeo.com/video/<%= video %>/?<%= $.param( defaults ) %>"' +
-               ' width=<%= width %> height=<%= height %>'+
+               ' width=<%= width %> height=<%= height %> title="<%= video.title %>"'+
                ' frameborder=0 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
 
     playlist : '' +
@@ -11705,7 +11706,7 @@ UAMS.Select = Backbone.View.extend({
                     '<div></div>' +
                     '<div class="wrapper" style="width:<%= width %>px; margin-top:-<%= height/2 %>px; margin-left:-<%= width/2 %>px;">' +
                      '<span class="close"> Close</span>' +
-                     '<iframe width="<%= width %>" height="<%= height %>" src="<%= src %>" style="border:0;" allowfullscreen="" title="<%= caption %>"></iframe>' +
+                     '<iframe width="<%= width %>" height="<%= height %>" src="<%= src %>" style="border:0" allowfullscreen="" title="<%= caption %>"></iframe>' +
                      '<p><%= caption %></p>' +
                      '<p><%= credit %></p>' +
                    '</div>' +

@@ -56,13 +56,14 @@ class UAMS_Iframes
   {
     return array(
       'uams.edu',
+      'www.uams.edu',
       'uamshealth.com',
+      'uamsonlinedev.com', // development url
       'google.com',
       'docs.google.com',
       'youtube.com',
       'www.googletagmanager.com',
-      'www.uams.edu',
-      'www.surveygizmo.com',
+      //'www.surveygizmo.com',
       'www.google.com',
       'www.youtube.com',
       'pgcalc.com',
@@ -71,9 +72,10 @@ class UAMS_Iframes
       'api.soundcloud.com',
       'flickr.com',
       'vimeo.com',
+      'player.vimeo.com',
       'www.facebook.com',
-      'form.jotform.com'
-
+      'facebook.com',
+      //'form.jotform.com'
     );
   }
 
