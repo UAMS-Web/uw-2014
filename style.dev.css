@@ -10702,19 +10702,23 @@ h1.post-link-title {
 .padding-left-four {
   padding-left: 4em;
 }
-.padding-none {
+.padding-none,
+.pad-none {
   padding: 0;
 }
-.padding-quarter {
+.padding-quarter,
+.pad-small {
   padding: 0.25em;
 }
 .padding-halve {
   padding: 0.5em;
 }
-.padding-one {
+.padding-one,
+.pad-normal {
   padding: 1em;
 }
-.padding-two {
+.padding-two,
+.pad-large {
   padding: 2em;
 }
 .padding-three {
