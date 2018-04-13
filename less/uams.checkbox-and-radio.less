@@ -168,7 +168,6 @@
 }
 
 // Contact Form 7 isn't able to show custom radios and checkboxes
-
 .wpcf7 .fui-radio-unchecked:before,
 .wpcf7 .fui-radio-checked:before {
     display: none
@@ -198,6 +197,18 @@
       font-size: @font-size-h6;
       font-weight: 700;
       margin-bottom: 20px;
+  }
+  // Learndash Quiz Overrides
+  .wpProQuiz_content .wpProQuiz_questionListItem {
+      position: relative;
+  }
+  .wpProQuiz_content .wpProQuiz_questionListItem input[type="checkbox"],
+  .wpProQuiz_content .wpProQuiz_questionListItem input[type="radio"] {
+      opacity: 0;
+  }
+  .wpProQuiz_quiz .fui-radio-unchecked:before, 
+  .wpProQuiz_quiz .fui-radio-checked:before {
+      top: 9px;
   }
 
 	input[type="checkbox"],
