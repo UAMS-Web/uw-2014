@@ -33,7 +33,7 @@ class UAMS_Install_Theme
 
     add_theme_support( 'post-thumbnails' );
 
-    add_theme_support( 'post-formats', array( 'gallery', 'link', 'video' ) );
+    add_theme_support( 'post-formats', array( 'gallery', 'link' ) );
 
     add_theme_support( 'custom-header', array(
       'default-image'  => $defaultImage['url'],
