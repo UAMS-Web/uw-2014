@@ -9389,10 +9389,6 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 .wpProQuiz_quiz .fui-radio-checked {
   border: none;
 }
-.wpProQuiz_quiz .fui-radio-unchecked:before,
-.wpProQuiz_quiz .fui-radio-checked:before {
-  top: 9px;
-}
 .gform_wrapper .gfield_radio .icons,
 .gform_wrapper .gfield_checkbox .icons {
   width: 30px;
