@@ -9375,6 +9375,18 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 .wpcf7 .fui-radio-checked:before {
   display: none;
 }
+.wpProQuiz_content .wpProQuiz_questionListItem {
+  position: relative;
+}
+.wpProQuiz_content .wpProQuiz_questionListItem input[type="checkbox"],
+.wpProQuiz_content .wpProQuiz_questionListItem input[type="radio"] {
+  opacity: 0;
+}
+.wpProQuiz_quiz .fui-radio-unchecked:before,
+.wpProQuiz_quiz .fui-radio-checked:before {
+  top: 9px;
+  border: none;
+}
 .gform_wrapper .gfield_radio .icons,
 .gform_wrapper .gfield_checkbox .icons {
   width: 30px;
@@ -9385,17 +9397,6 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
   font-size: 19px;
   font-weight: 700;
   margin-bottom: 20px;
-}
-.gform_wrapper .wpProQuiz_content .wpProQuiz_questionListItem {
-  position: relative;
-}
-.gform_wrapper .wpProQuiz_content .wpProQuiz_questionListItem input[type="checkbox"],
-.gform_wrapper .wpProQuiz_content .wpProQuiz_questionListItem input[type="radio"] {
-  opacity: 0;
-}
-.gform_wrapper .wpProQuiz_quiz .fui-radio-unchecked:before,
-.gform_wrapper .wpProQuiz_quiz .fui-radio-checked:before {
-  top: 9px;
 }
 .gform_wrapper input[type="checkbox"],
 .gform_wrapper input[type="radio"] {
