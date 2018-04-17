@@ -9378,14 +9378,20 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 .wpProQuiz_content .wpProQuiz_questionListItem {
   position: relative;
 }
+.wpProQuiz_content .wpProQuiz_questionListItem label {
+  position: relative;
+}
 .wpProQuiz_content .wpProQuiz_questionListItem input[type="checkbox"],
 .wpProQuiz_content .wpProQuiz_questionListItem input[type="radio"] {
   opacity: 0;
 }
+.wpProQuiz_quiz .fui-radio-unchecked,
+.wpProQuiz_quiz .fui-radio-checked {
+  border: none;
+}
 .wpProQuiz_quiz .fui-radio-unchecked:before,
 .wpProQuiz_quiz .fui-radio-checked:before {
   top: 9px;
-  border: none;
 }
 .gform_wrapper .gfield_radio .icons,
 .gform_wrapper .gfield_checkbox .icons {
