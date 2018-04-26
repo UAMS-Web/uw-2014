@@ -403,3 +403,24 @@ if ( !function_exists('uams_page_title')):
 
 endif;
 
+if ( !function_exists('uams_get_permalink')):
+
+  function uams_get_permalink( $post = null )
+  {
+      if (empty($post)){
+        $postID = get_the_ID();
+      } else {
+        $post = get_post( $post );
+        $postID = $post->ID;
+      }
+      $external_url = get_post_meta( $postID, 'post_custom_link', true);
+      $post_format = get_post_format( $postID );
+      if (!empty($external_url) && ($post_format == 'link')){
+          $link = $external_url;
+      } else {
+          $link = get_permalink( $postID );
+      }
+      return $link;
+  }
+
+endif;

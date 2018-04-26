@@ -60,7 +60,7 @@ class UAMS_Recent_Posts extends WP_Widget
     <?php foreach ( $recent as $post ) : ?>
 
           <li>
-            <a class="widget-thumbnail" href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo esc_attr( get_the_title( $post->ID ) ) ?>">
+            <a class="widget-thumbnail" href="<?php echo uams_get_permalink( $post->ID ) ?>" title="<?php echo esc_attr( get_the_title( $post->ID ) ) ?>">
 
             <?php if ( has_post_thumbnail( $post->ID ) ) : ?>
 
@@ -68,7 +68,7 @@ class UAMS_Recent_Posts extends WP_Widget
 
             <?php endif; ?>
 
-            <a class="widget-link" href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo esc_attr( get_the_title( $post->ID ) ) ?>">
+            <a class="widget-link" href="<?php echo uams_get_permalink( $post->ID ) ?>" title="<?php echo esc_attr( get_the_title( $post->ID ) ) ?>">
               <?php echo get_the_title( $post->ID ) ?>
               <p><small><?php echo $this->humanTime( $post->ID ) ?> ago</small></p>
             </a>

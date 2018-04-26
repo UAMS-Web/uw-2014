@@ -113,7 +113,7 @@ class UAMS_Blogroll extends WP_Widget
 
     foreach ( $posts as $post ) {
 
-      $link = get_permalink( $post->ID );
+      $link = uams_get_permalink( $post->ID );
 
       if ( $this->is_true( $params->excerpt ) )
       {
