@@ -11907,6 +11907,15 @@ ul.shortcode-blogroll-mini {
 .uams-sidebar .uams-widget-rss.widget > span:nth-child(1) {
   display: none;
 }
+.uams-body-copy .shortcode-blogroll-mini a.widget-link,
+.uams-body-copy .widget_recent_entries a.widget-link,
+.uams-body-copy .recent-posts-widget a.widget-link,
+.uams-body-copy .uams-recent a.widget-link,
+.uams-body-copy .uams-top-posts a.widget-link,
+.uams-body-copy .uams-widget-related-posts a.widget-link,
+.uams-body-copy .uams-widget-rss a.widget-link {
+  border-bottom: none;
+}
 .widget_nav_menu ul {
   padding: 0;
   list-style: none;
