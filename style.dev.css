@@ -5170,6 +5170,107 @@ table th[class*="col-"] {
   color: #9d2235;
   text-decoration: underline;
 }
+/*
+ *  All styles for cards 
+ */
+.card {
+  background: #fff;
+  margin-bottom: 2em;
+}
+.card .card-content {
+  padding: 1.4em;
+}
+.card .card-action {
+  padding: 16px 24px;
+  position: relative;
+  border-top: 1px solid #a0a0a033;
+  font-size: 16px;
+}
+.card .card-footer {
+  background-color: #eee;
+  border-top: 1px solid #a0a0a033;
+  position: relative;
+  padding: 16px 24px;
+  font-size: 16px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cards .card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  flex: 0 1 calc(32%);
+}
+.cards .card .card-stack {
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  display: flex;
+}
+.cards .card .card-content {
+  flex-grow: 1;
+}
+.cards .card .card-content h3 {
+  margin-top: 0;
+  color: #9d2235;
+}
+.cards .card .card-content .date {
+  font-size: .8em;
+}
+.cards .card .card-content .card-action {
+  align-items: flex-end;
+}
+.cards .card .card-content .card-footer {
+  align-items: flex-end;
+}
+.cards .card.horizontal,
+.cards .card.left,
+.cards .card.right {
+  flex-direction: row;
+  flex: 1 0 100%;
+}
+.cards .card.horizontal h3,
+.cards .card.left h3,
+.cards .card.right h3 {
+  font-size: 1.1em;
+}
+.cards .card.horizontal .card-image,
+.cards .card.left .card-image,
+.cards .card.right .card-image {
+  max-width: 50%;
+}
+.cards .card.horizontal.top .card-image,
+.cards .card.left.top .card-image,
+.cards .card.right.top .card-image {
+  align-items: flex-start;
+}
+.cards .card.horizontal.boxed .card-image,
+.cards .card.left.boxed .card-image,
+.cards .card.right.boxed .card-image {
+  align-items: flex-start;
+  padding: 1em;
+}
+.cards .card.right {
+  flex-direction: row-reverse;
+}
+.cards .card.bottom {
+  flex-direction: column-reverse;
+}
+.cards .card.lrg {
+  flex: 0 1 calc(49%);
+}
+.cards .card.sml {
+  flex: 0 1 calc(24%);
+}
+.cards .card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+/* Small Devices, Tablets */
 div[id*='tidio-chat'] iframe {
   margin: 0;
   box-sizing: border-box;
@@ -5504,7 +5605,7 @@ div[id*='tidio-chat'] iframe {
     height: 45px;
     width: 45px;
     margin-right: 15px;
-    border: 1px solid #eee;
+    border: 1px solid #f0eeef;
     overflow: hidden;
     position: absolute;
   }
@@ -6808,7 +6909,7 @@ span.next-page a:hover {
   list-style: none;
   margin-bottom: 6px;
   padding-bottom: 6px;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #f0eeef;
 }
 .links li:last-child {
   border-bottom: none;
@@ -11704,7 +11805,7 @@ h1.post-link-title {
   font-size: 16px;
   font-weight: 400;
   outline: none;
-  background-color: #F5F5F5;
+  background-color: #f5f3f4;
 }
 #searchform #searchsubmit {
   float: left;

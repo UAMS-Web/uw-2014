@@ -23,11 +23,11 @@
 
 .moving-handle {
 	cursor:n-resize;
-	border:1px solid #e5e5e5;
+	border:1px solid #DCDADB;
 	-webkit-box-shadow:0 1px 1px rgba(0,0,0,.04);
 	box-shadow:0 1px 1px rgba(0,0,0,.04);
 	padding:15px 8px;
-	background-color:#fafafa;
+	background-color:#FAF8F9;
 	margin: 0;
 	position: relative; zoom: 1;
 	font-size: 14px;
