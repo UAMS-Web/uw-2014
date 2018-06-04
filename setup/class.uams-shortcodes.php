@@ -25,6 +25,7 @@ class UAMS_Shortcodes
         require_once('class.tabs-shortcode.php');
         require_once('class.grid-shortcode.php');
         require_once('class.menu-shortcode.php');
+        require_once('class.cards-shortcode.php');
     }
 
     private function initialize()
@@ -39,5 +40,6 @@ class UAMS_Shortcodes
         $this->tabs           = new UAMS_TabsShortcode();
         $this->bootstrap      = new UAMS_GridShortcode();
         $this->custommenu     = new UAMS_MenuShortcode();
+        $this->cards          = new UAMS_CardsShortcode();
     }
 }

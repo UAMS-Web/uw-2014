@@ -3595,7 +3595,7 @@ div.uams-slideshow .uams-slideshow-controls {
   font-size: 30px;
   text-align: center;
   position: absolute;
-  background-color: #eee;
+  background-color: #f0eeef;
   height: 80px;
   width: 45px;
   bottom: 36px;
@@ -5174,7 +5174,7 @@ table th[class*="col-"] {
  *  All styles for cards 
  */
 .card {
-  background: #fff;
+  background: #ffffff;
   margin-bottom: 2em;
 }
 .card .card-content {
@@ -5184,11 +5184,13 @@ table th[class*="col-"] {
   padding: 16px 24px;
   position: relative;
   border-top: 1px solid #a0a0a033;
+  border-bottom: 1px solid #a0a0a033;
   font-size: 16px;
 }
 .card .card-footer {
-  background-color: #eee;
+  background-color: #f0eeef;
   border-top: 1px solid #a0a0a033;
+  border-bottom: 1px solid #a0a0a033;
   position: relative;
   padding: 16px 24px;
   font-size: 16px;
@@ -5203,7 +5205,11 @@ table th[class*="col-"] {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  flex: 0 1 calc(32%);
+  flex: 0 1 100%;
+  margin: 0 1em 1em 0;
+}
+.cards .card .card-image {
+  text-align: center;
 }
 .cards .card .card-stack {
   flex-direction: column;
@@ -5260,16 +5266,26 @@ table th[class*="col-"] {
 .cards .card.bottom {
   flex-direction: column-reverse;
 }
+.cards .card.xl {
+  flex: 44em;
+}
 .cards .card.lrg {
-  flex: 0 1 calc(49%);
+  flex: 39em;
+}
+.cards .card.med {
+  flex: 29em;
 }
 .cards .card.sml {
-  flex: 0 1 calc(24%);
+  flex: 19em;
+}
+.cards .card.xs {
+  flex: 14em;
 }
 .cards .card:hover {
   top: -2px;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
+/* Small Devices, Tablets */
 /* Small Devices, Tablets */
 div[id*='tidio-chat'] iframe {
   margin: 0;
@@ -5922,7 +5938,7 @@ div[id*='tidio-chat'] iframe {
 .reddiedrops-menu li {
   float: left;
   clear: left;
-  border-bottom: thin solid #eee;
+  border-bottom: thin solid #f0eeef;
 }
 .reddiedrops-menu li a {
   color: #767475;
@@ -7478,7 +7494,7 @@ ul.uams-mobile-menu li.pagenav ul li a,
 ul.uams-sidebar-menu > div ul li a,
 ul.uams-mobile-menu > div ul li a {
   color: #9d2235;
-  border-bottom: thin solid #eee;
+  border-bottom: thin solid #f0eeef;
 }
 ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children,
 ul.uams-mobile-menu li.pagenav ul li.current_page_item ul.children,
@@ -7500,7 +7516,7 @@ ul.uams-sidebar-menu li.pagenav ul li.current_page_ancestor ul.children li,
 ul.uams-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li,
 ul.uams-sidebar-menu > div ul li.current_page_ancestor ul.children li,
 ul.uams-mobile-menu > div ul li.current_page_ancestor ul.children li {
-  background-color: #eee;
+  background-color: #f0eeef;
   border-bottom: 1px solid #fff;
 }
 ul.uams-sidebar-menu li.pagenav ul li.current_page_item ul.children li a,
@@ -7955,7 +7971,7 @@ body.action-bar ul.uams-mobile-menu {
   #mobile-relative li a:hover,
   .home #mobile-reddiedrops li a:focus,
   #mobile-relative li a:focus {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f0eeef;
   }
   .home #mobile-reddiedrops li:last-child a:hover,
   #mobile-relative li:last-child a:hover,

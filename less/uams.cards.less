@@ -1,0 +1,125 @@
+/*
+ *  All styles for cards 
+ */
+
+
+.card {
+    background: @white;
+    margin-bottom: 2em;
+    .card-content {
+        padding: 1.4em;
+    }
+    .card-action {
+        padding: 16px 24px;
+		position: relative;
+        border-top: 1px solid #a0a0a033;
+        border-bottom: 1px solid #a0a0a033;
+		font-size: 16px;
+    }
+    .card-footer {
+        background-color: @200grey;
+        border-top: 1px solid #a0a0a033;
+        border-bottom: 1px solid #a0a0a033;
+        position: relative;
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+}
+///* Flexbox */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .card {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        flex: 0 1 100%;
+        margin: 0 1em 1em 0;
+        .card-image {
+            text-align: center; // Just in case it isn't big enough
+        }
+        .card-stack {
+            flex-direction: column;
+            flex: 1;
+            position: relative;
+            display: flex;
+        }
+        .card-content {
+            flex-grow: 1;
+            h3 {
+                margin-top: 0;
+                color: #9d2235;
+            }
+            .date {
+                font-size: .8em;
+            }
+            .card-action {
+                align-items: flex-end;
+            }
+            .card-footer {
+                align-items: flex-end;
+            }
+        }
+        &.horizontal, 
+        &.left,
+        &.right {
+            flex-direction: row;
+            flex: 1 0 100%;
+            h3 {
+                font-size: 1.1em;
+            }
+            .card-image {
+                max-width: 50%;
+            }
+            &.top {
+                .card-image {
+                    align-items: flex-start;
+                }
+            }
+            &.boxed {
+                .card-image {
+                align-items: flex-start;
+                padding: 1em;
+                }
+            }
+        }
+        &.right {
+            flex-direction: row-reverse;
+        }
+        &.bottom {
+            flex-direction: column-reverse;
+        }
+        &.xl { // 3/4 fullwidth
+            flex: 44em; // 45 - 1em
+        }
+        &.lrg { // 2/3 fullwidth
+            flex: 39em; // 40 - 1em
+        }
+        &.med { // 1/2 fullwidth
+            flex: 29em; // 30 - 1em
+        }
+        &.sml { // 1/3 fullwidth
+            flex: 19em; // 20 - 1em
+        }
+        &.xs { // 1/4 fullwidth
+            flex: 14em; // 15 - 1em
+        }
+        &:hover {
+            top: -2px;
+            box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 990px) {
+
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+
+}
