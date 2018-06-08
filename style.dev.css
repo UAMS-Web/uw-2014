@@ -5184,13 +5184,11 @@ table th[class*="col-"] {
   padding: 16px 24px;
   position: relative;
   border-top: 1px solid #a0a0a033;
-  border-bottom: 1px solid #a0a0a033;
   font-size: 16px;
 }
 .card .card-footer {
   background-color: #f0eeef;
   border-top: 1px solid #a0a0a033;
-  border-bottom: 1px solid #a0a0a033;
   position: relative;
   padding: 16px 24px;
   font-size: 16px;
@@ -5201,7 +5199,7 @@ table th[class*="col-"] {
   justify-content: space-between;
 }
 .cards .card {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -5283,7 +5281,7 @@ table th[class*="col-"] {
 }
 .cards .card:hover {
   top: -2px;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 /* Small Devices, Tablets */
 /* Small Devices, Tablets */
