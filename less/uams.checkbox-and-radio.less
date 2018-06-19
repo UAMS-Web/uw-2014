@@ -191,56 +191,73 @@
 
 // Gravity Forms updates
 .gform_wrapper {
-	.gfield_radio,
-	.gfield_checkbox {
-		label {
-			//padding-left: 30px !important;
-		}
-		.icons {
-        width: 30px;
-				display: inline-block;
-        vertical-align: top;
-			}
-	}
+  .gfield:not(.no-format) {
+    .gfield_radio,
+    .gfield_checkbox {
+      label {
+        //padding-left: 30px !important;
+      }
+      .icons {
+          width: 30px;
+          display: inline-block;
+          vertical-align: top;
+        }
+    }
 
-	.gfield_checkbox {
-	}
+    .gfield_checkbox {
+    }
 
-	.gfield_radio {
-	}
+    .gfield_radio {
+    }
 
-  li.gfield fieldset legend.gfield_label {
-      font-size: @font-size-h6;
-      font-weight: 700;
-      margin-bottom: 20px;
+    li.gfield fieldset legend.gfield_label {
+        font-size: @font-size-h6;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-top: 0 !important;
+      display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        padding: 0;
+        margin: 0;
+        outline: 0!important;
+        opacity: 0;
+        z-index: 1000; // Float above Icons
+        cursor: pointer; // Add pointer cursor
+    }
   }
-
-	input[type="checkbox"],
-	input[type="radio"] {
-		margin-top: 0 !important;
-		display: block;
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    width: 22px;
-	    height: 22px;
-	    padding: 0;
-	    margin: 0;
-	    outline: 0!important;
-	    opacity: 0;
-	    z-index: 1000; // Float above Icons
-	    cursor: pointer; // Add pointer cursor
-	}
 }
-.uams-body .gform_wrapper ul.gfield_checkbox li input[type=checkbox],
-.uams-body .gform_wrapper ul.gfield_radio li input[type=radio] {
+.gform_wrapper {
+  .gfield.no-format {
+    .gfield_radio,
+    .gfield_checkbox {
+      .icons {
+          display: none;
+        }
+    }
+    .gfield_checkbox li input[type="checkbox"],
+    .gfield_radio li input[type="radio"] {
+      margin-top: 0px;
+      margin-right: 6px;
+    }
+  }
+}
+.uams-body .gform_wrapper .gfield:not(.no-format) ul.gfield_checkbox li input[type=checkbox],
+.uams-body .gform_wrapper .gfield:not(.no-format) ul.gfield_radio li input[type=radio] {
 	width: 22px !important; // Over-ride width settings
 }
 // GF CSS Override
 // Keep radio & checkboxes inline
 @media only screen and (max-width: 641px) {
-    .gform_wrapper .gfield_radio .icons,
-    .gform_wrapper .gfield_checkbox .icons,
+    .gform_wrapper .gfield:not(.no-format) .gfield_radio .icons,
+    .gform_wrapper .gfield:not(.no-format) .gfield_checkbox .icons,
     .fui-checkbox-unchecked, .fui-radio-unchecked,
     .fui-checkbox-checked, .fui-radio-checked
      {
