@@ -35,25 +35,30 @@
 			position: static;
 			padding-bottom: 20px;
   			h1 {
-			  line-height: 1;
-			  padding: 40px 20% 0 0;
-			  margin: 0;
-		      text-shadow: 1px 3px rgba(0,0,0,.5);
-			  &:after {
-			    content: "";
-			    display: block;
-			    position: absolute;
-			    height: 360px;
-			    left: -140px;
-  				opacity: .3;
-  				width: 600px;
-			    background: url(assets/svg/triangle-light.svg) no-repeat 0 0;
-			    z-index: -1;
-			    top: 50%;
-			    -webkit-transform: translateY(-50%);
-				-ms-transform: translateY(-50%);
-				transform: translateY(-50%);
-			  }
+				line-height: 1;
+				padding: 40px 20% 0 0;
+				margin: 0;
+				text-shadow: 1px 3px rgba(0,0,0,.5);
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					height: 360px;
+					left: -140px;
+					opacity: .3;
+					width: 600px;
+					background: url(assets/svg/triangle-light.svg) no-repeat 0 0;
+					z-index: -1;
+					top: 50%;
+					-webkit-transform: translateY(-50%);
+					-ms-transform: translateY(-50%);
+					transform: translateY(-50%);
+				}
+			}
+			h2 { // For sub-titles
+				color: @white;
+				line-height: 1;
+				text-shadow: 1px 3px rgba(0,0,0,.5);
 			}
   		}
   		&:after{
@@ -194,7 +199,10 @@
 // 						top: -60px;
 						left: -270px;
 		  			}
-		  		}
+				}
+				h2 {
+					font-size: 26px;
+				}
 		  	}
 		}
 		// Smaller hero

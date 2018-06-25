@@ -16,7 +16,11 @@
 
       <div id='main_content' class="uams-body-copy" tabindex="-1">
 
-      <h1><?php echo single_cat_title( '', false ); ?></h1><hr>
+      <h1><?php echo single_cat_title( '', false ); ?></h1>
+      <?php if ( category_description() ) : // Show an optional category description ?>
+        <div class=”archive-meta”><?php echo category_description(); ?></div>
+      <?php endif; ?>
+      <hr>
 
         <?php
           // Start the Loop.

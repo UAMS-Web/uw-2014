@@ -6099,6 +6099,12 @@ div[id*='tidio-chat'] iframe {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.uams-hero-image.hero-height #hero-container h2,
+.no-uams-hero-image.hero-height #hero-container h2 {
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 1px 3px rgba(0, 0, 0, 0.5);
+}
 .uams-hero-image.hero-height:after,
 .no-uams-hero-image.hero-height:after {
   display: none;
@@ -6217,6 +6223,9 @@ div[id*='tidio-chat'] iframe {
     -moz-background-size: 80%;
     -webkit-background-size: 80%;
     left: -270px;
+  }
+  .uams-hero-image.hero-height #hero-container h2 {
+    font-size: 26px;
   }
   .uams-hero-image.hero-height2 {
     padding: 5px;
