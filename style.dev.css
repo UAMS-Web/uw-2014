@@ -6820,6 +6820,9 @@ a.more:after {
   padding-left: 8px;
   border-left: 1px dotted #5d5b5c;
 }
+.uams-body .archive-meta {
+  padding: 1em 0;
+}
 span.next-page {
   display: block;
   margin-top: 50px;
