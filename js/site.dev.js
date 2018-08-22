@@ -9556,6 +9556,10 @@ UAMS.getBaseUrl = function() {
     url = Backbone.history.location.origin + ( site ? '/' + site : '' ) + '/';
   } else if (Backbone.history.location.origin.indexOf('uamsonline.com') != -1) {
     url = Backbone.history.location.origin + ( site ? '/' + site : '' ) + '/';
+  } else if (Backbone.history.location.origin.indexOf('inside.uams.edu') != -1) {
+    url = Backbone.history.location.origin + ( site ? '/' + site : '' ) + '/';
+  } else if (Backbone.history.location.origin.indexOf('insidedev.uamsonlinedev.com') != -1) {
+    url = Backbone.history.location.origin + ( site ? '/' + site : '' ) + '/';
   } else {
     url = Backbone.history.location.origin + '/';
   }
