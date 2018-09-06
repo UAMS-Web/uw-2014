@@ -3,7 +3,6 @@
   * Template Name: Home
   */
 ?>
-
 <?php get_header(); ?>
 
 
@@ -16,28 +15,28 @@
     if ( ( get_field('home_page_slider') == 'slide' ) && have_rows('home_slides') ) : //$loop->have_posts() ) : ?>
 <div class="uams-homepage-slider-container" role="region" aria-label="homepage-slides">
 	<?php
-        while ( have_rows('home_slides') ): the_row();
+      while ( have_rows('home_slides') ): the_row();
 
-			$desktopimage = get_sub_field( "home_slide_desktop" );
-			$mobileimage = get_sub_field("home_slide_mobile");
-			$hasmobileimage = false;
-			if( !empty($mobileimage) && $mobileimage['url'] !== "") {
-	        	$mobileimage = $mobileimage['url'];
-				$hasmobileimage = true;
-	      	}
-	      	$buttonlink = get_sub_field( "home_slide_internal_link" ); //Default interal link
-	      	if ( get_sub_field( "home_slide_external" ) && get_sub_field( "home_slide_external_link" ) ) { // Make it external
-		  		$buttonlink = get_sub_field( "home_slide_external_link" );
-		  	 }
-		  	$textcolor = get_sub_field( "home_slide_text_color" );
+				$desktopimage = get_sub_field( "home_slide_desktop" );
+				$mobileimage = get_sub_field("home_slide_mobile");
+				$hasmobileimage = false;
+				if( !empty($mobileimage) && $mobileimage['url'] !== "") {
+							$mobileimage = $mobileimage['url'];
+					$hasmobileimage = true;
+				}
+				$buttonlink = get_sub_field( "home_slide_internal_link" ); //Default interal link
+				if ( get_sub_field( "home_slide_external" ) && get_sub_field( "home_slide_external_link" ) ) { // Make it external
+						$buttonlink = get_sub_field( "home_slide_external_link" );
+				}
+				$textcolor = get_sub_field( "home_slide_text_color" );
 
       ?>
 
-    <div data-mobimg="<? echo ($hasmobileimage ? $mobileimage : $desktopimage['url']); ?>" data-dtimg="<? echo $desktopimage['url']; ?>" class="uams-hero-image uams-homepage-slider <?php echo ($textcolor ? $textcolor : 'lighttext' ); ?> <?php echo ($first ? 'activeslide' : '' ); ?>" style="background-position: center center; background-image:url('<? echo $desktopimage["url"]; ?>');">
+    <div data-mobimg="<?php echo ($hasmobileimage ? $mobileimage : $desktopimage['url']); ?>" data-dtimg="<?php echo $desktopimage['url']; ?>" class="uams-hero-image uams-homepage-slider <?php echo ($textcolor ? $textcolor : 'lighttext' ); ?> <?php echo ($first ? 'activeslide' : '' ); ?>" style="background-position: center center; background-image:url('<?php echo $desktopimage["url"]; ?>');">
 		<div>
 			<h3 class="slide-title" id="slide-title-<?php echo $i; ?>"><?php the_sub_field( "home_slide_title" ); ?></a><span class="udub-slant"><span></span></span></h3>
 			<p class="slide-content"><?php the_sub_field( 'home_slide_text' ); ?></p>
-			<p><a class="uams-btn btn-sm btn-none" href="<? echo $buttonlink ?>" aria-describedby="slide-title-<?php echo $i; ?>"><?php the_sub_field( 'home_slide_button_text' ); ?></a></p>
+			<p><a class="uams-btn btn-sm btn-none" href="<?php echo $buttonlink ?>" aria-describedby="slide-title-<?php echo $i; ?>"><?php the_sub_field( 'home_slide_button_text' ); ?></a></p>
 		</div>
 	</div>
 
@@ -81,7 +80,7 @@
       <div id="hero-container" class="container">
         <h1 class="uams-site-title<?php echo $hasdarktext; ?>"><?php echo get_field('home_image_title') ? get_field('home_image_title') : get_the_title(); ?></h1>
         <span class="udub-slant"><span></span></span>
-      <?php if( get_field( 'home_image_add_button' )){ ?>
+      <?php if( get_field( 'home_image_add_button' )) { ?>
         <a class="uams-btn btn-sm btn-none" href="<?php echo get_field('home_image_external') ? get_field('home_image_external_url') : get_field('home_image_internal_url'); ?>"><?php echo get_field('home_image_button_text'); ?></a>
       <?php } ?>
       </div>
@@ -157,8 +156,8 @@ endif;
 								$length--;
 							  	if ($length > strlen($text)) {
 								  	break;
+									}
 								}
-							}
 						    $text = substr($text, 0, $length);
 						    return $text . ( ( $dots == true && $text != '' && strlen($text_temp) > $length ) ? '...' : '');
 						}
@@ -197,7 +196,7 @@ endif;
     </div>
 
     <?php
-    if($sidebar[0]!="on"){ ?>
+    if($sidebar[0]!="on") { ?>
       <div id="sidebar">
       <?php get_sidebar(); ?>
       </div> <?php
