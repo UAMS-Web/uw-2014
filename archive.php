@@ -8,11 +8,11 @@
 
     <div <?php uams_content_class(); ?> role='main'>
 
-      <?php uams_site_title(); ?>
+      <?php //uams_site_title(); ?>
 
-      <?php get_template_part( 'menu', 'mobile' ); ?>
+      <?php //get_template_part( 'menu', 'mobile' ); ?>
 
-      <?php get_template_part( 'breadcrumbs' ); ?>
+      <?php //get_template_part( 'breadcrumbs' ); ?>
 
       <div id='main_content' class="uams-body-copy" tabindex="-1">
 
