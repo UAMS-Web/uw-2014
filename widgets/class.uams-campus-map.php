@@ -7,7 +7,7 @@
 class UAMS_Campus_Map extends WP_Widget
 {
 
-  const URL = '//maps.local/full-screen/?marker=';
+  const URL = '//maps.uams.edu/full-screen/?marker=';
 
   function __construct()
   {
@@ -29,9 +29,16 @@ class UAMS_Campus_Map extends WP_Widget
        $content .= "<h3 class=\"widget-title\"> $before_title $title $after_title </h3>";
 
     $content .= '<div class="uams-campus-map-widget">
-                  <iframe width="100%" height="365" src="'.self::URL.$buildingCode.'" style="border:0" allow="geolocation" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" scrolling="no"></iframe>
+                  <iframe id="map-widget" width="100%" height="365" src="'.self::URL.$buildingCode.'" style="border:0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" scrolling="no" class="hidden"></iframe>
                   <a href="https://maps.uams.edu/maps/fullscreen/4/?marker='.$buildingCode.'" target="_blank">View larger</a>
-                </div>';
+                </div>
+                <script>
+                $(document).ready(function(){
+				    document.querySelector("iframe").addEventListener("load", function() {
+					    setTimeout(function(){$("#map-widget").removeClass("hidden")}, 2000);
+				    });
+				});
+				</script>';
 
     echo $before_widget . $content . $after_widget;
 	}
