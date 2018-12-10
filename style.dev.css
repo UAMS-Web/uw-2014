@@ -7747,6 +7747,9 @@ ul.uams-mobile-menu ul.children {
 .page-template-blank ul.uams-sidebar-menu {
   margin-top: 0;
 }
+.page-template-no-hero ul.uams-sidebar-menu {
+  margin-top: -56px;
+}
 body.home .uams-sidebar-menu {
   display: none;
 }
