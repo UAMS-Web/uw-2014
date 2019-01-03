@@ -10554,10 +10554,10 @@ h1.post-link-title {
 .hidden {
   display: none;
 }
-.white {
+.transparentwhite {
   color: #ffffff;
 }
-.gray {
+.transparentgray {
   color: #c9c9c9;
 }
 .dark-gray {
@@ -11802,6 +11802,20 @@ h1.post-link-title {
   -webkit-transform: translate(0, -10px);
   -ms-transform: translate(0, -10px);
   transform: translate(0, -10px);
+}
+a.icon-phone,
+a.icon-email {
+  padding: 1px 0 1px 35px;
+  background-image: url(assets/svg/widgets-sprite.svg);
+}
+a.icon-phone {
+  color: inherit;
+  background-size: 580px;
+  background-position: 0 -30px;
+}
+a.icon-email {
+  color: inherit;
+  background-position: 0 1px;
 }
 .fa-ul {
   margin-left: 0;
