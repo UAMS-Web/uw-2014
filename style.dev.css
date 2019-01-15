@@ -6666,7 +6666,6 @@ div[id*='tidio-chat'] iframe {
   font-size: 17px;
   padding: 0 25px 0 0;
   display: block;
-  white-space: nowrap;
   overflow: hidden;
 }
 .uams-breadcrumbs a br,
