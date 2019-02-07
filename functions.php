@@ -161,3 +161,15 @@ function add_defer_attribute( $tag, $handle ) {
 	}
 }
 
+/**
+ *	Gravity Forms to Google Tag Manager script
+ *  Exposes form submission data to the data layer
+ */
+add_action( 'gform_after_submission', 'access_entry_via_field', 10, 2 );
+	function access_entry_via_field( $entry, $form ) {
+	echo "<script>var entryField = ". json_encode($entry) .";",
+	"var formData = ". json_encode($form) .";",
+	"var dataLayer = window.dataLayer || [];",
+	"dataLayer.push({'event':'formSubmit','formTitle': 'Submitted', 'submissionID': formData['title'] + ' ('+formData['id']+') | ' + entryField['source_url'], 'formFields':entryField });",
+	"console.log(dataLayer)</script>";
+};
