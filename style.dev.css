@@ -9546,7 +9546,8 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
   cursor: pointer;
 }
 .gform_wrapper .gfield.no-format .gfield_radio .icons,
-.gform_wrapper .gfield.no-format .gfield_checkbox .icons {
+.gform_wrapper .gfield.no-format .gfield_checkbox .icons,
+.gform_wrapper .gfield.no-format .gsurvey-likert-choice .icons {
   display: none;
 }
 .gform_wrapper .gfield.no-format .gfield_checkbox li input[type="checkbox"],
