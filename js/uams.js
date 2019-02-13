@@ -113,7 +113,7 @@ UAMS.Search = Backbone.View.extend({
                     '</form>'+
 
                     '<select id="mobile-search-select" class="visible-xs">' +
-                      '<option value="uams" selected>All the UAMS</option>' +
+                      '<option value="uams" selected>All of UAMS</option>' +
                       '<option value="site">Current Site</option>' +
                     '</select>' +
 
@@ -122,7 +122,7 @@ UAMS.Search = Backbone.View.extend({
                     '<div class="labels hidden-xs">'+
                       '<label class="radio">'+
                         '<input type="radio" name="search" value="uams" data-toggle="radio" checked tabindex="-1">'+
-                        'All the UAMS'+
+                        'All of UAMS'+
                       '</label>'+
 
                       '<label class="radio">'+
