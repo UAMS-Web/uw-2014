@@ -30,7 +30,7 @@ UAMS.Search = Backbone.View.extend({
                     '<div id="search-labels" class="labels hidden-xs">'+
                       '<label class="radio">'+
                         '<input class="radiobtn" type="radio" name="search" value="uams" data-toggle="radio" checked />'+
-                        'All the UAMS'+
+                        'All of UAMS'+
                       '</label>'+
 
                       '<label class="radio">'+
