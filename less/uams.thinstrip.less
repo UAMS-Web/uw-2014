@@ -229,11 +229,11 @@
 	position: absolute;
 	top: 22px;
 	height: 85px;
-	& h1 {
+	h1, .h1 {
 		margin: 0;
 		padding: 0;
 		font-size: 35px;
-		& a {
+		a {
 			color: @red;
 			&.long-title {
 			font-size: 32px;
@@ -325,8 +325,7 @@
 			background-size: 640px;
       .transition(all 0s);
       &:hover,
-      &:focus,
-      {
+      &:focus {
         background-size: 640px;
       }
 		}
@@ -394,9 +393,9 @@
     #site-title {
 	    max-width: 90%;
 	    top: 62px;
-	    & h1 {
+	    h1, .h1 {
 		    font-size: 30px;
-		    & a {
+		    a {
 			    &.long-title {
 				font-size: 26px;
 				}
@@ -422,8 +421,7 @@
 				background-size: 640px;
 				.transition(all 0s);
 				&:hover,
-				&:focus,
-				{
+				&:focus {
 		        	background-size: 640px;
 		      	}
 		    }
@@ -461,8 +459,7 @@
 			height: 48px;
 			background-size: auto;
 			&:hover,
-		    &:focus,
-		    {
+		    &:focus {
 		        background-size: auto;
 		    }
 		}
@@ -479,8 +476,7 @@
 			height: 45px;
 			background-size: 780px;
 			&:hover,
-		    &:focus,
-		    {
+		    &:focus {
 		        background-size: 780px;
 		    }
 		}

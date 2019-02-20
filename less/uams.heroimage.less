@@ -28,7 +28,7 @@
 	position: relative;
 	z-index: 1;
 	padding-bottom: 20px;
-	h1 {
+	h1, .h1 {
 		font-family: @font-family-headline;
 		text-transform: uppercase;
 		font-weight: @bold;
@@ -64,8 +64,10 @@
 	color: @red;
 }
 .no-title {
-	h1.uams-site-title-blank {
-		display: none;
+	h1, .h1 {
+		&.uams-site-title-blank {
+			display: none;
+		}
 	}
 }
 
@@ -96,7 +98,7 @@
 			}
 		}
 	}
-	h1 {
+	h1, .h1 {
 		text-transform: uppercase;
     	color: white;
     	font-weight: @bold;
@@ -128,7 +130,8 @@
 	}
 	&:before {
 		display: none;
-	}&:after {
+	}
+	&:after {
 		display: none;
 	}
 	.udub-slant {
@@ -161,7 +164,7 @@
 	}
 	.hero-height2 {
 		.container {
-	  		top: inherit%;
+	  		top: inherit;
 	  		-webkit-transform: none;
 	  		-ms-transform: none;
 	  		transform: none;

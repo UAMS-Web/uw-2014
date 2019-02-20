@@ -40,7 +40,7 @@ div.uams-slideshow
 
 
 
-      h3 {
+      h3, .h3 {
         color      :white;
         float      :none;
         margin     :10px 60px 0 0;
@@ -195,7 +195,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
           padding: 10px 30px;
           bottom: -300px;
           .transition(bottom ease-in-out 0.1s);
-          h3 {
+          h3, .h3 {
             font-size: 18px;
           }
           p {
@@ -461,16 +461,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
       bottom: 50px;
     }
   }
-  div.uams-slideshow>div.slide div h3 {
-    margin: 10px 0 0 0;
-  }
-  div.uams-slideshow > div.slide div {
-    padding: 20px 20px 55px;
-    opacity: 1;
-    width: 100%;
-    bottom: 0;
-    p {
-      width: 100%;
+  div.uams-slideshow {
+    > div.slide {
+      div {
+        padding: 20px 20px 55px;
+        opacity: 1;
+        width: 100%;
+        bottom: 0;
+        p {
+          width: 100%;
+        }
+        h3, .h3 {
+          margin: 10px 0 0 0;
+        }
+      }
     }
   }
 

@@ -6,7 +6,7 @@
 
 
 .uams-accordion {
-    h3 {
+    h3, .h3 {
         background-color: @300grey;
         color: @800grey;
         padding: 15px 15px 15px 15px;
@@ -18,14 +18,14 @@
         &.active:after {
             background-position: -383px -23px;
         }
-    }
-    h3:after {
-        content: " ";
-        float: right;
-        display: block;
-        width: 30px;
-        height: 25px;
-        background: url(assets/svg/uams-sprite.svg) no-repeat -383px 2px rgba(255, 255, 255, 0);
+        &:after {
+            content: " ";
+            float: right;
+            display: block;
+            width: 30px;
+            height: 25px;
+            background: url(assets/svg/uams-sprite.svg) no-repeat -383px 2px rgba(255, 255, 255, 0);
+        }
     }
     div {
         height: 0px;

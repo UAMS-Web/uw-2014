@@ -103,13 +103,15 @@
 		}
 		div {
 			padding: 24px;
-			h3.slide-title {
-				font-size: ceil(@font-size-base * 2.5);
-				line-height: ceil(@font-size-base * 2.66);
-				/* text-transform: uppercase; */ //Removed for Nursing, et al
-				margin: 0;
-				.udub-slant span {
-					background-color: @red;
+			h3, .h3 {
+				&.slide-title {
+					font-size: ceil(@font-size-base * 2.5);
+					line-height: ceil(@font-size-base * 2.66);
+					/* text-transform: uppercase; */ //Removed for Nursing, et al
+					margin: 0;
+					.udub-slant span {
+						background-color: @red;
+					}
 				}
 			}
 			p {
@@ -120,7 +122,8 @@
 		}
 		&.lighttext {
 			div {
-				h3, p {
+				h3, .h3,
+				p {
 					color: #fff;
 					text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 				}
@@ -128,7 +131,8 @@
 		}
 		&.darktext {
 			div {
-				h3, p {
+				h3, .h3,
+				p {
 					color: @900grey;
 					text-shadow: 1px 1px rgba(225, 225, 225, 0.3);
 				}
@@ -140,9 +144,11 @@
 	.uams-homepage-slider-container {
 		.uams-homepage-slider {
 			div {
-				h3.slide-title {
-					font-size: floor(@font-size-base * 1.2);
-					line-height: ceil(@font-size-base * 1.2);
+				h3, .h3 {
+					&.slide-title {
+						font-size: floor(@font-size-base * 1.2);
+						line-height: ceil(@font-size-base * 1.2);
+					}
 				}
 				p {
 					font-size: floor(@font-size-base * 0.9);
@@ -188,10 +194,12 @@
 					font-size: floor(@font-size-base * 0.95);
 					line-height: floor(@font-size-base * 1.2);
 		    	}
-		    	h3.slide-title {
-			    	.udub-slant {
-				    	margin: 20px 0 10px 0;
-			    	}
+		    	h3, .h3 {
+					&.slide-title {
+						.udub-slant {
+							margin: 20px 0 10px 0;
+						}
+					}
 		    	}
 		    }
 	    }
