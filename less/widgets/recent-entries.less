@@ -8,21 +8,26 @@
 	ul {
 		padding: 0;
 	}
+
 	li {
 		clear: both;
 		padding-top: 5px;
 		list-style: none;
 		margin: 0;
+
 		&:last-child {
 			p:after {
 				display: none;
 			}
 		}
 	}
-	p, span {
+
+	p,
+	span {
 		margin: 0;
 		position: relative;
 		padding-bottom: 20px;
+
 		&:after {
 			position: absolute;
 			bottom: 10px;
@@ -33,6 +38,7 @@
 			background-color: @gray;
 		}
 	}
+
 	img {
 		.border-radius(100%);
 		overflow: hidden;
@@ -42,9 +48,11 @@
 		margin: 5px 25px 15px 0px;
 		float: left;
 	}
+
 	a.widget-thumbnail {
 
 	}
+
 	a.widget-link {
 		font-family: @font-family-headline;
 		color: @red;
@@ -53,48 +61,54 @@
 		line-height: 1.4;
 		overflow: hidden;
 		display: block;
+		
+		&:hover {
+			color: #909090;
+			border-bottom: none;
+		}
+
 		span {
 			font-size: 17px;
 			color: #818181;
 			margin-top: 3px;
 			font-weight: 400;
 		}
-		&:hover {
-			color: #909090;
-			border-bottom: none;
-		}
 	}
+
 	.more {
 		margin: 10px 0 0 0;
 	}
+
 	small {
 		font-family: @font-family-headline;
 		font-size: floor(@font-size-base * .8);
 		font-weight: 400;
 	}
+
 	span {
 		display: block;
 		overflow: hidden;
 	}
+
 	svg {
 		margin-left: 10px;
 	}
 }
+
 ul.shortcode-blogroll-mini {
 	padding-left: 0;
 }
 
 // Fixes UL padding of shortcode
-
 .uams-content .uams-widget-rss {
 	padding: 0;
 }
 
 // Necessary for sidebar, and hides blank span
-
 .uams-sidebar .uams-widget-rss.widget {
-    // padding: 10px 0 0 40px;
-    & > span:nth-child(1) {
+	// padding: 10px 0 0 40px;
+	
+    > span:nth-child(1) {
     	display: none;
 	}
 }
