@@ -3,42 +3,52 @@
 .uams-homepage-slider-container {
 	position: relative;
 	height: 450px;
+
 	.slideshow-controls {
 		&:hover {
-				text-shadow: 3px 4px black;
+			text-shadow: 3px 4px black;
+		}
+
+		&.lighttext .next-headline{
+			text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+			background-color: rgba(0, 0, 0, 0.25);
+
+			.uwn-slideshow-next-text {
+				color: @gray;
 			}
-			&.lighttext .next-headline{
-				text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-				background-color: rgba(0, 0, 0, 0.25);
-				.uwn-slideshow-next-text {
-					color: @gray;
-				}
-				.uwn-slideshow-next-title {
-					color: white;
-				}
-				.udub-slant span {
-					background-color: white;
-				}
-				&:before {
-					background: url(../uams-2016/assets/svg/uams-sprite.svg) no-repeat -574px -55px;
-				}
+
+			.uwn-slideshow-next-title {
+				color: white;
 			}
-			&.darktext .next-headline{
-				text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
-				background-color: rgba(255, 255, 255, 0.25);
-				.uwn-slideshow-next-text {
-					color: @red;
-				}
-				.uwn-slideshow-next-title {
-					color: @900grey;
-				}
-				.udub-slant span {
-					background-color: @900grey;
-				}
-				&:before {
-					background: url(../uams-2016/assets/svg/uams-sprite-focus.svg) no-repeat -574px -55px;
-				}
+
+			.udub-slant span {
+				background-color: white;
 			}
+
+			&:before {
+				background: url(../uams-2016/assets/svg/uams-sprite.svg) no-repeat -574px -55px;
+			}
+		}
+		&.darktext .next-headline{
+			text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
+			background-color: rgba(255, 255, 255, 0.25);
+
+			.uwn-slideshow-next-text {
+				color: @red;
+			}
+
+			.uwn-slideshow-next-title {
+				color: @900grey;
+			}
+
+			.udub-slant span {
+				background-color: @900grey;
+			}
+
+			&:before {
+				background: url(../uams-2016/assets/svg/uams-sprite-focus.svg) no-repeat -574px -55px;
+			}
+		}
 		.next-headline{
 			background: 0 0;
 		    border: none;
@@ -52,21 +62,23 @@
 			//height: 112px;
 			width: 280px;
 			line-height: 17px;
-
 			text-align: left;
 			cursor: pointer;
 			padding: 14px 14px 20px 44px;
 			z-index: 1;
+
 			.uwn-slideshow-next-text {
 				font-weight: bold;
 				font-style: italic;
 				font-size: floor(@font-size-base * 1.111);
 				line-height: floor(@font-size-base * 1.9);
+
 				&:after {
 					content: "\A";
 					white-space: pre;
 				}
 			}
+
 			&:before {
 				content: "";
 			    position: absolute;
@@ -76,17 +88,19 @@
 			    width: 16px;
 			    height: 28px;
 			}
+
 			.uwn-slideshow-next-title {
 				font-weight: bold;
 				cursor: pointer;
 				font-size: floor(@font-size-base * 1.111);
 			}
+
 			.udub-slant span {
 				height: 5px; width: 57px;
 			}
-
 		}
 	}
+
 	.uams-homepage-slider {
 		position: absolute;
 		top: 0;
@@ -97,10 +111,12 @@
 		z-index: 1;
 		transition: opacity 1s;
 		pointer-events: none;
+
 		&.activeslide {
 			opacity: 1;
 			pointer-events: auto;
 		}
+
 		div {
 			padding: 24px;
 			h3, .h3 {
@@ -109,17 +125,20 @@
 					line-height: ceil(@font-size-base * 2.66);
 					/* text-transform: uppercase; */ //Removed for Nursing, et al
 					margin: 0;
+
 					.udub-slant span {
 						background-color: @red;
 					}
 				}
 			}
+
 			p {
 				font-size: floor(@font-size-base * 1.111);;
 				line-height: 28px;
 				font-weight: 400;
 			}
 		}
+
 		&.lighttext {
 			div {
 				h3, .h3,
@@ -129,6 +148,7 @@
 				}
 			}
 		}
+
 		&.darktext {
 			div {
 				h3, .h3,
@@ -140,6 +160,7 @@
 		}
 	}
 }
+
 @media only screen and (max-width: 767px) {
 	.uams-homepage-slider-container {
 		.uams-homepage-slider {
@@ -150,50 +171,63 @@
 						line-height: ceil(@font-size-base * 1.2);
 					}
 				}
+
 				p {
 					font-size: floor(@font-size-base * 0.9);
 					line-height: floor(@font-size-base * 1.111);
 				}
 			}
 		}
+
 		.slideshow-controls {
 			position: absolute;
 			left: 35px;
 			bottom: 0;
+
 			.next-headline {
 			    position: relative;
 			    width: auto;
 			    padding: 0 40px 10px 5px;
-			    right:auto;
+				right:auto;
+				
 			    &:before {
 				    right: 10px;
 				    left: auto;
 				    top: 36px;
-			    }
+				}
+				
 			    .udub-slant {
 				    display: none;
 			    }
 			}
 		}
 	}
+
 	.uams-hero-image {
 		display: block !important;
 	}
 }
+
 @media only screen and (max-width: 991px) and (min-width: 768px) {
 	.uams-homepage-slider-container {
 		.slideshow-controls {
-			 right: auto; left: 50px;
-			 .next-headline { right:10%; }
+			right: auto; left: 50px;
+
+			.next-headline {
+				right:10%;
+			}
 		}
+
 		.uams-homepage-slider {
 			 div {
-				 padding-left: 48px;
+				padding-left: 48px;
+
 				p {
 					padding-right: 45%;
 					font-size: floor(@font-size-base * 0.95);
 					line-height: floor(@font-size-base * 1.2);
-		    	}
+				}
+				
 		    	h3, .h3 {
 					&.slide-title {
 						.udub-slant {
@@ -205,16 +239,26 @@
 	    }
     }
 }
+
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
-	.uams-homepage-slider-container .slideshow-controls { right: 480px; }
+	.uams-homepage-slider-container {
+		.slideshow-controls {
+			right: 480px;
+		}
+	}
 }
+
 @media (min-width: 992px) {
 	.uams-homepage-slider-container {
 		height: 430px;
+
 		.uams-homepage-slider div {
 			margin: 25px auto 45px;
 			width: 970px;
-			p { width: 50%;}
+
+			p {
+				width: 50%;
+			}
 		}
 	}
 }
@@ -223,6 +267,7 @@
 		margin: 35px auto 45px;
 		width: 1170px;
 	}
+
 	.uams-homepage-slider-container .uams-homepage-slider div p {
 		width: 44%;
 	}
