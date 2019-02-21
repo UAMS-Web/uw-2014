@@ -75,18 +75,22 @@ a.more {
 	padding-top: 10px;
 	-webkit-font-smoothing: antialiased;
 	letter-spacing: -0.022em;
+
+	h1, .h1,
+	h2, .h2, 
+	h3, .h3, 
+	h4, .h4, 
+	h5, .h5, 
+	h6, .h6 {
+		letter-spacing: normal;
+	}
+	h1, .h1 {
+		font-weight: @extrabold;
+	}
 	h1, .h1,
 	h2, .h2 {
 		color: @red;
 		display: block;
-		letter-spacing: normal;
-	}
-	h2, .h2, 
-	h3, .h3, 
-	h4, .h4, 
-	h5, .h5 {
-		font-weight: @extrabold;
-		letter-spacing: normal;
 	}
 	blockquote {
 		border-left: 3px solid @300grey;
