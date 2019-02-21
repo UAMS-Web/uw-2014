@@ -67,11 +67,18 @@
 			padding: 14px 14px 20px 44px;
 			z-index: 1;
 
+			.uwn-slideshow-next-text,
+			.uwn-slideshow-next-title {
+				display:block;
+				line-height:1;
+			}
+
 			.uwn-slideshow-next-text {
-				font-weight: bold;
+				display:block;
+				margin-bottom:0.25em;
+				font-weight: @semibold;
 				font-style: italic;
 				font-size: floor(@font-size-base * 1.111);
-				line-height: floor(@font-size-base * 1.9);
 
 				&:after {
 					content: "\A";
@@ -90,7 +97,8 @@
 			}
 
 			.uwn-slideshow-next-title {
-				font-weight: bold;
+				display:block;
+				font-weight: @bold;
 				cursor: pointer;
 				font-size: floor(@font-size-base * 1.111);
 			}
@@ -135,7 +143,7 @@
 			p {
 				font-size: floor(@font-size-base * 1.111);;
 				line-height: 28px;
-				font-weight: 400;
+				font-weight: @regular;
 			}
 		}
 
@@ -144,7 +152,7 @@
 				h3, .h3,
 				p {
 					color: #fff;
-					text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+					text-shadow: @hero-shadow-dark;
 				}
 			}
 		}
@@ -154,7 +162,7 @@
 				h3, .h3,
 				p {
 					color: @900grey;
-					text-shadow: 1px 1px rgba(225, 225, 225, 0.3);
+					text-shadow: @hero-shadow-light;
 				}
 			}
 		}
