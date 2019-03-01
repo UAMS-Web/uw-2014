@@ -191,8 +191,7 @@
 
 // Gravity Forms updates
 .gform_wrapper {
-  .gfield:not(.no-format),
-  .gfield:not(.gfield_error) {
+  .gfield:not(.no-format) {
     .gfield_radio,
     .gfield_checkbox {
       label {
@@ -236,8 +235,7 @@
   }
 }
 .gform_wrapper {
-  .gfield.no-format,
-  .gfield.gfield_error {
+  .gfield.no-format {
     .gfield_radio,
     .gfield_checkbox,
     .gsurvey-likert-choice {
@@ -252,15 +250,15 @@
     }
   }
 }
-.uams-body .gform_wrapper .gfield:not(.no-format):not(.gfield_error) ul.gfield_checkbox li input[type=checkbox],
-.uams-body .gform_wrapper .gfield:not(.no-format):not(.gfield_error) ul.gfield_radio li input[type=radio] {
+.uams-body .gform_wrapper .gfield:not(.no-format) ul.gfield_checkbox li input[type=checkbox],
+.uams-body .gform_wrapper .gfield:not(.no-format) ul.gfield_radio li input[type=radio] {
 	width: 22px !important; // Over-ride width settings
 }
 // GF CSS Override
 // Keep radio & checkboxes inline
 @media only screen and (max-width: 641px) {
-    .gform_wrapper .gfield:not(.no-format):not(.gfield_error) .gfield_radio .icons,
-    .gform_wrapper .gfield:not(.no-format):not(.gfield_error) .gfield_checkbox .icons,
+    .gform_wrapper .gfield:not(.no-format) .gfield_radio .icons,
+    .gform_wrapper .gfield:not(.no-format) .gfield_checkbox .icons,
     .fui-checkbox-unchecked, .fui-radio-unchecked,
     .fui-checkbox-checked, .fui-radio-checked
      {
