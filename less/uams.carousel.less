@@ -69,20 +69,22 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	transition: 400ms ease-out;
 }
 
-.jp-carousel-info h2 {
-	background: none !important;
-	border: none !important;
-	color: @700grey;
-	display: block !important;
-	font: normal 13px/1.25em "Helvetica Neue", sans-serif !important;
-	letter-spacing: 0 !important;
-	margin: 7px 0 0 0 !important;
-	padding: 10px 0 0 !important;
-	overflow: hidden;
-	text-align: left;
-	text-shadow: none !important;
-	text-transform: none !important;
-	-webkit-font-smoothing: subpixel-antialiased;
+.jp-carousel-info {
+	h2, .h2 {
+		background: none !important;
+		border: none !important;
+		color: @700grey;
+		display: block !important;
+		font: normal 13px/1.25em "Helvetica Neue", sans-serif !important;
+		letter-spacing: 0 !important;
+		margin: 7px 0 0 0 !important;
+		padding: 10px 0 0 !important;
+		overflow: hidden;
+		text-align: left;
+		text-shadow: none !important;
+		text-transform: none !important;
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
 }
 
 .jp-carousel-next-button,
@@ -476,14 +478,17 @@ div#carousel-reblog-box {
 	margin-bottom: 0.75em;
 }
 
-.jp-carousel-titleanddesc p a,
-.jp-carousel-comments p a,
-.jp-carousel-info h2 a {
-	color: #fff !important;
-	border: none !important;
-	text-decoration: underline !important;
-	font-weight: normal !important;
-	font-style: normal !important;
+.jp-carousel-titleanddesc p,
+.jp-carousel-comments p,
+.jp-carousel-info h2,
+.jp-carousel-info .h2 {
+	a {
+		color: #fff !important;
+		border: none !important;
+		text-decoration: underline !important;
+		font-weight: normal !important;
+		font-style: normal !important;
+	}
 }
 
 .jp-carousel-titleanddesc p strong,
@@ -499,21 +504,27 @@ div#carousel-reblog-box {
 }
 
 
-.jp-carousel-titleanddesc p a:hover,
-.jp-carousel-comments p a:hover,
-.jp-carousel-info h2 a:hover {
-	color: #68c9e8 !important;
+.jp-carousel-titleanddesc p,
+.jp-carousel-comments p,
+.jp-carousel-info h2,
+.jp-carousel-info .h2 {
+	a:hover {
+		color: #68c9e8 !important;
+	}
 }
 
 .jp-carousel-titleanddesc p:empty {
 	display: none;
 }
 
-.jp-carousel-photo-info h1:before,
-.jp-carousel-photo-info h1:after,
-.jp-carousel-left-column-wrapper h1:before,
-.jp-carousel-left-column-wrapper h1:after {
-	content:none !important;
+.jp-carousel-photo-info,
+.jp-carousel-left-column-wrapper {
+	h1, .h1 {
+		&:before,
+		&:after {
+			content:none !important;
+		}
+	}
 }
 /** Title and Desc End **/
 
@@ -527,42 +538,38 @@ div#carousel-reblog-box {
 	overflow: hidden;
 	padding: 18px 20px;
 	width: 209px !important;
-}
+	li,
+	h5, .h5 {
+		font-family: "Helvetica Neue", sans-serif !important;
+		position: inherit !important;
+		top: auto !important;
+		right: auto !important;
+		left: auto !important;
+		bottom: auto !important;
+		background: none !important;
+		border: none !important;
+		font-weight: 400 !important;
+		line-height: 1.3em !important;
+		color: @500grey !important;
+		text-transform: uppercase !important;
+		font-size:10px !important;
+		margin:0 0 2px !important;
+		letter-spacing: 0.1em !important;
+	}
 
-.jp-carousel-image-meta li,
-.jp-carousel-image-meta h5 {
-	font-family: "Helvetica Neue", sans-serif !important;
-	position: inherit !important;
-	top: auto !important;
-	right: auto !important;
-	left: auto !important;
-	bottom: auto !important;
-	background: none !important;
-	border: none !important;
-	font-weight: 400 !important;
-	line-height: 1.3em !important;
-}
+	ul {
+		margin: 0 !important;
+		padding: 0 !important;
+		list-style: none !important;
+	}
 
-.jp-carousel-image-meta ul {
-	margin: 0 !important;
-	padding: 0 !important;
-	list-style: none !important;
-}
-
-.jp-carousel-image-meta li {
-	width: 48% !important;
-	float: left !important;
-	margin: 0 2% 15px 0 !important;
-	color: #fff !important;
-	font-size:13px !important;
-}
-
-.jp-carousel-image-meta h5 {
-	color: @500grey !important;
-	text-transform: uppercase !important;
-	font-size:10px !important;
-	margin:0 0 2px !important;
-	letter-spacing: 0.1em !important;
+	li {
+		width: 48% !important;
+		float: left !important;
+		margin: 0 2% 15px 0 !important;
+		color: #fff !important;
+		font-size:13px !important;
+	}
 }
 
 a.jp-carousel-image-download {
@@ -864,49 +871,52 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 
 /* ----- Light variant ----- */
 
-.jp-carousel-light .jp-carousel-overlay {
-	background: #fff;
-}
 
-.jp-carousel-light .jp-carousel-next-button:hover span,
-.jp-carousel-light .jp-carousel-previous-button:hover span {
-	opacity: 0.8;
-}
+.jp-carousel-light {
+	.jp-carousel-overlay {
+		background: #fff;
+	}
 
-.jp-carousel-light .jp-carousel-close-hint:hover,
-.jp-carousel-light .jp-carousel-titleanddesc div {
-	color: #000 !important;
-}
+	.jp-carousel-next-button:hover,
+	.jp-carousel-previous-button:hover {
+		span {
+			opacity: 0.8;
+		}
+	}
 
-.jp-carousel-light .jp-carousel-comments p a,
-.jp-carousel-light .jp-carousel-comment .comment-author a,
-.jp-carousel-light .jp-carousel-titleanddesc p a,
-.jp-carousel-light .jp-carousel-titleanddesc p a,
-.jp-carousel-light .jp-carousel-comments p a,
-.jp-carousel-light .jp-carousel-info h2 a {
-	color: @steel !important;
-}
+	.jp-carousel-close-hint:hover,
+	.jp-carousel-titleanddesc div {
+		color: #000 !important;
+	}
 
-.jp-carousel-light .jp-carousel-comments p a:hover,
-.jp-carousel-light .jp-carousel-comment .comment-author a:hover,
-.jp-carousel-light .jp-carousel-titleanddesc p a:hover,
-.jp-carousel-light .jp-carousel-titleanddesc p a:hover,
-.jp-carousel-light .jp-carousel-comments p a:hover,
-.jp-carousel-light .jp-carousel-info h2 a:hover {
-	color: @alert !important;
-}
+	.jp-carousel-comments p,
+	.jp-carousel-comment .comment-author,
+	.jp-carousel-titleanddesc p,
+	.jp-carousel-comments p,
+	.jp-carousel-info h2,
+	.jp-carousel-info .h2 {
+		a {
+			color: @steel !important;
 
-.jp-carousel-light .jp-carousel-info h2,
-.jp-carousel-light .jp-carousel-titleanddesc,
-.jp-carousel-light .jp-carousel-titleanddesc p,
-.jp-carousel-light .jp-carousel-comment,
-.jp-carousel-light .jp-carousel-comment p,
-.jp-carousel-light div.jp-carousel-buttons a,
-.jp-carousel-light .jp-carousel-titleanddesc p strong,
-.jp-carousel-light .jp-carousel-titleanddesc p b,
-.jp-carousel-light .jp-carousel-titleanddesc p em,
-.jp-carousel-light .jp-carousel-titleanddesc p i {
-	color: @700grey;
+			&:hover {
+				color: @alert !important;
+			}
+		}
+	}
+
+	.jp-carousel-info h2,
+	.jp-carousel-info .h2,
+	.jp-carousel-titleanddesc,
+	.jp-carousel-titleanddesc p,
+	.jp-carousel-comment,
+	.jp-carousel-comment p,
+	div.jp-carousel-buttons a,
+	.jp-carousel-titleanddesc p strong,
+	.jp-carousel-titleanddesc p b,
+	.jp-carousel-titleanddesc p em,
+	.jp-carousel-titleanddesc p i {
+		color: @700grey;
+	}
 }
 
 .jp-carousel-light .jp-carousel-buttons {
@@ -1095,7 +1105,7 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 	}
 
 	.jp-carousel-close-hint {
-	 	font-weight: @ultra !important;
+	 	font-weight: @heavy !important;
 		font-size: 26px !important;
 		position: fixed !important;
 		top: -10px;

@@ -34,11 +34,11 @@
   			padding-left: 0;
 			position: static;
 			padding-bottom: 20px;
-  			h1 {
+  			h1, .h1 {
 				line-height: 1;
 				padding: 40px 20% 0 0;
 				margin: 0;
-				text-shadow: 1px 3px rgba(0,0,0,.5);
+				text-shadow: @hero-shadow-dark;
 				&:after {
 					content: "";
 					display: block;
@@ -55,10 +55,10 @@
 					transform: translateY(-50%);
 				}
 			}
-			h2 { // For sub-titles
+			h2, .h2 { // For sub-titles
 				color: @white;
 				line-height: 1;
-				text-shadow: 1px 3px rgba(0,0,0,.5);
+				text-shadow: @hero-shadow-dark;
 			}
   		}
   		&:after{
@@ -160,14 +160,16 @@
 		      -moz-background-size: cover;
 		      -o-background-size: cover;
 		      background-size: cover;
-		    }
+		  }
 
-		    #hero-bg {
+		  #hero-bg {
 				//top: 20px;
-			    #hero-container h1.uams-site-title ,
-			    div.container h1.uams-site-title2 {
+				#hero-container h1.uams-site-title,
+				#hero-container .h1.uams-site-title,
+				div.container h1.uams-site-title2,
+				div.container .h1.uams-site-title2 {
 					padding-top: 40px;
-				    &:after{
+				    &:after {
 				    	background: none;
 				    }
 				}
@@ -184,25 +186,25 @@
 		&.hero-height {
 			padding: 50px 20px 20px;
 			display: block;
-		  	height: 240px;
+		  height: 240px;
 		  	#hero-bg{
 			  	top: 50%;
 		  	}
 		  	#hero-container {
-		  		h1 {
+		  		h1, .h1 {
 		  			font-size: 35px;
 		  			padding: 0;
 		  			&:after {
 		  				background-size: 80%;
 		  				-moz-background-size: 80%;
 		  				-webkit-background-size: 80%;
-// 						top: -60px;
-						left: -270px;
+ 							//top: -60px;
+							left: -270px;
 		  			}
-				}
-				h2 {
-					font-size: 26px;
-				}
+					}
+					h2, .h2 {
+						font-size: 26px;
+					}
 		  	}
 		}
 		// Smaller hero
@@ -212,16 +214,16 @@
 		  	height: auto;
 		  	.container {
 		  	}
-		  	h1 {
+		  	h1, .h1 {
 		  		font-size: 35px;
 		  		padding: 0;
 		  		&:after {
 		  			background-size: 100%;
 		  			-moz-background-size: 100%;
 		  			-webkit-background-size: 100%;
-					//top: -60px;
-					left: -270px;
-					height: 100vh;
+						//top: -60px;
+						left: -270px;
+						height: 100vh;
 		  		}
 		  	}
 		}

@@ -1,6 +1,4 @@
-div.uams-slideshow
-{
-
+div.uams-slideshow {
   position :relative;
   overflow: hidden;
   width: 100%;
@@ -9,7 +7,6 @@ div.uams-slideshow
   z-index: 0;
 
   > div.slide {
-
     position:absolute;
     right: 0;
     left: 0;
@@ -30,20 +27,19 @@ div.uams-slideshow
     }
 
     div {
-        position         :absolute;
-        left             :0;
-        bottom           :5%;
-        background-color :@red;
-        opacity          :.9;
-        padding          :12px 0 10px 40px;
-        width            :77.5%;
+      position:absolute;
+      left: 0;
+      bottom: 5%;
+      background-color: @red;
+      opacity: .9;
+      padding: 12px 0 10px 40px;
+      width: 77.5%;
 
+      h3, .h3 {
+        color: white;
+        float: none;
+        margin: 10px 60px 0 0;
 
-
-      h3 {
-        color      :white;
-        float      :none;
-        margin     :10px 60px 0 0;
         a {
           color: white;
           border: none;
@@ -58,13 +54,10 @@ div.uams-slideshow
         line-height: 20px;
         padding-top: 7px;
       }
-
     }
-
   }
 
-  .uams-slideshow-controls
-  {
+  .uams-slideshow-controls {
     color: @gray;
     line-height:60px;
     font-size:30px;
@@ -74,26 +67,28 @@ div.uams-slideshow
     height:80px;
     width: 45px;
     bottom: 36px;
-    &.next:after,
-    &.previous:after {
-      background: url(assets/svg/uams-sprite.svg) no-repeat -698px -97px;
-      content: "";
-      width: 81px;
-      height: 44px;
-      position: absolute;
-      top: 21px;
-      left: 15px;
-      background-size: 1700px;
+
+    &.next,
+    &.previous {
+      &:after {
+        background: url(assets/svg/uams-sprite.svg) no-repeat -698px -97px;
+        content: "";
+        width: 81px;
+        height: 44px;
+        position: absolute;
+        top: 21px;
+        left: 15px;
+        background-size: 1700px;
+      }
     }
 
     &.next {
       z-index:101;
       left: 77.5%;
       .box-shadow(-1px 0px 5px 0 rgba(0, 0, 0, .4));
-      &:after {
-
-      }
-      // background: white url('@{local-image-path}/slideshow-arrow-right.png') center no-repeat;
+      //background: white url('@{local-image-path}/slideshow-arrow-right.png') center no-repeat;
+      //&:after {
+      //}
     }
 
     &.previous {
@@ -107,23 +102,17 @@ div.uams-slideshow
 
   }
 
-  &.last-previous
-  {
-
+  &.last-previous {
     .next {
       z-index:100;
     }
 
-    .previous
-    {
+    .previous {
       opacity:0.2;
     }
-
   }
 
-  &.last-next
-  {
-
+  &.last-next {
     .next {
       opacity:0.2;
     }
@@ -131,19 +120,15 @@ div.uams-slideshow
     .previous {
       z-index:100;
     }
-
   }
 
   // For the simple photo slider
 
   &.photo-slider {
-
-
       height: 510px;
       padding-bottom: 51px;
 
       // For class switching on dots
-
       .dotSlide {
         z-index: 99 !important;
         left: 0 !important;
@@ -169,35 +154,40 @@ div.uams-slideshow
         right: 0;
         width: 250px;
         z-index: 19;
-background: -moz-linear-gradient(-45deg,  rgba(255,255,255,0) 0%, rgba(128,128,128,0) 50%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(128,128,128,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,0) 0%,rgba(128,128,128,0) 50%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(-45deg,  rgba(255,255,255,0) 0%,rgba(128,128,128,0) 50%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(-45deg,  rgba(255,255,255,0) 0%,rgba(128,128,128,0) 50%,rgba(0,0,0,1) 100%); /* IE10+ */
-background: linear-gradient(135deg,  rgba(255,255,255,0) 0%,rgba(128,128,128,0) 50%,rgba(0,0,0,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+        background: -moz-linear-gradient(-45deg,  rgba(255,255,255,0) 0%, rgba(128,128,128,0) 50%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(128,128,128,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,0) 0%,rgba(128,128,128,0) 50%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  rgba(255,255,255,0) 0%,rgba(128,128,128,0) 50%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  rgba(255,255,255,0) 0%,rgba(128,128,128,0) 50%,rgba(0,0,0,1) 100%); /* IE10+ */
+        background: linear-gradient(135deg,  rgba(255,255,255,0) 0%,rgba(128,128,128,0) 50%,rgba(0,0,0,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
       }
-      & > div.slide {
+
+      > div.slide {
         overflow: hidden;
         height: 90%;
+
         &.no-text div {
           display: none;
         }
+
         &:hover {
           div {
             bottom: 0;
           }
         }
+
         div {
           background-color: rgba(0, 0, 0, 0.7);
           width: 100%;
           padding: 10px 30px;
           bottom: -300px;
           .transition(bottom ease-in-out 0.1s);
-          h3 {
+
+          h3, .h3 {
             font-size: 18px;
           }
+
           p {
             font-size: 15px;
           }
@@ -205,10 +195,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
       }
 
       // Adds a litte 'i' for hover
-
       .has-text:after {
         font-family: @font-family-headline;
-        font-weight: @bold;
+        font-weight: @extrabold;
         content: "i";
         font-size: 13px;
         text-align: center;
@@ -231,39 +220,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
         background-color: transparent;
         bottom: 10%;
         width: 75px;
+
         &.next,
         &.previous {
           .box-shadow(none);
+
           &:hover,
           &:focus {
             border-bottom: none;
           }
         }
+
         &.previous {
           left: auto;
           right: 90px;
+
           &:hover,
           &:focus {
             right: 95px;
           }
         }
+
         &.next {
           left: auto;
           right: 5px;
+
           &:hover,
           &:focus {
             right: 0;
           }
         }
-        &.next:after,
-        &.previous:after {
-          width: 46px;
-          left: 10px;
-          background: url(assets/svg/uams-sprite.svg) no-repeat -55px -545px rgba(0, 0, 0, 0);
-          background-size: 970px;
-        }
 
+        &.next,
+        &.previous {
+          &:after {
+            width: 46px;
+            left: 10px;
+            background: url(assets/svg/uams-sprite.svg) no-repeat -55px -545px rgba(0, 0, 0, 0);
+            background-size: 970px;
+          }
+        }
     }
+
     .slider-dots {
       position: relative;
       bottom: 0;
@@ -271,6 +269,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
       text-align: center;
       margin-top: 465px;
       padding: 0;
+
       li {
         list-style: none;
         display: inline-block;
@@ -279,6 +278,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
         margin: 0 3px;
         background-color: #C8C8C8;
         cursor: pointer;
+
         &:hover,
         &.select-dot {
           background-color: #484848;
@@ -299,14 +299,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
       z-index: 50;
       .transition(scale linear .1s);
       border-bottom: none;
+
       &:hover {
         .scale(1.2);
         transform-origin: center center;
       }
     }
-
   }
-
 }
 
 .activeFullscreen div.uams-slideshow.photo-slider {
@@ -317,6 +316,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   width: 90%;
   height: auto;
   z-index: 100;
+
   &:after {
     position: fixed;
     top: 0;
@@ -328,28 +328,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     background-color: rgba(0,0,0,.8);
     z-index: -1;
   }
+
   a.fullscreen {
     background-position: 0px -93px;
   }
-  & > div.slide {
+
+  > div.slide {
     background-color: black;
   }
 
-
   // For flashing bug
-  &.last-previous
-  {
-    .previous
-    {
+  &.last-previous {
+    .previous {
       opacity:1;
     }
   }
-  &.last-next
-  {
+
+  &.last-next {
     .next {
       opacity:1;
     }
   }
+
   .slider-dots {
     position: absolute;
     bottom: 20px;
@@ -357,7 +357,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     margin-top: 0;
     padding: 0;
   }
-
 }
 // Accounts for template with no sidebar
 
@@ -365,24 +364,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   .page-template-no-sidebar {
     div.uams-slideshow {
       height: 550px;
+
       .uams-slideshow-controls.next {
         right: 212px;
       }
+
       .uams-slideshow-controls.previous {
         right: 257px;
       }
+
       &.photo-slider {
         height: 690px;
         .uams-slideshow-controls.next {
           right: 2px;
         }
+
         .uams-slideshow-controls.previous {
           right: 107px;
         }
+
         .slider-dots {
           margin-top: 645px;
         }
-        &  > div.slide {
+
+        > div.slide {
           overflow: hidden;
           height: 92.5%;
         }
@@ -391,21 +396,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   }
 }
 
-
-
-
-
-
 @media only screen and (max-width : 1200px) {
   div.uams-slideshow.photo-slider .slider-dots {
     margin-top: 390px;
   }
+
   div.uams-slideshow.photo-slider {
     height: 420px;
     padding-bottom: 60px;
+
     &:after {
       bottom: 42px;
     }
+
     .has-text:after,
     &> div.slide div {
      display: none;
@@ -413,33 +416,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   }
 }
 
-
 @media only screen and (max-width : 767px) {
-
   div.uams-slideshow .uams-slideshow-controls {
     height:45px;
     bottom: 0;
+
     &.next {
       right: 0;
       left: auto;
     }
+
     &.previous {
       right: 45px;
       left: auto;
       margin-left: 0;
     }
+
     &.next:after,
     &.previous:after {
       top: 3px;
     }
   }
+
   div.uams-slideshow.photo-slider {
     height: 420px;
     padding-bottom: 0;
+
     .uams-slideshow-controls {
       bottom: 55px;
+
       &.previous {
         right: 60px;
+
         &:hover,
         &:focus {
           right: 65px;
@@ -447,31 +455,40 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
       }
       &.next {
         right: -18px;
+
         &:hover,
         &:focus {
           right: -22px;
         }
       }
     }
+
     &:before {
       bottom: 5%;
       right: 40px;
     }
+
     &:after {
       bottom: 50px;
     }
   }
-  div.uams-slideshow>div.slide div h3 {
-    margin: 10px 0 0 0;
-  }
-  div.uams-slideshow > div.slide div {
-    padding: 20px 20px 55px;
-    opacity: 1;
-    width: 100%;
-    bottom: 0;
-    p {
-      width: 100%;
+
+  div.uams-slideshow {
+    > div.slide {
+      div {
+        padding: 20px 20px 55px;
+        opacity: 1;
+        width: 100%;
+        bottom: 0;
+
+        p {
+          width: 100%;
+        }
+
+        h3, .h3 {
+          margin: 10px 0 0 0;
+        }
+      }
     }
   }
-
 }

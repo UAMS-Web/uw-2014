@@ -5,28 +5,32 @@
 
 
 .tube-wrapper {
-     position: relative;
-     padding-bottom: 56.25%;
-     padding-top: 30px; height: 0; overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+
+    iframe,
+    object,
+    embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
-.tube-wrapper iframe,
-.tube-wrapper object,
-.tube-wrapper embed {
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 width: 100%;
-	 height: 100%;
-}
+
 .nc-video-player {
     clear: both;
     width: 100%;
     background-color: #FFF;
     position: relative;
+
     &.playlist {
         box-shadow: 1px 1px 7px #E0E0E0;
         margin-bottom: 35px;
         margin-top: 30px;
+
         &:after {
             content: " ";
             position: absolute;
@@ -37,18 +41,21 @@
             background: url("assets/images/youtube-player/video-overflow.png") 0 0 no-repeat;
         }
     }
+
     iframe {
     	max-width: none !important;
     	padding: 0;
     	margin: 0;
     }
 }
+
 .playBtn {
     left: 43px;
     position: absolute;
     top: 31px;
     z-index: 0;
-    border: none; }
+    border: none;
+}
 
 .vidSmall {
     height: 130px;
@@ -70,9 +77,11 @@
         font-size: 12px;
         color: white;
     }
+
     .title {
         margin: 3px 3px 0 0 ;
     }
+
     button {
         border: none;
         display: block;
@@ -81,34 +90,44 @@
         position: relative;
         padding: 0;
         width: 120px;
-        &.vid-active:after {
-            content: "Now Playing";
-            padding: 0px 7px;
-            background-color: #FFF;
-            position: absolute;
-            bottom: -3px;
-            left: 10px;
-            color: @red;
-            text-transform: uppercase;
-            font-size: 11px;
-            font-weight: @bold;
-	    }
-        &.vid-active div {
-            opacity: 1;
+
+        &.vid-active {
+            &:after {
+                content: "Now Playing";
+                padding: 0px 7px;
+                background-color: #FFF;
+                position: absolute;
+                bottom: -3px;
+                left: 10px;
+                color: @red;
+                text-transform: uppercase;
+                font-size: 11px;
+                font-weight: @extrabold;
+            }
+
+            div {
+                opacity: 1;
+            }
         }
-        &:hover div, &:focus div {
-            opacity: 1;
+        
+        &:hover,
+        &:focus {
+            div {
+                opacity: 1;
+            }
+
+            .playBtn {
+                display: none;
+            }
         }
-        &:hover .playBtn, &:focus .playBtn {
-            display: none;
-        }
+
         div {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            font-weight: @bold;
+            font-weight: @extrabold;
             color: #FFF;
             padding: 5px 10px 5px 10px;
             overflow: hidden;
@@ -120,14 +139,17 @@
             -webkit-transition: opacity .25s ease-in-out;
         }
     }
+
     img {
         margin: 0;
         padding: 0;
     }
+
 	ul {
 		margin: 0px;
         padding: 0px;
-	}
+    }
+    
     li {
     	float: left;
     	width: 120px;
@@ -137,6 +159,7 @@
         list-style: none;
         cursor: pointer;
     }
+
     .duration {
     	color: @400grey ;
     	background: url('assets/images/youtube-player/play-sm.png') right 2px no-repeat transparent;
@@ -145,6 +168,7 @@
     	float: left;
     	margin-top: 3px;
     }
+
     .viewport {
     	height: 95px;
     	overflow: hidden;
@@ -152,16 +176,19 @@
     	width: 96%;
     	margin: 0 2%;
     }
+
     .overview {
     	list-style: none;
     	position: absolute;
     	left: 0;
     	top: 0;
     }
+
     .thumb .end,
     .thumb {
     	background-color: @600grey;
     }
+
     .scrollbar {
    		display: none;
    		float: right;
@@ -171,6 +198,7 @@
    		left: 2%;
    		height: 7px;
     }
+
     .track {
         background-color: @100grey;
         height: 100%;
@@ -178,6 +206,7 @@
         position: relative;
         padding: 0 1px;
     }
+
     .thumb {
         height: 7px;
         width: 8px;
@@ -185,11 +214,15 @@
         overflow: hidden;
         position: absolute;
         bottom: 0;
+
         .end {
         	overflow: hidden;
         	height: 5px;
         	width: 8px;
         }
     }
-    .disable { display: none }
+
+    .disable {
+        display: none
+    }
 }

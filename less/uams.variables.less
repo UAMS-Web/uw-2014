@@ -87,20 +87,26 @@
 @uni-sans:      				"uni_sans_thin-webfont";
 
 
+// Readjusted for simplicity (the old ones still work)
+@heavy: 		 			900;
+@extrabold:		 			800;
+@bold:	 					700;
+@semibold: 					600;
+@medium: 					500;
+@regular:					400;
+@light:						300;
+@extralight:				200;
+@thin:			        	100;
+
+@body:						@light;
+@heading:                   @medium;
+
+
 
 // Legacy weights
-@ultra-font-weight: 		900;
-@headings-font-weight:		800;
-@body-font-weight:			300;
-
-
-// Readjusted for simplicity (the old ones still work)
-@ultra: 		 			900;
-@bold:		 				800;
-@heavy:	 					700;
-@medium: 					600;
-@light:						400;
-@body:						300;
+@ultra-font-weight: 		@heavy;
+@headings-font-weight:		@medium;
+@body-font-weight:			@body;
 
 
 // Iconography
@@ -137,3 +143,8 @@
 @btn-success-bg:				 @green-darker; // a11y & brand
 
 @btn-info-bg:					 @blue; // a11y & brand
+
+//** Hero shadows
+
+@hero-shadow-dark:  0.5px 0.5px 3px rgba(0, 0, 0, 0.5);
+@hero-shadow-light: 0.5px 0.5px 3px rgba(225, 225, 225, 0.5);
