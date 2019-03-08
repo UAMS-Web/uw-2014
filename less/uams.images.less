@@ -5,55 +5,110 @@ img {
 	height: auto;
 }
 
-.alignright,
-.alignleft,
-.aligncenter,
-.alignnone {
+.alignright, div.alignright,
+.alignleft, div.alignleft,
+.aligncenter, div.aligncenter,
+.alignnone, div.alignnone {
+	margin: 0 0 50px;
+	clear: both;
+
 	@media only screen and (max-width : 767px) {
 		width: 100% !important;
 		height: auto;
-		margin: 20px 20px 20px 0px;
-		float: none;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+
+	img {
+		display: block;
+
+		@media only screen and (max-width : 767px) {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+
+	.wp-caption-text {
+		@media only screen and (max-width : 767px) {
+			width: 28.875em;
+			max-width: 100%;
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+		}
 	}
 }
 
-.alignleft {
-	margin: 20px 50px 50px 0;
-	float: left;
+.alignright, div.alignright,
+.alignleft, div.alignleft {
+	@media only screen and (min-width : 768px) {
+		max-width: 50%;
+	}
+}
 
+.alignleft, div.alignleft {
+	@media only screen and (min-width: 768px) {
+		margin: 0 50px 50px 0;
+		float: left;
+	}
+	
 	&.size-large {
 		// width:305px !important;
 		height: auto;
 	}
 }
 
-.alignright {
-	margin: 20px 20px 50px 60px;
-	float: right;
+.alignright, div.alignright {
+	@media only screen and (min-width: 768px) {
+		margin: 0 0 50px 60px;
+		float: right;
+	}
 }
 
-.alignnone {
-	margin: 20px 0 50px;
+.alignnone, div.alignnone {
+	@media only screen and (min-width : 768px) {
+		margin: 0 0 50px;
+	}
 }
 
-.aligncenter {
+.aligncenter, div.aligncenter {
     display: block;
+	width: 100% !important;
     margin-right: auto;
     margin-left: auto;
-	clear: both;
     text-align: center;
+
+	img {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.wp-caption-text {
+		width: 28.875em;
+		max-width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+	}
 }
 
 .textwidget {
-    .alignleft {
+    .alignleft, div.alignleft {
         margin-bottom: 20px;
     }
 }
 
 .wp-caption-text {
-	margin-top: 15px;
+	margin-top: 1em;
+	color: @caption-color;
 	font-size: 15px;
-	line-height: @line-height-computed / 1.3;
+	line-height: 1.5;
 }
 
 .wp-media-credit  {
