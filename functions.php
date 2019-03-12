@@ -173,3 +173,17 @@ add_action( 'gform_after_submission', 'access_entry_via_field', 10, 2 );
 	"dataLayer.push({'event':'formSubmit','formTitle': 'Submitted', 'submissionID': formData['title'] + ' ('+formData['id']+') | ' + entryField['source_url'], 'formFields':entryField });",
 	"console.log(dataLayer)</script>";
 };
+
+add_filter( 'embed_oembed_html', 'wrap_oembed_html', 99, 4 );
+add_filter( 'video_embed_html', 'wrap_oembed_html' ); // Jetpack
+function wrap_oembed_html( $cached_html, $url, $attr, $post_id ) {
+    if ( false !== strpos( $url, "://youtube.com") ||
+         false !== strpos( $url, "://www.youtube.com") ||
+         false !== strpos( $url, "://youtu.be") ||
+         false !== strpos( $url, "://www.youtu.be" ) ||
+         false !== strpos( $url, "://vimeo.com" ))
+        {
+            $cached_html = '<div class="nc-video-player" role="region" aria-label="video" tabindex="-1"><div class="tube-wrapper">' . $cached_html . '</div></div>';
+        }
+    return $cached_html;
+}
