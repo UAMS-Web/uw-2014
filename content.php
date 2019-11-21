@@ -10,7 +10,7 @@ if ( get_post_meta( get_the_ID(), 'show_image_single', true ) && is_single() && 
       </a>
       <?php 
           $credit = get_post_meta( get_post_thumbnail_id(), '_media_credit', true ); 
-          echo $credit ? '<span class="wp-media-credit">Image by ' . $credit . '</spna>' : '';
+          echo $credit ? '<span class="wp-media-credit">Image by ' . $credit . '</span>' : '';
       ?>
     </p>
 <?php
