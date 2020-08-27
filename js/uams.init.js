@@ -1,7 +1,7 @@
 // List out the classes that each component searches for
 UAMS.elements = {
 
-  alert      	: '.mobile-menu',
+  // alert      	: '.mobile-menu',
   accordion  	: '.uams-accordion',
   dropdowns  	: '#reddiedrops',
   images     	: 'a > img',
@@ -82,7 +82,7 @@ UAMS.initialize = function( $ )
   UAMS.checkbox   = _.map( $( UAMS.elements.checkbox ),  function( element ) { return new UAMS.Checkbox({ el : element }) } )
   UAMS.select     = _.map( $( UAMS.elements.select ),    function( element ) { return new UAMS.Select({ el : element }) } )
 
-  UAMS.alert = new UAMS.Alert({ after: UAMS.elements.alert, model: new UAMS.Alert.Model() });
+  // UAMS.alert = new UAMS.Alert({ after: UAMS.elements.alert, model: new UAMS.Alert.Model() });
 
   // todo: add to separate file
   $('table').addClass('table table-striped').attr( "border", 1 )
