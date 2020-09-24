@@ -238,9 +238,19 @@
   .gfield.no-format {
     .gfield_radio,
     .gfield_checkbox,
-    .gsurvey-likert-choice {
+    .gsurvey-likert-choice, 
+    .ginput_container_consent {
       .icons {
           display: none;
+          .fui-radio-unchecked,
+          .fui-radio-checked, 
+          .fui-checkbox-unchecked,
+          .fui-checkbox-checked {
+            border: 0;
+            &:before {
+              display: none;
+            }
+          }
         }
     }
     .gfield_checkbox li input[type="checkbox"],
