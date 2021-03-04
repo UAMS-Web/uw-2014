@@ -415,7 +415,15 @@ img.attachment-post-thumbnail.wp-post-image,
 // }
 
 .widget {
-	padding: 10px 0 0 40px;
+	padding: 0;
+
+	@media only screen and (min-width: 768px) {
+		padding: 10px 0 0;
+	}
+
+	@media only screen and (min-width: 992px) {
+		padding: 10px 0 0 40px;
+	}
 }
 
 // Big Screens
@@ -427,10 +435,6 @@ img.attachment-post-thumbnail.wp-post-image,
 }
 
 @media only screen and (max-width : 767px) {
-	.widget {
-		padding: 0;
-	}
-
 	.info-box {
 		margin-left: 0;
 		width: 100%;
