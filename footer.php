@@ -21,15 +21,15 @@
         <nav aria-label="footer links">
             <ul class="footer-links">
 <!--                 <li><a href="http://www.uw.edu/accessibility">Accessibility</a></li> -->
-                <li><a href="http://uamshealth.com/disclaimer/">Disclaimer</a></li>
-                <li><a href="http://jobs.uams.edu">Jobs</a></li>
+                <li><a href="https://uamshealth.com/disclaimer/">Disclaimer</a></li>
+                <li><a href="https://jobs.uams.edu/">Jobs</a></li>
 <!--
                 <li><a href="http://www.washington.edu/safety">Campus Safety</a></li>
                 <li><a href="http://myuw.washington.edu/">My UW</a></li>
 -->
-                <li><a href="http://uamshealth.com/privacy/#legal">Copyright Statement</a></li>
-                <li><a href="http://uamshealth.com/privacy/">Privacy</a></li>
-                <li><a href="http://uamshealth.com/termsofuse/">Terms</a></li>
+                <li><a href="https://uamshealth.com/privacy/#legal">Copyright Statement</a></li>
+                <li><a href="https://uamshealth.com/privacy/">Privacy</a></li>
+                <li><a href="https://uamshealth.com/terms-of-use/">Terms</a></li>
             </ul>
         </nav>
 
