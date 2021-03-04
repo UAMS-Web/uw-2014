@@ -61,7 +61,7 @@ class UAMS_Media_Credit
     if ( 1 > (int) $id )
       return '';
     return '<div class="wp-caption ' . esc_attr($align) . '" style="width:'. ( 10  + (int) $width ) .'px">' .
-      do_shortcode( $content ) . '<p class="wp-media-credit">'.$credit.'</p>' . '</div>';
+      do_shortcode( $content ) . '<p class="wp-media-credit">Image by '.$credit.'</p>' . '</div>';
   }
 
   /**

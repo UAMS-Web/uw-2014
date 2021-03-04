@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         theme : [
           "js/uams.core.js",
           "js/uams.init.js",
-          "js/uams.alert.js",
+          //"js/uams.alert.js",
           "js/uams.searchtoggle.js",
           "js/uams.search.js",
           "js/uams.quicklinks.js",

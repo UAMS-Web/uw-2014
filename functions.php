@@ -47,29 +47,31 @@ function hs_content_character_count( $valid, $value, $field, $input ){
 
 };
 */
+/* ACF - add if it isn't installed */
+if( ! class_exists('acf') ) {
+    // 1. customize ACF path
+    add_filter('acf/settings/path', 'my_acf_settings_path');
+    function my_acf_settings_path( $path ) {
+        $path = get_template_directory() . '/_includes/acf-pro/';
+        return $path;
+    }
 
-/*ACF*/
-// 1. customize ACF path
-add_filter('acf/settings/path', 'my_acf_settings_path');
-function my_acf_settings_path( $path ) {
-    $path = get_template_directory() . '/_includes/acf-pro/';
-    return $path;
+    // 2. customize ACF dir
+    add_filter('acf/settings/dir', 'my_acf_settings_dir');
+
+    function my_acf_settings_dir( $dir ) {
+        $dir = get_template_directory_uri() . '/_includes/acf-pro/';
+        return $dir;
+    }
+
+    // 3. Hide ACF field group menu item
+    //if ( ! has_filter( 'acf/settings/show_admin' ) ) {
+    //	add_filter('acf/settings/show_admin', '__return_false');
+    //}
+    // 4. Include ACF
+    include_once( get_template_directory() . '/_includes/acf-pro/acf.php' );
+
 }
-
-// 2. customize ACF dir
-add_filter('acf/settings/dir', 'my_acf_settings_dir');
-
-function my_acf_settings_dir( $dir ) {
-    $dir = get_template_directory_uri() . '/_includes/acf-pro/';
-    return $dir;
-}
-
-// 3. Hide ACF field group menu item
-//if ( ! has_filter( 'acf/settings/show_admin' ) ) {
-//	add_filter('acf/settings/show_admin', '__return_false');
-//}
-// 4. Include ACF
-include_once( get_template_directory() . '/_includes/acf-pro/acf.php' );
 
 // check for 'action_menu_active' meta key on pages and add a body class if meta value equals '1'
 add_filter('body_class','uams_custom_field_body_class');
@@ -103,8 +105,10 @@ function woocommerce_support() {
 /* Update sitemap on publish post & page */
 add_action( 'publish_post', 'sitemap' );
 add_action( 'publish_page', 'sitemap' );
+
 /* Function to create sitemap.xml */
 function sitemap() {
+  $sitemap ='';
   $posts = get_posts( array(
     'numberposts' => -1,
     'orderby' => 'modified',
@@ -173,3 +177,17 @@ add_action( 'gform_after_submission', 'access_entry_via_field', 10, 2 );
 	"dataLayer.push({'event':'formSubmit','formTitle': 'Submitted', 'submissionID': formData['title'] + ' ('+formData['id']+') | ' + entryField['source_url'], 'formFields':entryField });",
 	"console.log(dataLayer)</script>";
 };
+
+add_filter( 'embed_oembed_html', 'wrap_oembed_html', 99, 4 );
+add_filter( 'video_embed_html', 'wrap_oembed_html' ); // Jetpack
+function wrap_oembed_html( $cached_html, $url, $attr, $post_id ) {
+    if ( false !== strpos( $url, "://youtube.com") ||
+         false !== strpos( $url, "://www.youtube.com") ||
+         false !== strpos( $url, "://youtu.be") ||
+         false !== strpos( $url, "://www.youtu.be" ) ||
+         false !== strpos( $url, "://vimeo.com" ))
+        {
+            $cached_html = '<div class="nc-video-player" role="region" aria-label="video" tabindex="-1"><div class="tube-wrapper">' . $cached_html . '</div></div>';
+        }
+    return $cached_html;
+}

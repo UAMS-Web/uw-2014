@@ -36,7 +36,7 @@
 		<div>
 			<h3 class="slide-title" id="slide-title-<?php echo $i; ?>"><?php the_sub_field( "home_slide_title" ); ?></a><span class="udub-slant"><span></span></span></h3>
 			<p class="slide-content"><?php the_sub_field( 'home_slide_text' ); ?></p>
-			<p><a class="uams-btn btn-sm btn-none" href="<?php echo $buttonlink ?>" aria-describedby="slide-title-<?php echo $i; ?>"><?php the_sub_field( 'home_slide_button_text' ); ?></a></p>
+			<p><a class="uams-btn btn-sm btn-none" href="<?php echo $buttonlink; ?>" aria-describedby="slide-title-<?php echo $i; ?>"><?php the_sub_field( 'home_slide_button_text' ); ?></a></p>
 		</div>
 	</div>
 
@@ -78,10 +78,10 @@
     <?php } ?>
     <div id="hero-bg">
       <div id="hero-container" class="container">
-        <h1 class="uams-site-title<?php echo $hasdarktext; ?>"><?php echo get_field('home_image_title') ? get_field('home_image_title') : get_the_title(); ?></h1>
+        <h1 class="uams-site-title<?php echo $hasdarktext; ?>"><?php echo (get_field('home_image_title') ? get_field('home_image_title') : get_the_title()); ?></h1>
         <span class="udub-slant"><span></span></span>
       <?php if( get_field( 'home_image_add_button' )) { ?>
-        <a class="uams-btn btn-sm btn-none" href="<?php echo get_field('home_image_external') ? get_field('home_image_external_url') : get_field('home_image_internal_url'); ?>"><?php echo get_field('home_image_button_text'); ?></a>
+        <a class="uams-btn btn-sm btn-none" href="<?php echo ( get_field('home_image_external') ? get_field('home_image_external_url') : get_field('home_image_internal_url') ); ?>"><?php echo get_field('home_image_button_text'); ?></a>
       <?php } ?>
       </div>
     </div>
@@ -90,7 +90,7 @@
 <?php
 endif;
 ?>
-<?php if( get_field( 'action_menu_active' ) && have_rows('action_menu') ):  ?>
+<?php if( get_field( 'action_menu_active' ) && have_rows('action_menu') ) :  ?>
 
 <div class="full-bar">
 	<nav aria-label="popular links" class="container action-bar">
@@ -110,13 +110,13 @@ endif;
 		$externalurl = get_sub_field('action_link_url');
 
 ?>
-			<li class="ab-1_<?php echo $row_count; ?>"><a href="<?php echo ($external ? $externalurl : $internalurl); ?>" title="<?php echo $linktitle ?>"><span class="icon <?php echo $icon ?>"></span><span><?php echo $linktitle ?></span></a></li>
+			<li class="ab-1_<?php echo $row_count; ?>"><a href="<?php echo ($external ? $externalurl : $internalurl); ?>" title="<?php echo $linktitle; ?>"><span class="icon <?php echo $icon; ?>"></span><span><?php echo $linktitle; ?></span></a></li>
 <?php
 		endwhile; ?>
 		</ul>
 	</nav>
 </div>
-<?
+<?php
 	endif;
 ?>
 
@@ -124,7 +124,7 @@ endif;
 
   <div class="row">
 
-    <div class="hero-content col-md-<?php echo (($sidebar[0]!="on") ? "8" : "12" ) ?> uams-content" role='main'>
+    <div class="hero-content col-md-<?php echo (($sidebar[0]!="on") ? "8" : "12" ); ?> uams-content" role='main'>
 
       <?php
 	      if((!isset($breadcrumbs[0]) || $breadcrumbs[0]!="on")) {
@@ -156,8 +156,8 @@ endif;
 								$length--;
 							  	if ($length > strlen($text)) {
 								  	break;
-									}
 								}
+							}
 						    $text = substr($text, 0, $length);
 						    return $text . ( ( $dots == true && $text != '' && strlen($text_temp) > $length ) ? '...' : '');
 						}

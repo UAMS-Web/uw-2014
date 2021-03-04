@@ -23,7 +23,8 @@ class UAMS_Scripts
         'url'     => 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
         'deps'    => array(),
         'version' => '1.11.3',
-        'admin'   => false
+        'admin'   => false,
+        'footer'  => false
       ),
 
       'site'   => array (
@@ -32,8 +33,18 @@ class UAMS_Scripts
         'deps'      => array( 'backbone' ),
         'version'   => '1.0.3',
         'admin'     => false,
-        'style_dir' => site_url()
+        'style_dir' => site_url(),
+        'footer'  => false
         // 'variables' => array( 'is_multisite' =>  $multi ),
+      ),
+
+      'alert' => array (
+        'id'      => 'alert',
+        'url'     => '//www.uams.edu/web/alert/uamsalert.js',
+        'deps'    => array( 'jquery' ),
+        'version' => '1.0.1',
+        'admin'   => false,
+        'footer'  => true
       ),
 
       'admin' => array (
@@ -41,7 +52,8 @@ class UAMS_Scripts
         'url'     => get_bloginfo('template_directory') . '/assets/admin/js/admin.js',
         'deps'    => array( 'jquery' ),
         'version' => '1.0',
-        'admin'   => true
+        'admin'   => true,
+        'footer'  => false
       ),
 
     ), $this->get_child_theme_scripts() );
@@ -78,7 +90,8 @@ class UAMS_Scripts
           $script->id,
           $script->url,
           $script->deps,
-          $script->version
+          $script->version,
+          $script->footer
         );
 
       }

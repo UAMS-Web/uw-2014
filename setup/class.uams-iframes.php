@@ -75,6 +75,8 @@ class UAMS_Iframes
       'player.vimeo.com',
       'www.facebook.com',
       'facebook.com',
+      'monday.com',
+      'forms.monday.com',
       //'form.jotform.com'
     );
   }
