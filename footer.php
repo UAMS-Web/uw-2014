@@ -9,24 +9,16 @@
                 <li><a class="facebook" href="http://facebook.com/uamshealth">Facebook</a></li>
                 <li><a class="twitter" href="http://twitter.com/uamshealth">Twitter</a></li>
                 <li><a class="instagram" href="http://instagram.com/uamshealth">Instagram</a></li>
-<!--                 <li><a class="tumblr" href="http://uofwa.tumblr.com/">Tumblr</a></li> -->
                 <li><a class="youtube" href="https://www.youtube.com/user/UAMSHealth">YouTube</a></li>
                 <li><a class="linkedin" href="https://www.linkedin.com/company/uams">LinkedIn</a></li>
                 <li><a class="pinterest" href="http://pinterest.com/uamshealth">Pinterest</a></li>
-<!--                 <li><a class="vine" href="https://vine.co/uofwa">Vine</a></li> -->
-<!--                 <li><a class="google" href="https://plus.google.com/+universityofwashington/posts">Google+</a></li> -->
             </ul>
         </nav>
 
         <nav aria-label="footer links">
             <ul class="footer-links">
-<!--                 <li><a href="http://www.uw.edu/accessibility">Accessibility</a></li> -->
                 <li><a href="https://uamshealth.com/disclaimer/">Disclaimer</a></li>
                 <li><a href="https://jobs.uams.edu/">Jobs</a></li>
-<!--
-                <li><a href="http://www.washington.edu/safety">Campus Safety</a></li>
-                <li><a href="http://myuw.washington.edu/">My UW</a></li>
--->
                 <li><a href="https://uamshealth.com/privacy/#legal">Copyright Statement</a></li>
                 <li><a href="https://uamshealth.com/privacy/">Privacy</a></li>
                 <li><a href="https://uamshealth.com/terms-of-use/">Terms</a></li>
