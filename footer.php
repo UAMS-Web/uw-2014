@@ -29,7 +29,7 @@
 -->
                 <li><a href="http://uamshealth.com/privacy/#legal">Copyright Statement</a></li>
                 <li><a href="http://uamshealth.com/privacy/">Privacy</a></li>
-                <li><a href="http://uamshealth.com/termsofuse/">Terms</a></li>
+                <li><a href="http://uamshealth.com/terms-of-use/">Terms</a></li>
             </ul>
         </nav>
 
